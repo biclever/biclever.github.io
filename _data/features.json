@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Metadata extraction",
+    "description": "Whether you need just a list of reports or data lineage from database to report field, we can extract this information in a convenient format.",
+    "image": {
+      "url": "images/features/noun_branding_1885335.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Tools for development",
+    "description": "You can speed up development and improve quality by automating some tedious workflows with tools.",
+    "image": {
+      "url": "images/features/noun_3d modeling_1885342.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Test automation",
+    "description": "A change in a database or universe can affect many reports. Automatic testing of reports can help timely detect issues.",
+    "image": {
+      "url": "images/features/noun_The Process_1885341.svg",
+      "width": 80,
+      "height": 80
+    }
+  }
+]

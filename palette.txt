@@ -1,0 +1,40 @@
+/* Coolors Exported Palette - https://coolors.co/012a4a-013a63-01497c-014f86-2a6f97-2c7da0-468faf-61a5c2-89c2d9-a9d6e5 */
+
+- Tailwind
+
+{ 'prussian_blue': { DEFAULT: '#012a4a', 100: '#00090f', 200: '#00111e', 300: '#011a2d', 400: '#01233c', 500: '#012a4a', 600: '#025ca1', 700: '#048df6', 800: '#54b4fc', 900: '#aad9fe' }, 'indigo_dye': { DEFAULT: '#013a63', 100: '#000c14', 200: '#001828', 300: '#01243d', 400: '#012f51', 500: '#013a63', 600: '#026bb6', 700: '#0d99fd', 800: '#5dbbfd', 900: '#aeddfe' }, 'indigo_dye': { DEFAULT: '#01497c', 100: '#000f19', 200: '#011e32', 300: '#012c4c', 400: '#013b65', 500: '#01497c', 600: '#0277ca', 700: '#1c9ffd', 800: '#68bffd', 900: '#b3dffe' }, 'indigo_dye': { DEFAULT: '#014f86', 100: '#000f1a', 200: '#001f35', 300: '#002e4f', 400: '#013e6a', 500: '#014f86', 600: '#0179cf', 700: '#1ea0fe', 800: '#69c0fe', 900: '#b4dfff' }, 'ucla_blue': { DEFAULT: '#2a6f97', 100: '#09161e', 200: '#112d3c', 300: '#1a435b', 400: '#225979', 500: '#2a6f97', 600: '#3a93c7', 700: '#6baed5', 800: '#9cc9e3', 900: '#cee4f1' }, 'cerulean': { DEFAULT: '#2c7da0', 100: '#091920', 200: '#123240', 300: '#1a4b60', 400: '#236480', 500: '#2c7da0', 600: '#3fa1ca', 700: '#6fb8d8', 800: '#9fd0e5', 900: '#cfe7f2' }, 'air_force_blue': { DEFAULT: '#468faf', 100: '#0e1d23', 200: '#1c3946', 300: '#2a5669', 400: '#38738c', 500: '#468faf', 600: '#67a7c3', 700: '#8dbdd2', 800: '#b3d3e1', 900: '#d9e9f0' }, 'air_superiority_blue': { DEFAULT: '#61a5c2', 100: '#10222a', 200: '#214454', 300: '#31677e', 400: '#4189a7', 500: '#61a5c2', 600: '#81b7ce', 700: '#a0c9da', 800: '#c0dbe6', 900: '#dfedf3' }, 'sky_blue': { DEFAULT: '#89c2d9', 100: '#112b35', 200: '#22566a', 300: '#34819f', 400: '#52a6c7', 500: '#89c2d9', 600: '#a0cee0', 700: '#b7dae8', 800: '#cfe6f0', 900: '#e7f3f7' }, 'light_blue': { DEFAULT: '#a9d6e5', 100: '#12333d', 200: '#25657b', 300: '#3798b8', 400: '#6bb9d3', 500: '#a9d6e5', 600: '#badeea', 700: '#cbe6f0', 800: '#dceff5', 900: '#eef7fa' } }
+
+- CSV
+
+012a4a,013a63,01497c,014f86,2a6f97,2c7da0,468faf,61a5c2,89c2d9,a9d6e5
+
+- With #
+
+#012a4a, #013a63, #01497c, #014f86, #2a6f97, #2c7da0, #468faf, #61a5c2, #89c2d9, #a9d6e5
+
+- Array
+
+["012a4a","013a63","01497c","014f86","2a6f97","2c7da0","468faf","61a5c2","89c2d9","a9d6e5"]
+
+- Object
+
+{"Prussian blue":"012a4a","Indigo dye":"013a63","Indigo dye 2":"01497c","Indigo dye 3":"014f86","UCLA Blue":"2a6f97","Cerulean":"2c7da0","Air Force blue":"468faf","Air superiority blue":"61a5c2","Sky blue":"89c2d9","Light blue":"a9d6e5"}
+
+- Extended Array
+
+[{"name":"Prussian blue","hex":"012a4a","rgb":[1,42,74],"cmyk":[99,43,0,71],"hsb":[206,99,29],"hsl":[206,97,15],"lab":[16,1,-24]},{"name":"Indigo dye","hex":"013a63","rgb":[1,58,99],"cmyk":[99,41,0,61],"hsb":[205,99,39],"hsl":[205,98,20],"lab":[23,1,-29]},{"name":"Indigo dye","hex":"01497c","rgb":[1,73,124],"cmyk":[99,41,0,51],"hsb":[205,99,49],"hsl":[205,98,25],"lab":[30,1,-34]},{"name":"Indigo dye","hex":"014f86","rgb":[1,79,134],"cmyk":[99,41,0,47],"hsb":[205,99,53],"hsl":[205,99,26],"lab":[33,2,-36]},{"name":"UCLA Blue","hex":"2a6f97","rgb":[42,111,151],"cmyk":[72,26,0,41],"hsb":[202,72,59],"hsl":[202,56,38],"lab":[44,-8,-28]},{"name":"Cerulean","hex":"2c7da0","rgb":[44,125,160],"cmyk":[72,22,0,37],"hsb":[198,73,63],"hsl":[198,57,40],"lab":[49,-12,-26]},{"name":"Air Force blue","hex":"468faf","rgb":[70,143,175],"cmyk":[60,18,0,31],"hsb":[198,60,69],"hsl":[198,43,48],"lab":[56,-13,-24]},{"name":"Air superiority blue","hex":"61a5c2","rgb":[97,165,194],"cmyk":[50,15,0,24],"hsb":[198,50,76],"hsl":[198,44,57],"lab":[64,-14,-22]},{"name":"Sky blue","hex":"89c2d9","rgb":[137,194,217],"cmyk":[37,11,0,15],"hsb":[197,37,85],"hsl":[197,51,69],"lab":[75,-13,-17]},{"name":"Light blue","hex":"a9d6e5","rgb":[169,214,229],"cmyk":[26,7,0,10],"hsb":[195,26,90],"hsl":[195,54,78],"lab":[83,-11,-12]}]
+
+- XML
+
+<palette>
+  <color name="Prussian blue" hex="012a4a" r="1" g="42" b="74" />
+  <color name="Indigo dye" hex="013a63" r="1" g="58" b="99" />
+  <color name="Indigo dye" hex="01497c" r="1" g="73" b="124" />
+  <color name="Indigo dye" hex="014f86" r="1" g="79" b="134" />
+  <color name="UCLA Blue" hex="2a6f97" r="42" g="111" b="151" />
+  <color name="Cerulean" hex="2c7da0" r="44" g="125" b="160" />
+  <color name="Air Force blue" hex="468faf" r="70" g="143" b="175" />
+  <color name="Air superiority blue" hex="61a5c2" r="97" g="165" b="194" />
+  <color name="Sky blue" hex="89c2d9" r="137" g="194" b="217" />
+  <color name="Light blue" hex="a9d6e5" r="169" g="214" b="229" />
+</palette>
