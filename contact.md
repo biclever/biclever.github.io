@@ -4,13 +4,15 @@ layout: contact
 description: Contact
 ---
 
-Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.
+Our company specializes in the automation of processes and workflows for SAP BusinessObjects. We can help you to reduce costs and improve quality of your reporting solution by replacing tedious manual work with automated solutions. Our expertise areas include:
 
-| Day       | Opening Hours   |
-| --------- | --------------- |
-| Tuesday   | 8:30am - 5:00pm |
-| Wednesday | 8:30am - 5:00pm |
-| Thursday  | 8:30am - 5:00pm |
-| Friday    | 8:30am - 5:00pm |
-| Saturday  | 10:am - 4:00pm  |
-| Saturday  | Closed          |
+* Web Intelligence documents
+* Universes
+* Crystal Reports
+* Analysis for OLAP
+* Managing object in CMS
+* Dependencies between objects in CMS
+* Security
+* etc
+  
+We know what it takes to maintain a complex SAP BusinessObjects environment! Therefore we provide free tools to support BusinessObjects developers and administrators.

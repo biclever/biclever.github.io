@@ -1,7 +1,7 @@
 ---
-title: "Robert Johnson"
+title: "Antonina Bukhantsova"
 date: 2018-12-20T13:44:23+10:00
-image: "images/team/vince-fleming-613817-unsplash.jpg"
+image: "images/team/antonina-bukhantsova.png"
 jobtitle: "Developer"
 linkedinurl: "https://www.linkedin.com/"
 weight: 3

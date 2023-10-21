@@ -1,9 +1,9 @@
 ---
-title: Services
+title: Products
 layout: services
-description: Services
+description: Products
 ---
 
-# Services that grow with your business
+# BI Tools Designed for Your Success
 
-Aliquam erat volutpat. Morbi nisl tortor, dignissim eget efficitur vel, auctor non felis. Fusce quis viverra mi. Aenean quis massa pretium, ullamcorper nisi eget, hendrerit odio.
+Elevate the quality of your analytics, accelerate your development processes, and streamline maintenance tasks. Our suite of tools is designed to seamlessly integrate with SAP BusinessObjects, ensuring you harness the full potential of your BI initiatives. 
