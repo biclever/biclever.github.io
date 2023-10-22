@@ -8,7 +8,7 @@ weight: 2
 UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (objects, classes, tables, joins, incompatibilities etc) to Excel file.
 
 **EULA:**
-- [UnvDoc End-User License Agreement](http://biclever.com/software/universe-documenter/unvdoc-end-user-license-agreement/)
+- [UnvDoc End-User License Agreement](/pages/end-user-license-agreement-unvdoc/)
 
 **Downloads:**
 - [Unv Documenter for BO 4.x (unvdoc-bo4x-20190305.zip)](https://drive.google.com/uc?export=download&id=1Z9NU2QxSL3kWW5iEDgRMCSaPmM6Lp9-0)
@@ -19,7 +19,7 @@ UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (
 - [support@biclever.com](mailto:support@biclever.com)
 
 **Useful Information:**
-- [Error when running UnvDoc on BO 4.1 SP12, 4.2 SP6 (The RPC server is unavailable)](http://biclever.com/blog/error-when-running-unvdoc-on-bo-4-1-sp12-4-2-sp6/)
+- [Error when running UnvDoc on BO 4.1 SP12, 4.2 SP6 (The RPC server is unavailable)](/pages/error-when-running-unvdoc-on-bo-4-1-sp12-4-2-sp6/)
 
 **Screenshots:**
 ![unvdoc-1](/images/pages/unvdoc-1.png)

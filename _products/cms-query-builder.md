@@ -20,7 +20,7 @@ CMS Query Builder is a tool for building CMS queries, running them against the d
 You need to have SAP BusinessObjects 3.1/4.x Client Tools on your machine.
 
 **EULA:**  
-- [CMS Query Builder End-User License Agreement](http://biclever.com/software/cms-query-builder/cms-query-builder-end-user-license-agreement/)
+- [CMS Query Builder End-User License Agreement](/pages/end-user-license-agreement-cms-query-builder/)
 
 **Downloads:**  
 - [CMS Query Builder for BO 4.x (cmsquerybuilder-bo4x-1.5-20190305.zip)](https://drive.google.com/uc?export=download&id=1bv7VgCS9VMO1nAqcQAAzHW8Gop5k3hBp)
