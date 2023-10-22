@@ -1,6 +1,6 @@
 ---
 title: Products
-layout: services
+layout: products
 description: Products
 ---
 
