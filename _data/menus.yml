@@ -19,6 +19,9 @@ footer:
   - name: "Home"
     url: "/"
     weight: 1
+  - name: "Knowledge Base"
+    url: "/pages"
+    weight: 2
   - name: "Contact"
     url: "/contact/"
-    weight: 2
+    weight: 3
