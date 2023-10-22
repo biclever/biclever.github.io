@@ -11,8 +11,8 @@ UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (
 - [UnvDoc End-User License Agreement](http://biclever.com/software/universe-documenter/unvdoc-end-user-license-agreement/)
 
 **Downloads:**
-- [Unv Documenter for BO 4.x (unvdoc-bo4x-20190305.zip)](http://biclever.com/download/446/)
-- [Unv Documenter for BO 3.1 SP5+ (unvdoc-bo31sp5-20190305.zip)](http://biclever.com/download/641/)
+- [Unv Documenter for BO 4.x (unvdoc-bo4x-20190305.zip)](https://drive.google.com/uc?export=download&id=1Z9NU2QxSL3kWW5iEDgRMCSaPmM6Lp9-0)
+- [Unv Documenter for BO 3.1 SP5+ (unvdoc-bo31sp5-20190305.zip)](https://drive.google.com/uc?export=download&id=1riyL6cINXn1WXqbdxFw68qFMFe18J3_I)
 - [UnvDoc.pdf](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZYURFMjB2Y2FCSjA)
 
 **Support:**

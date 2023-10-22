@@ -23,8 +23,8 @@ You need to have SAP BusinessObjects 3.1/4.x Client Tools on your machine.
 - [CMS Query Builder End-User License Agreement](http://biclever.com/software/cms-query-builder/cms-query-builder-end-user-license-agreement/)
 
 **Downloads:**  
-- [CMS Query Builder for BO 4.x (cmsquerybuilder-bo4x-1.5-20190305.zip)](http://biclever.com/download/1456/)
-- [CMS Query Builder for BO 3.1 SP5+ (cmsquerybuilder-bo31sp5-1.5-20190305.zip)](http://biclever.com/download/2211/)
+- [CMS Query Builder for BO 4.x (cmsquerybuilder-bo4x-1.5-20190305.zip)](https://drive.google.com/uc?export=download&id=1bv7VgCS9VMO1nAqcQAAzHW8Gop5k3hBp)
+- [CMS Query Builder for BO 3.1 SP5+ (cmsquerybuilder-bo31sp5-1.5-20190305.zip)](https://drive.google.com/uc?export=download&id=1dwsVf12SKeQDZ7bvn2_hyJhIw3BqT-qA)
 - [CmsQueryBuilder.pdf](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZb1pka3k5cEFuVU0)
 
 **Support:**  

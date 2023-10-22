@@ -29,6 +29,5 @@ You need to have SAP BusinessObjects 4.1 Client Tools with Semantic Layer Java S
 **Screenshots:**
 
 ![UnxDoc Login](/images/pages/unxdoc-1.png)
-![UnxDoc Universe Selection](/images/pages/unxdoc-2.png)
-![UnxDoc Export Result](/images/pages/unxdoc-3.png)
+
 
