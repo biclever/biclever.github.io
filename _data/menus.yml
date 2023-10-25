@@ -20,7 +20,7 @@ footer:
     url: "/"
     weight: 1
   - name: "Knowledge Base"
-    url: "/pages"
+    url: "/pages/"
     weight: 2
   - name: "Contact"
     url: "/contact/"
