@@ -3,7 +3,7 @@ title: Pages
 layout: pages
 description: Pages
 permalink: "/pages/"
-intro_image: "images/illustrations/Knowledge.svg"
+intro_image_: "images/illustrations/Knowledge.svg"
 intro_image_absolute: false
 intro_image_hide_on_mobile: true
 ---
