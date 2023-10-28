@@ -2,6 +2,7 @@
 title: "CMS Query Builder"
 description: The tool allows to build and run queries against CMS system database and export the result to Excel.
 date: 2018-11-18T12:33:46+10:00
+published: true
 weight: 3
 ---
 

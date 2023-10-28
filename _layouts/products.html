@@ -20,7 +20,8 @@ bodyClass: "page-products"
 
 <div class="container pt-3 pb-3">
   <div class="row">
-    {% for product in site.products %}
+    {% assign products = site.products | where: "published", true | sort: "weight" %}
+    {% for product in products %}
     <div class="col-12 col-md-6 mb-3">
       <div class="product product-summary">
         <div class="product-content">

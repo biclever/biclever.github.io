@@ -2,6 +2,7 @@
 title: "Security Exporter"
 description: The tool allows extracting access rights to an Excel.
 date: 2018-11-18T12:33:46+10:00
+published: false
 weight: 5
 ---
 
