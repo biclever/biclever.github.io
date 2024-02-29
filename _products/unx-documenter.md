@@ -3,7 +3,7 @@ title: "Unx Documenter"
 description: The tool allows extracting Unx universe metadata to Excel spreadsheet. You can also use it to find differences between universes.
 date: 2018-11-18T12:33:46+10:00
 published: true
-weight: 1
+weight: 6
 ---
 
 Unx Universe Documenter (UnxDoc) is a tool for extracting UNX universe metadata to an excel spreadsheet. The tool allows extracting details about objects, tables, joins, list of values, parameters, contexts, navigation paths, and incompatibilities.
