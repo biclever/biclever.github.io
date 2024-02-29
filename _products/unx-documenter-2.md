@@ -1,5 +1,5 @@
 ---
-title: "Unx Documenter 2.0 (BO 4.3 SP2+)"
+title: "UnxDoc 2.0 (BO 4.3 SP2+)"
 description: The tool facilitates the extraction of UNX universe metadata into an Excel spreadsheet and enables easy identification of differences between universes for streamlined analysis and documentation.
 date: 2024-02-29T09:27:00+10:00
 published: true
