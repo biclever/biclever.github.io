@@ -11,7 +11,7 @@ New features:
 - Command line interface for automation
 - Fixes
 
-Planned Release Date: March 2024
+**Planned Release Date:** 8 March 2024
 
 ## Comprehensive Metadata Extraction and Analysis
 
