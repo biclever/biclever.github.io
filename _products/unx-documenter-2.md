@@ -10,8 +10,6 @@ weight: 1
 
 **1 Year License - $300** [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
 
-Personal license for unrestricted use across multiple devices.
-
 ## Comprehensive Metadata Extraction and Analysis
 
 The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing the extraction of metadata from UNX universes into Excel for better data management and documentation. It's valuable for universe administrators, data analysts, and IT professionals handling data reporting and management. UnxDoc streamlines creating documentation, analyzing universe designs for optimization and troubleshooting, and comparing universes to ensure consistency across different environments. This tool aids in maintaining version control and facilitating migration projects, making it a practical solution for managing SAP BusinessObjects universes.
