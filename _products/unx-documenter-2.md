@@ -11,7 +11,8 @@ New features:
 - Command line interface for automation
 - Fixes
 
-- [Unx Documenter for BO 4.3 SP2+ (unxdoc-20240224.zip)](https://drive.google.com/file/d/1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k/view?usp=sharing)
+**Downloads:**
+- [Unx Documenter for BO 4.3 SP2+ (unxdoc-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
 
 ## Comprehensive Metadata Extraction and Analysis
 
