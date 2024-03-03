@@ -6,13 +6,13 @@ published: true
 weight: 1
 ---
 
-New features:
-- Upgraded for BO 4.3 SP2+
-- Command line interface for automation
-- Fixes
+**Free trial**
 
-**Downloads:**
-- [Unx Documenter for BO 4.3 SP2+ (unxdoc-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
+[Unx Documenter for BO 4.3 SP2+ (unxdoc-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
+
+**1 Year License - $300**
+
+[Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
 
 ## Comprehensive Metadata Extraction and Analysis
 
