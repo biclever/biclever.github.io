@@ -6,13 +6,11 @@ published: true
 weight: 1
 ---
 
-**Free trial**
+**Download free trial** [Unx Documenter for BO 4.3 SP2+ (unxdoc-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
 
-[Unx Documenter for BO 4.3 SP2+ (unxdoc-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
+**1 Year License - $300** [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
 
-**1 Year License - $300**
-
-[Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
+Personal license for unrestricted use across multiple devices.
 
 ## Comprehensive Metadata Extraction and Analysis
 
