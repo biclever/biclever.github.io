@@ -24,13 +24,13 @@ To set up **UnxDoc**, perform the following steps:
 2. Find the line:
 
     ```
-    START "" %JAVA%\bin\javaw.exe -Dbusinessobjects.connectivity.directory="%CD%" -cp "%CP%" com.biclever.gui.Program
+    START "" %JAVA%\bin\javaw.exe ...
     ```
 
 3. Add the parameters after `javaw.exe` (in one line, separated by space). There should be no spaces in the path, and no space before or after `=`. For example:
 
     ```
-    START "" %JAVA%\bin\javaw.exe -Djava.security.auth.login.config=c:\winnt\bscLogin.conf -Djava.security.krb5.conf=c:\winnt\krb5.ini -Dbusinessobjects.connectivity.directory="%CD%" -cp "%CP%" com.biclever.gui.Program
+    START "" %JAVA%\bin\javaw.exe -Djava.security.auth.login.config=c:\winnt\bscLogin.conf -Djava.security.krb5.conf=c:\winnt\krb5.ini ...
     ```
 
 4. Save the file.
