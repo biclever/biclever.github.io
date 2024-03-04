@@ -23,11 +23,14 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 **EULA:**
 - [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
 
-**Download free trial** [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-2.0-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
+**Download free trial:** 
+- [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-2.0-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
 
-**1 Year License - $300** [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
+**1 Year License - $300:** 
 
-The license grants the Licensee a non-exclusive, non-transferable right to use the software. It is intended exclusively for the individual to whom it is registered and must not be shared, transferred, or used by any other individual or entity. The license permits use on multiple devices and activation does not require internet access. 
+- [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
+
+- The license grants the Licensee a non-exclusive, non-transferable right to use the software. It is intended exclusively for the individual to whom it is registered and must not be shared, transferred, or used by any other individual or entity. The license permits use on multiple devices and activation does not require internet access. 
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
