@@ -32,7 +32,7 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - The license grants the Licensee a non-exclusive, non-transferable right to use the software. It is intended exclusively for the individual to whom it is registered and must not be shared, transferred, or used by any other individual or entity. The license permits use on multiple devices and activation does not require internet access. 
 
-**Why the Change?**
+**Why are we transitioning to a paid model?**
 
 - Sustainable Development: The move to a paid model is primarily aimed at securing the financial support necessary to sustain the ongoing development and enhancement of the software. This includes dedicating resources to bug fixes, new features, and compatibility updates.
 
@@ -44,7 +44,7 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - Contact Us to Discuss: We understand the importance of flexibility and are committed to finding solutions that work for everyone. If you would like to discuss the pricing, have questions about the transition, or simply want to share your thoughts, please don’t hesitate to contact us [support@biclever.com](mailto:support@biclever.com)
 
-**Old versions:**
+**Old versions (free):**
 - [Unx Documenter for BO 4.2, BO 4.1 SP6+ (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
 - [Unx Documenter for BO 4.1 SP3-SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
 - [Unx Documenter for BO 4.1 SP1-SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
