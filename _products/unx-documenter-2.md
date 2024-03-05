@@ -1,5 +1,5 @@
 ---
-title: "UnxDoc 2.0 (BO 4.3 SP2+)"
+title: "Unx Documenter (BO 4.3 SP2+)"
 description: The tool facilitates the extraction of UNX universe metadata into an Excel spreadsheet and enables easy identification of differences between universes for streamlined analysis and documentation.
 date: 2024-02-29T09:27:00+10:00
 published: true
@@ -32,11 +32,31 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - The license grants the Licensee a non-exclusive, non-transferable right to use the software. It is intended exclusively for the individual to whom it is registered and must not be shared, transferred, or used by any other individual or entity. The license permits use on multiple devices and activation does not require internet access. 
 
+**Why the Change?**
+
+- Sustainable Development: The move to a paid model is primarily aimed at securing the financial support necessary to sustain the ongoing development and enhancement of the software. This includes dedicating resources to bug fixes, new features, and compatibility updates.
+
+- Enhanced Support and Service: Our users rely on the software for important business functions. A paid model allows us to offer more robust and timely support, ensuring that businesses can continue to operate smoothly and efficiently without interruption.
+
+- Investment in Innovation: The transition to a paid model will enable us to invest more in research and development. 
+
+- Cost-Effective Solutions: Even with this change, our commitment to providing cost-effective solutions remains unwavering. We understand the significant investment our users have made in SAP Business Objects, and we are dedicated to ensuring that the software remains an affordable option, offering exceptional value without the hefty price tag of alternatives. 
+
+- Contact Us to Discuss: We understand the importance of flexibility and are committed to finding solutions that work for everyone. If you would like to discuss the pricing, have questions about the transition, or simply want to share your thoughts, please don’t hesitate to contact us [support@biclever.com](mailto:support@biclever.com)
+
+**Old versions:**
+- [Unx Documenter for BO 4.2, BO 4.1 SP6+ (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
+- [Unx Documenter for BO 4.1 SP3-SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
+- [Unx Documenter for BO 4.1 SP1-SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
+- [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
+- [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
+
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
 **Useful Information:**
 - [How to enable semantic layer SDK](/pages/how-to-enable-semantic-layer-sdk/)
+- [Error when running UnxDoc on BO 4.1 SP7](/pages/error-in-unxdoc-on-bo-4-1-sp7-localresourceserviceimpl-load/)
 
 ## Screenshots
 
