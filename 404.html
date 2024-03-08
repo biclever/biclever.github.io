@@ -34,6 +34,7 @@ bodyClass: "page-home"
       </div>
       <div class="col-6 col-md-6 col-lg-6 order-2 order-md-1">
         <div class="content">
+          <h3>Otherwise, here are some other pages:</h3>        
           {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
           <ul class="list-group">
             {% for item in mainmenu %}
@@ -41,6 +42,9 @@ bodyClass: "page-home"
               <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
             </li>
             {% endfor %}
+            <li class="list-group-item">
+              <a href="/pages/">Knowledge base</a>
+            </li>
           </ul>
         </div>        
       </div>
