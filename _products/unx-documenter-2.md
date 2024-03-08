@@ -16,40 +16,23 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - **User-Friendly GUI:** To accommodate users of all skill levels, UnxDoc features an intuitive graphical user interface (GUI). This interface simplifies the process of setting up and executing metadata extraction, making it accessible even to those with minimal technical expertise.
 
-- **Command Line Interface for Automation:** For advanced users and those looking to integrate UnxDoc into their automated workflows, the tool also offers a command line interface (CLI). This feature allows for the automation of metadata extraction processes, saving time and ensuring consistency across documentations.
+- **Command Line Interface for Automation:** For advanced users and those looking to integrate UnxDoc into their automated workflows, the tool also offers a command line interface (CLI). This feature allows for the automation of metadata extraction processes, saving time and ensuring consistency across documentations. This is a paid feature. 
 
 - **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects 4.3 SP2+ Client Tools installed on their system. Additionally, the Semantic Layer Java SDK is required to facilitate the extraction process, alongside proper configuration for Data Security and Access. These prerequisites ensure that UnxDoc functions seamlessly, providing accurate and secure metadata documentation.
 
 **EULA:**
 - [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
 
-**Download free trial:** 
-- [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-2.0-20240224.zip)](https://drive.google.com/uc?export=download&id=1hnxPWRmNC6Qc5QgtS5Ue-vWf00wq7V3k)
-
-**1 Year License - $300:** 
-
-- [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
-
-- The license grants the Licensee a non-exclusive, non-transferable right to use the software. It is intended exclusively for the individual to whom it is registered and must not be shared, transferred, or used by any other individual or entity. The license permits use on multiple devices and activation does not require internet access. 
-
-**Why are we transitioning to a paid model?**
-
-- Sustainable Development: The move to a paid model is primarily aimed at securing the financial support necessary to sustain the ongoing development and enhancement of the software. This includes dedicating resources to bug fixes, new features, and compatibility updates.
-
-- Enhanced Support and Service: Our users rely on the software for important business functions. A paid model allows us to offer more robust and timely support, ensuring that businesses can continue to operate smoothly and efficiently without interruption.
-
-- Investment in Innovation: The transition to a paid model will enable us to invest more in research and development. 
-
-- Cost-Effective Solutions: Even with this change, our commitment to providing cost-effective solutions remains unwavering. We understand the significant investment our users have made in SAP Business Objects, and we are dedicated to ensuring that the software remains an affordable option, offering exceptional value without the hefty price tag of alternatives. 
-
-- Contact Us to Discuss: We understand the importance of flexibility and are committed to finding solutions that work for everyone. If you would like to discuss the pricing, have questions about the transition, or simply want to share your thoughts, please don’t hesitate to contact us [support@biclever.com](mailto:support@biclever.com)
-
-**Old versions (free):**
+**Downloads:**
+- [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-20240308.zip)](https://drive.google.com/uc?export=download&id=1343J5arRkNuKowbcx8eRqIOUY08ylt6K)
 - [Unx Documenter for BO 4.2, BO 4.1 SP6+ (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
 - [Unx Documenter for BO 4.1 SP3-SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
 - [Unx Documenter for BO 4.1 SP1-SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
 - [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
+
+**UnxDoc Command Line 1 Year License - $300:** 
+- [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
