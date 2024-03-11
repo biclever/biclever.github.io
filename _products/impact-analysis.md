@@ -19,7 +19,7 @@ The field type change can potentially affect reports in several ways, including:
 - The fields may be used in filtrations, and the change could lead to erroneous comparisons between integer and string values.
 - Previously merged objects based on the field might become unmerged, breaking layouts and calculations.
 
-To address these issues, manual verification of all reports is required to identify those utilizing the affected fields. This process involves scrutinizing every report section to locate where the impacted objects are used. Despite the vast number of reports, only a few were actually affected by this change and needed correction. Consequently, identifying the necessary corrections could demand extensive efforts. However, using the tool significantly streamlined the upgrade process, reducing the time from a month to just two days and markedly enhancing the quality of the upgrade.
+To address these issues, manual verification of all reports is required to identify those utilizing the affected fields. This process involves scrutinizing every report section to locate where the impacted objects are used. Despite the vast number of reports, only a few were actually affected by this change and needed correction. Consequently, identifying the necessary corrections could demand extensive efforts. However, using the tool significantly streamlined the upgrade process, reducing the time from several weeks to just two days and markedly enhancing the quality of the upgrade.
 
 **Downloads:**
 - [Impact Analysis for BO 4.3 SP2+ (impactanalysis-v0.1-20240311.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
