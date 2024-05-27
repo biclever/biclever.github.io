@@ -23,9 +23,7 @@ To address these issues, manual verification of all reports is required to ident
 
 ## Versions
 
-Note: Until version 1.0, the database structure may undergo significant changes.
-
-- **v0.2** Corrected batch file so it automatically detects BO folder.
+- **v0.2** Corrected the batch file to automatically detect the BO installation folder and use BO standard java.
 
 - **v0.1** Inital version.
 
