@@ -12,8 +12,8 @@ The tool has the following features:
 * List of documents: Exports the list of documents.
 * List of data providers: Exports the list of documents and their universes. Unlike CMC’s “Check relationships,” this feature opens documents and checks actual universes, providing more accurate results and identifying broken dependencies (e.g., missing universes).
 * Variables: Lists variables in the documents and calculates the “Evaluation Order” for variables to identify dependencies.
-* Purge documents: Cleans up prompt values before promotion to test/prod environments.
-* Force query regeneration: Regenerates all queries in selected documents, fixing issues when new universes are imported. Custom queries are not regenerated.
+* Purge documents: Cleans up prompt values e.g. before promotion to prod environments.
+* Force query regeneration: Regenerates all queries in selected documents. Custom queries are not regenerated.
 * Change unv to unx: Remaps documents to unx; see the help section for suggested use.
 * CMS Query: Runs CMS queries without needing server access or client tools, unlike the CMS Query Builder.
 
