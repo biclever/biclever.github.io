@@ -21,8 +21,16 @@ The field type change can potentially affect reports in several ways, including:
 
 To address these issues, manual verification of all reports is required to identify those utilizing the affected fields. This process involves scrutinizing every report section to locate where the impacted objects are used. Despite the vast number of reports, only a few were actually affected by this change and needed correction. Consequently, identifying the necessary corrections could demand extensive efforts. However, using the tool significantly streamlined the upgrade process, reducing the time from several weeks to just two days and markedly enhancing the quality of the upgrade.
 
+## Versions
+
+Note: Until version 1.0, the database structure may undergo significant changes.
+
+- **v0.2** Corrected batch file so it automatically detects BO folder.
+
+- **v0.1** Inital version.
+
 **Downloads:**
-- [Impact Analysis for BO 4.3 SP2+ (impactanalysis-v0.1-20240311.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
+- [Impact Analysis for BO 4.3 SP2+ (impactanalysis-v0.2-20240527.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
   
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
