@@ -20,7 +20,7 @@ UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (
 - [support@biclever.com](mailto:support@biclever.com)
 
 **Useful Information:**
-- [Error when running UnvDoc on BO 4.1 SP12, 4.2 SP6 (The RPC server is unavailable)](/pages/error-when-running-unvdoc-on-bo-4-1-sp12-4-2-sp6/)
+- [Error when running UnvDoc on BO 4.1 SP12, 4.2 SP6 (The RPC server is unavailable)](/pages/error-when-running-unvdoc/)
 
 **Screenshots:**
 ![unvdoc-1](/images/pages/unvdoc-1.png)
