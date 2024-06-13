@@ -21,6 +21,12 @@ The tool has the following features:
 
 Limited Availability. Contact [dmytro@biclever.com](mailto:dmytro@biclever.com) for a trial license.
 
+## Versions
+
+- **v0.2** 
+
+- **v0.1** Inital version. Found issues: this version does not close sessions even after logging off (likely due to an API error, possibly affecting only BO 4.3). This may cause the Webi processing server to crash after processing of 200 reports and require a restart. A corrected version will be released soon. 
+  
 **Downloads:**
 - [Webi Master (webimaster-v0.1-20240525.zip)](https://drive.google.com/uc?export=download&id=1rzsFWpFD4FTqr6RgijDf11E4VqmN_aQI)
   
