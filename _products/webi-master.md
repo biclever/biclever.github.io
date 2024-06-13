@@ -8,7 +8,7 @@ weight: 5
 
 The tool has the following features:
 
-* Connects to BO via a RESTful API, eliminating the need for server or client tools.
+* Connects to BO via a RESTful API, eliminating the need for BO client tools to be installed.
 * List of documents: Exports the list of documents.
 * List of data providers: Exports the list of documents and their universes. Unlike CMC’s “Check relationships,” this feature opens documents and checks actual universes, providing more accurate results and identifying broken dependencies (e.g., missing universes).
 * Variables: Lists variables in the documents and calculates the “Evaluation Order” for variables to identify dependencies.
