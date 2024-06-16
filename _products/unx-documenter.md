@@ -16,7 +16,7 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - **User-Friendly GUI:** To accommodate users of all skill levels, UnxDoc features an intuitive graphical user interface (GUI). This interface simplifies the process of setting up and executing metadata extraction.
 
-- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)).
+- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)). This allows the tool run for your specific version of SAP BusinessObjects. 
 
 **EULA:**
 - [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
@@ -29,14 +29,12 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 - [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
 
-**UnxDoc Premium - $300 per year:** 
+**UnxDoc Premium - $300 per year:** [**Buy on Stripe**](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
 
 Unlock advanced features with our Premium plan, including:
 - Command line interface for seamless automation.
 - Export to CSV for working with complex universes.
 - Compare and find differences between universes across various environments.
-
-[**Buy on Stripe**](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
