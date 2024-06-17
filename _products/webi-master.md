@@ -21,7 +21,11 @@ The tool has the following features:
 
 **Downloads:**
 - [Webi Master (webimaster-v0.2-20240616.zip)](https://drive.google.com/uc?export=download&id=1jKXZ87BrIG3zl4TyK9v4jxUMUw5UpJmv)
-  
+
+![Unlock Premium Features](https://buy.stripe.com/eVacP68wIdFSf84145)
+
+After purchase, you will receive a 1-year license key within 24 hours.
+
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
