@@ -16,23 +16,25 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - **User-Friendly GUI:** To accommodate users of all skill levels, UnxDoc features an intuitive graphical user interface (GUI). This interface simplifies the process of setting up and executing metadata extraction.
 
-- **Command Line Interface for Automation:** For advanced users and those looking to integrate UnxDoc into their automated workflows, the tool also offers a command line interface (CLI) for the automation of metadata extraction processes. This is a paid feature. Contact [support@biclever.com](mailto:support@biclever.com) for a trial license. 
-
-- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects 4.3 SP2+ Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)).
+- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)). This allows the tool run for your specific version of SAP BusinessObjects. 
 
 **EULA:**
 - [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
 
 **Downloads:**
-- [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-20240308.zip)](https://drive.google.com/uc?export=download&id=1343J5arRkNuKowbcx8eRqIOUY08ylt6K)
+- [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-2.1-20240615.zip)](https://drive.google.com/uc?export=download&id=1cNQ-fO9RzRnp0dyPC4hI8D0Go6Qw3oUO)
 - [Unx Documenter for BO 4.2, BO 4.1 SP6+ (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
 - [Unx Documenter for BO 4.1 SP3-SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
 - [Unx Documenter for BO 4.1 SP1-SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
 - [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
 
-**UnxDoc Command Line Interface 1 Year License - $300:** 
-- [Buy on Stripe](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
+**UnxDoc Premium - $300 per year:** [**Buy on Stripe**](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
+
+Unlock advanced features with our Premium plan, including:
+- Command line interface for seamless automation.
+- Export to CSV for working with complex universes.
+- Compare and find differences between universes across various environments.
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
