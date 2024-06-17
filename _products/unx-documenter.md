@@ -1,5 +1,5 @@
 ---
-title: "Unx Documenter (BO 4.3 SP2+)"
+title: "Unx Documenter"
 description: The tool facilitates the extraction of UNX universe metadata into an Excel spreadsheet and enables easy identification of differences between universes for streamlined analysis and documentation.
 date: 2024-03-08T08:23:00+10:00
 published: true
@@ -35,6 +35,8 @@ Unlock advanced features with our Premium plan, including:
 - Command line interface for seamless automation.
 - Export to CSV for working with complex universes.
 - Compare and find differences between universes across various environments.
+
+You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing unxdoc.bat.
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
