@@ -22,7 +22,7 @@ The tool has the following features:
 **Downloads:**
 - [Webi Master (webimaster-v0.2-20240616.zip)](https://drive.google.com/uc?export=download&id=1jKXZ87BrIG3zl4TyK9v4jxUMUw5UpJmv)
 
-**Webi Master Premium - $300 per year:** [**Buy on Stripe**](https://buy.stripe.com/eVacP68wIdFSf84145)
+**Webi Master Premium - $300 per year:** [**Buy**](https://buy.stripe.com/eVacP68wIdFSf84145)
 
 Unlock advanced features and support further development with our Premium plan.
 
