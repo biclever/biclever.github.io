@@ -19,9 +19,13 @@ Security Exporter is a command-line program. The following options are available
 
 You can provide parameters either in the config.ini file or as command-line arguments. For instance, the server and username can be specified in the config file and the password can be provided as an argument. 
 
+```
+securityexporter.bat -password=******
+```
+
 ## Queries
 
-You can configure the scope of extraction in the queries file (default: queries.txt)
+You can configure the scope of extraction in the queries file.
 
 Security is usually configured on public folders, and this is typically the main focus of analysis. Therefore the default query is:
 
@@ -43,8 +47,11 @@ You can change or add more queries. Each query should be on a separate line. Emp
 - Effective Roles
 - Effective Rights
 
+- [Example (placeholder)](https://google.com)
+
 **Downloads:**
-- TO-DO
+- [ZIP (placeholder)](https://google.com)
+
   
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
