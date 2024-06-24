@@ -13,7 +13,6 @@ Security Exporter is a command-line program. The following options are available
 - **-server**=localhost: BO server
 - **-username**=Administrator: BO username (Enterprise)
 - **-password**=: BO user password
-- **-queries**=queries.txt: File with queries (see below).
 - **-output**=output.xlsx: Output Excel file
 - **-details**=N: By default, some details such as IDs are omitted.
 
@@ -22,6 +21,23 @@ You can provide parameters either in the config.ini file or as command-line argu
 ```
 securityexporter.bat -password=******
 ```
+
+## Output
+
+- [Example](https://google.com)
+
+- Explicit Principals
+- Explicit Access Levels
+- Explicit Rights
+- Effective Principals 
+- Effective Access Levels
+- Effective Rights
+- Access Levels Setup
+
+![Assigned Access Levels](/images/pages/security-assigned-access-levels.png)
+![Assigned Rights](/images/pages/security-assigned-rights.png)
+![Assigned Principals](/images/pages/security-principals.png)
+![Access Levels Setup](/images/pages/security-access-levels.png)
 
 ## Queries
 
@@ -37,17 +53,6 @@ This query extracts all CMS objects of type 'Folder' that are subfolders of the 
 
 You can change or add more queries. Each query should be on a separate line. Empty lines will be ignored. Comments start with `#`.
 
-## Output
-
-- Access Levels
-- Explicit Principals
-- Explicit Roles
-- Explicit Rights
-- Effective Principals
-- Effective Roles
-- Effective Rights
-
-- [Example (placeholder)](https://google.com)
 
 **Downloads:**
 - [ZIP (placeholder)](https://google.com)
