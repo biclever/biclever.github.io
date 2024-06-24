@@ -34,9 +34,16 @@ securityexporter.bat -password=******
 - Effective Rights
 - Access Levels Setup
 
+### Assigned Access Levels
 ![Assigned Access Levels](/images/pages/security-assigned-access-levels.png)
+
+### Assigned Rights
 ![Assigned Rights](/images/pages/security-assigned-rights.png)
+
+### Assigned Principals
 ![Assigned Principals](/images/pages/security-principals.png)
+
+### Access Levels Setup
 ![Access Levels Setup](/images/pages/security-access-levels.png)
 
 ## Queries
