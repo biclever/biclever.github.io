@@ -24,7 +24,7 @@ securityexporter.bat -password=******
 
 ## Output
 
-- [Example](https://google.com)
+[Example](https://drive.google.com/uc?export=download&id=1knk5C85e9_-hkUeX-CI5YbqJsgUKNtnc)
 
 - Explicit Principals
 - Explicit Access Levels
