@@ -10,7 +10,7 @@ Checking access rights setup in SAP BusinessObjects can be challenging. You need
 
 Security Exporter is a command-line program. The following options are available:
 
-- **-server**=localhost: BO server
+- **-server**=localhost:6400: BO server
 - **-username**=Administrator: BO username (Enterprise)
 - **-password**=: BO user password
 - **-output**=output.xlsx: Output Excel file
@@ -66,7 +66,9 @@ You can change or add more queries. Each query should be on a separate line. Emp
 
 ## Downloads
 
-[securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
+The tool should work with any version of SAP BusinessObjects 4.x, as it uses local BO SDK libraries installed on the machine. It has been tested on BO 4.2 SP8 and BO 4.3 SP3.
+
+- [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
 
 [**Buy SecurityExporter 1-Year license - $300**](https://buy.stripe.com/14k5mE3co6dq0da8wy)
 
@@ -80,6 +82,7 @@ Without the license key, the tool will work in demo mode. In this mode, the tool
 SELECT * FROM CI_INFOOBJECTS WHERE SI_ID = <id>
 ```
 
-**Support:**
+## Support
+
 - [support@biclever.com](mailto:support@biclever.com)
 
