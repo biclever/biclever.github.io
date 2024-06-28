@@ -6,7 +6,7 @@ published: true
 weight: 6
 ---
 
-Checking access rights setup can be challenging. You need to click on each item in the CMC to check the configuration. This process can lead to incorrect setups, a lack of security overview, and potential security issues. Security Exporter simplifies this by allowing you to easily extract the security configuration into an Excel format.
+Checking access rights setup in SAP BusinessObjects can be challenging. You need to click on each item in the CMC to check the configuration. This process can lead to incorrect setups, a lack of security overview, and potential security issues. Security Exporter simplifies this by allowing you to easily extract the security configuration into an Excel format.
 
 Security Exporter is a command-line program. The following options are available:
 
@@ -14,7 +14,7 @@ Security Exporter is a command-line program. The following options are available
 - **-username**=Administrator: BO username (Enterprise)
 - **-password**=: BO user password
 - **-output**=output.xlsx: Output Excel file
-- **-details**=N: By default, some details such as IDs are omitted.
+- **-includedetails**=N: By default, ids and other technical details are omitted
 
 You can provide parameters either in the config.ini file or as command-line arguments. For instance, the server and username can be specified in the config file and the password can be provided as an argument. 
 
@@ -22,10 +22,13 @@ You can provide parameters either in the config.ini file or as command-line argu
 securityexporter.bat -password=******
 ```
 
+If a parameter is provided both in the config.ini file and as a command-line argument, the command-line value will take precedence and the config.ini value will be ignored.
+
 ## Output
 
-[Example](https://drive.google.com/uc?export=download&id=1knk5C85e9_-hkUeX-CI5YbqJsgUKNtnc)
+[Download Example](https://drive.google.com/uc?export=download&id=1knk5C85e9_-hkUeX-CI5YbqJsgUKNtnc)
 
+The output is an Excel workbook with the following sheets:
 - Explicit Principals
 - Explicit Access Levels
 - Explicit Rights
@@ -62,9 +65,18 @@ You can change or add more queries. Each query should be on a separate line. Emp
 
 
 **Downloads:**
-- [ZIP (placeholder)](https://google.com)
-
+- [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
   
+Demo version exports one object. You can modify the query in the query file to test if the tool export what you need.
+
+```sql
+SELECT * FROM CI_INFOOBJECTS WHERE SI_ID = <id>
+```
+
+**Security Exporter - $300 per year:** [**Buy**](https://buy.stripe.com/14k5mE3co6dq0da8wy)
+
+You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing securityexporter.bat.
+
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
