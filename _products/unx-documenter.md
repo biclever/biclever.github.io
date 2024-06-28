@@ -29,7 +29,7 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 - [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
 
-**UnxDoc Premium - $300 per year:** [**Buy**](https://buy.stripe.com/4gw4iA00c6dq1he6oo)
+{% include button.html url="https://buy.stripe.com/4gw4iA00c6dq1he6oo" text="Buy UnxDoc Premium - $300 per year" %}
 
 Unlock advanced features with our Premium plan, including:
 - Command line interface for seamless automation.
