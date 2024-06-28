@@ -66,17 +66,19 @@ You can change or add more queries. Each query should be on a separate line. Emp
 
 ## Downloads
 
-- [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
-  
-The demo version exports one object. To test if the tool exports what you need in the format you need, you can modify `queries.txt` as follows, where `id` is the ID of a folder, for instance. You can see the ID in the folder properties in Launchpad or CMC.
+[securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
+
+[**Buy SecurityExporter 1-Year license - $300**](https://buy.stripe.com/14k5mE3co6dq0da8wy)
+
+You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing securityexporter.bat.
+
+**Demo version**
+
+Without the license key, the tool will work in demo mode. In this mode, the tool exports one object. To test if the tool exports what you need in the format you need, you can modify `queries.txt` as follows, where `id` is the ID of a folder, for instance. You can see the ID in the folder properties in Launchpad or CMC.
 
 ```sql
 SELECT * FROM CI_INFOOBJECTS WHERE SI_ID = <id>
 ```
-
-**Security Exporter - $300 per year:** [**Buy**](https://buy.stripe.com/14k5mE3co6dq0da8wy)
-
-You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing securityexporter.bat.
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
