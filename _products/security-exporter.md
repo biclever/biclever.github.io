@@ -64,10 +64,11 @@ This query extracts all CMS objects of type 'Folder' that are subfolders of the 
 You can change or add more queries. Each query should be on a separate line. Empty lines will be ignored. Comments start with `#`.
 
 
-**Downloads:**
+## Downloads
+
 - [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
   
-Demo version exports one object. You can modify the query in the query file to test if the tool export what you need.
+The demo version exports one object. To test if the tool exports what you need in the format you need, you can modify `queries.txt` as follows, where `id` is the ID of a folder, for instance. You can see the ID in the folder properties in Launchpad or CMC.
 
 ```sql
 SELECT * FROM CI_INFOOBJECTS WHERE SI_ID = <id>
