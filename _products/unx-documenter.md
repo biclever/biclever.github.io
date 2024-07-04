@@ -29,14 +29,6 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 - [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
 
-{% include button.html url="https://buy.stripe.com/4gw4iA00c6dq1he6oo" text="Buy UnxDoc Premium - $300 per year" %}
-
-Unlock advanced features with our Premium plan, including:
-- Command line interface for seamless automation.
-- Export to CSV for working with complex universes.
-- Compare and find differences between universes across various environments.
-
-You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing unxdoc.bat.
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)

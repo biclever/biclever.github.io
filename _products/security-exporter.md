@@ -70,9 +70,6 @@ The tool should work with any version of SAP BusinessObjects 4.x, as it uses loc
 
 - [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
 
-{% include button.html url="https://buy.stripe.com/14k5mE3co6dq0da8wy" text="Buy SecurityExporter 1-Year license - $300" %}
-
-You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing securityexporter.bat.
 
 **Demo version**
 

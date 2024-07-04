@@ -22,10 +22,6 @@ The tool has the following features:
 **Downloads:**
 - [Webi Master (webimaster-v0.2-20240616.zip)](https://drive.google.com/uc?export=download&id=1jKXZ87BrIG3zl4TyK9v4jxUMUw5UpJmv)
 
-{% include button.html url="https://buy.stripe.com/eVacP68wIdFSf84145" text="Buy Webi Master Premium - $300 per year" %}
-
-You will receive the license key within 24 hours after purchase. The license is personal and should not be shared. It is not bound to a specific machine, and activation does not require internet access. Please place the file in the folder containing webimaster.exe.
-
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
