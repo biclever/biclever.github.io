@@ -70,6 +70,7 @@ The tool should work with any version of SAP BusinessObjects 4.x, as it uses loc
 
 - [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
 
+For purchasing a full license, please contact us at [dmytro@biclever.com](mailto:dmytro@biclever.com)
 
 **Demo version**
 
