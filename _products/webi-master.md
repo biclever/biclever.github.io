@@ -36,6 +36,8 @@ weight: 5
 
 Interested in trying the full version? Just send us an email! [dmytro@biclever.com](mailto:dmytro@biclever.com)
 
+For purchasing a full license, please contact us at [dmytro@biclever.com](mailto:dmytro@biclever.com)
+
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
