@@ -20,7 +20,7 @@ weight: 5
 
 - **Force Query Regeneration** *(Premium feature 🌟)*: Regenerates all queries in selected documents (custom queries are not regenerated).
 
-- **Regression Testing**: Allows you to run regression tests to ensure that changes do not negatively impact existing functionalities.
+- **Regression Testing** *(Premium feature 🌟)*: Allows you to run regression tests to ensure that changes do not negatively impact existing functionalities.
 
 - **UNV to UNX Conversion** *(Premium feature 🌟)*: Remaps documents from UNV (Universe) format to UNX format.
 
