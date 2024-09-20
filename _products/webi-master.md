@@ -32,7 +32,7 @@ weight: 5
 ![Webi Master 0.1](/images/pages/webimaster-01.png)
 
 **Downloads:**
-- [Webi Master (webimaster-v0.5-20240916.zip)](https://drive.google.com/uc?export=download&id=1bMW2B3Zj7Otx7CJgBuun2_iG_cregInc)
+- [Webi Master (webimaster-v0.6-20240920.zip)](https://drive.google.com/uc?export=download&id=1bMW2B3Zj7Otx7CJgBuun2_iG_cregInc)
 
 Interested in trying the full version? Just send us an email! [dmytro@biclever.com](mailto:dmytro@biclever.com)
 
@@ -41,7 +41,7 @@ Interested in trying the full version? Just send us an email! [dmytro@biclever.c
 
 ## Versions
 
-**v0.6 dev (2024-06-16)** 
+**v0.6 (2024-06-20)** 
 - Corrected retrieving universe list
 
 **v0.5 (2024-06-16)**
