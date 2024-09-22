@@ -68,17 +68,9 @@ You can change or add more queries. Each query should be on a separate line. Emp
 
 The tool should work with any version of SAP BusinessObjects 4.x, as it uses local BO SDK libraries installed on the machine. It has been tested on BO 4.2 SP8 and BO 4.3 SP3.
 
-- [securityexporter-v1.0-20240628.zip](https://drive.google.com/uc?export=download&id=18LSo7jIOgPLmPYLZLY5koyrBM5CG1VkE)
+The software is still in development.
 
-For purchasing a full license, please contact us at [dmytro@biclever.com](mailto:dmytro@biclever.com)
-
-**Demo version**
-
-Without the license key, the tool will work in demo mode. In this mode, the tool exports one object. To test if the tool exports what you need in the format you need, you can modify `queries.txt` as follows, where `id` is the ID of a folder, for instance. You can see the ID in the folder properties in Launchpad or CMC.
-
-```sql
-SELECT * FROM CI_INFOOBJECTS WHERE SI_ID = <id>
-```
+Interested in trying the full version? Just send us an email! [dmytro@biclever.com](mailto:dmytro@biclever.com)
 
 ## Support
 

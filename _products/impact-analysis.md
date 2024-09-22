@@ -28,9 +28,10 @@ To address these issues, manual verification of all reports is required to ident
 - **v0.1** Inital version.
 
 **Downloads:**
-- [Impact Analysis for BO 4.3 SP2+ v0.2 beta (impactanalysis-v0.2-20240527.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
-  
-The software is currently in development. We would be happy if you want to try the current version. We will announce when the finalized version is available.
+
+The software is still in development.
+
+Interested in trying the full version? Just send us an email! [dmytro@biclever.com](mailto:dmytro@biclever.com)
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
