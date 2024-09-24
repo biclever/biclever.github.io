@@ -21,7 +21,11 @@ The field type change can potentially affect reports in several ways, including:
 
 To address these issues, manual verification of all reports is required to identify those utilizing the affected fields. This process involves scrutinizing every report section to locate where the impacted objects are used. Despite the vast number of reports, only a few were actually affected by this change and needed correction. Consequently, identifying the necessary corrections could demand extensive efforts. However, using the tool significantly streamlined the upgrade process, reducing the time from several weeks to just two days and markedly enhancing the quality of the upgrade.
 
+- [User Guide](/pages/impact-analysis-for-boe/)
+
 ## Versions
+
+- **v0.3** Data model adjustments.
 
 - **v0.2** Corrected the batch file to automatically detect the BO installation folder and use BO standard java.
 
