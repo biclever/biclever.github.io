@@ -29,7 +29,7 @@ weight: 5
 - **CMS Query Execution**: Runs Central Management Server (CMS) queries without requiring server client tools, unlike the CMS Query Builder.
 
 
-![Webi Master 0.1](/images/pages/webimaster-01.png)
+![Webi Master 0.7](/images/pages/webimaster-01.png)
 
 **Downloads:**
 - [Webi Master (webimaster-v0.7-20240922.zip)](https://drive.google.com/uc?export=download&id=11_Znvo6NKx12eKKMjHZCjM6uwnTm5k9t)
