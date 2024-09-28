@@ -35,8 +35,6 @@ To address these issues, manual verification of all reports is required to ident
 
 - [Impact Analysis (impactanalysis-v0.3-20240924.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
 
-Interested in trying the full version? Just send us an email! [dmytro@biclever.com](mailto:dmytro@biclever.com)
-
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
