@@ -63,14 +63,11 @@ This query extracts all CMS objects of type 'Folder' that are subfolders of the 
 
 You can change or add more queries. Each query should be on a separate line. Empty lines will be ignored. Comments start with `#`.
 
-
 ## Downloads
 
 The tool should work with any version of SAP BusinessObjects 4.x, as it uses local BO SDK libraries installed on the machine. It has been tested on BO 4.2 SP8 and BO 4.3 SP3.
 
-The software is still in development.
-
-Interested in trying the full version? Just send us an email! [dmytro@biclever.com](mailto:dmytro@biclever.com)
+- [Security Exporter (securityexporter-v1.1-20240829.zip)](https://drive.google.com/uc?export=download&id=1DvRmVB0HFrBs1FgpbC4m_Dl5cDUcRJ4M)
 
 ## Support
 
