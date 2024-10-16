@@ -31,8 +31,10 @@ weight: 5
 
 ![Webi Master 0.7](/images/pages/webimaster-01.png)
 
-**Downloads:**
+**Stable**
 - [Webi Master (webimaster-v0.7-20240922.zip)](https://drive.google.com/uc?export=download&id=11_Znvo6NKx12eKKMjHZCjM6uwnTm5k9t)
+ 
+**Development build**
 - [Webi Master (webimaster-v1.0-20241016.zip)](https://drive.google.com/uc?export=download&id=1dL0DfSwnK4GESce056L-CQAQfl3OJIW1)
 
 The software is still in development.
@@ -44,8 +46,8 @@ Interested in trying the full version? Just send us an email! [dmytro@biclever.c
 
 ## Versions
 
-**v1.0 (2024-10-16)** 
-- Major internal refactoring 
+**v1.0 (2024-10-16)**
+- Major internal refactoring
 
 **v0.7 (2024-09-22)** 
 - Bug fixes 
