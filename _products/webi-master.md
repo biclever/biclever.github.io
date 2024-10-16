@@ -33,6 +33,7 @@ weight: 5
 
 **Downloads:**
 - [Webi Master (webimaster-v0.7-20240922.zip)](https://drive.google.com/uc?export=download&id=11_Znvo6NKx12eKKMjHZCjM6uwnTm5k9t)
+- [Webi Master (webimaster-v1.0-20241016.zip)](https://drive.google.com/uc?export=download&id=1dL0DfSwnK4GESce056L-CQAQfl3OJIW1)
 
 The software is still in development.
 
@@ -43,13 +44,16 @@ Interested in trying the full version? Just send us an email! [dmytro@biclever.c
 
 ## Versions
 
-**v0.6 (2024-06-20)** 
-- Bug fixes
+**v1.0 (2024-10-16)** 
+- Major internal refactoring 
 
-**v0.6 (2024-06-20)** 
+**v0.7 (2024-09-22)** 
+- Bug fixes 
+
+**v0.6 (2024-09-20)** 
 - Corrected retrieving universe list
 
-**v0.5 (2024-06-16)**
+**v0.5 (2024-09-16)**
 - Added regression testing allowing to automatically run reports
 
 **v0.4 (2024-09-11)**
