@@ -31,10 +31,7 @@ weight: 5
 
 ![Webi Master 0.7](/images/pages/webimaster-01.png)
 
-**Stable**
-- [Webi Master (webimaster-v0.7-20240922.zip)](https://drive.google.com/uc?export=download&id=11_Znvo6NKx12eKKMjHZCjM6uwnTm5k9t)
- 
-**Development build**
+**Downloads**
 - [Webi Master (webimaster-v1.0-20241016.zip)](https://drive.google.com/uc?export=download&id=1dL0DfSwnK4GESce056L-CQAQfl3OJIW1)
 
 The software is still in development.
