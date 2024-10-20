@@ -8,10 +8,6 @@ weight: 5
 
 **The tool offers the following features:**
 
-- **RESTful API Connection**: Connects to BusinessObjects (BO) via a RESTful API, eliminating the need to install BO client tools.
-  
-- **Document List Export**: Exports a list of documents with additional details.
-
 - **Data Provider List Export**: Exports a list of documents along with their universes. Unlike the Central Management Console (CMC)’s “Check Relationships” feature, this tool opens documents and checks actual universes, providing more accurate results and identifying broken dependencies (e.g., missing universes).
 
 - **Document Purging** *(Premium feature 🌟)*: Cleans up prompt values, which is useful before promoting documents to production environments.
