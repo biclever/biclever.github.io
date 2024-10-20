@@ -30,8 +30,8 @@ weight: 5
 You will receive the license key within 24 hours. The tool does not validate the license key externally and does not require internet access. Please ensure that the number of users does not exceed the number of purchased licenses.
 
 **Download**
-- [Webi Master (webimaster-v1.1-20241020.zip)](https://drive.google.com/uc?export=download&id=1bf8NcL9VDbKjqQ9nFu-vlbWu2N2Rspz2) Windows 64-bit
- 
+- [Webi Master (webimaster-v1.1-20241020.zip)](https://drive.google.com/uc?export=download&id=1bf8NcL9VDbKjqQ9nFu-vlbWu2N2Rspz2) Windows 64-bit <small>sha256sum: CC927B2D1DAE7BE17857553A4D4AFF9AB9C82E1DEB6B83406D3785785F354172</small>
+
 Some antivirus programs may incorrectly flag the software. Unfortunately, applications generated with PyInstaller often trigger [false positives](https://www.google.com/search?q=pyinstaller+false+positive). We regularly submit false positive reports to major antivirus vendors. Please let us know if you encounter this issue with your antivirus vendor.
 
 **Support:**
