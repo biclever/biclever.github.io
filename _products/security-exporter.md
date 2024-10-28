@@ -6,7 +6,9 @@ published: true
 weight: 6
 ---
 
-Checking access rights setup in SAP BusinessObjects can be challenging. You need to click on each item in the CMC to check the configuration. This process can lead to incorrect setups, a lack of security overview, and potential security issues. Security Exporter simplifies this by allowing you to easily extract the security configuration into an Excel format.
+Checking access rights setup in SAP BusinessObjects can be challenging. You need to click on each item in the CMC to check the configuration. 
+This process can lead to incorrect setups, a lack of security overview, and potential security issues. 
+Security Exporter simplifies this by allowing you to easily extract the security configuration into an Excel format.
 
 Security Exporter is a command-line program. The following options are available:
 
@@ -41,7 +43,19 @@ The output is an Excel workbook with the following sheets:
 - Effective Rights
 - Access Levels Setup
 
-If the output format is txt, the result will be saved in text files with corresponding names. 
+If the output format is `txt`, results will be saved in text files with corresponding names.
+
+To specify particular types of information, configure the following options in the config file:
+
+- **-includeExplicitPrincipals**=Y
+- **-includeExplicitAccessLevels**=Y
+- **-includeExplicitRights**=Y
+- **-includeEffectivePrincipals**=Y
+- **-includeEffectiveAccessLevels**=Y
+- **-includeEffectiveRights**=Y
+- **-includeAccessLevelsSetup**=Y
+
+Since there are many different rights, you can use the **-rightFilter** option to filter specific rights. If the option is empty, it will be ignored. Otherwise, only the rights listed (separated by `;`) will be included in the output.
 
 ### Assigned Access Levels
 ![Assigned Access Levels](/images/pages/security-assigned-access-levels.png)
@@ -68,6 +82,39 @@ SELECT TOP 100000 * FROM CI_INFOOBJECTS WHERE SI_ANCESTOR = 23 AND SI_KIND='Fold
 This query extracts all CMS objects of type 'Folder' that are subfolders of the root Public Folder with ID 23. By default, BO CMS queries return a maximum of 1000 objects. Therefore, we need to modify the query with the TOP option in case there are more than 1000 folders.
 
 You can change or add more queries. Each query should be on a separate line. Empty lines will be ignored. Comments start with `#`.
+
+## Example: Get List of Documents a User Can View
+
+To get a list of documents that a user has view access to, we focus on the "View objects" right.
+
+The queries file should be configured to include all Webi documents.
+
+**queries.txt**
+```sql
+SELECT TOP 100000 * FROM CI_INFOOBJECTS WHERE SI_ANCESTOR = 23 AND SI_KIND='Webi'
+```
+
+In this case, only Effective Rights are needed, so you can disable output of other information. Use the `-rightFilter` option to specify the "View objects" right:
+
+**config.ini**
+```
+-server=localhost
+-username=Administrator
+-password=********
+-outputType=xlsx
+-output=output.xlsx
+
+-includeDetails=N
+-includeExplicitPrincipals=N
+-includeExplicitAccessLevels=N
+-includeExplicitRights=N
+-includeEffectivePrincipals=N
+-includeEffectiveAccessLevels=N
+-includeEffectiveRights=Y
+-includeAccessLevelsSetup=N
+-rightFilter=View objects
+```
+
 
 ## Downloads
 
