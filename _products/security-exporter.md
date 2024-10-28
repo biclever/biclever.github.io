@@ -83,26 +83,28 @@ This query extracts all CMS objects of type 'Folder' that are subfolders of the 
 
 You can change or add more queries. Each query should be on a separate line. Empty lines will be ignored. Comments start with `#`.
 
-## Example: Get List of Documents a User Can View
+## Example: Get a List of Documents a User Can View
 
-To get a list of documents that a user has view access to, we focus on the "View objects" right.
+In this example, we’ll configure Security Exporter to generate a list of all Webi documents along with the users who have view access to each document. By focusing on the "View objects" right, we can limit the output to relevant access rights information, making the extraction more efficient and easier to analyze. The resulting data will be saved as text files to handle large volumes efficiently.
 
-The queries file should be configured to include all Webi documents.
-
-**queries.txt**
+We’ll use a query that scans all Webi documents. Configure queries.txt as follows:
 ```sql
 SELECT TOP 100000 * FROM CI_INFOOBJECTS WHERE SI_ANCESTOR = 23 AND SI_KIND='Webi'
 ```
 
-In this case, only Effective Rights are needed, so you can disable output of other information. Use the `-rightFilter` option to specify the "View objects" right:
+For each document, we need a list of all users who can view it. This information is available in Effective Rights, so we can disable other outputs using the `-include` options.
+
+Since we are only interested in whether a user has view access, we’ll use the `-rightFilter` option to specify that we only need the "View objects" right.
+
+Because the output may be large, we’ll export it to a text file using the `-outputType` and `-outputFolder` options.
 
 **config.ini**
 ```
 -server=localhost
 -username=Administrator
 -password=********
--outputType=xlsx
--output=output.xlsx
+-outputType=txt
+-outputFolder=.
 
 -includeDetails=N
 -includeExplicitPrincipals=N
@@ -114,7 +116,6 @@ In this case, only Effective Rights are needed, so you can disable output of oth
 -includeAccessLevelsSetup=N
 -rightFilter=View objects
 ```
-
 
 ## Downloads
 
