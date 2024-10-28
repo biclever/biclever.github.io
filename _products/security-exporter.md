@@ -13,8 +13,12 @@ Security Exporter is a command-line program. The following options are available
 - **-server**=localhost:6400: BO server
 - **-username**=Administrator: BO username (Enterprise)
 - **-password**=: BO user password
-- **-output**=output.xlsx: Output Excel file
 - **-includedetails**=N: By default, ids and other technical details are omitted
+- **-output**=output.xlsx: Output Excel file
+
+If the amount of data is too large for an Excel file, you can export the result to tab-separated text files using the following options (instead of -output=)
+- **-outputType**=txt: Format of the output (txt or xlsx)
+- **-outputFolder**=.: Output folder where text files will be created
 
 You can provide parameters either in the config.ini file or as command-line arguments. For instance, the server and username can be specified in the config file and the password can be provided as an argument. 
 
@@ -36,6 +40,8 @@ The output is an Excel workbook with the following sheets:
 - Effective Access Levels
 - Effective Rights
 - Access Levels Setup
+
+If the output format is txt, the result will be saved in text files with corresponding names. 
 
 ### Assigned Access Levels
 ![Assigned Access Levels](/images/pages/security-assigned-access-levels.png)
@@ -67,7 +73,7 @@ You can change or add more queries. Each query should be on a separate line. Emp
 
 The tool should work with any version of SAP BusinessObjects 4.x, as it uses local BO SDK libraries installed on the machine. It has been tested on BO 4.2 SP8 and BO 4.3 SP3.
 
-- [Security Exporter (securityexporter-v1.1-20240829.zip)](https://drive.google.com/uc?export=download&id=1DvRmVB0HFrBs1FgpbC4m_Dl5cDUcRJ4M)
+- [Security Exporter (securityexporter-v1.2-20241027.zip)](https://drive.google.com/uc?export=download&id=1-DJ56x29gydS0NNmpABgSHOqwrT9cebJ)
 
 ## Support
 
