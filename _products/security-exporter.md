@@ -98,7 +98,7 @@ Since we are only interested in whether a user has view access, we’ll use the 
 
 Because the output may be large, we’ll export it to a text file using the `-outputType` and `-outputFolder` options.
 
-**config.ini**
+Adjust config.ini as follows: 
 ```
 -server=localhost
 -username=Administrator
