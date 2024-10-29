@@ -83,40 +83,6 @@ This query extracts all CMS objects of type 'Folder' that are subfolders of the 
 
 You can change or add more queries. Each query should be on a separate line. Empty lines will be ignored. Comments start with `#`.
 
-## Example: Get a List of Documents a User Can View
-
-In this example, we’ll configure Security Exporter to generate a list of all Webi documents along with the users who have view access to each document. By focusing on the "View objects" right, we can limit the output to relevant access rights information, making the extraction more efficient and easier to analyze. The resulting data will be saved as text files to handle large volumes efficiently.
-
-We’ll use a query that scans all Webi documents. Configure queries.txt as follows:
-```sql
-SELECT TOP 100000 * FROM CI_INFOOBJECTS WHERE SI_ANCESTOR = 23 AND SI_KIND='Webi'
-```
-
-For each document, we need a list of all users who can view it. This information is available in Effective Rights, so we can disable other outputs using the `-include` options.
-
-Since we are only interested in whether a user has view access, we’ll use the `-rightFilter` option to specify that we only need the "View objects" right.
-
-Because the output may be large, we’ll export it to a text file using the `-outputType` and `-outputFolder` options.
-
-Adjust config.ini as follows: 
-```
--server=localhost
--username=Administrator
--password=********
--outputType=txt
--outputFolder=.
-
--includeDetails=N
--includeExplicitPrincipals=N
--includeExplicitAccessLevels=N
--includeExplicitRights=N
--includeEffectivePrincipals=N
--includeEffectiveAccessLevels=N
--includeEffectiveRights=Y
--includeAccessLevelsSetup=N
--rightFilter=View objects
-```
-
 ## Downloads
 
 The tool should work with any version of SAP BusinessObjects 4.x, as it uses local BO SDK libraries installed on the machine. It has been tested on BO 4.2 SP8 and BO 4.3 SP3.
