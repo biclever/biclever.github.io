@@ -12,18 +12,18 @@ weight: 5
 Unlike the CMC’s “Check Relationships” feature, this tool opens documents and checks actual universes, 
 providing more accurate results and identifying broken dependencies (e.g., missing universes).
 
-- **UNV to UNX Conversion** *(Premium feature* 🌟*)*: Automatic remapping of documents from UNV universes to UNX universes.
+- **UNV to UNX Conversion** (*Premium feature* 🌟): Automatic remapping of documents from UNV universes to UNX universes.
 UNV universes are depricated. The feature allows you quickly migrate your reports to UNX universes. (Check instructions in 
 the tool for the suggested use)
 
-- **Data Source Remapping** *(Premium feature* 🌟*)*: Remaps documents documents using a specified mapping.
+- **Data Source Remapping** (*Premium feature* 🌟): Remaps documents documents using a specified mapping.
 
-- **Regression Testing** *(Premium feature* 🌟*)*: Allows you to run export report prompts, and then run reports with specified values. 
+- **Regression Testing** (*Premium feature* 🌟): Allows you to run export report prompts, and then run reports with specified values. 
 This feature is useful to ensure that changes do not negatively impact existing functionalities.
 
-- **Document Purging** *(Premium feature* 🌟*)*: Cleans up saved prompt values. 
+- **Document Purging** (*Premium feature* 🌟): Cleans up saved prompt values. 
 
-- **Force Query Regeneration** *(Premium feature* 🌟*)*: Regenerates all queries in selected documents (custom queries are not regenerated).
+- **Force Query Regeneration** (*Premium feature* 🌟): Regenerates all queries in selected documents (custom queries are not regenerated).
 
 - **CMS Query Execution**: Runs CMS queries without requiring server client tools.
 
