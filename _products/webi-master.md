@@ -36,15 +36,19 @@ Do you need to automate another workflow? We’d love to hear from you at [suppo
 You will receive the license key within 24 hours. The tool does not validate the license key externally and does not require internet access. 
 You are responsible for ensuring that the number of users does not exceed the number of purchased licenses.
 
+<!--
 [Request Free Trial License](https://docs.google.com/forms/d/1PG8PWjVjuY6w4Z1HbwZD9Sby7J6qbH7YFjsB25aoJB8)
+-->
 
 **Download**
 - [Webi Master (webimaster-v1.1-20241020.zip)](https://drive.google.com/uc?export=download&id=1bf8NcL9VDbKjqQ9nFu-vlbWu2N2Rspz2) Windows 64-bit
 - <small>SHA-256 hash: cc927b2d1dae7be17857553a4d4aff9ab9c82e1deb6b83406d3785785f354172</small>
 
+<!--
 Some antivirus programs may incorrectly flag the software. Unfortunately, applications generated with PyInstaller often trigger 
 [false positives](https://www.google.com/search?q=pyinstaller+false+positive). We regularly submit false positive reports to major antivirus vendors. 
 Please let us know if you encounter this issue with your antivirus vendor.
+-->
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
