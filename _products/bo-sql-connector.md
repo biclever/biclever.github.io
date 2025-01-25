@@ -12,18 +12,13 @@ The **BO SQL Connector** is your ultimate solution for seamless data retrieval v
 ## Why Choose the BO SQL Connector?
 
 - **Bypass Firewall Constraints**  
-  Many databases are protected by strict firewall rules, making direct access challenging.  
-  The BO SQL Connector eliminates the need for direct database connections, allowing you to retrieve data securely via the SAP BO Restful API.  
-  This ensures that sensitive data remains protected while still being accessible for your business needs.
+  Many databases are protected by strict firewall rules, making direct access challenging. The BO SQL Connector eliminates the need for direct database connections, allowing you to retrieve data securely via the SAP BO Restful API. This ensures that sensitive data remains protected while still being accessible for your business needs.
 
 - **Simplify Complex APIs**  
-  Application APIs can often be restrictive and challenging to work with, lacking the flexibility needed to retrieve data in the precise format required. The BO SQL Connector bridges this gap by enabling you to write SQL queries and access results directly through the BO Restful API.
-  This streamlined approach provides both convenience and power, allowing you to focus on leveraging your data rather than wrestling with the limitations of system application APIs.
+  Application APIs can often be restrictive and challenging to work with, lacking the flexibility needed to retrieve data in the precise format required. The BO SQL Connector bridges this gap by enabling you to write SQL queries and access results directly through the BO Restful API. This streamlined approach provides both convenience and power, allowing you to focus on leveraging your data rather than wrestling with the limitations of system application APIs.
 
 - **Leverage the Full Power of SAP BO**  
-  SAP BO Universes empower you to design queries with advanced capabilities like data transformations, aggregations, and custom filters.  
-  The BO SQL Connector allows you to tap into this power by utilizing Universes as a flexible query design layer.  
-  Transform your raw data into actionable insights within Universes and retrieve it in the desired format, ready for direct upload to your database or further processing.  
+  SAP BO Universes empower you to design queries with advanced capabilities like data transformations, aggregations, and custom filters. The BO SQL Connector allows you to tap into this power by utilizing Universes as a flexible query design layer. Transform your raw data into actionable insights within Universes and retrieve it in the desired format, ready for direct upload to your database or further processing.  
 
 ## How it works
 
