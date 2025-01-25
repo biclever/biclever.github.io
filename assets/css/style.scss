@@ -24,8 +24,8 @@ $font-family-heading: "Segoe UI", Helvetica, Arial, sans-serif, -apple-system;
 $header-background-color: $white-offset;
 $footer-background-color: $primary;
 $footer-text-color: $white;
+$disclaimer-background-color: darken($primary, 5%);
 $sub-footer-background-color: darken($primary, 10%);
-$disclaimer-background-color: darken($primary, 20%);
 $sub-footer-text-color: $white;
 
 // Bootstrap
