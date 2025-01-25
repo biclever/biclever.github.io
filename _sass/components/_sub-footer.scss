@@ -29,3 +29,22 @@
     }
   }
 }
+
+.disclaimer {
+  background: $disclaimer-background-color;
+  color: $sub-footer-text-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include media-breakpoint-up(md) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .disclaimer-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }  
+}
