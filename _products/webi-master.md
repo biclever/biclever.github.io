@@ -37,7 +37,6 @@ Do you need to automate another workflow? We’d love to hear from you at [suppo
 You will receive the license key within 24 hours. The tool does not validate the license key externally and does not require internet access. 
 You are responsible for ensuring that the number of users does not exceed the number of purchased licenses.
 
-<!--
 [Request Free Trial License](https://docs.google.com/forms/d/1PG8PWjVjuY6w4Z1HbwZD9Sby7J6qbH7YFjsB25aoJB8)
 -->
 
