@@ -12,14 +12,18 @@ The **SAP BO SQL Connector** is your ultimate solution for seamless data retriev
 ## Why Choose the SAP BO SQL Connector?
 
 - **Bypass Firewall Constraints**  
-  Access databases that are protected by firewalls without compromising security.
+  Many databases are protected by strict firewall rules, making direct access challenging.  
+  The SAP BO SQL Connector eliminates the need for direct database connections, allowing you to retrieve data securely via the SAP BO Restful API.  
+  This ensures that sensitive data remains protected while still being accessible for your business needs.
 
 - **Simplify Complex APIs**  
-  The connector streamlines the complexity of the SAP BO Restful API, making data retrieval intuitive and efficient.
+  Application APIs can often be restrictive and challenging to work with, lacking the flexibility needed to retrieve data in the precise format required. The SAP BO SQL Connector bridges this gap by enabling you to write SQL queries and access results directly through the BO Restful API.
+  This streamlined approach provides both convenience and power, allowing you to focus on leveraging your data rather than wrestling with the limitations of system application APIs.
 
 - **Leverage the Full Power of SAP BO**  
-  Design queries using SAP BO Universes, harnessing all the advanced capabilities of SAP BO.  
-  Retrieve data in your desired format with precision and ease.
+  SAP BO Universes empower you to design queries with advanced capabilities like data transformations, aggregations, and custom filters.  
+  The SAP BO SQL Connector allows you to tap into this power by utilizing Universes as a flexible query design layer.  
+  Transform your raw data into actionable insights within Universes and retrieve it in the desired format, ready for direct upload to your database or further processing.  
 
 ## Ready to Simplify Your Data Workflow?
 
