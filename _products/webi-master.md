@@ -12,18 +12,18 @@ weight: 5
 Unlike the CMC’s “Check Relationships” feature, this tool opens documents and checks actual universes, 
 providing more accurate results and identifying broken dependencies (e.g., missing universes).
 
-- **UNV to UNX Conversion** (*Premium feature* 🌟): Automatic remapping of documents from UNV universes to UNX universes.
+- **UNV to UNX Conversion**: Automatic remapping of documents from UNV universes to UNX universes.
 UNV universes are depricated. The feature allows you quickly migrate your reports to UNX universes. (Check instructions in 
 the tool for the suggested use)
 
-- **Data Source Remapping** (*Premium feature* 🌟): Remaps documents documents using a specified mapping.
+- **Data Source Remapping**: Remaps documents documents using a specified mapping.
 
-- **Regression Testing** (*Premium feature* 🌟): Allows you to run export report prompts, and then run reports with specified values. 
+- **Regression Testing**: Allows you to run export report prompts, and then run reports with specified values. 
 This feature is useful to ensure that changes do not negatively impact existing functionalities.
 
-- **Document Purging** (*Premium feature* 🌟): Cleans up saved prompt values. 
+- **Document Purging**: Cleans up saved prompt values. 
 
-- **Force Query Regeneration** (*Premium feature* 🌟): Regenerates all queries in selected documents (custom queries are not regenerated).
+- **Force Query Regeneration**: Regenerates all queries in selected documents (custom queries are not regenerated).
 
 - **CMS Query Execution**: Runs CMS queries without requiring server client tools.
 
@@ -31,12 +31,14 @@ Do you need to automate another workflow? We’d love to hear from you at [suppo
 
 ![Webi Master 0.7](/images/pages/webimaster-01.png)
 
+<!--
 {% include button.html url="https://buy.stripe.com/dR63eweV68ly2li147" text="Buy Webi Master Premium – 150 EUR/user/year" %}
 
 You will receive the license key within 24 hours. The tool does not validate the license key externally and does not require internet access. 
 You are responsible for ensuring that the number of users does not exceed the number of purchased licenses.
 
 [Request Free Trial License](https://docs.google.com/forms/d/1PG8PWjVjuY6w4Z1HbwZD9Sby7J6qbH7YFjsB25aoJB8)
+-->
 
 **Download**
 - [Webi Master (webimaster-v1.1-20241020.zip)](https://drive.google.com/uc?export=download&id=1bf8NcL9VDbKjqQ9nFu-vlbWu2N2Rspz2) Windows 64-bit
