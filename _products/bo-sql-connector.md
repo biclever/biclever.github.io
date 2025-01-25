@@ -25,6 +25,10 @@ The **SAP BO SQL Connector** is your ultimate solution for seamless data retriev
   The SAP BO SQL Connector allows you to tap into this power by utilizing Universes as a flexible query design layer.  
   Transform your raw data into actionable insights within Universes and retrieve it in the desired format, ready for direct upload to your database or further processing.  
 
+## How it works
+
+![bosqlconnector](/images/pages/bosqlconnector.svg)
+
 ## Ready to Simplify Your Data Workflow?
 
 [**Contact us**](https://biclever.com/contact/) to learn more about how the SAP BO SQL Connector can transform your data integration process.
