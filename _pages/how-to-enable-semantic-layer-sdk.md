@@ -4,19 +4,21 @@ date: 2019-03-07T12:00:00+00:00
 weight: 3
 ---
 
-To use Unx Documenter, the Semantic Layer Java SDK must be enabled. This ensures that the tool utilizes the libraries specific to your version of SAP Business Objects and is compatible with any service pack or fix pack.
+To utilize Unx Documenter, the **Semantic Layer (SL) Java SDK** must be enabled. This ensures that the tool integrates with the appropriate libraries corresponding to your SAP BusinessObjects version, ensuring compatibility with installed service packs and fix packs.
 
-Although SL SDK is installed on the server, it is unchecked by default during the installation of SAP BusinessObjects client tools and, therefore, often not installed. Here are the steps to enable it:
+While the SL SDK is included with the server installation, it is not selected by default during the installation of SAP BusinessObjects client tools and is therefore frequently omitted. To enable the SL SDK, perform the following steps:
 
-Open "Apps and Features". Locate the client tools and click "Uninstall". This action will not actually uninstall the client tools but will initiate the setup program instead. (Ensure that you have selected the full/base installer and not a patch):
+1. Open **"Apps and Features"** from the system settings.  
+2. Locate **SAP BusinessObjects Client Tools** in the application list.  
+3. Select **Uninstall**. This action does not remove the client tools but launches the installer in maintenance mode.
 
 ![Windows 10](/images/pages/windows10.png)
 
-In the installer, select the option "Modify":
+4. In the installer, choose the **Modify** option and click **Next**:  
 
 ![Modify](/images/pages/sl-sdk-enable-02.png)
 
-Click "Next" for language selection. Add Semantic Layer Java SDK and complete the installation with "Next":
+5. Proceed to the language selection screen, then add the Semantic Layer Java SDK feature. Complete the modification by following the remaining prompts and clicking Next.
 
 ![Add Semantic Layer Java SDK](/images/pages/sl-sdk-enable-04.png)
 
