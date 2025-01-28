@@ -8,17 +8,17 @@ To utilize Unx Documenter, the **Semantic Layer (SL) Java SDK** must be enabled.
 
 While the SL SDK is included with the server installation, it is not selected by default during the installation of SAP BusinessObjects client tools and is therefore frequently omitted. To enable the SL SDK, perform the following steps:
 
-1. Open **"Apps and Features"** from the system settings.  
-2. Locate **SAP BusinessObjects Client Tools** in the application list.  
-3. Select **Uninstall**. This action does not remove the client tools but launches the installer in maintenance mode.
+* Open **"Apps and Features"** from the system settings.  
+* Locate **SAP BusinessObjects Client Tools** in the application list.  
+* Select **Uninstall**. This action does not remove the client tools but launches the installer in maintenance mode.
 
 ![Windows 10](/images/pages/windows10.png)
 
-4. In the installer, choose the **Modify** option and click **Next**:  
+* In the installer, choose the **Modify** option and click **Next**:  
 
 ![Modify](/images/pages/sl-sdk-enable-02.png)
 
-5. Proceed to the language selection screen, then add the Semantic Layer Java SDK feature. Complete the modification by following the remaining prompts and clicking Next.
+* Proceed to the language selection screen, then add the Semantic Layer Java SDK feature. Complete the modification by following the remaining prompts and clicking Next.
 
 ![Add Semantic Layer Java SDK](/images/pages/sl-sdk-enable-04.png)
 
