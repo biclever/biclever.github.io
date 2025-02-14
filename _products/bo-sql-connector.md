@@ -7,7 +7,7 @@ weight: 6
 ---
 
 ## Description
-The **BO SQL Connector** is your ultimate solution for seamless data retrieval via the SAP BusinessObjects Restful API. With its robust capabilities, you can effortlessly upload the retrieved data to your database.
+The **BO SQL Connector** is your ultimate solution for seamless data retrieval via the SAP BusinessObjects® Restful API. With its robust capabilities, you can effortlessly upload the retrieved data to your database.
 
 ## Why Choose the Secure and Efficient BO SQL Connector?
 

@@ -6,7 +6,7 @@ published: true
 weight: 4
 ---
 
-Impact Analysis streamlines the extraction of metadata from universes and documents within SAP BusinessObjects, aiming primarily to assess how alterations in the database and universe could impact reports. It aids in resolving queries such as, "Which reports require testing if an object is modified?" Additionally, it serves a vital role in quality assurance, enabling the verification of variable definition consistency across reports. Furthermore, it facilitates the rapid identification of reports utilizing specific functionalities.
+Impact Analysis streamlines the extraction of metadata from universes and documents within SAP BusinessObjects®, aiming primarily to assess how alterations in the database and universe could impact reports. It aids in resolving queries such as, "Which reports require testing if an object is modified?" Additionally, it serves a vital role in quality assurance, enabling the verification of variable definition consistency across reports. Furthermore, it facilitates the rapid identification of reports utilizing specific functionalities.
 
 Impact Analysis is a command line tool designed to extract metadata and upload the results to a database, such as SQL Server or SQLite. Subsequent analysis can be conducted using any reporting tool, such as SAP BusinessObjects BI, or through direct queries to the database.
 

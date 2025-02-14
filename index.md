@@ -10,4 +10,4 @@ show_call_box: true
 
 # Biclever - Tools for Business Intelligence
 
-Improve quality, speed up development, simplify maintenance with our tools for SAP BusinessObjects!
+Improve quality, speed up development, simplify maintenance with our tools for SAP BusinessObjects®!

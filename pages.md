@@ -10,5 +10,4 @@ intro_image_hide_on_mobile: true
 
 # Knowledge base
 
-"People who think they know everything really annoy those of us who know we don't" Bjarne Stroustrup
 

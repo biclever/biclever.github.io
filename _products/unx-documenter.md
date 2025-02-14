@@ -8,7 +8,7 @@ weight: 1
 
 ## Comprehensive Metadata Extraction and Analysis
 
-The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing the extraction of metadata from UNX universes into Excel for better data management and documentation. It's valuable for universe administrators, data analysts, and IT professionals handling data reporting and management. UnxDoc streamlines creating documentation, analyzing universe designs for optimization and troubleshooting, and comparing universes to ensure consistency across different environments. This tool aids in maintaining version control and facilitating migration projects, making it a practical solution for managing SAP BusinessObjects universes.
+The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing the extraction of metadata from UNX universes into Excel for better data management and documentation. It's valuable for universe administrators, data analysts, and IT professionals handling data reporting and management. UnxDoc streamlines creating documentation, analyzing universe designs for optimization and troubleshooting, and comparing universes to ensure consistency across different environments. This tool aids in maintaining version control and facilitating migration projects, making it a practical solution for managing SAP BusinessObjects® universes.
 
 **Key Features:**
 
@@ -16,7 +16,7 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - **User-Friendly GUI:** To accommodate users of all skill levels, UnxDoc features an intuitive graphical user interface (GUI). This interface simplifies the process of setting up and executing metadata extraction.
 
-- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)). This allows the tool run for your specific version of SAP BusinessObjects. 
+- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)). This allows the tool run for your specific version of SAP BusinessObjects®. 
 
 **EULA:**
 - [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
