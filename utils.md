@@ -1,7 +1,7 @@
 ---
 title: Utilities
 description: Utils
-permalink: "/util/"
+permalink: "/utils/"
 ---
 
 [SQL Filter](https://biclever.com/utils/sqlfilter/)
