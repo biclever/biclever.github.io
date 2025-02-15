@@ -6,4 +6,4 @@ permalink: "/util/"
 
 # Utilities
 
-[SQLy](https://biclever.com/util/sqly.html)
+[SQL Filter](https://biclever.com/util/sqlfilter/)
