@@ -45,24 +45,27 @@
  */
  
 window.toolConfig = {
-  title: "SQL Filter Tool",
+  title: "SQL Filter",
   description: "Converts column-separated text into SQL restrictions.",
   helpText: `
     <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
     <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>
+<hr/>
     <h3>Example 1:</h3>
+    <p>Input:</p>
     <pre>JOBNUMBER
 10000-1
 10000-2</pre>
     <p>Will be converted to:</p>
     <pre>JOBNUMBER IN ('10000-1', '10000-2')</pre>
     <h3>Example 2:</h3>
+    <p>Input:</p>
     <pre>JOBNUMBER   ENTRYNUMBER
 10000-1     1
 10000-1     2</pre>
     <p>Will be converted to:</p>
     <pre>JOBNUMBER='10000-1' AND ENTRYNUMBER=1 OR JOBNUMBER='10000-1' AND ENTRYNUMBER=2</pre>
-	<hr>
+	<hr/>
     <p><strong>Parameters:</strong></p>
     <ul>
       <li><strong>Single line</strong>: When enabled, the whole condition will be on a single line. When disabled, each value is placed on a new line.</li>
