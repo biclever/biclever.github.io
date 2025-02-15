@@ -1,6 +1,6 @@
 window.toolConfig = {
   title: "Prompt Expression Generator",
-  description: "Creates an expression that conditionally displays prompt values. Date prompts are formatted as dates, while other prompts are displayed as-is.",
+  description: "Creates an expression that conditionally displays prompt values. One prompt per line. Date prompts are formatted as dates, while other prompts are displayed as-is.",
   helpText: `
     <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
     <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>
@@ -8,13 +8,9 @@ window.toolConfig = {
     <p>Enter your prompt labels (one per line) in the input field.</p>
     <p>For each prompt:</p>
     <p>If the label appears to be a date prompt (e.g. contains "date", "dato", "datum"), a date line is generated:</li>
-    <pre>
-If IsPromptAnswered("From date:") Then ", From date: " + FormatDate(ToDate(UserResponse("From date:");"INPUT_DATE_TIME");"INPUT_DATE")
-    </pre>
-    <p>Otherwise, an employee (or general) line is generated:</p>
-    <pre>
-If IsPromptAnswered("Employee No:") Then ", Employee No: " + UserResponse("Employee No:")
-    </pre>
+    <pre>If IsPromptAnswered("From date:") Then ", From date: " + FormatDate(ToDate(UserResponse("From date:");"INPUT_DATE_TIME");"INPUT_DATE")</pre>
+    <p>Otherwise, a general line is generated:</p>
+    <pre>If IsPromptAnswered("Employee No:") Then ", Employee No: " + UserResponse("Employee No:")</pre>
     <p>(The final expression is wrapped in a Substr function so that the leading comma is removed.)</p>
   `,
   // No optional controls in this example—but you could add them if needed.
