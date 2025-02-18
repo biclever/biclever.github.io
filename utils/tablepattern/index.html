@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">$TITLE</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .container {
+      max-width: 80%;
+    }
+    .help-section {
+      margin-bottom: 20px;
+      display: none;
+    }
+    textarea {
+      padding: 10px;
+    }
+    .toggle-help {
+      text-align: left;
+      font-size: 0.9em;
+      color: gray;
+    }
+    .shortcut-text {
+      font-size: 0.7em;
+      color: gray;
+      display: block;
+      margin-top: 2px;
+      text-align: center;
+    }
+    /* The parent row that holds both buttons and optional controls in one line */
+    #buttonRow {
+      display: flex;
+      flex-wrap: wrap;       /* Allows wrapping if the screen is too narrow */
+      align-items: center;   /* Vertically center all items on the same baseline */
+      gap: 1rem;             /* Spacing between items */
+      margin-bottom: 1rem;
+    }
+    /* Each button set is stacked: button over its shortcut text */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* The optional controls container */
+    #optionalControls {
+      display: none;         /* Hidden by default, shown if array has items */
+      gap: 1rem;
+      align-items: start;   /* Vertically center toggles and input on same baseline */
+    }
+    /* Make sure the input group isn't too wide */
+    .input-group-text {
+      min-width: 100px;
+    }
+    #helpText pre {
+      margin-left: 10px;
+      padding: 5px;
+      background-color: #fafbff; /* Light grey background for better readability */
+      border-radius: 4px;
+      font-size: 0.9em; /* Slightly smaller font for compact display */
+    }
+  </style>
+</head>
+<body onload="document.getElementById('inputText').focus()">
+  <div class="container">
+    <header class="mb-3 mt-5" id="header">
+      <div class="logo">
+        <a href="/">
+          <img width="90" height="32" alt="Biclever - Tools for Business Intelligence" src="/images/logo/logo.svg">
+        </a>
+      </div>
+      <h1 id="toolTitle">$TITLE</h1>
+      <!-- The description now gets a (more)/(less) link appended -->
+      <p class="text-muted" id="toolDescription">$DESCRIPTION</p>
+    </header>
+
+    <!-- Combined row for buttons + optional controls -->
+    <div id="buttonRow">
+      <!-- Convert button + shortcut text -->
+      <div class="button-container">
+        <button class="btn btn-primary px-4" onclick="processText()">Convert</button>
+        <span class="shortcut-text">Ctrl+Enter</span>
+      </div>
+
+      <!-- Copy button + shortcut text -->
+      <div class="button-container">
+        <button class="btn btn-secondary px-4" onclick="copyToClipboard()">Copy</button>
+        <span class="shortcut-text">Ctrl+Shift+C</span>
+      </div>
+
+      <!-- Optional controls (created dynamically based on array) -->
+      <div id="optionalControls" class="d-flex"></div>
+    </div>
+
+    <div class="row" id="toolContainer">
+      <div class="col-md-6 mb-3">
+        <textarea id="inputText" class="form-control" rows="20" placeholder="Enter text here..."></textarea>
+      </div>
+      <div class="col-md-6 mb-3">
+        <textarea id="outputText" class="form-control" rows="20" placeholder="Output will appear here..." readonly></textarea>
+      </div>
+    </div>
+
+    <div class="toggle-help mb-3" id="toggleHelpContainer">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="toggleHelp" />
+        <label class="form-check-label" for="toggleHelp">Show Help</label>
+      </div>
+    </div>
+
+    <div class="help-section" id="helpColumn">
+      <div class="p-3 border rounded" id="helpText">$HELP</div>
+    </div>
+  </div>
+
+  <!-- Load external tool configuration & transformation logic -->
+  <script src="tool-config.js"></script>
+
+  <!-- GUI Logic -->
+  <script>
+    // 1. Initialize the page with config data
+    document.getElementById("pageTitle").innerText = toolConfig.title;
+    document.getElementById("toolTitle").innerText = toolConfig.title;
+    // Add (more)/(less) link to the description
+    document.getElementById("toolDescription").innerHTML =
+      toolConfig.description + ' <a href="#" id="helpLink">(more)</a>';
+    document.getElementById("helpText").innerHTML = toolConfig.helpText;
+
+    // 2. Dynamically create optional controls
+    const optionalControlsContainer = document.getElementById("optionalControls");
+    if (Array.isArray(toolConfig.optionalControls) && toolConfig.optionalControls.length > 0) {
+      // Show the container
+      optionalControlsContainer.style.display = "flex";
+
+      toolConfig.optionalControls.forEach(control => {
+        // We'll create a unique ID for each control
+        const controlId = `control-${control.property}`;
+
+        if (control.type === "switch") {
+          // Create a form-switch element
+          const switchDiv = document.createElement("div");
+          switchDiv.className = "form-check form-switch";
+
+          const input = document.createElement("input");
+          input.className = "form-check-input";
+          input.type = "checkbox";
+          input.id = controlId;
+
+          const label = document.createElement("label");
+          label.className = "form-check-label ms-2";
+          label.htmlFor = controlId;
+          label.innerText = control.label;
+
+          switchDiv.appendChild(input);
+          switchDiv.appendChild(label);
+
+          optionalControlsContainer.appendChild(switchDiv);
+        } 
+        else if (control.type === "text") {
+          // Create an input-group for text
+          const groupDiv = document.createElement("div");
+          groupDiv.className = "input-group";
+
+          const span = document.createElement("span");
+          span.className = "input-group-text";
+          span.innerText = control.label;
+
+          const input = document.createElement("input");
+          input.type = "text";
+          input.className = "form-control";
+          input.id = controlId;
+
+          groupDiv.appendChild(span);
+          groupDiv.appendChild(input);
+
+          optionalControlsContainer.appendChild(groupDiv);
+        }
+      });
+    }
+
+    // 3. Set up (more)/(less) toggle for help
+    document.getElementById("helpLink").addEventListener("click", function(e) {
+      e.preventDefault();
+      const toggleHelp = document.getElementById("toggleHelp");
+      toggleHelp.checked = !toggleHelp.checked;
+      toggleHelp.dispatchEvent(new Event("change")); // Trigger the event
+    });
+
+    // 4. Keyboard shortcuts
+    document.getElementById("inputText").addEventListener("keydown", function (event) {
+      if (event.ctrlKey && event.key === "Enter") {
+        event.preventDefault();
+        processText();
+      }
+      if (event.ctrlKey && event.shiftKey && event.key === "C") {
+        event.preventDefault();
+        copyToClipboard();
+      }
+    });
+
+    // 5. Process the text (pass optional controls to transformation)
+    function processText() {
+      const input = document.getElementById("inputText").value;
+      let opts = {};
+
+      if (Array.isArray(toolConfig.optionalControls)) {
+        toolConfig.optionalControls.forEach(control => {
+          const controlId = `control-${control.property}`;
+          const element = document.getElementById(controlId);
+
+          if (!element) return; // If the element wasn't created, skip
+
+          if (control.type === "switch") {
+            opts[control.property] = element.checked;
+          } else if (control.type === "text") {
+            opts[control.property] = element.value;
+          }
+        });
+      }
+
+      const output = toolConfig.transformation(input, opts);
+      document.getElementById("outputText").value = output;
+    }
+
+    // 6. Copy to clipboard
+    function copyToClipboard() {
+      const outputText = document.getElementById("outputText");
+      outputText.select();
+      outputText.setSelectionRange(0, 99999); // For mobile devices.
+      navigator.clipboard.writeText(outputText.value);
+      document.getElementById("inputText").focus();
+    }
+
+    // 7. Toggle help display
+    document.getElementById("toggleHelp").addEventListener("change", function () {
+      const helpColumn = document.getElementById("helpColumn");
+      const toggleHelpContainer = document.getElementById("toggleHelpContainer");
+      const header = document.getElementById("header");
+      const helpLink = document.getElementById("helpLink");
+      if (this.checked) {
+        helpColumn.style.display = "block";
+        helpLink.innerText = "(less)";
+        toggleHelpContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        helpColumn.style.display = "none";
+        helpLink.innerText = "(more)";
+        header.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
