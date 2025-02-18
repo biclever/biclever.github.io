@@ -16,10 +16,10 @@ FROM (VALUES
   `,
   optionalControls: [
     {
-      type: "switch",
-      label: "Quote",
+      type: "radio",
+      label: "Determine type|Quote all values",
       property: "quote"
-    } 
+    }
   ],
   transformation: function(text, opts) {
     if (!text.trim()) return "Please provide valid input.";
@@ -37,7 +37,7 @@ FROM (VALUES
     // Helper function to format a value.
     function formatValue(value) {
       const trimmed = value.trim();
-      if (opts.quote) {
+      if (opts.quote === 'Quote all values') {
         return `'${trimmed}'`;
       } else {
         return (!isNaN(trimmed) && trimmed !== "") ? trimmed : `'${trimmed}'`;

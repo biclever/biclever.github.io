@@ -46,41 +46,52 @@
  
 window.toolConfig = {
   title: "Table to SQL WHERE Clause",
-  description: "Converts tab-separated text into SQL restrictions. For instance, you can copy a table from Excel or SSMS and paste it here.",
+  description: "Converts tab-separated text into SQL restrictions.",
   helpText: `
-    <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
-    <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>
-<hr/>
-    <h3>Example 1:</h3>
-    <p>Input:</p>
-    <pre>JOBNUMBER
-10000-1
-10000-2</pre>
-    <p>Will be converted to:</p>
-    <pre>JOBNUMBER IN ('10000-1', '10000-2')</pre>
-    <h3>Example 2:</h3>
-    <p>Input:</p>
-    <pre>JOBNUMBER   ENTRYNUMBER
-10000-1     1
-10000-1     2</pre>
-    <p>Will be converted to:</p>
-    <pre>JOBNUMBER='10000-1' AND ENTRYNUMBER=1 OR JOBNUMBER='10000-1' AND ENTRYNUMBER=2</pre>
-	<hr/>
-    <p><strong>Parameters:</strong></p>
-    <ul>
-      <li><strong>Single line</strong>: When enabled, the whole condition will be on a single line. When disabled, each value is placed on a new line.</li>
-      <li><strong>Quote</strong>: When disabled, numeric values are not quoted. When enabled, all values are wrapped in quotes regardless of whether they are numeric.</li>
-    </ul>
-  `,
+  <h2>Usage</h2>
+<p>
+  Use this tool to convert tab-separated data (e.g., from Excel or SQL query results) into SQL WHERE clauses.
+  The first row should contain column names, and subsequent rows should contain values.
+  If you have only one column, the tool will produce an <code>IN()</code> expression.
+  If you have multiple columns, it will generate <code>AND</code>/<code>OR</code> expressions for each row.
+</p>
+
+<h2>Parameters</h2>
+<ul>
+  <li>
+    <strong>Multiple lines / Single line:</strong>
+    Choose “Single line” for a more compact WHERE clause or “Multiple lines” for a more readable, line-separated format.
+  </li>
+  <li>
+    <strong>Determine type / Quote all values:</strong>
+    Select “Determine type” to keep numeric values unquoted, or choose “Quote all values” to enclose every value in quotes.
+  </li>
+</ul>
+
+<h2>Examples</h2>
+<p><strong>Single-Column Example</strong></p>
+<p>This shows how a single-column table is converted into an <code>IN()</code> expression.</p>
+<p><strong>Input:</strong></p>
+<pre>JOBNUMBER\n1000012-1\n1000012-2</pre>
+<p><strong>Output:</strong></p>
+<pre>JOBNUMBER IN ('10000-1', '10000-2')</pre>
+
+<p><strong>Multi-Column Example</strong></p>
+<p>This shows how multiple columns generate <code>AND</code>/<code>OR</code> expressions for each row.</p>
+<p><strong>Input:</strong></p>
+<pre>JOBNUMBER\tENTRYNUMBER\n1000012-1\t1\n1000012-1\t2</pre>
+<p><strong>Output:</strong></p>
+<pre>JOBNUMBER='10000-1' AND ENTRYNUMBER=1 OR JOBNUMBER='10000-1' AND ENTRYNUMBER=2</pre>
+  `.replace(/\\t/g, "\t").replace(/\\n/g, "\n"),
   optionalControls: [
     {
-      type: "switch",
-      label: "Single line",
+      type: "radio",
+      label: "Multiple lines|Single line",
       property: "compact"
     },
     {
-      type: "switch",
-      label: "Quote",
+      type: "radio",
+      label: "Determine type|Quote all values",
       property: "quote"
     }
   ],
@@ -93,16 +104,20 @@ window.toolConfig = {
 
     const headers = lines[0].split("\t");
     const rows = lines.slice(1).map(line => line.split("\t"));
+    const allSameNumber = rows.every(row => row.length === headers.length);
+    if (!allSameNumber) {
+      return "Error: All rows must have the same number of columns.";
+    }
     const isNumberColumn = headers.map((_, colIndex) =>
       rows.every(row => !isNaN(row[colIndex]))
     );
-    const nl0 = opts.compact ? "" : "\n  ";
-    const nl = opts.compact ? "" : "\n";
+    const nl0 = opts.compact === 'Single line' ? "" : "\n  ";
+    const nl = opts.compact === 'Single line' ? "" : "\n";
     
     if (headers.length === 1) {
       const columnName = headers[0];
       const values = rows.map(row => {
-        if (opts.quote) {
+        if (opts.quote === 'Quote all values') {
           return `'${row[0]}'`;
         } else {
           return isNumberColumn[0] ? row[0] : `'${row[0]}'`;
@@ -113,7 +128,7 @@ window.toolConfig = {
       const conditions = rows.map(row => {
         return headers.map((header, index) => {
           const value = row[index] || "";
-          if (opts.quote) {
+          if (opts.quote === 'Quote all values') {
             return `${header}='${value}'`;
           } else {
             return isNumberColumn[index]
@@ -123,7 +138,7 @@ window.toolConfig = {
         }).join(" AND ");
       });
       // Use a single line separator if compact is enabled, otherwise join with newlines.
-      const separator = opts.compact ? " OR " : "\nOR ";
+      const separator = opts.compact === 'Single line' ? " OR " : "\nOR ";
       return conditions.join(separator);
     }
   }

@@ -14,53 +14,44 @@
     }
     .help-section {
       margin-bottom: 20px;
-      display: none;
     }
     textarea {
       padding: 10px;
     }
-    .toggle-help {
-      text-align: left;
-      font-size: 0.9em;
-      color: gray;
-    }
-    .shortcut-text {
-      font-size: 0.7em;
-      color: gray;
-      display: block;
-      margin-top: 2px;
-      text-align: center;
-    }
-    /* The parent row that holds both buttons and optional controls in one line */
+    /* The row that holds the two main buttons and optional controls */
     #buttonRow {
       display: flex;
-      flex-wrap: wrap;       /* Allows wrapping if the screen is too narrow */
-      align-items: center;   /* Vertically center all items on the same baseline */
-      gap: 1rem;             /* Spacing between items */
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
       margin-bottom: 1rem;
     }
-    /* Each button set is stacked: button over its shortcut text */
+    /* Buttons are stacked if needed */
     .button-container {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
-    /* The optional controls container */
+    /* The optional controls container expands to take leftover space on the row */
     #optionalControls {
-      display: none;         /* Hidden by default, shown if array has items */
+      display: flex;
+      flex: 1; 
       gap: 1rem;
-      align-items: center;   /* Vertically center toggles and input on same baseline */
     }
-    /* Make sure the input group isn't too wide */
+    /* For text controls, we allow them to flex-fill. Radio groups remain compact. */
+    .flex-fill-text {
+      flex: 1; 
+    }
+    /* Minimum width for the label portion of an input-group */
     .input-group-text {
       min-width: 100px;
     }
     #helpText pre {
       margin-left: 10px;
       padding: 5px;
-      background-color: #fafbff; /* Light grey background for better readability */
+      background-color: #fafbff;
       border-radius: 4px;
-      font-size: 0.9em; /* Slightly smaller font for compact display */
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -73,28 +64,27 @@
         </a>
       </div>
       <h1 id="toolTitle">$TITLE</h1>
-      <!-- The description now gets a (more)/(less) link appended -->
+      <!-- The description now gets a (more) link appended -->
       <p class="text-muted" id="toolDescription">$DESCRIPTION</p>
     </header>
 
     <!-- Combined row for buttons + optional controls -->
     <div id="buttonRow">
-      <!-- Convert button + shortcut text -->
+      <!-- Convert button -->
       <div class="button-container">
         <button class="btn btn-primary px-4" onclick="processText()">Convert</button>
-        <span class="shortcut-text">Ctrl+Enter</span>
       </div>
 
-      <!-- Copy button + shortcut text -->
+      <!-- Copy button -->
       <div class="button-container">
-        <button class="btn btn-secondary px-4" onclick="copyToClipboard()">Copy</button>
-        <span class="shortcut-text">Ctrl+Shift+C</span>
+        <button class="btn btn-primary px-4" onclick="copyToClipboard()">Copy</button>
       </div>
 
-      <!-- Optional controls (created dynamically based on array) -->
-      <div id="optionalControls" class="d-flex"></div>
+      <!-- Optional controls (created dynamically) -->
+      <div id="optionalControls"></div>
     </div>
 
+    <!-- Textareas -->
     <div class="row" id="toolContainer">
       <div class="col-md-6 mb-3">
         <textarea id="inputText" class="form-control" rows="20" placeholder="Enter text here..."></textarea>
@@ -104,15 +94,9 @@
       </div>
     </div>
 
-    <div class="toggle-help mb-3" id="toggleHelpContainer">
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="toggleHelp" />
-        <label class="form-check-label" for="toggleHelp">Show Help</label>
-      </div>
-    </div>
-
+    <!-- Help is always visible -->
     <div class="help-section" id="helpColumn">
-      <div class="p-3 border rounded" id="helpText">$HELP</div>
+      <div class="p-3 border rounded mt-3" id="helpText">$HELP</div>
     </div>
   </div>
 
@@ -124,45 +108,64 @@
     // 1. Initialize the page with config data
     document.getElementById("pageTitle").innerText = toolConfig.title;
     document.getElementById("toolTitle").innerText = toolConfig.title;
-    // Add (more)/(less) link to the description
+    // Add (more) link to the description which will scroll to help
     document.getElementById("toolDescription").innerHTML =
       toolConfig.description + ' <a href="#" id="helpLink">(more)</a>';
     document.getElementById("helpText").innerHTML = toolConfig.helpText;
-
+    
     // 2. Dynamically create optional controls
     const optionalControlsContainer = document.getElementById("optionalControls");
     if (Array.isArray(toolConfig.optionalControls) && toolConfig.optionalControls.length > 0) {
-      // Show the container
       optionalControlsContainer.style.display = "flex";
 
       toolConfig.optionalControls.forEach(control => {
-        // We'll create a unique ID for each control
+        // Unique ID for the control
         const controlId = `control-${control.property}`;
 
-        if (control.type === "switch") {
-          // Create a form-switch element
-          const switchDiv = document.createElement("div");
-          switchDiv.className = "form-check form-switch";
+        // Parent container for each control
+        // We'll use a normal flex item for all, but only "text" gets flex-fill
+        const controlItem = document.createElement("div");
+        controlItem.className = "d-flex align-items-center";
 
-          const input = document.createElement("input");
-          input.className = "form-check-input";
-          input.type = "checkbox";
-          input.id = controlId;
+        // If it's text, we also add 'flex-fill-text' so it can expand
+        if (control.type === "text") {
+          controlItem.classList.add("flex-fill-text");
+        }
 
-          const label = document.createElement("label");
-          label.className = "form-check-label ms-2";
-          label.htmlFor = controlId;
-          label.innerText = control.label;
+        if (control.type === "radio") {
+          // Keep it compact
+          const radioDiv = document.createElement("div");
+          radioDiv.className = "btn-group";
+          radioDiv.setAttribute("role", "group");
 
-          switchDiv.appendChild(input);
-          switchDiv.appendChild(label);
+          // Split label by | to get options
+          const options = control.label.split("|").map(o => o.trim());
+          options.forEach((option, index) => {
+            const radioId = controlId + "-" + index;
 
-          optionalControlsContainer.appendChild(switchDiv);
+            const radioInput = document.createElement("input");
+            radioInput.type = "radio";
+            radioInput.className = "btn-check";
+            radioInput.name = controlId; 
+            radioInput.id = radioId;
+            radioInput.value = option;
+            if (index === 0) radioInput.checked = true;
+
+            const radioLabel = document.createElement("label");
+            radioLabel.className = "btn btn-outline-primary";
+            radioLabel.htmlFor = radioId;
+            radioLabel.innerText = option;
+
+            radioDiv.appendChild(radioInput);
+            radioDiv.appendChild(radioLabel);
+          });
+
+          controlItem.appendChild(radioDiv);
         } 
         else if (control.type === "text") {
-          // Create an input-group for text
+          // This can now flex-fill
           const groupDiv = document.createElement("div");
-          groupDiv.className = "input-group";
+          groupDiv.className = "input-group flex-fill"; // fill horizontal space
 
           const span = document.createElement("span");
           span.className = "input-group-text";
@@ -176,20 +179,21 @@
           groupDiv.appendChild(span);
           groupDiv.appendChild(input);
 
-          optionalControlsContainer.appendChild(groupDiv);
+          controlItem.appendChild(groupDiv);
         }
+
+        // Add the control to the row
+        optionalControlsContainer.appendChild(controlItem);
       });
     }
 
-    // 3. Set up (more)/(less) toggle for help
+    // 3. (more) link scrolls to the help section
     document.getElementById("helpLink").addEventListener("click", function(e) {
       e.preventDefault();
-      const toggleHelp = document.getElementById("toggleHelp");
-      toggleHelp.checked = !toggleHelp.checked;
-      toggleHelp.dispatchEvent(new Event("change")); // Trigger the event
+      document.getElementById("helpColumn").scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
-    // 4. Keyboard shortcuts
+    // 4. Handle Tab key for main textarea
     document.getElementById("inputText").addEventListener("keydown", function (event) {
       if (event.key === "Tab") {
         event.preventDefault();
@@ -201,18 +205,27 @@
         // Move the caret after the inserted tab
         textarea.selectionStart = textarea.selectionEnd = start + 1;
       }
+    });
 
-      if (event.ctrlKey && event.key === "Enter") {
-        event.preventDefault();
-        processText();
-      }
-      if (event.ctrlKey && event.shiftKey && event.key === "C") {
-        event.preventDefault();
-        copyToClipboard();
+    // 5. Global keyboard shortcuts
+    document.addEventListener("keydown", function(event) {
+      const isMainText = (event.target.id === "inputText");
+      const optionalControls = document.getElementById("optionalControls");
+      const isOptional = optionalControls && optionalControls.contains(event.target);
+
+      if (isMainText || isOptional) {
+        if (event.ctrlKey && event.key === "Enter") {
+          event.preventDefault();
+          processText();
+        }
+        if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "c") {
+          event.preventDefault();
+          copyToClipboard();
+        }
       }
     });
 
-    // 5. Process the text (pass optional controls to transformation)
+    // 6. Process the text (pass optional controls to transformation)
     function processText() {
       const input = document.getElementById("inputText").value;
       let opts = {};
@@ -220,14 +233,15 @@
       if (Array.isArray(toolConfig.optionalControls)) {
         toolConfig.optionalControls.forEach(control => {
           const controlId = `control-${control.property}`;
-          const element = document.getElementById(controlId);
-
-          if (!element) return; // If the element wasn't created, skip
-
-          if (control.type === "switch") {
-            opts[control.property] = element.checked;
-          } else if (control.type === "text") {
-            opts[control.property] = element.value;
+          if (control.type === "radio") {
+            const selected = document.querySelector(`input[name="${controlId}"]:checked`);
+            if (selected) opts[control.property] = selected.value;
+          } 
+          else if (control.type === "text") {
+            const element = document.getElementById(controlId);
+            if (element) {
+              opts[control.property] = element.value;
+            }
           }
         });
       }
@@ -236,7 +250,7 @@
       document.getElementById("outputText").value = output;
     }
 
-    // 6. Copy to clipboard
+    // 7. Copy to clipboard
     function copyToClipboard() {
       const outputText = document.getElementById("outputText");
       outputText.select();
@@ -244,23 +258,6 @@
       navigator.clipboard.writeText(outputText.value);
       document.getElementById("inputText").focus();
     }
-
-    // 7. Toggle help display
-    document.getElementById("toggleHelp").addEventListener("change", function () {
-      const helpColumn = document.getElementById("helpColumn");
-      const toggleHelpContainer = document.getElementById("toggleHelpContainer");
-      const header = document.getElementById("header");
-      const helpLink = document.getElementById("helpLink");
-      if (this.checked) {
-        helpColumn.style.display = "block";
-        helpLink.innerText = "(less)";
-        toggleHelpContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        helpColumn.style.display = "none";
-        helpLink.innerText = "(more)";
-        header.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    });
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
