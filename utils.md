@@ -4,9 +4,9 @@ description: Utils
 permalink: "/utils/"
 ---
 
-[SQL Filter](https://biclever.com/utils/sqlfilter/)
+[Convert Table to SQL WHERE Clause](https://biclever.com/utils/sqlfilter/)
 
-[Convert Tabular Table into SQL](https://biclever.com/utils/webiprompts/)
+[Convert Table to SQL VALUES Query](https://biclever.com/utils/tablesql/)
 
-[Webi Prompts](https://biclever.com/utils/webiprompts/)
+[Webi Selection Criteria Generator](https://biclever.com/utils/webiprompts/)
 

@@ -45,7 +45,7 @@
  */
  
 window.toolConfig = {
-  title: "SQL Filter",
+  title: "Table to SQL WHERE Clause",
   description: "Converts tab-separated text into SQL restrictions. For instance, you can copy a table from Excel or SSMS and paste it here.",
   helpText: `
     <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>

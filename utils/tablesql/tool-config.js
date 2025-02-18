@@ -1,5 +1,5 @@
 window.toolConfig = {
-  title: "Table to SQL",
+  title: "Table to SQL VALUES Query",
   description: "Converts tab-separated text into SQL table. For instance, you can copy a table from Excel or SSMS and paste it here.",
   helpText: `
     <h3>Example:</h3>
