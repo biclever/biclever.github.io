@@ -46,7 +46,7 @@
  
 window.toolConfig = {
   title: "SQL Filter",
-  description: "Converts column-separated text into SQL restrictions.",
+  description: "Converts tab-separated text into SQL restrictions. For instance, you can copy a table from Excel or SSMS and paste it here.",
   helpText: `
     <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
     <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>

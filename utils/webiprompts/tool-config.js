@@ -1,6 +1,6 @@
 window.toolConfig = {
   title: "Prompt Expression Generator",
-  description: "Creates an expression that conditionally displays prompt values. One prompt per line. Date prompts are formatted as dates, while other prompts are displayed as-is.",
+  description: "Creates an expression that displays selection criteria. Enter one prompt per line. Date prompts are formatted as dates, while other prompts are displayed as-is.",
   helpText: `
     <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
     <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>

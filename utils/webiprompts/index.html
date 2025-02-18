@@ -55,6 +55,13 @@
     .input-group-text {
       min-width: 100px;
     }
+    #helpText pre {
+      margin-left: 10px;
+      padding: 5px;
+      background-color: #fafbff; /* Light grey background for better readability */
+      border-radius: 4px;
+      font-size: 0.9em; /* Slightly smaller font for compact display */
+    }
   </style>
 </head>
 <body onload="document.getElementById('inputText').focus()">
@@ -105,7 +112,7 @@
     </div>
 
     <div class="help-section" id="helpColumn">
-      <div class="p-3 border rounded bg-light" id="helpText">$HELP</div>
+      <div class="p-3 border rounded" id="helpText">$HELP</div>
     </div>
   </div>
 
