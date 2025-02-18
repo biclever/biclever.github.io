@@ -47,6 +47,6 @@ window.toolConfig = {
 
     // Wrap the whole expression in a Substr to remove the leading comma.
     // The Substr starts at character 2 and returns up to 1000 characters.
-    return `=Substr(\n${body}\n;2;1000)`;
+    return `=Substr(""\n${body}\n;2;1000)`;
   }
 };
