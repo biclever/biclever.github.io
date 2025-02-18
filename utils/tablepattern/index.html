@@ -49,7 +49,7 @@
     #optionalControls {
       display: none;         /* Hidden by default, shown if array has items */
       gap: 1rem;
-      align-items: start;   /* Vertically center toggles and input on same baseline */
+      align-items: center;   /* Vertically center toggles and input on same baseline */
     }
     /* Make sure the input group isn't too wide */
     .input-group-text {
@@ -191,6 +191,17 @@
 
     // 4. Keyboard shortcuts
     document.getElementById("inputText").addEventListener("keydown", function (event) {
+      if (event.key === "Tab") {
+        event.preventDefault();
+        const textarea = this;
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        // Insert a tab character at the current caret position
+        textarea.value = textarea.value.substring(0, start) + "\t" + textarea.value.substring(end);
+        // Move the caret after the inserted tab
+        textarea.selectionStart = textarea.selectionEnd = start + 1;
+      }
+
       if (event.ctrlKey && event.key === "Enter") {
         event.preventDefault();
         processText();
