@@ -66,7 +66,7 @@ export const toolConfig = {
     },
     {
       type: "checkbox",
-      label: "Boundaries",
+      label: "Whole Word",
       property: "boundaries",
       default: false
     }
