@@ -1,12 +1,13 @@
 export const toolConfig = {
   title: "Extract Pattern to a Table",
-  description: "Define a custom pattern using placeholders (%) to extract specific data segments and automatically format them into a table.",
+  description: "Define a custom pattern using placeholders (%) to extract specific data segments and automatically format them into a tab-separated table.",
   helpText: `
   <h2>Usage</h2>
   <p>
     Enter a pattern that includes one or more <code>%</code> placeholders, then paste your target text.<br>
     The tool will scan the text for segments matching your pattern and output the results as a tab-separated table.
   </p>
+  
   <h2>Parameters</h2>
   <ul>
     <li>
@@ -20,18 +21,31 @@ export const toolConfig = {
     </li>
     <li>
       <strong>Boundaries:</strong>
-      When selected, literal parts are wrapped in word boundaries (<code>\b</code>).
+      When selected, literal parts are wrapped in word boundaries (<code>\\b</code>).
     </li>
   </ul>
+
   <h2>Example</h2>
-  <p><strong>Extracting Used Fields</strong></p>
+  <h5>Extracting Used Fields</h5>
   <p><strong>Pattern:</strong></p>
   <pre>JOBHEADER.%</pre>
   <p><strong>Input:</strong></p>
   <pre>SELECT JOBHEADER.JOBNAME\nFROM JOBHEADER\nWHERE JOBHEADER.JOBNUMBER = '1000012-1';</pre>
   <p><strong>Output:</strong></p>
   <pre>JOBHEADER.JOBNAME\nJOBHEADER.JOBNUMBER</pre>  
-  `.replace(/\\t/g, "\t").replace(/\\n/g, "\n"),
+
+  <h2>Shortcuts</h2>
+  <ul>
+    <li>
+      <strong>Ctrl+Enter:</strong>
+      Convert the text.
+    </li>
+    <li>
+      <strong>Ctrl+Shift+C:</strong>
+      Copy to clipboard.
+    </li>
+  </ul>
+  `,
   optionalControls: [
     {
       type: "text",
@@ -41,17 +55,20 @@ export const toolConfig = {
     {
       type: "checkbox",
       label: "Identifiers",
-      property: "identifiers"
+      property: "identifiers",
+      default: true
     },
     {
       type: "checkbox",
       label: "Whitespace",
-      property: "whitespace"
+      property: "whitespace",
+      default: false
     },
     {
       type: "checkbox",
       label: "Boundaries",
-      property: "boundaries"
+      property: "boundaries",
+      default: false
     }
   ],
   transformation: function(text, opts) {
@@ -90,13 +107,22 @@ export const toolConfig = {
 
     // Define the capturing group for '%' based on the Identifiers option.
     // In Identifiers mode, match valid identifier names (starting with a letter or underscore).
-    // Otherwise, match any sequence of characters (greedily).
+    // Otherwise, match any sequence of characters (non-greedily).
     let captureGroup = opts.identifiers
       ? "([a-zA-Z_][a-zA-Z0-9_]*)"
-      : "(.+)";
+      : "(.+?)";
       
     // Build the full regex string by joining the literal parts with the capturing group.
     let regexString = parts.join(captureGroup);
+
+    // Replace leading and trailing placeholders with the greedy capture group.
+    if (regexString.startsWith("(.+?)")) {
+      regexString = "(.+)"+regexString.slice(5);
+    }
+    if (regexString.endsWith("(.+?)")) {
+      regexString = regexString.slice(0, -5)+"(.+)";
+    }
+
     // Create a regex object with the global flag
     let regex;
     try {

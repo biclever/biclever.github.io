@@ -50,10 +50,16 @@ export const toolConfig = {
   title: "Maconomy Query Builder",
   description: "Joins specified tables.",
   helpText: `
-    <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
-    <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>
-<hr/>
-    <h3>Example 1:</h3>
+    <h2>Usage:</h2>
+    <p>
+      Enter the tables and fields you want to select, and the tool will generate a SQL query with the necessary joins.
+    </p>
+    <h2>Parameters:</h2>
+    <ul>
+      <li><strong>Single line</strong>: When enabled, the whole condition will be on a single line. When disabled, each value is placed on a new line.</li>
+      <li><strong>Quote</strong>: When disabled, numeric values are not quoted. When enabled, all values are wrapped in quotes regardless of whether they are numeric.</li>
+    </ul>
+    <h5>Example 1:</h5>
     <p>Input:</p>
     <pre>FinanceEntry
 Account.AccountText</pre>
@@ -63,7 +69,7 @@ Account.AccountText</pre>
   Account.AccountText
 FROM FinanceEntry
 LEFT JOIN Account ON (FinanceEntry.AccountNumber = Account.AccountNumber)</pre>
-    <h3>Example 2:</h3>
+    <h5>Example 2:</h5>
     <p>Input:</p>
     <pre>JobEntry
 Employee.Name
@@ -76,12 +82,18 @@ Employee.Name
 FROM JobEntry
 LEFT JOIN Employee ON (JobEntry.EmployeeNumber = Employee.EmployeeNumber)
 LEFT JOIN Entity ON (Employee.EntityName = Entity.EntityName)</pre>
-    <hr/>
-    <p><strong>Parameters:</strong></p>
-    <ul>
-      <li><strong>Single line</strong>: When enabled, the whole condition will be on a single line. When disabled, each value is placed on a new line.</li>
-      <li><strong>Quote</strong>: When disabled, numeric values are not quoted. When enabled, all values are wrapped in quotes regardless of whether they are numeric.</li>
-    </ul>
+    
+    <h2>Shortcuts</h2>
+<ul>
+  <li>
+    <strong>Ctrl+Enter:</strong>
+    Convert the text.
+  </li>
+  <li>
+    <strong>Ctrl+Shift+C:</strong>
+    Copy to clipboard.
+  </li>
+</ul>
   `,
   optionalControls: [
     {

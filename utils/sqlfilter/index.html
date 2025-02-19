@@ -129,11 +129,12 @@
           checkboxInput.type = "checkbox";
           checkboxInput.id = controlId;
           checkboxInput.name = controlId;
+          checkboxInput.checked = control.default | false;
     
           const label = document.createElement("label");
           label.className = "form-check-label";
           label.htmlFor = controlId;
-          label.innerText = control.label;
+          label.innerText = control.label;          
     
           controlItem.appendChild(checkboxInput);
           controlItem.appendChild(label);
