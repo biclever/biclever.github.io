@@ -1,11 +1,13 @@
-window.toolConfig = {
+export const toolConfig = {
   title: "Apply pattern to table",
   description: "Use a pattern with placeholders (%) to generate lines of output.",
   helpText: `
   <h2>Usage</h2>
   <p>
-    Enter a pattern containing one or more <code>%</code> placeholders, then paste a tab-separated table.<br>
-    Each row in the table will be applied to the pattern, replacing each <code>%</code> with the corresponding column value.<br>
+    Enter a pattern containing one or more <code>%</code> placeholders, then paste a tab-separated table.
+    Each row in the table will be applied to the pattern, replacing each <code>%</code> with the corresponding column value.
+  </p>
+  <p>    
     The number of placeholders in the pattern must match the number of columns in the input table, 
     unless the table has only one column—in that case, all placeholders will be replaced with the same value.
   </p>
@@ -17,26 +19,23 @@ window.toolConfig = {
     </li>
   </ul>
   <h2>Example</h2>
+  
   <p><strong>Creating insert statements</strong></p>
   <p><strong>Pattern:</strong></p>
   <pre>INSERT INTO TEMPTABLE VALUES('%','%');</pre>
 
   <p><strong>Input:</strong></p>
-  <pre>1000012-1\t1
-1000012-1\t2</pre>
+  <pre>1000012-1\t1\n1000012-1\t2</pre>
 
   <p><strong>Output:</strong></p>
-  <pre>INSERT INTO TEMPTABLE VALUES('1000012-1','1');
-INSERT INTO TEMPTABLE VALUES('1000012-1','2');</pre>
-  <p><strong>Creating insert statements</strong></p>
+  <pre>INSERT INTO TEMPTABLE VALUES('1000012-1','1');\nINSERT INTO TEMPTABLE VALUES('1000012-1','2');</pre>
+
+  <p><strong>Creating functions</strong></p>
   <p><strong>Pattern:</strong></p>
   <pre>public static final MiText get%Title() {\\n  return tf.term("%Title");\\n}\\n</pre>
 
   <p><strong>Input:</strong></p>
-  <pre>JobNumber
-EmployeeNumber
-NumberRegistered
-  </pre>
+  <pre>JobNumber\nEmployeeNumber\nNumberRegistered</pre>
 
   <p><strong>Output:</strong></p>
   <pre>public static final MiText getJobNumberTitle() {
@@ -50,7 +49,7 @@ public static final MiText getEmployeeNumberTitle() {
 public static final MiText getNumberRegisteredTitle() {
   return tf.term("NumberRegisteredTitle");
 }</pre>
-  `.replace(/\\t/g, "\t"),
+  `.replace(/\\t/g, "\t").replace(/\\n/g, "\n"),
   optionalControls: [
     {
       type: "text",
@@ -58,9 +57,9 @@ public static final MiText getNumberRegisteredTitle() {
       property: "pattern"
     },
     {
-      type: "radio",
-      label: "Normal|Extended",
-      property: "mode"
+      type: "checkbox",
+      label: "Extended",
+      property: "extended"
     }
   ],
   transformation: function(text, opts) {
@@ -115,7 +114,7 @@ public static final MiText getNumberRegisteredTitle() {
           lineResult = lineResult.replace("%", row[0]);
         }
         // Extended mode => replace literal "\\n" with real newlines
-        if (opts.mode === "Extended") {
+        if (opts.extended) {
           lineResult = lineResult.replace(/\\n/g, "\n").replace(/\\t/g, "\t");
         }
         return lineResult;
@@ -128,7 +127,7 @@ public static final MiText getNumberRegisteredTitle() {
           lineResult = lineResult.replace("%", cell);
         });
         // Extended mode => replace literal "\\n" with real newlines
-        if (opts.mode === "Extended") {
+        if (opts.extended) {
           lineResult = lineResult.replace(/\\n/g, "\n");
         }
         return lineResult;

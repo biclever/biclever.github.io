@@ -1,4 +1,4 @@
-window.toolConfig = {
+export const toolConfig = {
   title: "Table to SQL VALUES Query",
   description: "Converts tab-separated text into SQL table. For instance, you can copy a table from Excel or SSMS and paste it here.",
   helpText: `
@@ -16,8 +16,8 @@ FROM (VALUES
   `,
   optionalControls: [
     {
-      type: "radio",
-      label: "Determine type|Quote all values",
+      type: "checkbox",
+      label: "Quote all values",
       property: "quote"
     }
   ],
@@ -37,7 +37,7 @@ FROM (VALUES
     // Helper function to format a value.
     function formatValue(value) {
       const trimmed = value.trim();
-      if (opts.quote === 'Quote all values') {
+      if (opts.quote) {
         return `'${trimmed}'`;
       } else {
         return (!isNaN(trimmed) && trimmed !== "") ? trimmed : `'${trimmed}'`;

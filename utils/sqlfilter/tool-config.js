@@ -44,13 +44,15 @@
  * -----------------------------------------------
  */
  
-window.toolConfig = {
+export const toolConfig = {
   title: "Table to SQL WHERE Clause",
   description: "Converts tab-separated text into SQL restrictions.",
   helpText: `
   <h2>Usage</h2>
 <p>
   Use this tool to convert tab-separated data (e.g., from Excel or SQL query results) into SQL WHERE clauses.
+</p>
+<p>
   The first row should contain column names, and subsequent rows should contain values.
   If you have only one column, the tool will produce an <code>IN()</code> expression.
   If you have multiple columns, it will generate <code>AND</code>/<code>OR</code> expressions for each row.
@@ -59,39 +61,52 @@ window.toolConfig = {
 <h2>Parameters</h2>
 <ul>
   <li>
-    <strong>Multiple lines / Single line:</strong>
-    Choose “Single line” for a more compact WHERE clause or “Multiple lines” for a more readable, line-separated format.
+    <strong>Single line:</strong>
+    Choose “Single line” for a compact single line WHERE clause.
   </li>
   <li>
-    <strong>Determine type / Quote all values:</strong>
-    Select “Determine type” to keep numeric values unquoted, or choose “Quote all values” to enclose every value in quotes.
+    <strong>Quote all values:</strong>
+    By default, numeric values are unquoted. Choose “Quote all values” to enclose every value in quotes.
   </li>
 </ul>
 
 <h2>Examples</h2>
-<p><strong>Single-Column Example</strong></p>
+<h5>Single-Column Example</h5>
 <p>This shows how a single-column table is converted into an <code>IN()</code> expression.</p>
 <p><strong>Input:</strong></p>
 <pre>JOBNUMBER\n1000012-1\n1000012-2</pre>
 <p><strong>Output:</strong></p>
 <pre>JOBNUMBER IN ('10000-1', '10000-2')</pre>
 
-<p><strong>Multi-Column Example</strong></p>
+<h5>Multi-Column Example</h5>
 <p>This shows how multiple columns generate <code>AND</code>/<code>OR</code> expressions for each row.</p>
 <p><strong>Input:</strong></p>
 <pre>JOBNUMBER\tENTRYNUMBER\n1000012-1\t1\n1000012-1\t2</pre>
 <p><strong>Output:</strong></p>
 <pre>JOBNUMBER='10000-1' AND ENTRYNUMBER=1 OR JOBNUMBER='10000-1' AND ENTRYNUMBER=2</pre>
+
+<h2>Shortcuts</h2>
+<ul>
+  <li>
+    <strong>Ctrl+Enter:</strong>
+    Convert the text.
+  </li>
+  <li>
+    <strong>Ctrl+Shift+C:</strong>
+    Copy to clipboard.
+  </li>
+</ul>
+
   `.replace(/\\t/g, "\t").replace(/\\n/g, "\n"),
   optionalControls: [
     {
-      type: "radio",
-      label: "Multiple lines|Single line",
+      type: "checkbox",
+      label: "Single line",
       property: "compact"
     },
     {
-      type: "radio",
-      label: "Determine type|Quote all values",
+      type: "checkbox",
+      label: "Quote all values",
       property: "quote"
     }
   ],
@@ -111,13 +126,13 @@ window.toolConfig = {
     const isNumberColumn = headers.map((_, colIndex) =>
       rows.every(row => !isNaN(row[colIndex]))
     );
-    const nl0 = opts.compact === 'Single line' ? "" : "\n  ";
-    const nl = opts.compact === 'Single line' ? "" : "\n";
+    const nl0 = opts.compact ? "" : "\n  ";
+    const nl = opts.compact ? "" : "\n";
     
     if (headers.length === 1) {
       const columnName = headers[0];
       const values = rows.map(row => {
-        if (opts.quote === 'Quote all values') {
+        if (opts.quote) {
           return `'${row[0]}'`;
         } else {
           return isNumberColumn[0] ? row[0] : `'${row[0]}'`;
@@ -128,7 +143,7 @@ window.toolConfig = {
       const conditions = rows.map(row => {
         return headers.map((header, index) => {
           const value = row[index] || "";
-          if (opts.quote === 'Quote all values') {
+          if (opts.quote) {
             return `${header}='${value}'`;
           } else {
             return isNumberColumn[index]
@@ -138,7 +153,7 @@ window.toolConfig = {
         }).join(" AND ");
       });
       // Use a single line separator if compact is enabled, otherwise join with newlines.
-      const separator = opts.compact === 'Single line' ? " OR " : "\nOR ";
+      const separator = opts.compact ? " OR " : "\nOR ";
       return conditions.join(separator);
     }
   }

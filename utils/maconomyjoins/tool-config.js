@@ -85,12 +85,12 @@ LEFT JOIN Entity ON (Employee.EntityName = Entity.EntityName)</pre>
   `,
   optionalControls: [
     {
-      type: "switch",
+      type: "checkbox",
       label: "Compact",
       property: "compact"
     },
     {
-      type: "switch",
+      type: "checkbox",
       label: "Maconomy terms",
       property: "maconomy"
     }

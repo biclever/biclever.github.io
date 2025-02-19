@@ -57,8 +57,8 @@
 </head>
 <body onload="document.getElementById('inputText').focus()">
   <div class="container">
-    <header class="mb-3 mt-5" id="header">
-      <div class="logo">
+    <header class="mb-3 mt-3" id="header">
+      <div class="logo mb-4">
         <a href="/">
           <img width="90" height="32" alt="Biclever - Tools for Business Intelligence" src="/images/logo/logo.svg">
         </a>
@@ -100,119 +100,91 @@
     </div>
   </div>
 
-  <!-- Load external tool configuration & transformation logic -->
-  <script src="tool-config.js"></script>
-
   <!-- GUI Logic -->
-  <script>
-    // 1. Initialize the page with config data
+  <script type="module">
+    import { toolConfig } from "./tool-config.js";
+    window.toolConfig = toolConfig;
+    
+    // Initialize the page with config data
     document.getElementById("pageTitle").innerText = toolConfig.title;
     document.getElementById("toolTitle").innerText = toolConfig.title;
-    // Add (more) link to the description which will scroll to help
     document.getElementById("toolDescription").innerHTML =
       toolConfig.description + ' <a href="#" id="helpLink">(more)</a>';
     document.getElementById("helpText").innerHTML = toolConfig.helpText;
     
-    // 2. Dynamically create optional controls
+    // Dynamically create optional controls
     const optionalControlsContainer = document.getElementById("optionalControls");
     if (Array.isArray(toolConfig.optionalControls) && toolConfig.optionalControls.length > 0) {
       optionalControlsContainer.style.display = "flex";
-
+      optionalControlsContainer.style.gap = "1rem";
+      optionalControlsContainer.style.flex = 1;
       toolConfig.optionalControls.forEach(control => {
-        // Unique ID for the control
         const controlId = `control-${control.property}`;
-
-        // Parent container for each control
-        // We'll use a normal flex item for all, but only "text" gets flex-fill
         const controlItem = document.createElement("div");
-        controlItem.className = "d-flex align-items-center";
-
-        // If it's text, we also add 'flex-fill-text' so it can expand
-        if (control.type === "text") {
-          controlItem.classList.add("flex-fill-text");
-        }
-
-        if (control.type === "radio") {
-          // Keep it compact
-          const radioDiv = document.createElement("div");
-          radioDiv.className = "btn-group";
-          radioDiv.setAttribute("role", "group");
-
-          // Split label by | to get options
-          const options = control.label.split("|").map(o => o.trim());
-          options.forEach((option, index) => {
-            const radioId = controlId + "-" + index;
-
-            const radioInput = document.createElement("input");
-            radioInput.type = "radio";
-            radioInput.className = "btn-check";
-            radioInput.name = controlId; 
-            radioInput.id = radioId;
-            radioInput.value = option;
-            if (index === 0) radioInput.checked = true;
-
-            const radioLabel = document.createElement("label");
-            radioLabel.className = "btn btn-outline-primary";
-            radioLabel.htmlFor = radioId;
-            radioLabel.innerText = option;
-
-            radioDiv.appendChild(radioInput);
-            radioDiv.appendChild(radioLabel);
-          });
-
-          controlItem.appendChild(radioDiv);
+        
+        if (control.type === "checkbox") {
+          controlItem.className = "d-flex align-items-center";        
+          const checkboxInput = document.createElement("input");
+          checkboxInput.className = "form-check-input me-2";
+          checkboxInput.type = "checkbox";
+          checkboxInput.id = controlId;
+          checkboxInput.name = controlId;
+    
+          const label = document.createElement("label");
+          label.className = "form-check-label";
+          label.htmlFor = controlId;
+          label.innerText = control.label;
+    
+          controlItem.appendChild(checkboxInput);
+          controlItem.appendChild(label);
         } 
         else if (control.type === "text") {
-          // This can now flex-fill
+          controlItem.className = "d-flex align-items-center flex-grow-1";
           const groupDiv = document.createElement("div");
-          groupDiv.className = "input-group flex-fill"; // fill horizontal space
-
+          groupDiv.className = "input-group w-100";
+    
           const span = document.createElement("span");
           span.className = "input-group-text";
           span.innerText = control.label;
-
+    
           const input = document.createElement("input");
           input.type = "text";
           input.className = "form-control";
           input.id = controlId;
-
+    
           groupDiv.appendChild(span);
           groupDiv.appendChild(input);
-
           controlItem.appendChild(groupDiv);
         }
-
-        // Add the control to the row
+    
         optionalControlsContainer.appendChild(controlItem);
       });
     }
-
-    // 3. (more) link scrolls to the help section
+    
+    // (more) link scrolls to the help section
     document.getElementById("helpLink").addEventListener("click", function(e) {
       e.preventDefault();
       document.getElementById("helpColumn").scrollIntoView({ behavior: "smooth", block: "start" });
     });
-
-    // 4. Handle Tab key for main textarea
+    
+    // Handle Tab key for the main textarea
     document.getElementById("inputText").addEventListener("keydown", function (event) {
       if (event.key === "Tab") {
         event.preventDefault();
         const textarea = this;
         const start = textarea.selectionStart;
         const end = textarea.selectionEnd;
-        // Insert a tab character at the current caret position
         textarea.value = textarea.value.substring(0, start) + "\t" + textarea.value.substring(end);
-        // Move the caret after the inserted tab
         textarea.selectionStart = textarea.selectionEnd = start + 1;
       }
     });
-
-    // 5. Global keyboard shortcuts
+    
+    // Global keyboard shortcuts
     document.addEventListener("keydown", function(event) {
       const isMainText = (event.target.id === "inputText");
       const optionalControls = document.getElementById("optionalControls");
       const isOptional = optionalControls && optionalControls.contains(event.target);
-
+    
       if (isMainText || isOptional) {
         if (event.ctrlKey && event.key === "Enter") {
           event.preventDefault();
@@ -224,18 +196,18 @@
         }
       }
     });
-
-    // 6. Process the text (pass optional controls to transformation)
+    
+    // Process the text (pass optional controls to transformation)
     function processText() {
       const input = document.getElementById("inputText").value;
       let opts = {};
-
+    
       if (Array.isArray(toolConfig.optionalControls)) {
         toolConfig.optionalControls.forEach(control => {
           const controlId = `control-${control.property}`;
-          if (control.type === "radio") {
-            const selected = document.querySelector(`input[name="${controlId}"]:checked`);
-            if (selected) opts[control.property] = selected.value;
+          if (control.type === "checkbox") {
+            const element = document.getElementById(controlId);
+            opts[control.property] = element.checked;
           } 
           else if (control.type === "text") {
             const element = document.getElementById(controlId);
@@ -245,20 +217,25 @@
           }
         });
       }
-
+    
       const output = toolConfig.transformation(input, opts);
       document.getElementById("outputText").value = output;
     }
-
-    // 7. Copy to clipboard
+    
+    // Copy to clipboard
     function copyToClipboard() {
       const outputText = document.getElementById("outputText");
       outputText.select();
-      outputText.setSelectionRange(0, 99999); // For mobile devices.
+      outputText.setSelectionRange(0, 99999);
       navigator.clipboard.writeText(outputText.value);
       document.getElementById("inputText").focus();
     }
+    
+    // Expose functions to global scope so inline HTML can access them
+    window.processText = processText;
+    window.copyToClipboard = copyToClipboard;
   </script>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
