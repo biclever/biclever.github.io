@@ -137,12 +137,7 @@ export const toolConfig = {
 
     // Build a tab-separated table from the matches.
     const rows = matches.map(match => {
-      if (placeholderCount === 1) {
-        return match[0];
-      } else {
-        // match[0] is the full match; subsequent entries are the capture groups.
-        return match.slice(1).join("\t");
-      }
+      return match.slice(1).join("\t");
     });
 
     return rows.join("\n");
