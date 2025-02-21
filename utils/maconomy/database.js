@@ -4877,6 +4877,7 @@ export const myDatabase = [
 "WorkEligibility.ContactPersonNumber = ContactPerson.ContactPersonNumber",
 "WorkEligibility.DocumentCheckPersonNumber = Employee.EmployeeNumber",
 "WorkEligibility.EligibilityCountry = Country.CountryNumber",
+//
 "AllocationCodeLine.LocalAccountNumber = LocalAccount.LocalAccountNumber and CompanyInformation.LocalChartOfAccountsName = LocalAccount.LocalChartOfAccountsName",
 "BankReconciliationLine.LocalAccountNumber = LocalAccount.LocalAccountNumber and CompanyInformation.LocalChartOfAccountsName = LocalAccount.LocalChartOfAccountsName",
 "BudgetEntry.LocalAccountNumber = LocalAccount.LocalAccountNumber and CompanyInformation.LocalChartOfAccountsName = LocalAccount.LocalChartOfAccountsName",
@@ -4898,6 +4899,7 @@ export const myDatabase = [
 "RegistrationCodeLine.LocalAccountNumber = LocalAccount.LocalAccountNumber and CompanyInformation.LocalChartOfAccountsName = LocalAccount.LocalChartOfAccountsName",
 "RequestForQuoteLine.LocalAccountNumber = LocalAccount.LocalAccountNumber and CompanyInformation.LocalChartOfAccountsName = LocalAccount.LocalChartOfAccountsName",
 "RequisitionLine.LocalAccountNumber = LocalAccount.LocalAccountNumber and CompanyInformation.LocalChartOfAccountsName = LocalAccount.LocalChartOfAccountsName",
+//
 "Account.LocalSpec10Name = LocalSpec10Line.LocalSpec10Name and CompanyInformation.LocalSpec10List = LocalSpec10Line.LocalSpec10List",
 "Activity.LocalSpec10Name = LocalSpec10Line.LocalSpec10Name and CompanyInformation.LocalSpec10List = LocalSpec10Line.LocalSpec10List",
 "AllocationCodeLine.LocalSpec10Name = LocalSpec10Line.LocalSpec10Name and CompanyInformation.LocalSpec10List = LocalSpec10Line.LocalSpec10List",
@@ -6248,6 +6250,7 @@ export const myDatabase = [
 "Vendor.LocalSpec9Name = LocalSpec9Line.LocalSpec9Name and CompanyInformation.LocalSpec9List = LocalSpec9Line.LocalSpec9List",
 "VendorEntry.LocalSpec9Name = LocalSpec9Line.LocalSpec9Name and CompanyInformation.LocalSpec9List = LocalSpec9Line.LocalSpec9List",
 "VendorInvoiceJournal.LocalSpec9Name = LocalSpec9Line.LocalSpec9Name and CompanyInformation.LocalSpec9List = LocalSpec9Line.LocalSpec9List",
+//
 "Asset.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
 "AssetDraft.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
 "AssetEntry.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
@@ -6310,5 +6313,15 @@ export const myDatabase = [
 "RegistrationCodeLine.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
 "RequestForQuoteLine.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
 "RequisitionLine.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
-"SubscriptionOrderHeader.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList"
+"SubscriptionOrderHeader.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
+//
+"AllocationKey.AllocationFiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = AllocationFiscalYear.FiscalYearTemplateNumber",
+"FinanceBudgetHeaderShadow.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
+"FinanceEntry.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
+"OpeningBalanceEntry.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
+"OpeningBalanceLog.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
+"PriceRegisterHeader.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
+"FinanceEntry.FiscalPeriod = FiscalYearPeriod.Period and CompanyInformation.FiscalYearTemplateNumber = FiscalYearPeriod.FiscalYearTemplateNumber and FinanceEntry.FiscalYear = FiscalYearPeriod.FiscalYear",
+"FiscalYearPeriod.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber and FiscalYearPeriod.FiscalYear = FiscalYear.FiscalYearStart",
+//
 ];
