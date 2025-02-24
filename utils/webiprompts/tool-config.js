@@ -2,9 +2,6 @@ export const toolConfig = {
   title: "Webi Selection Criteria Generator",
   description: "Creates an expression that displays selection criteria. Enter one prompt per line. Date prompts are formatted as dates, while other prompts are displayed as-is.",
   helpText: `
-    <p>Enter text in the input field and click "Convert" or press <strong>Ctrl+Enter</strong>.</p>
-    <p>Click "Copy" or press <strong>Ctrl+Shift+C</strong> to copy output to clipboard.</p>
-<hr/>
     <p>Enter your prompt labels (one per line) in the input field.</p>
     <p>For each prompt:</p>
     <p>If the label appears to be a date prompt (e.g. contains "date", "dato", "datum"), a date line is generated:</li>

@@ -46,13 +46,13 @@
 
 import { parseInput } from './parser.js';
 import { determineJoins, addJoin, findJoin } from './joins.js';
-import { buildSelectStatement } from './queryBuilder.js';
+import { buildSelectStatement } from './querybuilder.js';
 import { myDatabase } from "./database.js";
 
 export const toolConfig = {
   title: "Maconomy Query Builder",
   description: "Joins specified tables.",
-  helpText: `<h2>Usage:</h2>
+  helpText: `
     <p>
       Enter the tables and fields you want to select, and the tool will generate a SQL query with the necessary joins.
     </p>

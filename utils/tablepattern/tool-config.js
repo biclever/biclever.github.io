@@ -2,27 +2,26 @@ export const toolConfig = {
   title: "Apply pattern to table",
   description: "Use a pattern with placeholders (%) to generate lines of output.",
   helpText: `
-  <h2>Usage</h2>
   <p>
     Enter a pattern containing one or more <code>%</code> placeholders, then paste a tab-separated table.
     Each row in the table will be applied to the pattern, replacing each <code>%</code> with the corresponding column value.
   </p>
-  <p>    
-    The number of placeholders in the pattern must match the number of columns in the input table, 
-    unless the table has only one column—in that case, all placeholders will be replaced with the same value.
+  <p> 
+    There are two possible scenarios for placeholder replacement: If the table has multiple columns, the number of <code>%</code> placeholders in the pattern must match the number of columns. 
+    If the table has only one column, all <code>%</code> placeholders will be replaced with the same value from that column. 
   </p>
   <h2>Example</h2>
   
   <h5>Creating insert statements</h5>
   Here the number of placeholders in the pattern matches the number of columns in the input table.
   <p><strong>Pattern:</strong></p>
-  <pre>INSERT INTO TEMPTABLE VALUES('%','%');</pre>
+  <pre>INSERT INTO TEMP VALUES('%','%');</pre>
 
   <p><strong>Input:</strong></p>
   <pre>1000012-1\t1\n1000012-1\t2</pre>
 
   <p><strong>Output:</strong></p>
-  <pre>INSERT INTO TEMPTABLE VALUES('1000012-1','1');\nINSERT INTO TEMPTABLE VALUES('1000012-1','2');</pre>
+  <pre>INSERT INTO TEMP VALUES('1000012-1','1');\nINSERT INTO TEMP VALUES('1000012-1','2');</pre>
 
   <h5>Creating functions based on template</h5>
   Here the pattern has multiple placeholders, but the input table has only one column. Each placeholder is replaced with the same value.

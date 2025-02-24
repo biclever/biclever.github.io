@@ -2,7 +2,6 @@ export const toolConfig = {
   title: "Extract Pattern to a Table",
   description: "Define a custom pattern using placeholders (%) to extract specific data segments and automatically format them into a tab-separated table.",
   helpText: `
-  <h2>Usage</h2>
   <p>
     Enter a pattern that includes one or more <code>%</code> placeholders, then paste your target text.<br>
     The tool will scan the text for segments matching your pattern and output the results as a tab-separated table.
