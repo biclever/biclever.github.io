@@ -11,16 +11,10 @@ export const toolConfig = {
     The number of placeholders in the pattern must match the number of columns in the input table, 
     unless the table has only one column—in that case, all placeholders will be replaced with the same value.
   </p>
-  <h2>Parameters</h2>
-  <ul>
-    <li>
-      <strong>Normal/Extended:</strong> 
-      Choose “Extended” to replace literal "\\n" with newlines, and "\\t" with tabs.
-    </li>
-  </ul>
   <h2>Example</h2>
   
-  <p><strong>Creating insert statements</strong></p>
+  <h5>Creating insert statements</h5>
+  Here the number of placeholders in the pattern matches the number of columns in the input table.
   <p><strong>Pattern:</strong></p>
   <pre>INSERT INTO TEMPTABLE VALUES('%','%');</pre>
 
@@ -30,9 +24,10 @@ export const toolConfig = {
   <p><strong>Output:</strong></p>
   <pre>INSERT INTO TEMPTABLE VALUES('1000012-1','1');\nINSERT INTO TEMPTABLE VALUES('1000012-1','2');</pre>
 
-  <p><strong>Creating functions</strong></p>
+  <h5>Creating functions based on template</h5>
+  Here the pattern has multiple placeholders, but the input table has only one column. Each placeholder is replaced with the same value.
   <p><strong>Pattern:</strong></p>
-  <pre>public static final MiText get%Title() {\\n  return tf.term("%Title");\\n}\\n</pre>
+  <pre>public static final MiText get%Title() {\n  return tf.term("%Title");\n}\n</pre>
 
   <p><strong>Input:</strong></p>
   <pre>JobNumber\nEmployeeNumber\nNumberRegistered</pre>
@@ -48,18 +43,12 @@ public static final MiText getEmployeeNumberTitle() {
 
 public static final MiText getNumberRegisteredTitle() {
   return tf.term("NumberRegisteredTitle");
-}</pre>
-  `.replace(/\\t/g, "\t").replace(/\\n/g, "\n"),
+}</pre>`,
   optionalControls: [
     {
-      type: "text",
+      type: "textarea",
       label: "Pattern",
       property: "pattern"
-    },
-    {
-      type: "checkbox",
-      label: "Extended",
-      property: "extended"
     }
   ],
   transformation: function(text, opts) {
@@ -112,11 +101,7 @@ public static final MiText getNumberRegisteredTitle() {
         let lineResult = pattern;
         for (let i = 0; i < placeholderCount; i++) {
           lineResult = lineResult.replace("%", row[0]);
-        }
-        // Extended mode => replace literal "\\n" with real newlines
-        if (opts.extended) {
-          lineResult = lineResult.replace(/\\n/g, "\n").replace(/\\t/g, "\t");
-        }
+        }        
         return lineResult;
       });
     } else {
@@ -125,11 +110,7 @@ public static final MiText getNumberRegisteredTitle() {
         let lineResult = pattern;
         row.forEach(cell => {
           lineResult = lineResult.replace("%", cell);
-        });
-        // Extended mode => replace literal "\\n" with real newlines
-        if (opts.extended) {
-          lineResult = lineResult.replace(/\\n/g, "\n");
-        }
+        });        
         return lineResult;
       });
     }
