@@ -19,7 +19,7 @@ export const toolConfig = {
       By default, a space character matches exactly one space. If Whitespace mode is selected, a space character matches any sequence of whitespace characters.
     </li>
     <li>
-      <strong>Boundaries:</strong>
+      <strong>Whole Word:</strong>
       When selected, literal parts are wrapped in word boundaries (<code>\\b</code>).
     </li>
   </ul>

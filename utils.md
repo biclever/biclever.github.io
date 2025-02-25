@@ -15,5 +15,3 @@ The tools automate repetitive activities that require intensive copy-pasting and
 [Apply Pattern to a Table](https://biclever.com/utils/tablepattern/)
 
 [Extract Pattern to a Table](https://biclever.com/utils/patterntable/)
-
-[Maconomy Query Builder](https://biclever.com/utils/maconomy/)

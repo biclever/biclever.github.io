@@ -6315,7 +6315,6 @@ export const myDatabase = [
 "RequisitionLine.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
 "SubscriptionOrderHeader.TaskName = TaskListLine.TaskName and JobHeader.TaskList = TaskListLine.TaskList",
 //
-"AllocationKey.AllocationFiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = AllocationFiscalYear.FiscalYearTemplateNumber",
 "FinanceBudgetHeaderShadow.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
 "FinanceEntry.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",
 "OpeningBalanceEntry.FiscalYear = FiscalYear.FiscalYearStart and CompanyInformation.FiscalYearTemplateNumber = FiscalYear.FiscalYearTemplateNumber",

@@ -16,12 +16,11 @@ export function buildSelectStatement(processed) {
     }
   });
 
-  // Determine the fact table from the first field with indentation 0.
-  const factField = processed.fields.find(f => f.indentation === 0);
-  const factTable = factField ? factField.table : "UNKNOWN_TABLE";
-
+  // Determine the fact table from the first field in the list.
+  const factTable = processed.fields[0].table;
+  
   // Build JOIN clauses.
-  const joinClauses = processed.joins.map(join => {
+  const joins = processed.joins.map(join => {
     // Check if there is an alias mapping for the join's right table.
     const mapping = findAliasMapping(join.rightTable, processed.aliases);
     if (mapping) {
@@ -31,11 +30,21 @@ export function buildSelectStatement(processed) {
     }
   });
 
+  const restrictions = processed.restrictions.filter(f => f.type === "restriction").map(r => {
+    if (r.containsOr) {
+      return `(${r.expression})`;
+    } else {
+      return `${r.expression}`;
+    }
+  });
+
+  const joinClause = joins.length > 0 ? "\n"+joins.join("\n") : "";
+  const whereClause = restrictions.length > 0 ? `\nWHERE ${restrictions.join("\nAND ")}` : "";
+
   const selectStmt =
 `SELECT
   ${selectColumns.join(",\n  ")}
-FROM ${factTable}
-${joinClauses.join("\n")}`;
+FROM ${factTable}${joinClause}${whereClause}`;
 
   return selectStmt;
 }

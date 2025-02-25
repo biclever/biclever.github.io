@@ -5,9 +5,9 @@
  * @param {Array} fields - Array of field objects with indentation information.
  * @returns {Array} Array of join relationship objects.
  */
-export function determineJoins(fields) {
+export function deriveExplicitJoins(fields) {
   const joinRelationships = [];
-  const firstLevel0 = fields.find(f => f.indentation === 0);
+  const firstLevel0 = fields[0];
 
   for (let i = 0; i < fields.length; i++) {
     const field = fields[i];
@@ -24,11 +24,16 @@ export function determineJoins(fields) {
           break;
         }
       }
+      if (!parent) {
+        parent = firstLevel0;
+      }
     }
     if (parent) {
       joinRelationships.push({ leftTable: parent.table, rightTable: field.table });
     }
   }
+
+
 
   return joinRelationships;
 }
@@ -41,9 +46,9 @@ export function determineJoins(fields) {
  */
 export function joinEquals(j1, j2) {
   return (
-    j1.leftTable === j2.leftTable &&
-    j1.rightTable === j2.rightTable &&
-    ((j1.bridgeTable || null) === (j2.bridgeTable || null))
+    j1.leftTable.toLowerCase() === j2.leftTable.toLowerCase() &&
+    j1.rightTable.toLowerCase() === j2.rightTable.toLowerCase() &&
+    ((j1.bridgeTable?.toLowerCase() || null) === (j2.bridgeTable?.toLowerCase() || null))
   );
 }
 
@@ -67,11 +72,19 @@ export function addJoin(finalJoins, join) {
  * @returns {object|undefined} The matching join object if found.
  */
 export function findJoin(parsedInput, parsedDatabase, leftTable, rightTable) {
+  const lowerLeft = leftTable.toLowerCase();
+  const lowerRight = rightTable.toLowerCase();
+
   return (
-    parsedInput.joins.find(j => j.leftTable === leftTable && j.rightTable === rightTable) ||
-    parsedDatabase.joins.find(j => j.leftTable === leftTable && j.rightTable === rightTable)
+    parsedInput.joins.find(j => 
+      j.leftTable.toLowerCase() === lowerLeft && j.rightTable.toLowerCase() === lowerRight
+    ) ||
+    parsedDatabase.joins.find(j => 
+      j.leftTable.toLowerCase() === lowerLeft && j.rightTable.toLowerCase() === lowerRight
+    )
   );
 }
+
 
 /**
  * Finds an alias mapping for a given right table.
@@ -80,5 +93,8 @@ export function findJoin(parsedInput, parsedDatabase, leftTable, rightTable) {
  * @returns {object|undefined} The alias mapping if found.
  */
 export function findAliasMapping(rightTable, aliases) {
-  return aliases.find(mapping => mapping.alias === rightTable);
+  const lowerRightTable = rightTable.toLowerCase();
+
+  return aliases.find(mapping => mapping.alias.toLowerCase() === lowerRightTable);
 }
+

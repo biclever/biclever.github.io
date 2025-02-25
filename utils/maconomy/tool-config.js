@@ -45,8 +45,8 @@
  */
 
 import { parseInput } from './parser.js';
-import { determineJoins, addJoin, findJoin } from './joins.js';
-import { buildSelectStatement } from './querybuilder.js';
+import { deriveExplicitJoins, addJoin, findJoin } from './joins.js';
+import { buildSelectStatement } from './query-builder.js';
 import { myDatabase } from "./database.js";
 
 export const toolConfig = {
@@ -108,28 +108,64 @@ LEFT JOIN Entity ON (Employee.EntityName = Entity.EntityName)</pre>
       property: "maconomy"
     }
   ],
-
+  database: parseInput(myDatabase),
   transformation(text, opts) {
     if (!text.trim()) return "Please provide valid input.";
 
+    if (this.database.errors.length > 0) {
+      console.log(this.database.errors);
+      return this.database.errors.map(e => `Error on line ${e.line}: ${e.error}`).join("\n");
+    }
+
     // Parse user input and database definitions.
-    const parsedInput = parseInput(text);
-    const parsedDatabase = parseInput(myDatabase.join("\n"));
+    const parsedInput = parseInput(text.split(/\r?\n/));
 
     if (parsedInput.errors.length > 0) {
       return parsedInput.errors.map(e => `Error on line ${e.line}: ${e.error}`).join("\n");
-    }     
+    }
+
+    // If no fields are specified, and there are restrictions, add tables as fields.
+    if (parsedInput.fields.length === 0 && parsedInput.restrictions.length > 0) {
+      parsedInput.restrictions.forEach(r => {
+        if (r.type === "restriction") {
+          r.tables.forEach(t => {
+            parsedInput.fields.push({ type: "field", table: t, field: "*", indentation: 0 });
+          });          
+        }
+      });      
+    }
+
+    // If still no fields, add join tables as fields (removing duplicates)
+    if (parsedInput.fields.length === 0 && parsedInput.joins.length > 0) {
+      const uniqueFields = new Set();
+    
+      parsedInput.joins.forEach(j => {
+        const addField = (table) => {
+          const key = `${table}.*`; // Unique key to identify fields
+          if (!uniqueFields.has(key)) {
+            uniqueFields.add(key);
+            parsedInput.fields.push({ type: "field", table, field: "*", indentation: 0 });
+          }
+        };
+    
+        addField(j.leftTable);
+        addField(j.rightTable);
+        if (j.bridgeTable) {
+          addField(j.bridgeTable);
+        }
+      });
+    }
 
     // Merge joins from derived relationships and explicit definitions.
-    const derivedJoins = determineJoins(parsedInput.fields);
+    const derivedJoins = deriveExplicitJoins(parsedInput.fields);
     const finalJoins = [];
     const joinErrors = [];
 
     derivedJoins.forEach(dj => {
-      const found = findJoin(parsedInput, parsedDatabase, dj.leftTable, dj.rightTable);
+      const found = findJoin(parsedInput, this.database, dj.leftTable, dj.rightTable);
       if (found) {
         if (found.bridgeTable) {
-          const bridgeJoin = findJoin(parsedInput, parsedDatabase, found.leftTable, found.bridgeTable);
+          const bridgeJoin = findJoin(parsedInput, this.database, found.leftTable, found.bridgeTable);
           if (bridgeJoin) {
             addJoin(finalJoins, bridgeJoin);
           } else {
@@ -138,18 +174,20 @@ LEFT JOIN Entity ON (Employee.EntityName = Entity.EntityName)</pre>
         }
         addJoin(finalJoins, found);
       } else {
-        joinErrors.push(`Derived join ${JSON.stringify(dj)} not found in explicit joins.`);
+        joinErrors.push(`Derived join from ${dj.leftTable} to ${dj.rightTable} not found in explicit joins.`);
       }
     });
 
     const processed = {
-      fields: parsedInput.fields.concat(parsedDatabase.fields),
-      aliases: parsedInput.aliases.concat(parsedDatabase.aliases),
+      fields: parsedInput.fields,
+      aliases: parsedInput.aliases.concat(this.database.aliases),
+      restrictions: parsedInput.restrictions,
       joins: finalJoins,
-      errors: parsedInput.errors.concat(parsedDatabase.errors).concat(joinErrors)
+      errors: joinErrors
     };
 
     const selectStatement = buildSelectStatement(processed);
-    return selectStatement + "\n" + processed.errors.join("\n");
+    console.log(processed.errors);
+    return selectStatement;
   }
 };

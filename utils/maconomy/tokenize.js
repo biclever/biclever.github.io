@@ -4,7 +4,7 @@
 export function tokenize(input) {
   const tokens = [];
   // Extended regex to capture numbers, single-quoted strings, identifiers, punctuation, and whitespace
-  const regex = /[A-Za-z_]\w*|\d+(?:\.\d+)?|'[^']*'|[.()=]|\s+/g;
+  const regex = /[A-Za-z_]\w*|\d+(?:\.\d+)?|'[^']*'|[.*()=]|\*|\s+/g;
   let pos = 0;
   let match;
 
@@ -37,6 +37,8 @@ export function tokenize(input) {
       type = "rparen";
     } else if (text === "=") {
       type = "equals";
+    } else if (text === "*") {
+      type = "asterisk";
     } else {
       throw new Error(`Unexpected token: "${text}"`);
     }
