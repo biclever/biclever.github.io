@@ -1,7 +1,9 @@
 ---
-title: Utilities
-description: Utils
-permalink: "/utils/"
+title: "Text Utils"
+description: The tools automate repetitive activities that require intensive copy-pasting and boilerplate code.
+date: 2025-03-01T08:40:00+10:00
+published: true
+weight: 7
 ---
 
 The tools automate repetitive activities that require intensive copy-pasting and boilerplate code.
