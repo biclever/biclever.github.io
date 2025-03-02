@@ -3,33 +3,36 @@ export const toolConfig = {
   description: "Define a custom pattern using placeholders (%) to extract specific data segments and automatically format them into a tab-separated table.",
   helpText: `
   <p>
-  Provide a custom extraction pattern that includes one or more <code>%</code> placeholders, then paste the text you want to search. The tool will identify segments that match your pattern and output the results as a neatly formatted, tab-separated table.
-</p>
-
-<h2>Parameters</h2>
-<ul>
-  <li>
-    <strong>Identifiers:</strong> 
-    When enabled, each <code>%</code> placeholder will match only valid identifiers (such as variable or column names) composed of letters, numbers, and underscores.
-  </li>
-  <li>
-    <strong>Whitespace:</strong> 
-    When this option is active, literal spaces in your pattern will match any sequence of whitespace characters (spaces, tabs, newlines) using <code>\s+</code>, making your pattern more flexible.
-  </li>
-  <li>
-    <strong>Regex:</strong>
-    Enable this option to treat your pattern as a full regular expression. In this mode, you can use custom capture groups to precisely control the extraction process.
-  </li>
-</ul>
+    This tool gives you a simple way to pull structured data from text using a custom pattern. 
+    It’s perfect for extracting specific parts of a large text or log file, such as variable names, URLs, or other key information.
+  </p> 
+  <p>
+    Just enter a custom pattern with one or more <code>%</code> placeholders, and paste your target text. 
+    The tool will search for segments that match your pattern and output the results as a neat, tab-separated table—ready to be used in Excel or another program. 
+  </p> 
+  <p> 
+    If a placeholder is wrapped in quotes or brackets, the tool captures only the text inside them. For example, <code>'%'</code> extracts the content inside single quotes. 
+    You can also use <code>"%"</code> for double quotes, <code>(%)</code> for parentheses, <code>[%]</code> for square brackets, and <code>{%}</code> for curly braces. 
+  </p>
+  <p>
+    If a placeholder is at the beginning of your pattern, the tool captures all text up to the next fixed part. 
+    Likewise, if it’s at the end, it captures everything from the last fixed part to the end of the line.
+  </p>
+  <h2>Parameters</h2> 
+  <ul>
+  <li><strong>Identifiers:</strong> When enabled, each <code>%</code> placeholder will match only valid names (like variable or column names) made up of letters, numbers, and underscores. </li> 
+  <li><strong>Whitespace:</strong> When active, literal spaces in your pattern will match any amount of whitespace (spaces, tabs, or newlines), making your pattern more flexible. </li> 
+  <li> <strong>Regex:</strong> Enable this option if you want to treat your pattern as a full search expression with custom capture groups for more precise control. </li> 
+  </ul> 
 
   <h2>Example</h2>
-  <h5>Extracting Used Fields</h5>
+  <h5>Extracting Identifiers</h5>
   <p><strong>Pattern:</strong></p>
   <pre>JOBHEADER.%</pre>
   <p><strong>Input:</strong></p>
   <pre>SELECT JOBHEADER.JOBNAME\nFROM JOBHEADER\nWHERE JOBHEADER.JOBNUMBER = '1000012-1';</pre>
   <p><strong>Output:</strong></p>
-  <pre>JOBHEADER.JOBNAME\nJOBHEADER.JOBNUMBER</pre>  
+  <pre>JOBNAME\nJOBNUMBER</pre>  
 
   <h2>Shortcuts</h2>
   <ul>
@@ -143,20 +146,17 @@ export const toolConfig = {
       else if (left.endsWith("{") && right.startsWith("}")) {
         captureGroupForPlaceholder = "([^}]+)";
       }
-      // Default capture group based on Identifiers option.
+      // Default capture group  
+      else if (i === 0 && left === "") {
+        captureGroupForPlaceholder = "(.+)";
+      }
+      else if (i === placeholderCount - 1 && right === "") {
+        captureGroupForPlaceholder = "(.+)";
+      }
       else {
         captureGroupForPlaceholder = "(.+?)";
       }
       regexString += captureGroupForPlaceholder + escapedParts[i + 1];
-    }
-
-    // If the pattern starts with a placeholder, anchor to the beginning.
-    if (originalParts[0] === "") {
-      regexString = "^" + regexString;
-    }
-    // If the pattern ends with a placeholder, anchor to the end.
-    if (originalParts[originalParts.length - 1] === "") {
-      regexString = regexString + "$";
     }
 
     // Create a regex object with the global flag.
