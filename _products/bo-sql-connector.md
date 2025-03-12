@@ -2,7 +2,7 @@
 title: "BO SQL Connector"
 description: The connector allows retrieving data via SAP BO Restful API and uploading them to a database.
 date: 2024-05-25T10:45:00+10:00
-published: true
+published: false
 weight: 6
 ---
 
