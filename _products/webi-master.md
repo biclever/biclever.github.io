@@ -37,12 +37,11 @@ Do you need to automate another workflow? We’d love to hear from you at [suppo
 You will receive the license key within 24 hours. The tool does not validate the license key externally and does not require internet access. 
 You are responsible for ensuring that the number of users does not exceed the number of purchased licenses.
 -->
-[Free Trial License until 1 October 2025](https://docs.google.com/forms/d/e/1FAIpQLScAN_AEyvdanZqTiqJ1P4JrQAUyArD2sLMGwLPuqGB-drixdQ/viewform?usp=sharing&ouid=112368684507203789750)
-
 
 **Download**
 - [Webi Master (webimaster-v1.1-20241020.zip)](https://drive.google.com/uc?export=download&id=1bf8NcL9VDbKjqQ9nFu-vlbWu2N2Rspz2) Windows 64-bit
 - <small>SHA-256 hash: cc927b2d1dae7be17857553a4d4aff9ab9c82e1deb6b83406d3785785f354172</small>
+- [Free Trial License until 1 October 2025](https://docs.google.com/forms/d/e/1FAIpQLScAN_AEyvdanZqTiqJ1P4JrQAUyArD2sLMGwLPuqGB-drixdQ/viewform?usp=sharing&ouid=112368684507203789750)
 
 <!--
 Some antivirus programs may incorrectly flag the software. Unfortunately, applications generated with PyInstaller often trigger 
