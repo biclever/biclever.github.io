@@ -1,0 +1,15 @@
+- id: free
+  name: Free
+  tagline: Essential BO utilities, free forever.
+  price: "Free"
+  order: 1
+- id: pro
+  name: Pro
+  tagline: Advanced desktop tools for BO power users.
+  price: "$300/year/user"
+  order: 2
+- id: agent
+  name: Agent
+  tagline: AI-assisted Webi report creation and editing.
+  price: "Contact us for pricing"
+  order: 3

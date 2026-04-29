@@ -1,0 +1,44 @@
+---
+layout: default
+bodyClass: "page-pricing"
+---
+
+<div class="intro">
+  <div class="container pt-6 pb-3">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-8">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pt-3 pb-6">
+  <div class="row justify-content-center">
+    {% assign tiers = site.data.tiers | sort: "order" %}
+    {% for tier in tiers %}
+    <div class="col-12 col-md-6 col-lg-4 mb-4 d-flex">
+      <div class="tier tier-{{ tier.id }}">
+        <h2 class="tier-name">{{ tier.name }}</h2>
+        {% if tier.price %}<p class="tier-price">{{ tier.price }}</p>{% endif %}
+        <p class="tier-tagline">{{ tier.tagline }}</p>
+
+        {% assign tier_products = site.products | where: "published", true | where: "tier", tier.id | sort: "weight" %}
+        {% if tier_products.size > 0 %}
+        <ul class="tier-products">
+          {% for product in tier_products %}
+          <li><a href="{{ product.url | relative_url }}">{{ product.title }}</a></li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p class="tier-empty"><em>Coming soon.</em></p>
+        {% endif %}
+
+        {% if tier.cta_text and tier.cta_url %}
+        <a href="{{ tier.cta_url }}" class="button button-primary tier-cta">{{ tier.cta_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

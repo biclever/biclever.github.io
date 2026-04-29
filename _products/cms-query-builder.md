@@ -4,6 +4,7 @@ description: The tool allows to build and run queries against CMS system databas
 date: 2018-11-18T12:33:46+10:00
 published: true
 weight: 3
+tier: free
 ---
 
 CMS Query Builder is a tool for building CMS queries, running them against the database, and exporting the result to an excel spreadsheet.

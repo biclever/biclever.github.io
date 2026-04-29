@@ -1,0 +1,12 @@
+- id: free
+  name: Free
+  tagline: Essential BO utilities, free forever.
+  price: "Free"
+  order: 1
+- id: pro
+  name: Pro
+  tagline: Advanced desktop tools for BO power users.
+  price: "$300/year/user"
+  cta_text: "Buy"
+  cta_url: "mailto:dmytro@biclever.com"
+  order: 2

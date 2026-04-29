@@ -10,15 +10,10 @@ logo:
   desktop_height: "32px"
   desktop_width: "120px"
 
-home: 
-  limit_products: 6
-
 collections:
   products:
     output: true
     sort_by: weight
-  team:
-    output: true
   pages:
     output: true
 
@@ -28,11 +23,6 @@ defaults:
       type: "products"
     values:
       layout: "product"
-  - scope:
-      path: ""
-      type: "team"
-    values:
-      layout: "team"
   - scope:
       path: ""
       type: "pages"

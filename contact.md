@@ -1,16 +1,18 @@
 ---
 title: Contact
 layout: contact
-description: Contact
+description: Get in touch with Biclever — sales, licensing, support, or custom BO work.
 ---
 
-We specialize in the automation of processes and workflows for SAP BusinessObjects®. We can help you reduce costs and improve the quality of your reporting solutions by replacing tedious manual work with automated solutions. Our areas of expertise include:
+Biclever builds tools for SAP BusinessObjects administrators, report developers, and BI teams.
 
-* Web Intelligence documents
-* Universes
-* Crystal Reports
-* Analysis for OLAP
-* Managing objects in CMS
-* Dependencies between objects in CMS
-* Security
-* and more
+Questions about a tool, license, support issue, or custom SAP BusinessObjects work? Send an email.
+
+Good reasons to reach out:
+
+- **Sales & licensing** — quotes, multi-seat pricing, invoicing details.
+- **Support** — installation issues, bug reports, and version compatibility.
+- **Custom work** — tailoring an existing tool or building one for a workflow not covered yet.
+- **Agent early access** — interest in Analyst-in-a-box for AI-assisted Webi report creation and editing.
+
+Biclever Software AS (937 609 612) is based in Norway.

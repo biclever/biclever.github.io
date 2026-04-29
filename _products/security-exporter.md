@@ -3,7 +3,8 @@ title: "Security Exporter"
 description: The tool allows extracting access rights to an Excel.
 date: 2018-11-18T12:33:46+10:00
 published: true
-weight: 6
+weight: 7
+tier: pro
 ---
 
 Checking access rights setup in SAP BusinessObjects can be challenging. You need to click on each item in the CMC to check the configuration. 

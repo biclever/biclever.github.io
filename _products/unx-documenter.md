@@ -4,6 +4,7 @@ description: The tool facilitates the extraction of UNX universe metadata into a
 date: 2024-03-08T08:23:00+10:00
 published: true
 weight: 1
+tier: free
 ---
 
 ## Comprehensive Metadata Extraction and Analysis

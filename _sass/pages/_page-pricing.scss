@@ -1,0 +1,77 @@
+.page-home section[id] {
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.page-pricing,
+.page-home #pricing {
+  .tier {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 1.5rem;
+    background: #fff;
+    border: 1px solid #e3e6ea;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(0, 20, 36, 0.04);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tier-name {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary;
+  }
+
+  .tier-price {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $black;
+  }
+
+  .tier-tagline {
+    margin: 0 0 1.25rem 0;
+    color: #5b6770;
+    min-height: 3em;
+  }
+
+  .tier-products {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #eef0f3;
+    padding-top: 1rem;
+
+    li {
+      padding: 0.4rem 0;
+
+      a { color: $primary; }
+      a:hover { text-decoration: underline; }
+    }
+  }
+
+  .tier-empty {
+    margin-top: auto;
+    padding-top: 1rem;
+    color: #8a949d;
+    border-top: 1px dashed #e3e6ea;
+  }
+
+  .tier-cta {
+    margin-top: 1.25rem;
+    align-self: stretch;
+    text-align: center;
+  }
+
+  // Accent stripes on top of each card
+  .tier-free  { border-top: 4px solid #1f7a4a; }
+  .tier-pro   { border-top: 4px solid $primary; }
+  .tier-agent { border-top: 4px solid #6b1fb1; }
+}

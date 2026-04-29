@@ -1,0 +1,2 @@
+{% assign _tier = site.data.tiers | where: "id", include.tier | first %}
+{% if _tier %}<span class="tier-badge tier-badge-{{ _tier.id }}">{{ _tier.name }}</span>{% endif %}

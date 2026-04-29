@@ -21,7 +21,7 @@ $font-family-base: Helvetica, Arial, sans-serif, -apple-system;
 $font-family-heading: "Segoe UI", Helvetica, Arial, sans-serif, -apple-system;
 
 // Footer
-$header-background-color: $white-offset;
+$header-background-color: darken($white-offset, 8%);
 $footer-background-color: $primary;
 $footer-text-color: $white;
 $disclaimer-background-color: darken($primary, 5%);
@@ -57,17 +57,19 @@ $sub-footer-text-color: $white;
 @import "components/strip";
 @import "components/feature";
 @import "components/social";
+@import "components/tier-badge";
 // @import "components/fonts"; // Uncomment this line to self host font
 
 // Pages
 @import "pages/page-home";
-@import "pages/page-teams";
 @import "pages/page-product";
+@import "pages/page-pricing";
 
 body {
   font-size: 16px;
   line-height: 1.2;
   font-family: $font-family-base;
+  background-color: #ffffff;
   @include media-breakpoint-up(md) {
     font-size: 16px;
     line-height: 1.3;

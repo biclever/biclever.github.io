@@ -1,9 +1,10 @@
 ---
-title: "Key Metric"
-description: Key Metric for BusinessObjects 
+title: "KeyMetrika"
+description: KeyMetrika for BusinessObjects 
 date: 2024-06-28T00:00:00+10:00
 published: false
-weight: 9
+weight: -1
+tier: pro
 ---
 
 Business Objects Mobile is great.. if you get your users to set it up correctly. 

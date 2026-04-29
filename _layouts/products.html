@@ -27,6 +27,7 @@ bodyClass: "page-products"
         <div class="product-content">
           <h2 class="product-title">
             <a href="{{ product.url | relative_url }}">{{ product.title }}</a>
+            {% if product.tier %}{% include tier-badge.html tier=product.tier %}{% endif %}
           </h2>
           <p>{{ product.description }}</p>
         </div>

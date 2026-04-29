@@ -1,0 +1,17 @@
+.tier-badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  margin-left: 0.4em;
+  font-size: 0.65em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  border-radius: 999px;
+  background: #e9ecef;
+  color: #495057;
+}
+
+.tier-badge-free  { background: #e7f5ee; color: #1f7a4a; }
+.tier-badge-pro   { background: #e7eefc; color: #1f4ea8; }
+.tier-badge-agent { background: #f3e8fd; color: #6b1fb1; }
