@@ -6,14 +6,9 @@ bodyClass: "page-home"
 <div class="intro">
   <div class="container pt-6 pb-6">
     <div class="row justify-content-center">
-      <div class="col-12 text-center">
+      <div class="col-12 col-md-8 text-center">
         {{ content }}
       </div>
-      {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-6 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
@@ -97,7 +92,7 @@ bodyClass: "page-home"
     <div class="row justify-content-center">
       <div class="col-12" style="max-width: 37.5rem;">
         <h2 class="section-title">Contact</h2>
-        <p>Questions about a tool, a license, or something custom? Send an email and we'll get back to you.</p>
+        <p>Questions about a specific tool, licensing, custom development, or a demo? We're happy to help.</p>
         {% include call.html show_button=false %}
       </div>
     </div>

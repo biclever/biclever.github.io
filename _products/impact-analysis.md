@@ -2,7 +2,7 @@
 title: "Impact Analysis"
 description: The tool that identifies what universes can be impacted by a database change, and what reports can be impacted by a universe change.
 date: 2024-03-11T13:19:00+10:00
-published: true
+published: false
 weight: 6
 tier: pro
 ---
