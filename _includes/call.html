@@ -2,7 +2,10 @@
   <div class="call-box-top">
     {% if site.data.contact.email %}
     <div class="call-phone">
-      <strong>{{ site.data.contact.name }}</strong>      
+      <strong>{{ site.data.contact.name }}</strong>
+      {% if site.data.contact.role %}
+        <div class="call-role">{{ site.data.contact.role }}</div>
+      {% endif %}
     </div>
     {% endif %}
     {% if site.data.contact.phone %}
@@ -10,7 +13,7 @@
     {% endif %}
     {% if site.data.contact.email %}
     <div class="call-email"><strong>Email: </strong>
-      <a href="mailto:{{ .site.data.contact.email }}">
+      <a href="mailto:{{ site.data.contact.email }}">
         {{ site.data.contact.email }}
       </a>
     </div>

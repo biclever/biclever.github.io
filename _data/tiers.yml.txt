@@ -6,10 +6,10 @@
 - id: pro
   name: Pro
   tagline: Advanced desktop tools for BO power users.
-  price: "$300/year/user"
+  price: "€300/year/user"
   order: 2
 - id: agent
   name: Agent
   tagline: AI-assisted Webi report creation and editing.
-  price: "Contact us for pricing"
+  price: "€800/month"
   order: 3
