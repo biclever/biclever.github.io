@@ -1,6 +1,6 @@
 ---
 title: "Unx Documenter"
-description: The tool facilitates the extraction of UNX universe metadata into an Excel spreadsheet and enables easy identification of differences between universes for streamlined analysis and documentation.
+description: Extracts UNX universe metadata into Excel and highlights differences between universe versions. Perfect for audits, documentation, and change tracking.
 date: 2024-03-08T08:23:00+10:00
 published: true
 weight: 1
@@ -39,8 +39,17 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 ## Screenshots
 
-![UnxDoc Login](/images/pages/unxdoc2-1.png)
-![UnxDoc Universe Selection](/images/pages/unxdoc2-2.png)
-![UnxDoc Export Result](/images/pages/unxdoc2-3.png)
+![UnxDoc Login](/images/pages/unx-doc-2026-01.png)
+{:.full}
+
+![UnxDoc Universe Selection](/images/pages/unx-doc-2026-02.png)
+{:.full}
+
+![UnxDoc Export Result](/images/pages/unx-doc-2026-03.png)
+{:.full}
+
 ![UnxDoc Excel](/images/pages/unxdoc2-4.png)
-![UnxDoc Command Line](/images/pages/unxdoc2-5.png)
+{:.full}
+
+![UnxDoc Excel Comparison](/images/pages/unx-doc-2026-04.png)
+{:.full}

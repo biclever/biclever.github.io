@@ -31,6 +31,6 @@ Note: this is an old tool for the deprecated Universe Designer. It is no longer 
 
 **Screenshots:**
 
-![unvdoc-1](/images/pages/unvdoc-1.png)
+![unvdoc-1](/images/pages/unv-doc-01.png)
 {:.full}
 
