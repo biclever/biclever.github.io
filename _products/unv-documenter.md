@@ -9,7 +9,7 @@ tier: free
 
 UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (objects, classes, tables, joins, incompatibilities, etc.) to an Excel file.
 
-Note: this is an old tool for the deprecated Universe Designer. It is no longer supported. The "Import..." button will likely fail. A workaround is to import universes from Universe Design Tool and then use the "Open..." button in UnvDoc.
+***Note: this is an old tool for the deprecated Universe Designer, and it is no longer supported. The "Import..." button will crash the application for BO 4.2+. A workaround is to import universes from Universe Design Tool and then use the "Open..." button in UnvDoc.***
 
 **EULA:**
 

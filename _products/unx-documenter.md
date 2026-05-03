@@ -23,11 +23,10 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 - [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
 
 **Downloads:**
-- [Unx Documenter for BO 4.3 SP2+ (unxdoc-bo43-2.3-20241031.zip)](https://drive.google.com/uc?export=download&id=1OTy0RF4d4Wfpb3js3mgdtNtJ8bjtp5t9)
+- [Unx Documenter for BO 4.3 SP3+ (unxdoc-20260501.zip)](https://drive.google.com/uc?export=download&id=1_Cl4LIpKfANPVEq9yDCF_OxHBitTXCY2)
 - [Unx Documenter for BO 4.2, BO 4.1 SP6+ (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
 - [Unx Documenter for BO 4.1 SP3-SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
 - [Unx Documenter for BO 4.1 SP1-SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
-- [Unx Documenter Installation and User Guide (unxdoc.pdf)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZR0VkZ3B4dzlWZ00)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
 
 **Support:**

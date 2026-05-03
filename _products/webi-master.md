@@ -30,12 +30,12 @@ This feature is useful to ensure that changes do not negatively impact existing 
 
 Do you need to automate another workflow? We’d love to hear from you at [support@biclever.com](mailto:support@biclever.com)
 
-![Webi Master 0.7](/images/pages/webimaster-01.png)
+![Webi Master 2026](/images/pages/webi-master-2026-01.png)
 {:.full}
 
 **Download**
-- [Webi Master (webimaster-v1.1-20241020.zip)](https://drive.google.com/uc?export=download&id=1bf8NcL9VDbKjqQ9nFu-vlbWu2N2Rspz2) Windows 64-bit
-- <small>SHA-256 hash: cc927b2d1dae7be17857553a4d4aff9ab9c82e1deb6b83406d3785785f354172</small>
+- [Webi Master for BO 4.3 SP3+ (webimaster-20260501.zip)](https://drive.google.com/uc?export=download&id=1w6IKtsMX92JN30ky1OOxu6SGNyCDWfU3)
+- [Buy Biclever PRO €300/year/user](https://buy.stripe.com/5kQdRacWn2zP4GaeLO18c05)
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
