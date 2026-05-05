@@ -9,7 +9,7 @@ tier: pro
 
 **Built on the BIP REST API — no SAP SDK or server-side install required.** Webi Master talks to your BO platform over HTTPS, so it runs on any workstation with BO Client Tools and a network route to the BIP server.
 
-**The tool offers the following features:**
+## Features
 
 - **Data Provider List Export**: Exports a list of documents along with their universes. 
 Unlike the CMC’s “Check Relationships” feature, this tool opens documents and checks actual universes, 
@@ -39,13 +39,16 @@ Do you need to automate another workflow? We’d love to hear from you at [suppo
 
 You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
-## Download
+The BIP RESTful API must be enabled and reachable on the target system. It is normally enabled by default, but it is worth checking with your BO administrator if Webi Master cannot connect.
+
+## Downloads
 
 Without a PRO license the tool runs in a limited test mode so you can evaluate it; full automation and bulk operations require a PRO license.
 
 - [Webi Master for BO 4.3 SP3+ (webimaster-20260501.zip)](https://drive.google.com/uc?export=download&id=1w6IKtsMX92JN30ky1OOxu6SGNyCDWfU3)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
-**Support:**
+## Support
+
 - [support@biclever.com](mailto:support@biclever.com)
 

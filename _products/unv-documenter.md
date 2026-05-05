@@ -11,25 +11,25 @@ UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (
 
 ***Note: this is an old tool for the deprecated Universe Designer, and it is no longer supported. The "Import..." button will crash the application for BO 4.2+. A workaround is to import universes from Universe Design Tool and then use the "Open..." button in UnvDoc.***
 
-**EULA:**
+## Information
 
-- [UnvDoc End-User License Agreement](/pages/end-user-license-agreement-unvdoc/)
+- [Error when running UnvDoc on BO 4.1 SP12, 4.2 SP6 (The RPC server is unavailable)](/pages/error-when-running-unvdoc/)
 
-**Downloads:**
+## Downloads
 
 - [Unv Documenter for BO 4.x (unvdoc-bo4x-20190305.zip)](https://drive.google.com/uc?export=download&id=1Z9NU2QxSL3kWW5iEDgRMCSaPmM6Lp9-0)
 - [Unv Documenter for BO 3.1 SP5+ (unvdoc-bo31sp5-20190305.zip)](https://drive.google.com/uc?export=download&id=1riyL6cINXn1WXqbdxFw68qFMFe18J3_I)
 - [UnvDoc.pdf](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZYURFMjB2Y2FCSjA)
 
-**Support:**
+## Support
 
 - [support@biclever.com](mailto:support@biclever.com)
 
-**Useful Information:**
+## EULA
 
-- [Error when running UnvDoc on BO 4.1 SP12, 4.2 SP6 (The RPC server is unavailable)](/pages/error-when-running-unvdoc/)
+- [UnvDoc End-User License Agreement](/pages/end-user-license-agreement-unvdoc/)
 
-**Screenshots:**
+## Screenshots
 
 ![unvdoc-1](/images/pages/unv-doc-01.png)
 {:.full}

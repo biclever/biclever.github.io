@@ -1,10 +1,8 @@
 ---
 title: "Unx Doc CLI"
-date: 2026-05-05T12:00:00+00:00
-weight: 11
+date: 2026-05-01T00:00:00+10:00
+weight: 3
 ---
-
-# Unx Doc CLI
 
 `unxdoc-cli` extracts SAP BusinessObjects universe (`.unx`) metadata — objects, tables, joins, parameters, LOVs, contexts, navigation paths, incompatibilities — and writes a documentation workbook. Same functionality as the GUI, scriptable for batch documentation and CI pipelines.
 

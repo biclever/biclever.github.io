@@ -7,7 +7,7 @@ weight: 5
 tier: pro
 ---
 
-**The tool offers the following features:**
+## Features
 
 - **Snapshot Extraction**: Extracts a JSON snapshot of universe metadata (business layer objects, joins, derived tables, tables, contexts, LOVs, parameters) from selected universes on the BIP server. Snapshots are saved per universe to your local project folder for easy review and version control.
 
@@ -34,15 +34,17 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
 ## Information
 
-- [CLI](/pages/unxeditor-cli/)
+- [Unx Editor User Guide](/pages/unxeditor-user-guide/)
+- [Unx Editor CLI](/pages/unxeditor-cli/)
 
-## Download
+## Downloads
 
 Without a PRO license the tool runs in a limited test mode — you can extract universe metadata to JSON and diff it against the universe on the server. A PRO license is required to apply changes to a universe and publish it back to the CMS, and to use the CLI for automation.
 
 - [Unx Editor for BO 4.3 SP3+ (unxeditor-20260501.zip)](https://drive.google.com/uc?export=download&id=1ScVJOSijmQDVQ9JTT8YlYJFXr1p-KLFN)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
-**Support:**
+## Support
+
 - [support@biclever.com](mailto:support@biclever.com)
 

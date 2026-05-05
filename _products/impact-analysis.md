@@ -32,10 +32,11 @@ To address these issues, manual verification of all reports is required to ident
 
 - **v0.1** Inital version.
 
-**Downloads:**
+## Downloads
 
 - [Impact Analysis (impactanalysis-v0.3-20240924.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
 
-**Support:**
+## Support
+
 - [support@biclever.com](mailto:support@biclever.com)
 

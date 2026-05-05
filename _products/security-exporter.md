@@ -73,7 +73,7 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
 ## Information
 
-- [CLI](/pages/security-exporter-cli/)
+- [Security Exporter CLI](/pages/security-exporter-cli/)
 
 ## Downloads
 Without a PRO license the tool runs in a limited test mode — you can retrieve and browse the security. A PRO license is required to export to Excel/CSV and to automate with the CLI.
