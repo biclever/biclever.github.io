@@ -80,6 +80,9 @@ bodyClass: "page-home"
           {% if tier.cta_text and tier.cta_url %}
           <a href="{{ tier.cta_url }}" class="button button-primary tier-cta">{{ tier.cta_text }}</a>
           {% endif %}
+          {% if tier.info_url %}
+          <p class="tier-info"><a href="{{ tier.info_url }}">{{ tier.info_text | default: "More info" }}</a></p>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

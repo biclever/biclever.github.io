@@ -70,6 +70,14 @@
     text-align: center;
   }
 
+  .tier-info {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+    align-self: stretch;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
   // Accent stripes on top of each card
   .tier-free  { border-top: 4px solid #1f7a4a; }
   .tier-pro   { border-top: 4px solid $primary; }

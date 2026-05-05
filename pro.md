@@ -6,15 +6,15 @@ description: Biclever Pro — advanced desktop tools for SAP BusinessObjects pow
 keywords: biclever pro, sap businessobjects tools, bo sql connector, impact analysis, keymetrika, unx editor, webi master
 ---
 
-Biclever Pro is a single yearly license that unlocks the full set of advanced desktop utilities for SAP BusinessObjects® analysts and developers.
+**Biclever Pro is a single yearly license that unlocks the full set of advanced desktop utilities for SAP BusinessObjects® analysts and developers.**
 
 ## Setup
 
-1. Purchase a license using the **Buy Pro** button above. You will receive a license key by email.
-2. Download the tool you want to use from its product page and unzip the archive to a preferred location.
-3. Enter the license key when prompted.
+1. **Buy a license** using the **Buy Pro** button above. You will receive a signed `license.txt` file by email, usually within a few minutes.
+2. **Download** the tool you want from its product page and unzip the archive anywhere on your machine.
+3. **Activate** by dropping `license.txt` into the unzipped tool folder, next to the tool's `.bat` launcher. Restart the tool if it is already open.
 
-Each product page lists the exact target folder and any product-specific steps.
+The same `license.txt` works for every Pro tool — copy it into each tool's folder.
 
 ## Q&A
 

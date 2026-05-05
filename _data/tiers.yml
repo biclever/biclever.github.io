@@ -9,4 +9,6 @@
   price: "€300/year/user"
   cta_text: "Buy"
   cta_url: "https://buy.stripe.com/5kQdRacWn2zP4GaeLO18c05"
+  info_url: "/pro"
+  info_text: "More info"
   order: 2
