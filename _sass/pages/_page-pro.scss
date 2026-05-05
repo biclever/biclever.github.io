@@ -1,0 +1,28 @@
+.page-pro {
+  .pro-buy {
+    max-width: 280px;
+    margin: 1.5rem auto 2rem;
+    padding: 1.25rem 1.5rem;
+    background-color: $white-offset;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .pro-price {
+    margin: 0 0 0.75rem;
+    font-size: 1.25rem;
+    color: $steel;
+  }
+
+  .pro-cta {
+    display: inline-block;
+  }
+
+  .pro-products {
+    margin-bottom: 2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

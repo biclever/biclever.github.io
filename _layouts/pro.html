@@ -1,0 +1,42 @@
+---
+layout: default
+bodyClass: "page-pro"
+---
+
+{% assign pro_tier = site.data.tiers | where: "id", "pro" | first %}
+{% assign pro_products = site.products | where: "published", true | where: "tier", "pro" | sort: "weight" %}
+
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12">
+      <div class="service service-single">
+        <h1 class="title">{{ page.title }}</h1>
+
+        <div class="content">
+          {% if pro_tier.price or pro_tier.cta_url %}
+          <div class="pro-buy">
+            {% if pro_tier.price %}<p class="pro-price"><strong>{{ pro_tier.price }}</strong></p>{% endif %}
+            {% if pro_tier.cta_url %}
+            <a href="{{ pro_tier.cta_url }}" class="button button-primary pro-cta">{{ pro_tier.cta_text | default: "Buy Pro" }}</a>
+            {% endif %}
+          </div>
+          {% endif %}
+
+          {% if pro_products.size > 0 %}
+          <h2>Included tools</h2>
+          <ul class="pro-products">
+            {% for product in pro_products %}
+            <li>
+              <a href="{{ product.url | relative_url }}"><strong>{{ product.title }}</strong></a>
+              {% if product.description %} — {{ product.description }}{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
