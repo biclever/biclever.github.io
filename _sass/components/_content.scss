@@ -9,6 +9,11 @@
     max-width: 100%;
     text-align: center;
   }
+  &--wide {
+    > p, > ul, > ol, > h1, > h2, > h3, > h4, > h5, > h6, > blockquote, > pre, > table, > .call, > .highlighter-rouge, > .highlight {
+      max-width: 60rem;
+    }
+  }
   a {
     text-decoration: underline;
   }

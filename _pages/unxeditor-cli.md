@@ -2,6 +2,7 @@
 title: "Unx Editor CLI"
 date: 2026-05-01T00:00:00+10:00
 weight: 12
+wide: true
 ---
 
 # Unx Editor CLI

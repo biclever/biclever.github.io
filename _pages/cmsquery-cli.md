@@ -2,6 +2,7 @@
 title: "CMS Query CLI"
 date: 2026-05-01T00:00:00+10:00
 weight: 10
+wide: true
 ---
 
 # CMS Query CLI
