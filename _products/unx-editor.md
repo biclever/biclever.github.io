@@ -28,12 +28,20 @@ Do you need to automate another workflow? We'd love to hear from you at [support
 ![Unx Editor](/images/pages/unxeditor-01.png)
 {:.full}
 
-**Download**
+## Prerequisite
 
-Free version allows you to extract universe metadata in JSON file and diff against the universe in the system. Paid version allows applying changes to universe and publishing it back to CMS. 
+You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
+
+## Information
+
+- [CLI](/pages/unxeditor-cli/)
+
+## Download
+
+Without a PRO license the tool runs in a limited test mode — you can extract universe metadata to JSON and diff it against the universe on the server. A PRO license is required to apply changes to a universe and publish it back to the CMS, and to use the CLI for automation.
 
 - [Unx Editor for BO 4.3 SP3+ (unxeditor-20260501.zip)](https://drive.google.com/uc?export=download&id=1ScVJOSijmQDVQ9JTT8YlYJFXr1p-KLFN)
-- [Buy Biclever PRO €300/year/user](https://buy.stripe.com/5kQdRacWn2zP4GaeLO18c05)
+- [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)

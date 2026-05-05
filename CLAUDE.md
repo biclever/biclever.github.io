@@ -32,3 +32,17 @@ There are no tests or linters.
 - Product pages live in `_products/*.md` with front matter including `title`, `description`, `date`, `published`, and `weight` (controls home-page ordering).
 - `_pages/*.md` are SEO/long-tail articles — slugs are URL-significant because of `permalink: pretty`.
 - `404.html` is at repo root (Jekyll/Netlify convention).
+
+### Page text-width / image-width convention
+
+Body copy on content pages is capped at `37.5rem` (~600px) for readability, while the surrounding column is wider (Bootstrap container ~1140px). The cap is implemented in `_sass/components/_content.scss` on direct children of `.content` (`> p, > ul, > ol, > h1..h6, > blockquote, > pre, > table, > .call`) with `margin-left/right: auto` to centre them in the column.
+
+Implications when adding pages or layouts:
+- Wrap rendered Markdown in `<div class="content">{{ content }}</div>` (see `_layouts/page.html`, `_layouts/pro.html`). Anything you want capped at the text width must be a direct child of `.content` and one of the selectors above — wrap custom blocks accordingly, or move them inside `.content` so they inherit the cap (this is what `pro.html` does for `.pro-buy`, the "Included tools" `<h2>`, and `.pro-products`).
+- Images in Markdown are wrapped in `<p>` by kramdown and so inherit the text cap. To let an image span the full column width, add `{:.full}` after it:
+  ```markdown
+  ![alt](/images/foo.png)
+  {:.full}
+  ```
+  The `.full` class (and `p.full`) is whitelisted in `_content.scss` to break out to `max-width: 100%` and centre.
+- Custom `<div>`s inside `.content` are NOT in the selector list, so they keep the column's full width unless you give them their own `max-width` (e.g. `.pro-buy` is capped at 280px in `_page-pro.scss` with `margin: ... auto ...` to align with the centred text).

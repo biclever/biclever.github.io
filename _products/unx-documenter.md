@@ -19,8 +19,10 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 - **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)). This allows the tool run for your specific version of SAP BusinessObjects®. 
 
-**EULA:**
-- [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
+**Information:**
+- [CLI](/pages/unxdoc-cli/)
+- [How to enable semantic layer SDK](/pages/how-to-enable-semantic-layer-sdk/)
+- [Error when running UnxDoc on BO 4.1 SP7](/pages/error-in-unxdoc-on-bo-4-1-sp7-localresourceserviceimpl-load/)
 
 **Downloads:**
 - [Unx Documenter for BO 4.3 SP3+ (unxdoc-20260501.zip)](https://drive.google.com/uc?export=download&id=1_Cl4LIpKfANPVEq9yDCF_OxHBitTXCY2)
@@ -32,9 +34,8 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 **Support:**
 - [support@biclever.com](mailto:support@biclever.com)
 
-**Useful Information:**
-- [How to enable semantic layer SDK](/pages/how-to-enable-semantic-layer-sdk/)
-- [Error when running UnxDoc on BO 4.1 SP7](/pages/error-in-unxdoc-on-bo-4-1-sp7-localresourceserviceimpl-load/)
+**EULA:**
+- [UnxDoc End-User License Agreement](/pages/end-user-license-agreement-unxdoc/)
 
 ## Screenshots
 
