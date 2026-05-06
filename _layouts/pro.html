@@ -13,6 +13,10 @@ bodyClass: "page-pro"
         <h1 class="title">{{ page.title }}</h1>
 
         <div class="content">
+          {% if page.description %}
+          <p class="pro-description"><strong>{{ page.description }}</strong></p>
+          {% endif %}
+
           {% if pro_tier.price or pro_tier.cta_url %}
           <div class="pro-buy">
             {% if pro_tier.price %}<p class="pro-price"><strong>{{ pro_tier.price }}</strong></p>{% endif %}
