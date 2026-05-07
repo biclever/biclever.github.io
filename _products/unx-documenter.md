@@ -22,6 +22,7 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 ## Information
 
 - [Unx Documenter CLI](/pages/unxdoc-cli/)
+- [Diffing Universes with Unx Documenter](/pages/diffing-universes-with-unxdoc/)
 - [How to enable semantic layer SDK](/pages/how-to-enable-semantic-layer-sdk/)
 - [Error when running UnxDoc on BO 4.1 SP7](/pages/error-in-unxdoc-on-bo-4-1-sp7-localresourceserviceimpl-load/)
 
