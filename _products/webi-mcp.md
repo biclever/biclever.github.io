@@ -4,7 +4,7 @@ description: An MCP server that lets AI assistants explore SAP BO universes and 
 date: 2026-05-13T22:00:00+10:00
 published: true
 weight: 7
-tier: agent
+tier: pro
 ---
 
 **Bring your BO universes to your AI assistant.** Webi MCP exposes SAP BusinessObjects metadata and Web Intelligence query execution as standard Model Context Protocol tools. Point Claude Desktop (or any MCP client) at the server and your assistant can list universes, inspect their objects, and run ad-hoc queries — without you copy-pasting CSV between systems.
