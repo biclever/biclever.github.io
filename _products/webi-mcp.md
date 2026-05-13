@@ -18,6 +18,12 @@ tier: pro
 
 Everything is read-only against your CMS. Query documents are transient and dissolve with the session — nothing is written back.
 
+![Webi MCP](/images/pages/webi-mcp-01.png)
+{:.full}
+
+![Webi MCP](/images/pages/webi-mcp-02.png)
+{:.full}
+
 ## Built on the BIP REST API
 
 No SAP SDK or server-side install required. Webi MCP talks to your BO platform over HTTPS, so it runs on any workstation with a network route to your BIP server.
