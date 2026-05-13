@@ -43,6 +43,9 @@ No client-side BO install needed — the server runs as a standalone Java proces
 
 ## Information
 
-- [GitHub repository (forthcoming)](https://github.com/biclever)
+## Downloads
+
+## Support
 
 Do you need an MCP for another BI tool or workflow? We'd love to hear from you at [support@biclever.com](mailto:support@biclever.com).
+
