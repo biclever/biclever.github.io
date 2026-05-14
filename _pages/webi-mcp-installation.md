@@ -9,38 +9,50 @@ wide: true
 
 ## Requirements
 
-- Java 17 or later. 
+- Java 17 or later.
 - Network access to your BIP REST endpoint.
-- An Enterprise BIP account with the editing rights in Web Intelligence.
+- An Enterprise BIP account with permission to create documents in Web Intelligence (see *Required permissions* below).
 - An MCP-compatible client (Claude Desktop, Claude Code, Cursor, etc.).
 
 ## Download file
 
-Download and unpack Webi MCP to a preferred location e.g. `C:\<path>\webimcp\webimcp.jar`.
+Download the Webi MCP zip file and unpack it to a preferred location, for example:
+
+`C:\Tools\webimcp\`
+
+The folder should contain at least:
+
+- `webimcp.jar`
+- `license.txt` if you have a PRO license
+- `notes` folder if you want to use persistent notes
 
 ## Java
 
-We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?package=jre&version=17).
-
-Download and install.
+We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?package=jre&version=17) — download the installer and run it.
 
 ## BIP REST endpoint
 
-Verify that you have access to the BIP REST endpoint. 
+Webi MCP connects to SAP BusinessObjects through the BIP REST API.
 
-If you access SAP BO LaunchPad via https://bip-server/BOE/BI, the BIP REST endpoint is typically https://bip-server/biprws.
+If you access SAP BO LaunchPad at:
 
-Contact your admins if not sure. The link can be found under CMC > Applications > RESTful Web Service
+`https://bip-server/BOE/BI`
 
-## Access Configuration
+then the BIP REST endpoint is usually:
 
-- Universes: View-on-demand
-- Web Intelligence: Full Access
-- You do not need write access to any public folder. The tool does not persist Webi documents in the system. 
+`https://bip-server/biprws`
+
+Contact your SAP BO administrator if you are not sure. The URL can normally be found in the Central Management Console under **Applications → RESTful Web Service**.
+
+## Required permissions
+
+- **Universes**: *View On Demand* access level on every universe you intend to query.
+- **Web Intelligence application**: *Full Control* access level.
+- You do **not** need write access to any public folder — Webi MCP never saves documents to the CMS. Queries run inside an in-memory document that is discarded with the session.
 
 ## Install MCP in Claude Desktop
 
-Open Claude Desktop. Under Settings > Developer click `Edit Config`. Edit `claude_desktop_config.json`. 
+In Claude Desktop, open **Settings → Developer** and click **Edit Config** — this opens `claude_desktop_config.json` in your default editor.
 
 Add an `mcpServers.webimcp` entry pointing at the jar:
 
@@ -65,7 +77,7 @@ Add an `mcpServers.webimcp` entry pointing at the jar:
 }
 ```
 
-Alternatively the envrironemnt variables such as `BICLEVER_PASSWORD` can be set in Windows System Variables.
+Alternatively, environment variables such as `BICLEVER_PASSWORD` can be set in Windows under **System Properties → Environment Variables** so you don't store credentials in the Claude Desktop config file.
 
 Restart Claude Desktop fully (tray-icon Quit, then relaunch). The three universe tools
 (`list_universes`, `describe_universe`, `run_query`) appear immediately; the five `note_*`

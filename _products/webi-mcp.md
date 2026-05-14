@@ -37,17 +37,19 @@ The free preview of first 10 rows is enough to validate a query, see the column 
 ## Prerequisite
 
 - A reachable SAP BusinessObjects BIP REST endpoint (BO 4.x or 2025).
-- A BIP account with the editing rights in Web Intelligence.
-- Java 17 or later. We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?package=jre&version=17) — download, run the installer, done.
+- A BIP account with permission to create documents in Web Intelligence.
+- Java 17 or later. 
 - An MCP-compatible client (Claude Desktop, Claude Code, Cursor, etc.).
 
 No client-side BO install needed — the server runs as a standalone Java process and Claude Desktop launches it on demand.
 
 ## Information
 
-- [Webi MCP — install & configuration](/pages/webi-mcp/)
+- [Webi MCP — install & configuration](/pages/webi-mcp-installation/)
 
 ## Downloads
+
+- [Webi MCP (webimcp-20260514.zip)](https://drive.google.com/uc?export=download&id=1-RprqxrMBeBcGxBHkA5fYvxnSvfrkSgN)
 
 ## Support
 
