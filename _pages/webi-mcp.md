@@ -15,6 +15,10 @@ Single fat jar (`webimcp.jar`). Claude Desktop launches it directly via `java -j
 - Java 17+ (the SAP-bound tools ship with Java 8; Webi MCP is a standalone process and uses a
   modern JRE). Any Temurin / Eclipse Adoptium / Oracle 17+ works.
 - Network access to your BIP REST endpoint.
+- A BIP account with the **Edit** right in Web Intelligence on the universes you want to query.
+  Queries run inside a transient (in-memory) document — never saved to the CMS — but Webi still
+  requires the right to create a document for that to work. Read-only accounts can call
+  `list_universes` and `describe_universe`; `run_query` will be refused server-side.
 - An MCP-compatible client (Claude Desktop, Claude Code, Cursor, etc.).
 
 ## Install in Claude Desktop
