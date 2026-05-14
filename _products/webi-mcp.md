@@ -37,8 +37,8 @@ The free preview of first 10 rows is enough to validate a query, see the column 
 ## Prerequisite
 
 - A reachable SAP BusinessObjects BIP REST endpoint (BO 4.x or 2025).
-- A BIP account with the **Edit** right in Web Intelligence on the universes you want to query. The query is run inside a transient (in-memory) document — never saved to the CMS — but Webi still requires the right to create a document for that to work. Read-only accounts can call `list_universes` and `describe_universe` but `run_query` will be refused by the server.
-- Java 17 or later on the workstation that runs Webi MCP.
+- A BIP account with the editing rights in Web Intelligence.
+- Java 17 or later. We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?package=jre&version=17) — download, run the installer, done.
 - An MCP-compatible client (Claude Desktop, Claude Code, Cursor, etc.).
 
 No client-side BO install needed — the server runs as a standalone Java process and Claude Desktop launches it on demand.

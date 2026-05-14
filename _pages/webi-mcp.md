@@ -7,27 +7,40 @@ wide: true
 
 # Webi MCP — install & configuration
 
-Single fat jar (`webimcp.jar`). Claude Desktop launches it directly via `java -jar` — no
-`lib/` folder, no `.bat` launcher.
-
 ## Requirements
 
-- Java 17+ (the SAP-bound tools ship with Java 8; Webi MCP is a standalone process and uses a
-  modern JRE). Any Temurin / Eclipse Adoptium / Oracle 17+ works.
+- Java 17 or later. 
 - Network access to your BIP REST endpoint.
-- A BIP account with the **Edit** right in Web Intelligence on the universes you want to query.
-  Queries run inside a transient (in-memory) document — never saved to the CMS — but Webi still
-  requires the right to create a document for that to work. Read-only accounts can call
-  `list_universes` and `describe_universe`; `run_query` will be refused server-side.
+- An Enterprise BIP account with the editing rights in Web Intelligence.
 - An MCP-compatible client (Claude Desktop, Claude Code, Cursor, etc.).
 
-## Install in Claude Desktop
+## Download file
 
-Edit `claude_desktop_config.json`:
+Download and unpack Webi MCP to a preferred location e.g. `C:\<path>\webimcp\webimcp.jar`.
 
-- Windows (Store install): `%LOCALAPPDATA%\Packages\Claude_pzs8sxrjxfjjc\LocalCache\Roaming\Claude\claude_desktop_config.json`
-- Windows (installer):     `%APPDATA%\Claude\claude_desktop_config.json`
-- macOS:                   `~/Library/Application Support/Claude/claude_desktop_config.json`
+## Java
+
+We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?package=jre&version=17).
+
+Download and install.
+
+## BIP REST endpoint
+
+Verify that you have access to the BIP REST endpoint. 
+
+If you access SAP BO LaunchPad via https://bip-server/BOE/BI, the BIP REST endpoint is typically https://bip-server/biprws.
+
+Contact your admins if not sure. The link can be found under CMC > Applications > RESTful Web Service
+
+## Access Configuration
+
+- Universes: View-on-demand
+- Web Intelligence: Full Access
+- You do not need write access to any public folder. The tool does not persist Webi documents in the system. 
+
+## Install MCP in Claude Desktop
+
+Open Claude Desktop. Under Settings > Developer click `Edit Config`. Edit `claude_desktop_config.json`. 
 
 Add an `mcpServers.webimcp` entry pointing at the jar:
 
@@ -38,19 +51,21 @@ Add an `mcpServers.webimcp` entry pointing at the jar:
       "command": "java",
       "args": [
         "-jar",
-        "C:\\path\\to\\webimcp.jar"
+        "C:\\<path>\\webimcp\\webimcp.jar"
       ],
       "env": {
-        "BICLEVER_RWS":         "https://YOUR-BIP-HOST/biprws",
+        "BICLEVER_RWS":         "https://bip-server/biprws",
         "BICLEVER_USERNAME":    "your-username",
         "BICLEVER_PASSWORD":    "your-password",
-        "BICLEVER_NOTES_DIR":   "C:\\Users\\<you>\\webimcp-notes",
-        "BICLEVER_LICENSE_FILE":"C:\\Users\\<you>\\license.txt"
+        "BICLEVER_NOTES_DIR":   "C:\\<path>\\webimcp\\notes",
+        "BICLEVER_LICENSE_FILE":"C:\\<path>\\webimcp\\license.txt"
       }
     }
   }
 }
 ```
+
+Alternatively the envrironemnt variables such as `BICLEVER_PASSWORD` can be set in Windows System Variables.
 
 Restart Claude Desktop fully (tray-icon Quit, then relaunch). The three universe tools
 (`list_universes`, `describe_universe`, `run_query`) appear immediately; the five `note_*`
@@ -60,7 +75,7 @@ tools appear only when `BICLEVER_NOTES_DIR` is set.
 
 | Var | Required? | What it does |
 |---|---|---|
-| `BICLEVER_RWS` | yes | BIP REST root URL, e.g. `https://host:6405/biprws`. |
+| `BICLEVER_RWS` | yes | BIP REST root URL, e.g. `https://bip-server/biprws`. |
 | `BICLEVER_USERNAME` | yes | BIP login. |
 | `BICLEVER_PASSWORD` | yes | BIP password. |
 | `BICLEVER_NOTES_DIR` | yes for notes | Absolute path to a writable folder. Without it, the five `note_*` tools are not registered (read-only mode). |
