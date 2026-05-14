@@ -49,7 +49,7 @@ No client-side BO install needed — the server runs as a standalone Java proces
 
 ## Downloads
 
-- [Webi MCP (webimcp-20260514.zip)](https://drive.google.com/uc?export=download&id=1-RprqxrMBeBcGxBHkA5fYvxnSvfrkSgN)
+- Coming soon
 
 ## Support
 
