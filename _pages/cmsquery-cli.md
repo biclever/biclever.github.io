@@ -5,8 +5,6 @@ weight: 10
 wide: true
 ---
 
-# CMS Query CLI
-
 `cmsquery-cli` runs SQL queries against the SAP BusinessObjects CMS InfoStore from the command line and writes the result to Excel or CSV. Useful for scripted reporting, scheduled exports, and integration with other tooling.
 
 ## Setup
@@ -15,27 +13,34 @@ Credentials live in `config/systems.json`:
 
 ```json
 {
+    "lastSystem": "localhost",
     "systems": [
-        { "system": "production", "username": "Administrator", "password": "" }
+        {
+            "system": "localhost",
+            "username": "Administrator",
+            "password": ""
+        }
     ]
 }
 ```
 
 `--password` may be omitted from the file and supplied at run time, or stored once via the GUI's "Save password" option.
 
+`lastSystem` is the entry the desktop UI last connected to. The CLI reads it as a fallback when `login` is called with no arguments but never updates it — running the CLI doesn't shift the GUI's default.
+
 ## Running
 
 The CLI runs a sequence of commands in one invocation, sharing a single BIP session:
 
-```
-cmsquery-cli login --system production ^
+```bash
+cmsquery-cli login --system localhost ^
     query --sql "select top 10 si_id, si_name from ci_infoobjects where si_kind = 'Webi'" --includePath ^
     export --output webi.xlsx
 ```
 
 For multi-line readability, put the same line in a script file and run:
 
-```
+```bash
 cmsquery-cli --args script.txt
 ```
 
@@ -43,11 +48,11 @@ Lines starting with `#` are comments; `#` also ends a line inline. A literal `#`
 
 ## Commands
 
-Commands run in order in the order they appear; later commands consume state set by earlier ones.
+Commands run in the order they appear; later commands consume state set by earlier ones.
 
 ### `login`
 
-Open the BIP session.
+Open the BIP session. With no arguments, falls back to `lastSystem` from `config/systems.json`.
 
 | Parameter | Meaning |
 |---|---|
@@ -65,7 +70,8 @@ Run a SQL query against the CMS InfoStore. Result is held in memory until the ne
 |---|---|
 | `--sql "<text>"` | Inline SQL. Quote with double quotes. |
 | `--file <path>` | Read SQL from a file. |
-| `--includePath` | Add a `Path` column showing the folder location of each result row. |
+| `--includePath` | Add a `PATH` column with the folder location of each result row. |
+| `--includeFullPath` | Add a `FULLPATH` column — `PATH` joined with `SI_NAME`. More useful when the rows are folders, where `PATH` alone stops at the parent. |
 | `--includeContainers` | Expand container properties as additional columns. |
 | `--transpose` | Pivot the result so each row's fields become columns. |
 
@@ -82,6 +88,8 @@ Write the last query result to disk or into a database table.
 | `--map <path>` | JSON field map. Renames + reorders columns; required for `--output jdbc` and ignored for file outputs. Source columns not listed are dropped — the map defines the projection. |
 
 You can run multiple `query` / `export` pairs in one invocation — each `export` writes the result of the immediately preceding `query`.
+
+#### JDBC field map
 
 The field-map file looks like:
 
@@ -113,10 +121,22 @@ The shipped `example/` folder includes `example.db.sql` — a sample schema for 
 
 ## Examples
 
+### Show help
+
+```bash
+cmsquery-cli help
+```
+
+### Test connection
+
+```bash
+cmsquery-cli login
+```
+
 ### Excel export
 
-```
-cmsquery-cli login --system production ^
+```bash
+cmsquery-cli login --system localhost ^
     query --file example/example.cms.sql ^
     export --output result.xlsx
 ```
@@ -125,30 +145,27 @@ cmsquery-cli login --system production ^
 
 One-time setup:
 
-```
+```bash
 cmsquery-cli initdb --file example/example.db.sql
 ```
 
 Then on every run:
 
-```
-cmsquery-cli login --system production ^
+```bash
+cmsquery-cli login --system localhost ^
     query  --file example/example.cms.sql ^
     export --output jdbc --map example/example.map.json
 ```
 
 ### Script file
 
-```
+```bash
 # scripts/recent-webi.txt
-login   --system production
+login   --system localhost
 query   --sql "select top 50 si_id, si_name, si_creation_time from ci_infoobjects where si_kind = 'Webi' order by si_creation_time desc" --includePath
 export  --output recent-webi.xlsx
-
-query   --sql "select si_id, si_name from ci_systemobjects where si_kind = 'User'"
-export  --output users.csv
 ```
 
-```
+```bash
 cmsquery-cli --args scripts/recent-webi.txt
 ```
