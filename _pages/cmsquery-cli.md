@@ -38,13 +38,24 @@ cmsquery-cli login --system localhost ^
     export --output webi.xlsx
 ```
 
-For multi-line readability, put the same line in a script file and run:
+For multi-line readability, put the same commands in a plain-text file with any name (`.txt` is convenient for editors) and pass it via `--args`:
 
 ```bash
 cmsquery-cli --args script.txt
 ```
 
-Lines starting with `#` are comments; `#` also ends a line inline. A literal `#` inside a double-quoted SQL string is preserved.
+Inside the file, lines starting with `#` are comments, and `#` also ends a line inline — handy for documenting steps:
+
+```text
+# Daily Webi snapshot.
+login                                                                # uses lastSystem
+query --file queries/webi.sql --includePath
+export --output webi.xlsx
+```
+
+A literal `#` inside a double-quoted SQL string is preserved, so you can still write `where si_name like '%#foo%'` without escaping.
+
+See the [script-file example](#script-file) below for a more complete sample.
 
 ## Commands
 
@@ -159,13 +170,21 @@ cmsquery-cli login --system localhost ^
 
 ### Script file
 
-```bash
-# scripts/recent-webi.txt
-login   --system localhost
-query   --sql "select top 50 si_id, si_name, si_creation_time from ci_infoobjects where si_kind = 'Webi' order by si_creation_time desc" --includePath
-export  --output recent-webi.xlsx
+A copy-paste starter (`recent-webi.txt`). Comment lines and inline `#` notes describe what each step does:
+
+```text
+# recent-webi.txt — exports the 50 most recently created Webi documents.
+# Run with: cmsquery-cli --args recent-webi.txt
+
+login                                                                                              # uses lastSystem from systems.json
+query  --sql "select top 50 si_id, si_name, si_creation_time from ci_infoobjects where si_kind = 'Webi' order by si_creation_time desc" --includePath
+export --output recent-webi.xlsx
 ```
 
+Run it:
+
 ```bash
-cmsquery-cli --args scripts/recent-webi.txt
+cmsquery-cli --args recent-webi.txt
 ```
+
+Multiple `query` / `export` pairs in the same file run in order, sharing the BIP session — useful for batch exports.
