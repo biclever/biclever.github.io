@@ -7,9 +7,24 @@ weight: 7
 tier: pro
 ---
 
-**Bring your BO universes to your AI assistant.** Webi MCP exposes SAP BusinessObjects metadata and Web Intelligence query execution as standard Model Context Protocol tools. Point Claude Desktop (or any MCP client) at the server and your assistant can run ad-hoc queries.
+**Let your AI assistant see the data inside your BO universes.** Webi MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real Web Intelligence query results — not from the assistant's guesses about what your data might look like.
 
-## What it does
+You stay in your AI assistant; Webi MCP quietly opens a read-only window into your universes when the assistant needs it.
+
+## What you can do with it
+
+- **Validate data quickly.** "Did EMEA revenue dip in March or is that just my dashboard?" The assistant pulls the numbers from the universe and tells you.
+- **Run analyses you'd otherwise build by hand.** Describe the slice you want — top 10 customers by margin, year-over-year by product line, anomalies vs. last quarter — and let the assistant assemble the query, run it, and explain the result.
+- **Cross-check a report.** Paste a number from a Webi document into chat and ask the assistant to verify it with a fresh query against the source universe.
+- **Compare across universes.** "Is the Customer Count measure consistent between Sales and CRM?" — the assistant runs both queries and highlights the gap.
+
+![Webi MCP](/images/pages/webi-mcp-01.png)
+{:.full}
+
+![Webi MCP](/images/pages/webi-mcp-02.png)
+{:.full}
+
+## What it does, technically
 
 - **Discover universes**: `list_universes` returns every universe in your CMS by name and folder.
 - **Inspect schemas**: `describe_universe` returns a compact, LLM-friendly catalog of dimensions, measures, and predefined filters with their full paths and data types — no internal IDs.
@@ -17,12 +32,6 @@ tier: pro
 - **Persistent notes**: a built-in scratchpad lets the assistant record findings between sessions — what columns to use, what conventions apply, what prompts a universe requires — so it doesn't relearn your environment on every conversation. Notes are stored locally with the MCP server.
 
 Everything is read-only against your CMS. Query documents are transient and dissolve with the session — nothing is written back.
-
-![Webi MCP](/images/pages/webi-mcp-01.png)
-{:.full}
-
-![Webi MCP](/images/pages/webi-mcp-02.png)
-{:.full}
 
 ## Built on the BIP REST API
 
