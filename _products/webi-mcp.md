@@ -9,8 +9,6 @@ tier: pro
 
 **Let your AI assistant see the data inside your BO universes.** Webi MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real Web Intelligence query results — not from the assistant's guesses about what your data might look like.
 
-You stay in your AI assistant; Webi MCP quietly opens a read-only window into your universes when the assistant needs it.
-
 ## What you can do with it
 
 - **Validate data quickly.** "Did EMEA revenue dip in March or is that just my dashboard?" The assistant pulls the numbers from the universe and tells you.
