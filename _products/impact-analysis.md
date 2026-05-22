@@ -24,14 +24,6 @@ To address these issues, manual verification of all reports is required to ident
 
 **[User Guide](/pages/impact-analysis-for-boe/)**
 
-## Versions
-
-- **v0.3** Data model adjustments.
-
-- **v0.2** Corrected the batch file to automatically detect the BO installation folder and use BO standard java.
-
-- **v0.1** Inital version.
-
 ## Downloads
 
 - [Impact Analysis (impactanalysis-v0.3-20240924.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)

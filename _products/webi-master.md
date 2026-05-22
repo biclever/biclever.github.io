@@ -45,7 +45,7 @@ The BIP RESTful API must be enabled and reachable on the target system. It is no
 
 Without a PRO license the tool runs in a limited test mode so you can evaluate it; full automation and bulk operations require a PRO license.
 
-- [Webi Master for BO 4.3 SP3+ (webimaster-20260501.zip)](https://drive.google.com/uc?export=download&id=1w6IKtsMX92JN30ky1OOxu6SGNyCDWfU3)
+- [Webi Master for BO 4.3 SP3+/BI 2025 (webimaster-20260501.zip)](https://drive.google.com/uc?export=download&id=1fdiTwdcgdg-TTN72Nul3ahPR4sGioVkd)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 ## Support
