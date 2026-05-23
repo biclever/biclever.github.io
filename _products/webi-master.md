@@ -41,6 +41,11 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
 The BIP RESTful API must be enabled and reachable on the target system. It is normally enabled by default, but it is worth checking with your BO administrator if Webi Master cannot connect.
 
+## Information
+
+- [UNV to UNX migration](/pages/webimaster-unv-to-unx-migration/)
+- [Regression Testing](/pages/webimaster-regression-testing/)
+
 ## Downloads
 
 Without a PRO license the tool runs in a limited test mode so you can evaluate it; full automation and bulk operations require a PRO license.
