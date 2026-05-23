@@ -7,26 +7,63 @@ weight: 6
 tier: pro
 ---
 
-Impact Analysis streamlines the extraction of metadata from universes and documents within SAP BusinessObjects®, aiming primarily to assess how alterations in the database and universe could impact reports. It aids in resolving queries such as, "Which reports require testing if an object is modified?" Additionally, it serves a vital role in quality assurance, enabling the verification of variable definition consistency across reports. Furthermore, it facilitates the rapid identification of reports utilizing specific functionalities.
+**Which reports break if you change this universe object — or this database column?** Impact Analysis answers that question in a query, not a week of clicking through documents.
 
-Impact Analysis is a command line tool designed to extract metadata and upload the results to a database, such as SQL Server or SQLite. Subsequent analysis can be conducted using any reporting tool, such as SAP BusinessObjects BI, or through direct queries to the database.
+The tool extracts metadata from every universe and Web Intelligence document on your BO platform and lands it in a relational database you control (SQLite out of the box; SQL Server and Oracle supported). From there you can run impact queries with any tool you already have — SQL Server Management Studio, a Webi report, Excel, or an AI assistant pointed at the same database.
 
-## Case study
-The Deltek Maconomy ERP system, utilized by over 200 customers, integrates with SAP BusinessObjects as its principal reporting tool. Recently, a few key fields underwent modification, transitioning from integer to character types, necessitating updates to the reports. Notably, some customers manage up to 1,000 reports.
+## What you can ask
 
-The field type change can potentially affect reports in several ways, including:
+- *Which reports use the `Customer_ID` column?* — for any database change in scope.
+- *Which reports use objects in the deprecated "Legacy" folder of the Sales universe?* — for any planned cleanup.
+- *Which reports define a variable named "Net Margin", and do they all calculate it the same way?* — for governance.
+- *Which reports rely on the universe joins I'm about to retire?* — for restructure planning.
+- *Which reports use a specific Webi function (e.g. `RunningSum`)?* — for feature audits.
 
-- The fields may be used in calculations, necessitating rewrites of these calculations.
-- The fields may be used in filtrations, and the change could lead to erroneous comparisons between integer and string values.
-- Previously merged objects based on the field might become unmerged, breaking layouts and calculations.
+Because the data lives in a regular SQL database, the questions you can ask aren't limited to the ones we anticipated.
 
-To address these issues, manual verification of all reports is required to identify those utilizing the affected fields. This process involves scrutinizing every report section to locate where the impacted objects are used. Despite the vast number of reports, only a few were actually affected by this change and needed correction. Consequently, identifying the necessary corrections could demand extensive efforts. However, using the tool significantly streamlined the upgrade process, reducing the time from several weeks to just two days and markedly enhancing the quality of the upgrade.
+## Features
 
-**[User Guide](/pages/impact-analysis-for-boe/)**
+- **Bulk metadata extraction**: every selected universe and every Webi document on the platform, including objects, joins, contexts, parameters, LOVs, derived tables, plus per-document data providers, variables, and the actual generated SQL.
+- **Choose your database**: SQLite for laptop-scale, SQL Server or Oracle for shared analysis. JDBC drivers for all three are bundled — no separate downloads.
+- **Stable schema**: documented tables, primary keys, and indexes designed for joins between universes and documents. Build your own dashboards on top.
+- **Refreshable**: re-run extraction whenever the source changes; rows are deleted and replaced per universe/document, never duplicated.
+- **AI-friendly**: pair with [dbquerymcp](/products/dbquerymcp/) to let an AI assistant query the impact-analysis database in plain English.
+
+## Case study — Deltek Maconomy field type change
+
+The Deltek Maconomy ERP system integrates with SAP BusinessObjects as its reporting platform. A schema change retyped several fields from integer to character. Three failure modes were in play across the report estate:
+
+- Calculations using the field needed rewriting.
+- Filters mixing the field with a number caused comparison errors.
+- Object merges based on the field broke silently, distorting layouts and totals.
+
+A typical customer manages up to 1,000 reports; only a handful were actually affected. Identifying which ones, by hand, meant opening every report and inspecting every section.
+
+With Impact Analysis the same job became a single SQL query against the extracted database. End-to-end the upgrade dropped from **multiple weeks to two days**, and quality went up because nothing was missed.
+
+## How it works
+
+1. Configure a JDBC connection to the database where you want the metadata to land.
+2. Apply the bundled schema (`impactanalysis-cli initdb`).
+3. Run the extraction (`impactanalysis-cli refresh`) — it walks the selected folders, pulls universe and document metadata, writes it into the database in one transaction per artifact.
+4. Query the database with anything: SSMS, a Webi report, your favourite IDE, an AI assistant via [dbquerymcp](/products/dbquerymcp/).
+
+Re-run the extraction whenever the source state changes. Rows for the refreshed universe / document are replaced cleanly; everything else is left alone.
+
+## Prerequisite
+
+- SAP BusinessObjects 4.x or 2025 Client Tools.
+- A target database (SQLite, SQL Server, or Oracle). For SQLite there's nothing to install.
+- A PRO license for full automation; without it the tool runs limited to a small sample for evaluation.
+
+## Information
+
+- [User Guide](/pages/impact-analysis-for-boe/)
 
 ## Downloads
 
 - [Impact Analysis (impactanalysis-v0.3-20240924.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
+- [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 ## Support
 
