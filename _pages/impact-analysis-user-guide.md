@@ -112,9 +112,6 @@ The two join keys that bridge documents to universes:
 
 These are stable cuids assigned by BO, not surrogate keys generated at extraction time — they survive renames and folder moves.
 
-![impact analysis model](/images/pages/impact-analysis-model.png)
-{:.full}
-
 ## Example queries
 
 ### Which documents are affected if I change a universe object?
