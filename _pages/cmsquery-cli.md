@@ -7,6 +7,8 @@ wide: true
 
 `cmsquery-cli` runs SQL queries against the SAP BusinessObjects CMS InfoStore from the command line and writes the result to Excel or CSV. Useful for scripted reporting, scheduled exports, and integration with other tooling.
 
+Writing the result into a database table instead of a file is covered separately on [CMS Query CLI with JDBC](/pages/cmsquery-cli-jdbc/).
+
 ## Setup
 
 Credentials live in `config/systems.json`:
@@ -90,45 +92,15 @@ Exactly one of `--sql` / `--file` is required.
 
 ### `export`
 
-Write the last query result to disk or into a database table.
+Write the last query result to a file. The extension of `--output` chooses the format: `.xlsx` for Excel, `.csv` for CSV.
 
 | Parameter | Meaning |
 |---|---|
-| `--output <file>` | Output path. The extension chooses the format: `.xlsx` for Excel, `.csv` for CSV. |
-| `--output jdbc` | Write into the table named in the field map (see `--map`). Requires `config/jdbc.json` and a pre-applied schema (run `initdb` first). |
-| `--map <path>` | JSON field map. Renames + reorders columns; required for `--output jdbc` and ignored for file outputs. Source columns not listed are dropped — the map defines the projection. |
+| `--output <file>` | Output path (`.xlsx` or `.csv`). |
 
 You can run multiple `query` / `export` pairs in one invocation — each `export` writes the result of the immediately preceding `query`.
 
-#### JDBC field map
-
-The field-map file looks like:
-
-```json
-{
-    "table": "webi_document",
-    "fields": {
-        "SI_ID":        "id",
-        "SI_NAME":      "name",
-        "SI_KIND":      "kind",
-        "SI_UPDATE_TS": "last_modified"
-    }
-}
-```
-
-`SI_UPDATE_TS` and other date columns are rendered as ISO-8601 UTC strings on JDBC write — same shape regardless of driver, sortable lexicographically.
-
-Each `--output jdbc` export **replaces** the table's contents (DELETE + INSERT in one transaction). A failed insert rolls back, so the previous snapshot survives.
-
-### `initdb`
-
-Apply a schema SQL file to the JDBC target configured in `config/jdbc.json`. Runs in a single transaction.
-
-| Parameter | Meaning |
-|---|---|
-| `--file <path>` | Schema SQL file. Defaults to `config/schema.sql`. |
-
-The shipped `example/` folder includes `example.db.sql` — a sample schema for the workflow shown below.
+For writing into a database table instead of a file, see [CMS Query CLI with JDBC](/pages/cmsquery-cli-jdbc/).
 
 ## Examples
 
@@ -150,22 +122,6 @@ cmsquery-cli login
 cmsquery-cli login --system localhost ^
     query --file example/example.cms.sql ^
     export --output result.xlsx
-```
-
-### Database export
-
-One-time setup:
-
-```bash
-cmsquery-cli initdb --file example/example.db.sql
-```
-
-Then on every run:
-
-```bash
-cmsquery-cli login --system localhost ^
-    query  --file example/example.cms.sql ^
-    export --output jdbc --map example/example.map.json
 ```
 
 ### Script file
