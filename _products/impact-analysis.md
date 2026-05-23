@@ -2,8 +2,8 @@
 title: "Impact Analysis"
 description: The tool that identifies what universes can be impacted by a database change, and what reports can be impacted by a universe change.
 date: 2024-03-11T13:19:00+10:00
-published: false
-weight: 6
+published: true
+weight: 7
 tier: pro
 ---
 
@@ -58,7 +58,7 @@ Re-run the extraction whenever the source state changes. Rows for the refreshed 
 
 ## Information
 
-- [User Guide](/pages/impact-analysis-for-boe/)
+- [Impact Analysis — user guide](/pages/impact-analysis-user-guide/)
 
 ## Downloads
 

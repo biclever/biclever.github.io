@@ -3,7 +3,7 @@ title: "Webi MCP"
 description: An MCP server that lets AI assistants explore SAP BO universes and run ad-hoc Webi queries through Claude Desktop, Claude Code, and other MCP clients.
 date: 2026-05-13T22:00:00+10:00
 published: true
-weight: 7
+weight: 8
 tier: pro
 ---
 
