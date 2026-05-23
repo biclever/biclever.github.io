@@ -30,16 +30,15 @@ This feature is useful to ensure that changes do not negatively impact existing 
 
 - **CMS Query Execution**: Runs CMS queries without requiring server client tools.
 
-Do you need to automate another workflow? We’d love to hear from you at [support@biclever.com](mailto:support@biclever.com)
+- **Unused Object Analysis**: Identifies universe objects (dimensions, measures, filters) that are not referenced by any report. Useful for universe cleanup, simplification before a migration, and reducing the surface area exposed to end users.
 
-![Webi Master 2026](/images/pages/webi-master-2026-01.png)
-{:.full}
+- **Dependencies Export**: For every selected document, lists the universe objects it uses. Before you rename, retype, or retire an object, this tells you which reports will break — turning impact analysis into a one-click report instead of opening reports one by one.
 
-## Prerequisite
+- **Variables Export**: Pulls every user-defined variable and formula across selected documents into a single sheet. Useful for spotting duplicated calculations, standardising on a canonical version, and identifying formulas that should be promoted into the universe.
 
-You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
+- **Data Provider SQL Export**: Extracts the actual SQL each query generates — including hand-edited free-hand SQL. Lets a DBA review performance and security without needing access to the BO server, and gives developers a quick way to grep across the SQL of an entire estate.
 
-The BIP RESTful API must be enabled and reachable on the target system. It is normally enabled by default, but it is worth checking with your BO administrator if Webi Master cannot connect.
+- **Document List Export**: BO doesn't make it easy to get a flat list of reports with their metadata — owners, modification dates, refresh-on-open flags. This export does it in one click, saving the back-and-forth of building lists by hand.
 
 ## Information
 
@@ -57,3 +56,7 @@ Without a PRO license the tool runs in a limited test mode so you can evaluate i
 
 - [support@biclever.com](mailto:support@biclever.com)
 
+## Screenshots
+
+![Webi Master 2026](/images/pages/webi-master-2026-01.png)
+{:.full}
