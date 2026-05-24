@@ -78,7 +78,7 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 ## Downloads
 Without a PRO license the tool runs in a limited test mode — you can retrieve and browse the security. A PRO license is required to export to Excel/CSV and to automate with the CLI.
 
-- [Security Exporter for BO 4.3+ (securityexporter-20260501.zip)](https://drive.google.com/uc?export=download&id=1E9yEBhZsOVmScsp0w_VQkcdV85DLRfNV)
+- [Security Exporter for BO 4.3+ (securityexporter-20260525.zip)](https://drive.google.com/uc?export=download&id=1_4ma3jMlChFnpC7LXRcrRFxvGhj8OOP1)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 ## Support

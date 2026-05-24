@@ -41,7 +41,7 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
 Without a PRO license the tool runs in a limited test mode — you can extract universe metadata to JSON and diff it against the universe on the server. A PRO license is required to apply changes to a universe and publish it back to the CMS, and to use the CLI for automation.
 
-- [Unx Editor for BO 4.3 SP3+ (unxeditor-20260501.zip)](https://drive.google.com/uc?export=download&id=1ScVJOSijmQDVQ9JTT8YlYJFXr1p-KLFN)
+- [Unx Editor for BO 4.3 SP3+ (unxeditor-20260525.zip)](https://drive.google.com/uc?export=download&id=1P5dX90rUic0WwilqjveLGZ9Tg6cT6MZ4)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 ## Support

@@ -62,7 +62,7 @@ Re-run the extraction whenever the source state changes. Rows for the refreshed 
 
 ## Downloads
 
-- [Impact Analysis (impactanalysis-v0.3-20240924.zip)](https://docs.google.com/forms/d/e/1FAIpQLSetJ1U_vsJUYi41Hi3RvRMkboZb97VapLgJTMAZhohJei5-Ig/viewform)
+- [Impact Analysis (impactanalysis-20260525.zip)](https://drive.google.com/uc?export=download&id=1umkD1q1yTSUjIymc6rdfcO-ivbQDQ9J7)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 ## Support

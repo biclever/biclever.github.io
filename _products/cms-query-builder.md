@@ -28,7 +28,7 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
 ## Downloads
 
-- [CMS Query Builder for BO 4.3/2025 (cmsquery-20260517.zip)](https://drive.google.com/uc?export=download&id=1_ezAteOaweHdQv0F96kzf0oxQP-XXzoq)
+- [CMS Query Builder for BO 4.3/2025 (cmsquery-20260525.zip)](https://drive.google.com/uc?export=download&id=1dwelL9VmOuUS2eEQSEwaFy01zNkRQcEg)
 - [CMS Query Builder for BO 4.3 (cmsquerybuilder-bo43-20240304.zip)](https://drive.google.com/uc?export=download&id=1DqsC9H0AVBKdpwkxQINbRcaI7tVh6W6I)
 - [CMS Query Builder for BO 4.1, BO 4.2 (cmsquerybuilder-bo4x-1.5-20190305.zip)](https://drive.google.com/uc?export=download&id=1bv7VgCS9VMO1nAqcQAAzHW8Gop5k3hBp)
 - [CMS Query Builder for BO 3.1 SP5+ (cmsquerybuilder-bo31sp5-1.5-20190305.zip)](https://drive.google.com/uc?export=download&id=1dwsVf12SKeQDZ7bvn2_hyJhIw3BqT-qA)

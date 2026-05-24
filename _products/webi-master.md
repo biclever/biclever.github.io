@@ -49,7 +49,7 @@ This feature is useful to ensure that changes do not negatively impact existing 
 
 Without a PRO license the tool runs in a limited test mode so you can evaluate it; full automation and bulk operations require a PRO license.
 
-- [Webi Master for BO 4.3 SP3+/BI 2025 (webimaster-20260501.zip)](https://drive.google.com/uc?export=download&id=1fdiTwdcgdg-TTN72Nul3ahPR4sGioVkd)
+- [Webi Master for BO 4.3 SP3+/BI 2025 (webimaster-20260525.zip)](https://drive.google.com/uc?export=download&id=1lAkBpo6vEJy-Olt-ytzNqe-PWOGIdz0N)
 - [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
 ## Support
