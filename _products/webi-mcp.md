@@ -56,7 +56,7 @@ No client-side BO install needed — the server runs as a standalone Java proces
 
 ## Downloads
 
-- Coming soon
+- [Webi MCP for BO 4.3 SP3+/BI 2025 (webimcp-20260525.zip)](https://drive.google.com/uc?export=download&id=1kOIvmDEhdXGAUmHeuB4qhG11J8D2p12z)
 
 ## Support
 
