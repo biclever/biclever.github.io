@@ -1,13 +1,13 @@
 ---
-title: "Webi MCP"
-description: An MCP server that lets AI assistants explore SAP BO universes and run ad-hoc Webi queries through Claude Desktop, Claude Code, and other MCP clients.
+title: "BO Query MCP"
+description: An MCP server that lets AI assistants explore SAP BO universes and run ad-hoc universe queries through Claude Desktop, Claude Code, and other MCP clients.
 date: 2026-05-13T22:00:00+10:00
 published: true
 weight: 8
 tier: pro
 ---
 
-**Let your AI assistant see the data inside your BO universes.** Webi MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real Web Intelligence query results — not from the assistant's guesses about what your data might look like.
+**Let your AI assistant see the data inside your BO universes.** BO Query MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real query results against your universes — not from the assistant's guesses about what your data might look like.
 
 ## What you can do with it
 
@@ -16,10 +16,10 @@ tier: pro
 - **Cross-check a report.** Paste a number from a Webi document into chat and ask the assistant to verify it with a fresh query against the source universe.
 - **Compare across universes.** "Is the Customer Count measure consistent between Sales and CRM?" — the assistant runs both queries and highlights the gap.
 
-![Webi MCP](/images/pages/webi-mcp-01.png)
+![BO Query MCP](/images/pages/webi-mcp-01.png)
 {:.full}
 
-![Webi MCP](/images/pages/webi-mcp-02.png)
+![BO Query MCP](/images/pages/webi-mcp-02.png)
 {:.full}
 
 ## What it does, technically
@@ -27,13 +27,15 @@ tier: pro
 - **Discover universes**: `list_universes` returns every universe in your CMS by name and folder.
 - **Inspect schemas**: `describe_universe` returns a compact, LLM-friendly catalog of dimensions, measures, and predefined filters with their full paths and data types — no internal IDs.
 - **Run ad-hoc queries**: `run_query` creates a transient Web Intelligence document, runs your query against the universe, and streams the result back as CSV. Supports comparison filters (`Equal`, `Between`, `Like`, `InList`, …), predefined filters, and AND/OR combinators.
-- **Persistent notes**: a built-in scratchpad lets the assistant record findings between sessions — what columns to use, what conventions apply, what prompts a universe requires — so it doesn't relearn your environment on every conversation. Notes are stored locally with the MCP server.
+- **Inspect SQL**: `inspect_sql` returns the SQL the query would send to the database without executing it — useful for debugging or showing a user what's behind a number before pulling rows.
+
+Pair with **kbmcp** (separate MCP server) if you want the assistant to keep persistent notes about your environment — column conventions, prompts a universe requires, prior findings — across sessions.
 
 Everything is read-only against your CMS. Query documents are transient and dissolve with the session — nothing is written back.
 
 ## Built on the BIP REST API
 
-No SAP SDK or server-side install required. Webi MCP talks to your BO platform over HTTPS, so it runs on any workstation with a network route to your BIP server.
+No SAP SDK or server-side install required. BO Query MCP talks to your BO platform over HTTPS, so it runs on any workstation with a network route to your BIP server.
 
 ## Free vs PRO
 
@@ -52,10 +54,10 @@ No client-side BO install needed — the server runs as a standalone Java proces
 
 ## Information
 
-- [Webi MCP — install & configuration](/pages/webi-mcp-installation/)
+- [BO Query MCP — install & configuration](/pages/bo-query-mcp-installation/)
 
 ## Downloads
 
-- [Webi MCP for BO 4.3 SP3+/BI 2025 (webimcp-20260525.zip)](https://drive.google.com/uc?export=download&id=1kOIvmDEhdXGAUmHeuB4qhG11J8D2p12z)
+- [BO Query MCP for BO 4.3 SP3+/BI 2025 (webimcp-20260525.zip)](https://drive.google.com/uc?export=download&id=1kOIvmDEhdXGAUmHeuB4qhG11J8D2p12z)
 
 

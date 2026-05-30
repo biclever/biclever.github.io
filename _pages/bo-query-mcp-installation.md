@@ -1,11 +1,11 @@
 ---
-title: "Webi MCP — install & configuration"
+title: "BO Query MCP — install & configuration"
 date: 2026-05-14T00:00:00+10:00
 weight: 10
 wide: true
 ---
 
-# Webi MCP — install & configuration
+# BO Query MCP — install & configuration
 
 ## Requirements
 
@@ -16,14 +16,16 @@ wide: true
 
 ## Download file
 
-Download the Webi MCP zip file and unpack it to a preferred location, for example:
+Download the BO Query MCP zip file and unpack it to a preferred location, for example:
 
-`C:\Tools\webimcp\`
+`C:\Tools\boquerymcp\`
 
 The folder should contain at least:
 
-- `webimcp.jar` — the main server that talks to your BO platform.
+- `boquerymcp.jar` — the main server that talks to your BO platform.
 - `license.txt` if you have a PRO license.
+
+> **Note on the download filename.** The most recent published archive is still named `webimcp-20260525.zip` (the product was renamed from "Webi MCP" to "BO Query MCP" on 2026-05-30). The contents are equivalent; if you want filenames to match the instructions below, rename `webimcp.jar` to `boquerymcp.jar` after extracting. The next published release will ship under the new name.
 
 ## Java
 
@@ -31,7 +33,7 @@ We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?pac
 
 ## BIP REST endpoint
 
-Webi MCP connects to SAP BusinessObjects through the BIP REST API.
+BO Query MCP connects to SAP BusinessObjects through the BIP REST API.
 
 If you access SAP BO LaunchPad at:
 
@@ -47,7 +49,7 @@ Contact your SAP BO administrator if you are not sure. The URL can normally be f
 
 - **Universes**: *View On Demand* access level on every universe you intend to query.
 - **Web Intelligence application**: *Full Control* access level.
-- You do **not** need write access to any public folder — Webi MCP never saves documents to the CMS. Queries run inside an in-memory document that is discarded with the session.
+- You do **not** need write access to any public folder — BO Query MCP never saves documents to the CMS. Queries run inside an in-memory document that is discarded with the session.
 
 ## Install in Claude Desktop
 
@@ -56,17 +58,17 @@ In Claude Desktop, open **Settings → Developer** and click **Edit Config** —
 ```json
 {
   "mcpServers": {
-    "webimcp": {
+    "boquerymcp": {
       "command": "java",
       "args": [
         "-jar",
-        "C:\\<path>\\webimcp\\webimcp.jar"
+        "C:\\<path>\\boquerymcp\\boquerymcp.jar"
       ],
       "env": {
         "BICLEVER_RWS":          "https://bip-server/biprws",
         "BICLEVER_USERNAME":     "your-username",
         "BICLEVER_PASSWORD":     "your-password",
-        "BICLEVER_LICENSE_FILE": "C:\\<path>\\webimcp\\license.txt"
+        "BICLEVER_LICENSE_FILE": "C:\\<path>\\boquerymcp\\license.txt"
       }
     }
   }
@@ -75,7 +77,7 @@ In Claude Desktop, open **Settings → Developer** and click **Edit Config** —
 
 Alternatively, sensitive environment variables such as `BICLEVER_PASSWORD` can be set in Windows under **System Properties → Environment Variables** so you don't store credentials in the Claude Desktop config file.
 
-Restart Claude Desktop fully (tray-icon Quit, then relaunch). The three universe tools (`list_universes`, `describe_universe`, `run_query`) become available.
+Restart Claude Desktop fully (tray-icon Quit, then relaunch). The four universe tools (`list_universes`, `describe_universe`, `run_query`, `inspect_sql`) become available.
 
 ## Environment variables
 
@@ -93,3 +95,4 @@ Restart Claude Desktop fully (tray-icon Quit, then relaunch). The three universe
 | `list_universes` | ✓ | ✓ | List CMS universes by name + folder. |
 | `describe_universe(name, folder?)` | ✓ | ✓ | Folders, dimensions, measures, predefined filters with their backslash-joined paths. |
 | `run_query(universe, …)` | preview (10 rows) | full (caller's `limit`) | Ad-hoc query against a universe with optional filter tree. Returns CSV. |
+| `inspect_sql(universe, …)` | ✓ | ✓ | Returns the SQL the query would send to the database without executing it. No row cap (no rows returned). |
