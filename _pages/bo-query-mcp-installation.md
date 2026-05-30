@@ -25,8 +25,6 @@ The folder should contain at least:
 - `boquerymcp.jar` — the main server that talks to your BO platform.
 - `license.txt` if you have a PRO license.
 
-> **Note on the download filename.** The most recent published archive is still named `webimcp-20260525.zip` (the product was renamed from "Webi MCP" to "BO Query MCP" on 2026-05-30). The contents are equivalent; if you want filenames to match the instructions below, rename `webimcp.jar` to `boquerymcp.jar` after extracting. The next published release will ship under the new name.
-
 ## Java
 
 We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?package=jre&version=17) — download the installer and run it.
