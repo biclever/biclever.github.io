@@ -20,9 +20,17 @@ The same `license.txt` works for every Pro tool — copy it into each tool's fol
 
 Many BO installations sit behind firewalls, so we cannot validate or extend licenses automatically. Monthly renewals would be inconvenient for both you and us, so we settled on a yearly cycle.
 
+### Do you support invoices, purchase orders, or bank transfer?
+
+Yes. The fastest option is to buy online by card using the Buy Pro button. If your company requires an invoice, purchase order, or bank transfer, please [contact us](/contact/) and we will prepare the purchase manually. 
+
+### Can I receive an invoice after paying by card?
+
+Yes. Card payments are processed through Stripe, and an invoice/receipt is issued for the purchase.
+
 ### Can I try a tool before buying?
 
-Most Pro tools are useful without a license. We recommend trying a tool first to confirm it works in your environment and is compatible with your version of BusinessObjects.
+Most Pro tools are useful without a license. We recommend trying a tool first to confirm it works in your environment and is compatible with your version of BusinessObjects. 
 
 ### Can I use the license on more than one machine?
 
