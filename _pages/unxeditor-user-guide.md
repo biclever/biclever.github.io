@@ -30,7 +30,7 @@ Click **Import**. For each selected universe the tool downloads it from the BIP 
 Click **Extract**. The tool writes a JSON snapshot of each imported universe to the project folder:
 
 - File name pattern: `<universe_name>_unx.json` (e.g. `job_invoicing_unx.json`).
-- By default the SQL of objects, joins, and derived tables is moved into a companion `<universe_name>_unx.md` file, and the JSON keeps a `md:` reference in its place (see the **SQL sidecar** section below). Change this in **Settings → Extract SQL**.
+- By default the SQL of objects, joins, and derived tables is moved into a companion `<universe_name>_unx.md` file, and the JSON keeps a `md:` reference in its place (see the **SQL sidecar** section below). Multiline SQL is awkward to edit as an escaped JSON string, and you can't paste it straight in from (or out to) a query tool — pulling it into fenced code blocks in the `.md` keeps it as plain, copy-pasteable SQL. Change this in **Settings → Extract SQL**.
 
 This JSON (plus the `.md`) is your editable working copy — see step 5. Build Plan diffs it against the universe's *current* state (re-read from the local working copy at plan time), so your edits define the changes to apply. Re-extract only to discard your edits and start from a fresh copy.
 
