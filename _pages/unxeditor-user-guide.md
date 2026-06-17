@@ -21,35 +21,44 @@ Enter your BIP server address, username, password, and authentication type, then
 
 Browse the universe tree and move the universes you want to edit into the selected list.
 
-### 3. Extract
+### 3. Import
 
-Click **Extract**. For each selected universe the tool:
+Click **Import**. For each selected universe the tool downloads it from the BIP server to a local working folder (`tmp/`) and compares it against any existing workspace files, reporting each as New, Unchanged, or Modified. Import is the only step that contacts the CMS — everything after it works against the local copy.
 
-- Downloads the universe from the BIP server to a local temp folder.
-- Extracts metadata into a JSON snapshot file saved to the project folder.
+### 4. Extract
+
+Click **Extract**. The tool writes a JSON snapshot of each imported universe to the project folder:
+
 - File name pattern: `<universe_name>_unx.json` (e.g. `job_invoicing_unx.json`).
+- By default the SQL of objects, joins, and derived tables is moved into a companion `<universe_name>_unx.md` file, and the JSON keeps a `md:` reference in its place (see the **SQL sidecar** section below). Change this in **Settings → Extract SQL**.
 
-The snapshot is the baseline. Do not edit it while the session is open — re-extract if you need a fresh baseline.
+This JSON (plus the `.md`) is your editable working copy — see step 5. Build Plan diffs it against the universe's *current* state (re-read from the local working copy at plan time), so your edits define the changes to apply. Re-extract only to discard your edits and start from a fresh copy.
 
-### 4. Edit the JSON file
+> **Note:** Extract, Build Plan, Execute Plan, and Export all require an active connection and a prior Import — they stay disabled until you Import.
 
-Open the `_unx.json` file in any text editor and make your changes. Only the fields listed in the **Editable fields** section below are applied during Execute; everything else is read-only metadata captured for reference.
+### 5. Edit the JSON file
 
-After saving, you can re-open the app and proceed without re-extracting (as long as you do not restart the session).
+Open the `_unx.json` file in any text editor and make your changes. SQL that was moved to the `.md` sidecar is edited there, inside its fenced code block — leave the `md:` reference in the JSON untouched. Only the fields listed in the **Editable fields** section below are applied; everything else is read-only metadata captured for reference.
 
-### 5. Build Plan
+When you are done editing, go straight to Build Plan — there is no need to re-extract.
 
-Click **Build Plan**. The tool compares the original snapshot (captured at Extract time) with your edited JSON file and produces a `_plan.json` file in the project folder listing exactly what will change. The plan file opens automatically in your default JSON editor — review it before proceeding.
+### 6. Build Plan
 
-If there are no differences the plan will be empty and Execute will be a no-op.
+Click **Build Plan**. The tool re-reads the universe's current state from the local working copy, compares it against your edited JSON file, and produces a `_plan.json` file in the project folder listing exactly what will change. The plan file opens automatically in your default JSON editor — review it before proceeding.
 
-### 6. Execute
+If there are no differences the plan will be empty and Execute Plan will be a no-op.
 
-Click **Execute**. The plan is applied to the local universe file. Changes are saved locally only — nothing is published to the BIP server yet.
+### 7. Execute Plan
 
-### 7. Export (manual)
+Click **Execute Plan**. The plan is applied to the local universe file. Changes are saved locally only — nothing is published to the BIP server yet.
 
-Open the modified universe in **Information Design Tool** and save it back to the repository from there.
+> On the **FREE** tier only object/folder `name` and `description` changes are applied; every other instruction is skipped (with a log line saying how many). **PRO** applies the whole plan.
+
+### 8. Export
+
+Click **Export**. The modified universe is uploaded from the local working folder back to the BIP server, publishing your changes. Until this step, everything stays local.
+
+(You can also open the modified universe in **Information Design Tool** and publish it from there if you prefer.)
 
 ---
 
@@ -60,9 +69,34 @@ The project folder holds all working files:
 | File | Description |
 |------|-------------|
 | `<name>_unx.json` | Universe snapshot — edit this file |
+| `<name>_unx.md` | SQL sidecar — holds object/join/derived-table SQL pulled out of the JSON; edit the SQL here (present only when Extract SQL ≠ `None`) |
 | `_plan.json` | Generated change plan — review before executing |
 
 Set the project folder in the **Settings** panel before extracting.
+
+---
+
+## SQL sidecar — `_unx.md`
+
+To keep SQL readable and diff-friendly, Extract can move SQL out of the JSON into a companion Markdown file named `<name>_unx.md`. Where SQL was moved, the JSON holds a reference such as `"select": "md:object/OBJ_580"`, and the actual SQL lives in a fenced `sql` block in the `.md`:
+
+    ## Sales\Project Name `object/OBJ_580`
+    ```sql
+    PROJECT.PROJECTNAME
+    ```
+
+Edit the SQL in the `.md` block and leave the `md:` reference in the JSON unchanged. Build Plan resolves all references before diffing, so a change in either file is detected.
+
+How much SQL is extracted is controlled by **Settings → Extract SQL** (CLI / `preferences.json` key: `extractSql`):
+
+| Mode | Effect |
+|------|--------|
+| `All` (default) | Move object SELECT/WHERE, join, and derived-table SQL to the `.md` |
+| `Only complex expressions` | Same as `All`, but keep bare column SELECTs (e.g. `T.COL`) inline |
+| `Only derived tables` | Move only derived-table SQL; keep objects and joins inline |
+| `None` | Keep all SQL inline in the JSON (no `.md` written) |
+
+Objects without an `id` always keep their SQL inline. The examples below show SQL inline for readability; with the default mode you will see `md:` references in the JSON instead.
 
 ---
 
@@ -87,7 +121,7 @@ The snapshot represents the current state of one universe. It is the file you ed
 
 ### Business layer tree (`rootFolder`)
 
-The business layer is a tree of folders, dimensions, and measures. Each node carries a `"type"` discriminator field.
+The business layer is a tree of folders, dimensions, measures, and filters. Each node carries a `"type"` discriminator field.
 
 #### Folder
 
@@ -133,6 +167,29 @@ Same fields as Dimension plus:
   "projectionFunction": "SUM"  // SUM | COUNT | MIN | MAX | AVERAGE | NONE | ...
 }
 ```
+
+#### Filter
+
+A predefined filter (condition) in the business layer. Two kinds, distinguished by `filterKind`:
+
+```jsonc
+{
+  "type": "filter",
+  "id": "...",
+  "name": "Current Year Only",
+  "description": "",
+  "state": "ACTIVE",                                 // ACTIVE | HIDDEN | DEPRECATED
+  "filterKind": "native",                            // "native" | "business"
+  "where": "YEAR(SALES.DATE) = YEAR(GETDATE())",     // native filters: SQL WHERE fragment
+  "extraTables": [],                                 // native filters: extra tables used in "where"
+  "expression": "",                                  // business filters: business-layer expression
+  "mandatory": false,                                // always applied to queries using the universe
+  "appliedOnUniverse": false,
+  "appliedOnLov": false
+}
+```
+
+For a `native` filter the SQL lives in `where` (plus `extraTables`); for a `business` filter the logic lives in `expression`. The fields belonging to the other kind are ignored on apply. `filterKind` cannot be changed in place — delete and re-add the filter to switch kinds.
 
 ### Joins (`joins`)
 
@@ -314,6 +371,22 @@ The following fields are applied when executing a plan. All other fields in the 
 | `lovId` | `id` of a LOV from the `lovs` array, or `null` to remove the association |
 | `lovEnabled` | `true` / `false` — whether the LOV association is active |
 
+### Filters
+
+| Field | Notes |
+|-------|-------|
+| `name` | Filter name |
+| `description` | Optional description |
+| `state` | `ACTIVE`, `HIDDEN`, `DEPRECATED` |
+| `where` | Native filters only: SQL WHERE fragment |
+| `extraTables` | Native filters only: extra tables used in `where` |
+| `expression` | Business filters only: business-layer expression |
+| `mandatory` | `true` / `false` — always applied to queries using the universe |
+| `appliedOnUniverse` | `true` / `false` |
+| `appliedOnLov` | `true` / `false` |
+
+`filterKind` cannot be modified — delete and re-add the filter to change its kind.
+
 ### Joins
 
 | Field | Notes |
@@ -418,7 +491,7 @@ Changes one field of an existing item.
 {
   "operation": "modify",
   "id": "OBJ_580",
-  "type": "dimension",    // dimension | measure | folder | join | derivedTable | database | alias | context | lov | parameter
+  "type": "dimension",    // dimension | measure | filter | folder | join | derivedTable | database | alias | context | lov | parameter
   "field": "select",
   "from": "PROJECT.PROJECTNAME",
   "to": "EXPROJECT.PROJECTNAME"
