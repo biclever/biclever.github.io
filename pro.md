@@ -36,10 +36,20 @@ Most Pro tools are useful without a license. We recommend trying a tool first to
 
 The license is per user. You can install and activate the tools on the workstations you personally use (for example, a desktop and a laptop).
 
+### Can I use the tools for automation or with a service account?
+
+The standard license covers personal use of the tools, including running them manually or through the CLI for your own work.
+
+Automated or unattended use requires a separate license for each BusinessObjects system or environment being monitored or processed. For example, Development, Test, and Production are treated as three separate environments. Multiple CMS nodes that belong to the same logical environment count as one environment.
+
+For example, you may use Impact Analysis through the CLI for your own development work. However, if you build a scheduled monitoring or automation solution, each BusinessObjects environment included in that solution requires a dedicated license.
+
+Please [contact us](/contact/) for details.
+
 ### What happens when the license expires?
 
 The tools revert to limited mode. Renewing restores full functionality.
 
 ### Do you offer team or site licenses?
 
-Yes — for multi-seat or site-wide deployments, see the Enterprise tier or [contact us](/contact/).
+Yes — for multi-seat or site-wide deployments. Please [contact us](/contact/) for more details.
