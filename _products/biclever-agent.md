@@ -4,7 +4,7 @@ description: Your own SAP BusinessObjects expert, reachable by email. Ask a ques
 date: 2026-10-03T10:00:00+10:00
 published: true
 weight: 8
-tier: agent
+tier: managed
 ---
 
 **A BusinessObjects expert in your inbox.** Biclever Agent is an AI colleague with its own email address. Your team writes to it the way they would write to a consultant: "Create a report of registered hours per employee for January to May". A few minutes later the reply arrives with the report built, saved and described.
