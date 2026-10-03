@@ -12,3 +12,10 @@
   info_url: "/pro"
   info_text: "More info"
   order: 2
+- id: agent
+  name: Agent
+  tagline: AI agents that perform BusinessObjects work for you.
+  price: "Contact us"
+  cta_text: "Contact Sales"
+  cta_url: "mailto:dmytro@biclever.com"
+  order: 3
