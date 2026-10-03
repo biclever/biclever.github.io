@@ -36,10 +36,20 @@
     color: $black;
   }
 
+  // Tagline, CTA and "More info" each reserve a fixed height so the buttons
+  // and the product-list divider line up across cards, whatever the content.
   .tier-tagline {
     margin: 0 0 1.25rem 0;
     color: #5b6770;
-    min-height: 3em;
+    line-height: 1.6;
+    min-height: 3.2em; // two lines
+  }
+
+  .tier-actions {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(40px + 0.75rem + 0.9rem * 1.6); // button + info line
+    margin-bottom: 1.5rem;
   }
 
   .tier-products {
@@ -65,7 +75,6 @@
   }
 
   .tier-cta {
-    margin-top: 1.25rem;
     align-self: stretch;
     text-align: center;
   }
@@ -76,6 +85,7 @@
     align-self: stretch;
     text-align: center;
     font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   // Accent stripes on top of each card
