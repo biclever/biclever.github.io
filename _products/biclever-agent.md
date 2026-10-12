@@ -12,7 +12,7 @@ tier: managed
 No software to install, no portal to learn, no training. If your people can send an email, they can use it.
 
 <div class="video">
-  <iframe src="https://www.youtube-nocookie.com/embed/FWz57kNxjUo" title="Biclever Agent video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/FWz57kNxjUo?rel=0" title="Biclever Agent video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Why teams use it
