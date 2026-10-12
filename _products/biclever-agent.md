@@ -51,6 +51,9 @@ Note: AI can make mistakes. Important changes and results may require human revi
 - **Everything is traceable.** Every system call is logged and every task is recorded in the agent's journal, so past work can be found, reviewed and repeated.
 - **You set the limits.** The agent uses a service account with exactly the rights you choose. We recommend starting on development or test environments.
 
+![Biclever Agent architecture: a customer-specific container with the supervisor service (email), the agent in an isolated environment, its memory, and a proxy that holds the BusinessObjects credentials](/images/pages/biclever-agent-diagram.png)
+{:.full}
+
 ## An agent that keeps getting better
 
 Your agent keeps a notebook about your systems, your preferences and the work it has done, just like a consultant who has been on your project for months. When we improve a tool or add knowledge, every agent benefits on its next task. Lessons learned are reviewed by us before they become shared knowledge, with your specific details removed.
