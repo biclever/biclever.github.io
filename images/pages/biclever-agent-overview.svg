@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 720" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" role="img" aria-labelledby="t">
+  <title id="t">Biclever Agent: a private workspace where a no-AI mail desk talks to your team, the agent works sealed off, and a gatekeeper holds the passwords to your BusinessObjects system</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f6fd1"/>
+    </marker>
+    <linearGradient id="agent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a7de1"/>
+      <stop offset="1" stop-color="#155bb5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1250" height="720" fill="#ffffff"/>
+
+  <!-- private workspace -->
+  <rect x="290" y="60" width="710" height="640" rx="30" fill="#f3f8fe" stroke="#5aa2ec" stroke-width="2.5" stroke-dasharray="10 8"/>
+  <rect x="510" y="40" width="270" height="40" rx="20" fill="#dcebfb"/>
+  <text x="645" y="67" text-anchor="middle" font-size="20" font-weight="600" fill="#155bb5">Your private workspace</text>
+
+  <!-- sealed area -->
+  <rect x="620" y="305" width="250" height="245" rx="22" fill="#e8f2fd" stroke="#8cbdf2" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="638" y="333" font-size="15" font-weight="600" fill="#155bb5">Sealed area</text>
+
+  <!-- arrows -->
+  <g stroke="#1f6fd1" stroke-width="3" fill="none" marker-start="url(#a)" marker-end="url(#a)">
+    <line x1="178" y1="175" x2="557" y2="175"/>
+    <line x1="745" y1="258" x2="745" y2="367"/>
+    <line x1="233" y1="440" x2="337" y2="440"/>
+    <line x1="563" y1="440" x2="657" y2="440"/>
+    <line x1="833" y1="440" x2="1047" y2="440"/>
+    <line x1="745" y1="513" x2="745" y2="587"/>
+  </g>
+
+  <!-- your team -->
+  <circle cx="120" cy="175" r="55" fill="#e8f2fd" stroke="#5aa2ec" stroke-width="2.5"/>
+  <circle cx="120" cy="158" r="15" fill="#1f6fd1"/>
+  <path d="M92 203 a28 24 0 0 1 56 0 z" fill="#1f6fd1"/>
+  <text x="120" y="262" text-anchor="middle" font-size="20" font-weight="600" fill="#0f2a4a">Your team</text>
+
+  <!-- mail desk -->
+  <rect x="560" y="95" width="370" height="160" rx="16" fill="#ffffff" stroke="#1f6fd1" stroke-width="2.5"/>
+  <rect x="582" y="152" width="50" height="36" rx="5" fill="none" stroke="#1f6fd1" stroke-width="3.5"/>
+  <path d="M584 155 L607 174 L630 155" fill="none" stroke="#1f6fd1" stroke-width="3.5" stroke-linejoin="round"/>
+  <text x="652" y="140" font-size="22" font-weight="600" fill="#0f2a4a">Mail desk</text>
+  <text x="652" y="170" font-size="16" fill="#4a5d75">no AI, fixed rules</text>
+  <text x="652" y="194" font-size="16" fill="#4a5d75">accepts mail only from your team</text>
+  <text x="652" y="218" font-size="16" fill="#4a5d75">replies only to your team</text>
+
+  <!-- agent -->
+  <rect x="660" y="370" width="170" height="140" rx="16" fill="url(#agent)"/>
+  <line x1="745" y1="385" x2="745" y2="394" stroke="#ffffff" stroke-width="3"/>
+  <circle cx="745" cy="384" r="4" fill="#ffffff"/>
+  <rect x="721" y="395" width="48" height="34" rx="10" fill="none" stroke="#ffffff" stroke-width="3.5"/>
+  <circle cx="735" cy="412" r="4.5" fill="#ffffff"/>
+  <circle cx="755" cy="412" r="4.5" fill="#ffffff"/>
+  <text x="745" y="462" text-anchor="middle" font-size="20" font-weight="600" fill="#ffffff">Biclever Agent</text>
+  <text x="745" y="487" text-anchor="middle" font-size="15" fill="#d6e8fc">never sees passwords</text>
+
+  <!-- memory -->
+  <rect x="650" y="590" width="190" height="85" rx="16" fill="#ffffff" stroke="#1f6fd1" stroke-width="2.5"/>
+  <ellipse cx="690" cy="617" rx="16" ry="6" fill="#1f6fd1"/>
+  <path d="M674 617 v22 a16 6 0 0 0 32 0 v-22 a16 6 0 0 1 -32 0 z" fill="#1f6fd1"/>
+  <path d="M674 628 a16 6 0 0 0 32 0" fill="none" stroke="#ffffff" stroke-width="2"/>
+  <text x="720" y="626" font-size="19" font-weight="600" fill="#0f2a4a">Memory</text>
+  <text x="720" y="650" font-size="15" fill="#4a5d75">your setup only</text>
+
+  <!-- gatekeeper -->
+  <rect x="340" y="360" width="220" height="160" rx="16" fill="#ffffff" stroke="#1f6fd1" stroke-width="2.5"/>
+  <path d="M450 376 L472 384 v14 c0 14 -9 23 -22 28 c-13 -5 -22 -14 -22 -28 v-14 z" fill="#1f6fd1"/>
+  <rect x="442" y="397" width="16" height="12" rx="2" fill="#ffffff"/>
+  <path d="M445 397 v-4 a5 5 0 0 1 10 0 v4" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="450" y="452" text-anchor="middle" font-size="20" font-weight="600" fill="#0f2a4a">Gatekeeper</text>
+  <text x="450" y="476" text-anchor="middle" font-size="15" fill="#4a5d75">holds the passwords,</text>
+  <text x="450" y="496" text-anchor="middle" font-size="15" fill="#4a5d75">logs every action</text>
+
+  <!-- businessobjects -->
+  <rect x="30" y="360" width="200" height="160" rx="16" fill="#e8f2fd" stroke="#1f6fd1" stroke-width="2.5"/>
+  <g fill="#1f6fd1">
+    <rect x="112" y="376" width="24" height="40" rx="2"/>
+    <rect x="138" y="390" width="14" height="26" rx="2"/>
+    <rect x="107" y="414" width="50" height="4" rx="2"/>
+  </g>
+  <g fill="#ffffff">
+    <rect x="117" y="382" width="5" height="5"/><rect x="126" y="382" width="5" height="5"/>
+    <rect x="117" y="392" width="5" height="5"/><rect x="126" y="392" width="5" height="5"/>
+    <rect x="117" y="402" width="5" height="5"/><rect x="126" y="402" width="5" height="5"/>
+    <rect x="142" y="396" width="5" height="5"/><rect x="142" y="405" width="5" height="5"/>
+  </g>
+  <text x="130" y="450" text-anchor="middle" font-size="19" font-weight="600" fill="#0f2a4a">SAP</text>
+  <text x="130" y="474" text-anchor="middle" font-size="19" font-weight="600" fill="#0f2a4a">BusinessObjects</text>
+  <text x="130" y="498" text-anchor="middle" font-size="15" fill="#4a5d75">your system</text>
+
+  <!-- ai model -->
+  <rect x="1050" y="375" width="180" height="130" rx="16" fill="#f4f1fd" stroke="#7c6cdb" stroke-width="2.5"/>
+  <path d="M1140 390 q3 14 17 17 q-14 3 -17 17 q-3 -14 -17 -17 q14 -3 17 -17 z" fill="#7c6cdb"/>
+  <text x="1140" y="456" text-anchor="middle" font-size="19" font-weight="600" fill="#0f2a4a">AI model</text>
+  <text x="1140" y="480" text-anchor="middle" font-size="15" fill="#4a5d75">by Anthropic</text>
+</svg>
