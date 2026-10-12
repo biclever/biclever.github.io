@@ -11,6 +11,10 @@ tier: managed
 
 No software to install, no portal to learn, no training. If your people can send an email, they can use it.
 
+<div class="video">
+  <iframe src="https://www.youtube-nocookie.com/embed/FWz57kNxjUo" title="Biclever Agent video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 ## Why teams use it
 
 - **No more waiting days for small jobs.** "Add a column", "what does this field mean?", "why do these two reports disagree?" Requests like these used to queue for a consultant and cost billable hours. The agent picks them up straight away.
@@ -48,14 +52,10 @@ To start a new topic, send a new email.
 
 Your agent keeps a notebook about your systems, your preferences and the work it has done, just like a consultant who has been on your project for months. When we improve a tool or add knowledge, every agent benefits on its next task. Lessons learned are reviewed by us before they become shared knowledge, with your specific details removed.
 
-## Who it's for
-
-Finance, controlling and reporting teams that run their reporting on **SAP BusinessObjects**, and who today depend on a consultant for new reports, changes and explanations. 
-
 ## Getting started
 
 1. **Agree the scope.** Which systems and environments the agent may work on, and who may write to it.
-2. **Connect your system.** You provide a dedicated service account with the rights you're comfortable granting. We make sure our service can reach your BusinessObjects system, through a VPN or network opening if needed.
+2. **Connect your system.** You provide a dedicated service account with the rights you're comfortable granting.
 3. **Prepare the agent's knowledge.** We set up its memory with your folders, conventions and key reports, so it knows your environment from day one.
 4. **Trial.** A few of your users send real requests while we watch closely and tune the agent.
 5. **Go live.** Your users get the address and one rule: write to it like a colleague.
@@ -66,4 +66,4 @@ Adding or removing a user later takes one email to us.
 
 We're onboarding our first customers now. If your team spends too much time waiting on BusinessObjects work, let's talk about what the agent could take off your plate.
 
-[Contact us](mailto:dmytro@biclever.com)
+{% include button.html url="mailto:dmytro@biclever.com" text="Contact us" %}
