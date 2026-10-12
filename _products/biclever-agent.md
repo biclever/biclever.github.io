@@ -47,7 +47,7 @@ Note: AI can make mistakes. Important changes and results may require human revi
 - **The AI never sees your passwords.** Credentials are held by a separate gatekeeper component that logs in on the agent's behalf. Each task gets its own fresh session.
 - **Safeguards for original reports.** By default, the agent works on a copy. If you explicitly request a change to the original, it makes a backup first.
 - **Only your people can use it.** You decide who may write to the agent. Mail from anyone else, or from a sender address that can't be verified, is ignored.
-- **Your data stays yours.** Each customer has a dedicated agent with its own mailbox, memory and system access. Nothing is shared between customers.
+- **Your data stays yours.** Each customer has a dedicated agent with its own mailbox, memory and system access, running in an isolated workspace.
 - **Everything is traceable.** Every system call is logged and every task is recorded in the agent's journal, so past work can be found, reviewed and repeated.
 - **You set the limits.** The agent uses a service account with exactly the rights you choose. We recommend starting on development or test environments.
 
