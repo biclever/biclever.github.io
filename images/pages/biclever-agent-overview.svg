@@ -92,7 +92,11 @@
 
   <!-- ai model -->
   <rect x="1050" y="375" width="180" height="130" rx="16" fill="#f4f1fd" stroke="#7c6cdb" stroke-width="2.5"/>
-  <path d="M1140 390 q3 14 17 17 q-14 3 -17 17 q-3 -14 -17 -17 q14 -3 17 -17 z" fill="#7c6cdb"/>
+  <g fill="none" stroke="#7c6cdb" stroke-width="3" stroke-linecap="round">
+    <path d="M1132 387 v6 M1132 421 v6 M1120 399 h6 M1154 399 h6 M1140 387 v6 M1140 421 v6 M1120 407 h6 M1154 407 h6 M1148 387 v6 M1148 421 v6 M1120 415 h6 M1154 415 h6"/>
+  </g>
+  <rect x="1126" y="393" width="28" height="28" rx="4" fill="#7c6cdb"/>
+  <rect x="1133" y="400" width="14" height="14" rx="2" fill="none" stroke="#ffffff" stroke-width="2.5"/>
   <text x="1140" y="456" text-anchor="middle" font-size="19" font-weight="600" fill="#0f2a4a">AI model</text>
   <text x="1140" y="480" text-anchor="middle" font-size="15" fill="#4a5d75">by Anthropic</text>
 </svg>
