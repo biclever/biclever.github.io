@@ -28,6 +28,8 @@ tier: pro
 - **Inspect schemas**: `describe_universe` returns a compact, LLM-friendly catalog of dimensions, measures, and predefined filters with their full paths and data types — no internal IDs.
 - **Run ad-hoc queries**: `run_query` creates a transient Web Intelligence document, runs your query against the universe, and streams the result back as CSV. Supports comparison filters (`Equal`, `Between`, `Like`, `InList`, …), predefined filters, and AND/OR combinators.
 - **Inspect SQL**: `inspect_sql` returns the SQL the query would send to the database without executing it — useful for debugging or showing a user what's behind a number before pulling rows.
+- **Custom SQL** (PRO): `run_custom_sql` runs your own SELECT through the universe's connection — typically the SQL from `inspect_sql`, hand-tuned — and returns the rows the same way.
+- **Browser sign-in**: no credentials in any configuration file — Biclever MCP opens a sign-in page in your browser on first use. `sign_out` lets you switch to another BO system or user mid-conversation.
 
 Pair with **kbmcp** (separate MCP server) if you want the assistant to keep persistent notes about your environment — column conventions, prompts a universe requires, prior findings — across sessions.
 
@@ -39,7 +41,7 @@ No SAP SDK or server-side install required. Biclever MCP talks to your BO platfo
 
 ## Free vs PRO
 
-The free preview of first 10 rows is enough to validate a query, see the column shape, and decide whether full data is worth pulling. PRO removes the row cap. 
+The free preview of first 10 rows is enough to validate a query, see the column shape, and decide whether full data is worth pulling. PRO removes the row cap and adds custom SQL. 
 
 [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
@@ -58,6 +60,6 @@ No client-side BO install needed — the server runs as a standalone Java proces
 
 ## Downloads
 
-- [Biclever MCP for BO 4.3 SP3+/BI 2025 (boquerymcp-20260525.zip)](https://drive.google.com/uc?export=download&id=1kOIvmDEhdXGAUmHeuB4qhG11J8D2p12z)
+- [Biclever MCP for BO 4.3 SP3+/BI 2025 (biclevermcp-20261015.zip)](https://drive.google.com/uc?export=download&id=12W3oSJYqyr_oXjySJUCOwlsh30Ma5Hor)
 
 
