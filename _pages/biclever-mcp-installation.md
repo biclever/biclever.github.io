@@ -73,7 +73,7 @@ Contact your SAP BO administrator if you are not sure. The URL can normally be f
 
 ## 5. Add your team's knowledge (recommended)
 
-The assistant reads the `kb` folder before it picks a universe or builds a query. Put short Markdown or text notes there about what the universes don't say themselves: which universe answers which question, business definitions, filters that must always be applied, value formats and known quirks. `kb\README.md` explains what to write. Edits apply immediately; the assistant can read the notes but never change them.
+The assistant reads the `kb` folder before it picks a universe or builds a query. Put short Markdown notes there about what the universes don't say themselves: which universe answers which question, business definitions, filters that must always be applied, value formats and known quirks. Start each note with a one-line description — the assistant sees the list of descriptions and picks which notes to read. `kb\README.md` explains what to write. Edits apply immediately; the assistant can read the notes but never change them.
 
 To share one knowledge base across your team, keep it in a network folder and add its location to the Claude Desktop config:
 
@@ -96,10 +96,10 @@ To share one knowledge base across your team, keep it in a network folder and ad
 
 | Tool | Free | PRO | Description |
 |---|---|---|---|
-| `kb_search`, `kb_list`, `kb_read` | ✓ | ✓ | Search, list and read the knowledge base. Read-only. |
+| `kb_list`, `kb_read`, `kb_search` | ✓ | ✓ | List (with descriptions), read and search the knowledge base. Read-only. |
 | `list_universes` | ✓ | ✓ | List CMS universes by name + folder. |
 | `describe_universe(name, folder?)` | ✓ | ✓ | Folders, dimensions, measures, predefined filters with their backslash-joined paths. |
-| `run_query(universe, …)` | preview (10 rows) | full (caller's `limit`) | Ad-hoc query against a universe with optional filter tree. Returns CSV. |
+| `run_query(universe, …)` | preview (10 rows) | full (caller's `limit`) | Ad-hoc query against a universe with optional filter tree. Answers the universe's prompts. Returns CSV. |
 | `inspect_sql(universe, …)` | ✓ | ✓ | Returns the SQL the query would send to the database without executing it. No row cap (no rows returned). |
 | `run_custom_sql(universe, result_objects, sql, …)` | — | ✓ | Runs your own SELECT through the universe's connection. Must return one column per result object, in order; must start with `SELECT` (no `WITH`). |
 | `sign_out` | ✓ | ✓ | Signs out; the next call opens the sign-in page so you can switch system or user. |
