@@ -1,11 +1,11 @@
 ---
-title: "BO Query MCP — install & configuration"
+title: "Biclever MCP — install & configuration"
 date: 2026-05-14T00:00:00+10:00
 weight: 10
 wide: true
 ---
 
-# BO Query MCP — install & configuration
+# Biclever MCP — install & configuration
 
 ## Requirements
 
@@ -16,7 +16,7 @@ wide: true
 
 ## Download file
 
-Download the BO Query MCP zip file and unpack it to a preferred location, for example:
+Download the Biclever MCP zip file and unpack it to a preferred location, for example:
 
 `C:\Tools\boquerymcp\`
 
@@ -31,7 +31,7 @@ We recommend [Eclipse Temurin JRE 17](https://adoptium.net/temurin/releases/?pac
 
 ## BIP REST endpoint
 
-BO Query MCP connects to SAP BusinessObjects through the BIP REST API.
+Biclever MCP connects to SAP BusinessObjects through the BIP REST API.
 
 If you access SAP BO LaunchPad at:
 
@@ -47,7 +47,7 @@ Contact your SAP BO administrator if you are not sure. The URL can normally be f
 
 - **Universes**: *View On Demand* access level on every universe you intend to query.
 - **Web Intelligence application**: *Full Control* access level.
-- You do **not** need write access to any public folder — BO Query MCP never saves documents to the CMS. Queries run inside an in-memory document that is discarded with the session.
+- You do **not** need write access to any public folder — Biclever MCP never saves documents to the CMS. Queries run inside an in-memory document that is discarded with the session.
 
 ## Install in Claude Desktop
 
@@ -56,7 +56,7 @@ In Claude Desktop, open **Settings → Developer** and click **Edit Config** —
 ```json
 {
   "mcpServers": {
-    "boquerymcp": {
+    "biclevermcp": {
       "command": "java",
       "args": [
         "-jar",

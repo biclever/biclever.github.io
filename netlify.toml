@@ -4,3 +4,14 @@
 
 [build.environment]
   JEKYLL_ENV = "production"
+
+# Biclever MCP was called "BO Query MCP" until 2026-10-15 — keep old links working.
+[[redirects]]
+  from = "/products/bo-query-mcp/"
+  to = "/products/biclever-mcp/"
+  status = 301
+
+[[redirects]]
+  from = "/pages/bo-query-mcp-installation/"
+  to = "/pages/biclever-mcp-installation/"
+  status = 301

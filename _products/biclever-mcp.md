@@ -1,5 +1,5 @@
 ---
-title: "BO Query MCP"
+title: "Biclever MCP"
 description: An MCP server that lets AI assistants explore SAP BO universes and run ad-hoc universe queries through Claude Desktop, Claude Code, and other MCP clients.
 date: 2026-05-13T22:00:00+10:00
 published: true
@@ -7,7 +7,7 @@ weight: 8
 tier: pro
 ---
 
-**Let your AI assistant see the data inside your BO universes.** BO Query MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real query results against your universes — not from the assistant's guesses about what your data might look like.
+**Let your AI assistant see the data inside your BO universes.** Biclever MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real query results against your universes — not from the assistant's guesses about what your data might look like.
 
 ## What you can do with it
 
@@ -16,10 +16,10 @@ tier: pro
 - **Cross-check a report.** Paste a number from a Webi document into chat and ask the assistant to verify it with a fresh query against the source universe.
 - **Compare across universes.** "Is the Customer Count measure consistent between Sales and CRM?" — the assistant runs both queries and highlights the gap.
 
-![BO Query MCP](/images/pages/webi-mcp-01.png)
+![Biclever MCP](/images/pages/webi-mcp-01.png)
 {:.full}
 
-![BO Query MCP](/images/pages/webi-mcp-02.png)
+![Biclever MCP](/images/pages/webi-mcp-02.png)
 {:.full}
 
 ## What it does, technically
@@ -35,7 +35,7 @@ Everything is read-only against your CMS. Query documents are transient and diss
 
 ## Built on the BIP REST API
 
-No SAP SDK or server-side install required. BO Query MCP talks to your BO platform over HTTPS, so it runs on any workstation with a network route to your BIP server.
+No SAP SDK or server-side install required. Biclever MCP talks to your BO platform over HTTPS, so it runs on any workstation with a network route to your BIP server.
 
 ## Free vs PRO
 
@@ -54,10 +54,10 @@ No client-side BO install needed — the server runs as a standalone Java proces
 
 ## Information
 
-- [BO Query MCP — install & configuration](/pages/bo-query-mcp-installation/)
+- [Biclever MCP — install & configuration](/pages/biclever-mcp-installation/)
 
 ## Downloads
 
-- [BO Query MCP for BO 4.3 SP3+/BI 2025 (boquerymcp-20260525.zip)](https://drive.google.com/uc?export=download&id=1kOIvmDEhdXGAUmHeuB4qhG11J8D2p12z)
+- [Biclever MCP for BO 4.3 SP3+/BI 2025 (boquerymcp-20260525.zip)](https://drive.google.com/uc?export=download&id=1kOIvmDEhdXGAUmHeuB4qhG11J8D2p12z)
 
 
