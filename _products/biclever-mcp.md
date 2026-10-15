@@ -24,6 +24,7 @@ tier: pro
 
 ## How it works
 
+- **Reads your team's knowledge base first** — short notes on which universe answers what, business definitions and known quirks, so the assistant queries the way your team would.
 - **Browses your universes** — lists them and describes their dimensions, measures and predefined filters.
 - **Runs queries and returns the rows**, with filters and top/bottom rankings.
 - **Shows the SQL** behind a query without running it — or runs your own SELECT instead (PRO).

@@ -25,7 +25,7 @@ Download the Biclever MCP zip file and unpack it to a preferred location, for ex
 
 `C:\Tools\biclevermcp\`
 
-If you have a PRO license, put `license.txt` in the same folder, next to `biclevermcp.jar`. Without it, Biclever MCP runs in free mode.
+The folder contains `biclevermcp.jar` and a `kb` folder for your knowledge base (see step 5). If you have a PRO license, put `license.txt` in the same folder, next to `biclevermcp.jar`. Without it, Biclever MCP runs in free mode.
 
 ## 3. Add it to Claude Desktop
 
@@ -71,6 +71,20 @@ then the BIP REST endpoint is usually:
 
 Contact your SAP BO administrator if you are not sure. The URL can normally be found in the Central Management Console under **Applications → RESTful Web Service**.
 
+## 5. Add your team's knowledge (recommended)
+
+The assistant reads the `kb` folder before it picks a universe or builds a query. Put short Markdown or text notes there about what the universes don't say themselves: which universe answers which question, business definitions, filters that must always be applied, value formats and known quirks. `kb\README.md` explains what to write. Edits apply immediately; the assistant can read the notes but never change them.
+
+To share one knowledge base across your team, keep it in a network folder and add its location to the Claude Desktop config:
+
+```json
+"biclevermcp": {
+  "command": "java",
+  "args": ["-jar", "C:\\Tools\\biclevermcp\\biclevermcp.jar"],
+  "env": { "BICLEVER_KB_DIR": "\\\\fileserver\\bo\\kb" }
+}
+```
+
 ## Required permissions
 
 - **Universes**: *View On Demand* access level on every universe you intend to query.
@@ -82,6 +96,7 @@ Contact your SAP BO administrator if you are not sure. The URL can normally be f
 
 | Tool | Free | PRO | Description |
 |---|---|---|---|
+| `kb_search`, `kb_list`, `kb_read` | ✓ | ✓ | Search, list and read the knowledge base. Read-only. |
 | `list_universes` | ✓ | ✓ | List CMS universes by name + folder. |
 | `describe_universe(name, folder?)` | ✓ | ✓ | Folders, dimensions, measures, predefined filters with their backslash-joined paths. |
 | `run_query(universe, …)` | preview (10 rows) | full (caller's `limit`) | Ad-hoc query against a universe with optional filter tree. Returns CSV. |
