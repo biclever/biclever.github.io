@@ -7,7 +7,7 @@ weight: 8
 tier: pro
 ---
 
-**Let your AI assistant see the data inside your BO universes.** Biclever MCP connects Claude (and any other MCP-compatible AI assistant) to your SAP BusinessObjects environment so you can ask questions in plain language and get answers built from real query results against your universes — not from the assistant's guesses about what your data might look like.
+**Let your AI assistant see the data inside your BO universes.** Biclever MCP connects Claude (and any other MCP-compatible AI assistant) to SAP BusinessObjects. Ask questions in plain language; the answers come from real queries against your universes, not guesses.
 
 ## What you can do with it
 
@@ -22,44 +22,24 @@ tier: pro
 ![Biclever MCP](/images/pages/webi-mcp-02.png)
 {:.full}
 
-## What it does, technically
+## How it works
 
-- **Discover universes**: `list_universes` returns every universe in your CMS by name and folder.
-- **Inspect schemas**: `describe_universe` returns a compact, LLM-friendly catalog of dimensions, measures, and predefined filters with their full paths and data types — no internal IDs.
-- **Run ad-hoc queries**: `run_query` creates a transient Web Intelligence document, runs your query against the universe, and streams the result back as CSV. Supports comparison filters (`Equal`, `Between`, `Like`, `InList`, …), predefined filters, and AND/OR combinators.
-- **Inspect SQL**: `inspect_sql` returns the SQL the query would send to the database without executing it — useful for debugging or showing a user what's behind a number before pulling rows.
-- **Custom SQL** (PRO): `run_custom_sql` runs your own SELECT through the universe's connection — typically the SQL from `inspect_sql`, hand-tuned — and returns the rows the same way.
-- **Browser sign-in**: no credentials in any configuration file — Biclever MCP opens a sign-in page in your browser on first use. `sign_out` lets you switch to another BO system or user mid-conversation.
+- **Browses your universes** — lists them and describes their dimensions, measures and predefined filters.
+- **Runs queries and returns the rows**, with filters and top/bottom rankings.
+- **Shows the SQL** behind a query without running it — or runs your own SELECT instead (PRO).
+- **Signs in through your browser** — no credentials stored in any configuration file.
 
-Pair with **kbmcp** (separate MCP server) if you want the assistant to keep persistent notes about your environment — column conventions, prompts a universe requires, prior findings — across sessions.
-
-Everything is read-only against your CMS. Query documents are transient and dissolve with the session — nothing is written back.
-
-## Built on the BIP REST API
-
-No SAP SDK or server-side install required. Biclever MCP talks to your BO platform over HTTPS, so it runs on any workstation with a network route to your BIP server.
+Everything is read-only: queries run in a temporary Web Intelligence document that is never saved to the CMS. Biclever MCP talks to your BO platform over the BIP REST API, so there is nothing to install on the BO server and no SAP client tools on your machine.
 
 ## Free vs PRO
 
-The free preview of first 10 rows is enough to validate a query, see the column shape, and decide whether full data is worth pulling. PRO removes the row cap and adds custom SQL. 
+The free preview of first 10 rows is enough to validate a query, see the column shape, and decide whether full data is worth pulling. PRO removes the row cap and adds custom SQL.
 
 [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
 
-## Prerequisite
+## Get started
 
-- A reachable SAP BusinessObjects BIP REST endpoint (BO 4.x or 2025).
-- A BIP account with permission to create documents in Web Intelligence.
-- Java 17 or later. 
-- An MCP-compatible client (Claude Desktop, Claude Code, Cursor, etc.).
+You need SAP BusinessObjects 4.3 SP3 or later (or BI 2025) with REST web services enabled, Java 17 or later, and Claude Desktop or another MCP client.
 
-No client-side BO install needed — the server runs as a standalone Java process and Claude Desktop launches it on demand.
-
-## Information
-
-- [Biclever MCP — install & configuration](/pages/biclever-mcp-installation/)
-
-## Downloads
-
-- [Biclever MCP for BO 4.3 SP3+/BI 2025 (biclevermcp-20261015.zip)](https://drive.google.com/uc?export=download&id=12W3oSJYqyr_oXjySJUCOwlsh30Ma5Hor)
-
-
+- [Download Biclever MCP (biclevermcp-20261015.zip)](https://drive.google.com/uc?export=download&id=12W3oSJYqyr_oXjySJUCOwlsh30Ma5Hor)
+- [Install & configuration guide](/pages/biclever-mcp-installation/)

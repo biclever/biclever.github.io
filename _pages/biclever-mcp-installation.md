@@ -9,6 +9,7 @@ wide: true
 
 ## Requirements
 
+- SAP BusinessObjects 4.3 SP3 or later, or BI 2025.
 - Java 17 or later.
 - Network access to your BIP REST endpoint.
 - An Enterprise BIP account with permission to create documents in Web Intelligence (see *Required permissions* below).
@@ -47,7 +48,11 @@ Restart Claude Desktop fully (tray-icon Quit, then relaunch).
 
 ## 4. Sign in
 
-The first time you ask Claude about your universes, a sign-in page opens in your browser. Enter:
+The first time you ask Claude about your universes, a sign-in page opens in your browser:
+
+![Biclever MCP sign-in page](/images/pages/biclevermcp-login.png)
+
+Enter:
 
 - **REST web service URL** — the BIP REST endpoint (see below).
 - **User name** and **password** — your BO Enterprise account.
