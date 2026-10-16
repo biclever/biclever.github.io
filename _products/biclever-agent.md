@@ -56,7 +56,7 @@ Note: AI can make mistakes. Important changes and results may require human revi
 
 ## An agent that keeps getting better
 
-Your agent keeps a notebook about your systems, your preferences and the work it has done, just like a consultant who has been on your project for months. When we improve a tool or add knowledge, every agent benefits on its next task. Lessons learned are reviewed by us before they become shared knowledge, with your specific details removed.
+Your agent keeps a notebook about your systems, your preferences and the work it has done, just like a consultant who has been on your project for months. 
 
 ## Getting started
 
