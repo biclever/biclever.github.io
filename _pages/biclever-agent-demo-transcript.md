@@ -161,3 +161,14 @@ I renamed the tab and title to "Job Invoicing" / "Job Invoicing Report". Amounts
 
 ![Job Invoicing Report built from the Sales Report template: jobs grouped by customer with the same KPIs and GM% highlighting](/images/pages/biclever-agent-demo-3.png)
 {:.full}
+
+## Cost
+
+Each task is charged in usage credits, and one credit costs €1. These are the actual costs of the three tasks in this demo:
+
+| Task | Credits |
+|---|---:|
+| Describe a report | 4 |
+| Fix the issues and add KPIs | 21 |
+| Build a new report from an existing one | 17 |
+| **Whole thread** | **42** |
