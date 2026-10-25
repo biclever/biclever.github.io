@@ -15,6 +15,8 @@ No software to install, no portal to learn, no training. If your people can send
   <iframe src="https://www.youtube-nocookie.com/embed/FWz57kNxjUo?rel=0" title="Biclever Agent video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
+Want to see how it reads in practice? Here is the [full email thread from the demo](/pages/biclever-agent-demo-transcript/): the agent describes a report, fixes it, adds KPIs and highlighting, and then rebuilds it on a different universe.
+
 ## Why teams use it
 
 - **No more waiting days for small jobs.** "Add a column", "what does this field mean?", "why do these two reports disagree?" Requests like these used to queue for a consultant and cost billable hours. The agent picks them up straight away.
