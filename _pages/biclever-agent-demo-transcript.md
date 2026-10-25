@@ -9,11 +9,19 @@ This is a real email thread between a user and [Biclever Agent](/products/biclev
 
 ## 1. Describe the report
 
-### Dmytro, 09:39
+<div class="chat" markdown="1">
 
-> Could you describe the report called Sales Report?
+<div class="msg msg--user" markdown="1">
 
-### Biclever Agent, 09:42
+<p class="msg__from">Dmytro · 09:39</p>
+
+Could you describe the report called Sales Report?
+
+</div>
+
+<div class="msg msg--agent" markdown="1">
+
+<p class="msg__from">Biclever Agent · 09:42</p>
 
 **Sales Report** (demo system, Public Folders › Demo, id 28938) is a Web Intelligence document with a single report tab, "Report 2". It shows sales revenue, cost and margin for each product line and category of the eFashion universe, for one year.
 
@@ -46,20 +54,32 @@ This is a real email thread between a user and [Biclever Agent](/products/biclev
 
 I can fix points 1–5 on a draft copy, "Sales Report (draft)" in the same folder, and leave the original untouched. Or I can make the fixes directly in the original after taking a backup. Just tell me which you prefer.
 
+</div>
+
+</div>
+
 ![Sales Report before any changes: Category, Sales revenue, Cost and Margin per product line](/images/pages/biclever-agent-demo-1.png)
 {:.full}
 
 ## 2. Fix the report and add KPIs
 
-### Dmytro, 09:46
+<div class="chat" markdown="1">
 
-> Could you please fix the issues directly in the report?
->
-> Please add a GM% calculation. Highlight values below 20% in red and values above 45% in green.
->
-> Add four KPIs at the top with the totals: Revenue, Cost, GM and GM%.
+<div class="msg msg--user" markdown="1">
 
-### Biclever Agent, 09:55
+<p class="msg__from">Dmytro · 09:46</p>
+
+Could you please fix the issues directly in the report?
+
+Please add a GM% calculation. Highlight values below 20% in red and values above 45% in green.
+
+Add four KPIs at the top with the totals: Revenue, Cost, GM and GM%.
+
+</div>
+
+<div class="msg msg--agent" markdown="1">
+
+<p class="msg__from">Biclever Agent · 09:55</p>
 
 I fixed the five issues directly in **Sales Report** and added the GM% column, its colour rules and the four KPIs. It's saved, and I checked it from a fresh session. I backed up the original first.
 
@@ -96,20 +116,32 @@ I refreshed with Year = 2019 to check the figures, without saving that refresh:
 - My first save went into a backup copy instead of the report. I deleted that copy, took a new backup and redid all the changes on the report itself. Nothing else was affected.
 - The thresholds are fixed values (20% and 45%), and colour is the only signal, so it won't show in a black-and-white print. I can add a small legend if you want one.
 
+</div>
+
+</div>
+
 ![Sales Report after the fixes: four KPI tiles on top and a GM% column with red and green highlighting](/images/pages/biclever-agent-demo-2.png)
 {:.full}
 
 ## 3. Reuse the report on another universe
 
-### Dmytro, 10:11
+<div class="chat" markdown="1">
 
-> There is a real-world universe called Job Invoicing.
->
-> Use the existing Sales Report as a template to create a new report based on this universe.
->
-> Make reasonable assumptions. Provide the OpenDocument URL for the new report.
+<div class="msg msg--user" markdown="1">
 
-### Biclever Agent, 10:18
+<p class="msg__from">Dmytro · 10:11</p>
+
+There is a real-world universe called Job Invoicing.
+
+Use the existing Sales Report as a template to create a new report based on this universe.
+
+Make reasonable assumptions. Provide the OpenDocument URL for the new report.
+
+</div>
+
+<div class="msg msg--agent" markdown="1">
+
+<p class="msg__from">Biclever Agent · 10:18</p>
 
 I've created **Job Invoicing Report** on the Job Invoicing universe, using Sales Report as the template. It's saved and I checked it from a fresh session.
 
@@ -158,6 +190,10 @@ I renamed the tab and title to "Job Invoicing" / "Job Invoicing Report". Amounts
 
 - The internal customer "99990 Trifolium Law Internal" (internal matters, absence, overtime, yearly adjustments) has costs of 2,173,200 and no revenue. That pulls the overall GM% down from about 36% to 23%. I can exclude internal jobs, or show them in a separate block, if you prefer.
 - If you'd rather report what was actually invoiced, the report can switch back to invoiced figures in a few minutes. It will only show useful numbers once invoices exist in the system.
+
+</div>
+
+</div>
 
 ![Job Invoicing Report built from the Sales Report template: jobs grouped by customer with the same KPIs and GM% highlighting](/images/pages/biclever-agent-demo-3.png)
 {:.full}
