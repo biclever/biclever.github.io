@@ -1,0 +1,103 @@
+// Site-only additions on top of the design system (_tokens, _components).
+// Keep design decisions in the design system; this file is layout glue.
+
+html { scroll-padding-top: calc(var(--nav-height) + 16px); }
+img { max-width: 100%; height: auto; }
+
+.skip-link {
+  position: absolute; left: 16px; top: -48px; z-index: 20;
+  padding: 8px 12px; background: var(--primary); color: var(--on-primary); border-radius: var(--radius-sm);
+  &:focus { top: 8px; color: var(--on-primary); }
+}
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+// Mobile menu: a <details> sheet, no JavaScript
+.nav-mobile { display: none; position: relative; }
+.nav-mobile summary {
+  display: flex; align-items: center; height: var(--control-height); padding: 0 12px;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-md);
+  font-size: 14px; font-weight: 500; cursor: pointer; list-style: none;
+}
+.nav-mobile summary::-webkit-details-marker { display: none; }
+.nav-mobile ul {
+  position: absolute; right: 0; top: calc(100% + 8px); min-width: 14rem; margin: 0; padding: 8px; list-style: none;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+}
+.nav-mobile li a { display: block; padding: 10px 12px; border-radius: var(--radius-sm); color: var(--ink); }
+.nav-mobile li a:hover { background: var(--surface); }
+@media (max-width: 767px) {
+  .nav-mobile { display: block; }
+  .nav .container { gap: 12px; }
+  .nav-actions .btn { padding: 0 12px; }
+}
+
+// Grids used by the pages
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 48px; align-items: start; }
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 16px; }
+a.plan { color: var(--ink); text-decoration: none; }
+a.plan:hover { border-color: var(--border-strong); color: var(--ink); }
+.btn-ghost.flush { padding-left: 0; }
+.btn-ghost.flush:hover { background: transparent; }
+.section-flush-top { padding-top: 0; }
+
+// Hero product shot: an email thread on a panel
+.hero-shot { padding: 32px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); min-width: 0; }
+.hero-shot-meta {
+  display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; padding-top: 16px;
+  border-top: 1px dashed var(--border-strong); font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+}
+
+// Placeholder for missing images (founder photo, PDF)
+.placeholder {
+  aspect-ratio: 4 / 3; max-width: 100%; display: flex; align-items: center; justify-content: center;
+  background: var(--surface-2); border: 1px dashed var(--border-strong); border-radius: var(--radius-lg);
+  font-size: 14px; color: var(--muted);
+}
+
+// Video embed
+.video { aspect-ratio: 16 / 9; max-width: 100%; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); background: var(--blue-900); }
+.video iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+// Simple list with a right-hand note (pilot requirements, free tools)
+.rows { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+.rows > li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 32px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.rows .note { font-size: 14px; color: var(--subtle); }
+.rows h3 { flex: 0 0 14rem; font-size: 17px; }
+.rows p { flex: 1 1 20rem; font-size: 15px; color: var(--muted); }
+
+// Docs article: one centred column
+.docs { padding-block: 64px 96px; }
+.docs-main { max-width: var(--measure); margin-inline: auto; }
+.docs-main.wide, .docs-main.wide .prose { max-width: 56rem; }
+.docs-meta { font-size: 14px; color: var(--subtle); }
+.prose .docs-meta a { color: var(--muted); text-decoration: none; }
+.prose .docs-meta a:hover { color: var(--ink); }
+.lead { font-size: 19px; line-height: 1.55; color: var(--muted); }
+
+// Prose extras for content written for the old site
+.prose img { display: block; margin-block: 24px; border-radius: var(--radius-sm); }
+.prose p.full img, .prose .full img { width: 100%; }
+.prose .video { margin-block: 32px; }
+.prose hr { border: 0; border-top: 1px solid var(--border); margin-block: 48px; }
+.prose strong { font-weight: 600; }
+.prose .chat { margin-block: 24px; }
+.figure-plain { padding: 24px; background: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-lg); }
+
+// Old transcript markup (msg--user, msg--agent, msg__from) mapped to the new Chat component
+.msg--user { align-self: flex-end; background: var(--primary-soft); color: var(--ink); border-bottom-right-radius: var(--radius-sm); }
+.msg--agent { align-self: flex-start; background: var(--surface); border: 1px solid var(--border); border-bottom-left-radius: var(--radius-sm); }
+.msg > * + * { margin-top: 8px; }
+.msg > :first-child { margin-top: 0; }
+.msg__from { display: block; margin-bottom: 4px; font-size: 13px; font-weight: 500; color: var(--subtle); }
+.msg--user .msg__from { color: var(--muted); }
+.msg table { font-size: 14px; }
+
+// Forms (Netlify)
+.form .hidden-field { display: none; }
+
+// Product page header
+.product-head { display: flex; flex-direction: column; gap: 16px; max-width: 46rem; padding-block: 64px 32px; }
+.product-head h1 { font-size: 48px; line-height: 1.06; letter-spacing: -0.025em; }
+.product-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.product-body { padding-bottom: 96px; }
+@media (max-width: 767px) { .product-head h1 { font-size: 34px; } }

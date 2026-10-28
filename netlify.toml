@@ -15,3 +15,20 @@
   from = "/pages/bo-query-mcp-installation/"
   to = "/pages/biclever-mcp-installation/"
   status = 301
+
+# 2026 redesign: the Agent moved from the tools catalog to the main site.
+[[redirects]]
+  from = "/products/biclever-agent/"
+  to = "/how-it-works/"
+  status = 301
+
+# Short URLs for outreach emails
+[[redirects]]
+  from = "/agent/"
+  to = "/how-it-works/"
+  status = 301
+
+[[redirects]]
+  from = "/security/"
+  to = "/pages/biclever-agent-security/"
+  status = 301

@@ -2,10 +2,12 @@
 title: "Biclever Agent — demo transcript"
 description: A real email thread with Biclever Agent. It describes a Web Intelligence report, fixes it, adds KPIs and conditional formatting, then rebuilds it on a different universe.
 date: 2026-10-25T00:00:00+10:00
-weight: 30
+weight: 20
+section: agent
+nav_title: Demo email thread
 ---
 
-This is a real email thread between a user and [Biclever Agent](/products/biclever-agent/) on a demo SAP BusinessObjects system, sent on 10 October 2026. The whole conversation took about 40 minutes. The screenshots show the report after each reply.
+This is a real email thread between a user and [Biclever Agent](/how-it-works/) on a demo SAP BusinessObjects system, sent on 10 October 2026. The whole conversation took about 40 minutes. The screenshots show the report after each reply.
 
 ## 1. Describe the report
 

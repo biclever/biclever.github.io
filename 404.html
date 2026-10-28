@@ -1,53 +1,19 @@
 ---
+title: Page not found
 permalink: /404.html
 layout: default
-bodyClass: "page-home"
+sitemap: false
 ---
-
-<div class="intro">
-  <div class="container pt-6 pb-1">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-12 col-lg-12 order-2 order-md-1">
-        <div class="content">
-          <h1><span style="color:#01497c">Oops.. </span> <span style="color:#89c2d9">404</span> <span style="color:#01497c">Page not found</span></h1>        
-        </div>      
-      </div>
-    </div> 
-  </div>
-</div>
-
-<div class="strip">
-  <div class="container pt-1 pb-1">
-    <div class="row justify-content-start">
-      <div class="col-6 col-md-6 col-lg-6 order-2 order-md-1">
-        <div class="content">
-          <h3>Maybe you are looking for one of our products:</h3>          
-          <ul>
-            {% assign products = site.products | where: "published", true | sort: "weight" %}
-            {% for product in products %}
-            <li>
-              <a href="{{ product.url | relative_url }}">{{ product.title }}</a> 
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-      <div class="col-6 col-md-6 col-lg-6 order-2 order-md-1">
-        <div class="content">
-          <h3>Otherwise, here are some other pages:</h3>        
-          {% assign mainmenu = site.data.menus.main | sort: 'weight'  %}
-          <ul class="list-group">
-            {% for item in mainmenu %}
-            <li class="list-group-item">
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
-            {% endfor %}
-            <li class="list-group-item">
-              <a href="/pages/">Knowledge base</a>
-            </li>
-          </ul>
-        </div>        
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow">404</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">This page doesn't exist.</h1>
+      <p class="hero-sub">It may have moved when the site was redesigned. These are the most likely places:</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/' | relative_url }}">Biclever Agent</a>
+        <a class="btn btn-secondary btn-lg" href="{{ '/products/' | relative_url }}">Tools</a>
       </div>
     </div>
   </div>
-</div>
+</section>

@@ -1,0 +1,18 @@
+# Biclever Agent offer: one place for the numbers used across the site.
+price:
+  monthly: "€500"
+  credit: "€1"
+tasks:
+  - name: "Explain a report"
+    credits: 4
+  - name: "Fix issues and add KPIs"
+    credits: 25
+  - name: "Build from a template"
+    credits: 42
+pilot:
+  places: 5
+  # Shown as "N of 5 pilots left" on /pilot/. Lower it as pilots are taken.
+  places_left: 5
+  credits: 200
+  email: "pilot@biclever.com"
+demo_video: "https://www.youtube-nocookie.com/embed/FWz57kNxjUo?rel=0"

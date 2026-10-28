@@ -1,15 +1,14 @@
 ---
 layout: default
-bodyClass: "page-basic"
 ---
-
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-start">
-        <div class="col-12">
-            <div class="service service-single">
-                <h1 class="title{% if page.wide %} title--wide{% endif %}">{{page.title}}</h1>
-                <div class="content{% if page.wide %} content--wide{% endif %}">{{content}}</div>
-            </div>
-        </div>
+{% if page.section == "agent" %}{% assign back_url = '/how-it-works/' %}{% assign back_name = 'Biclever Agent' %}{% else %}{% assign back_url = '/products/' %}{% assign back_name = 'Tools' %}{% endif %}
+<div class="container docs">
+  <article class="docs-main{% if page.wide %} wide{% endif %}">
+    <div class="prose">
+      <p class="docs-meta"><a href="{{ back_url | relative_url }}">← {{ back_name }}</a>{% if page.updated %} · Last updated {{ page.updated | date: "%-d %B %Y" }}{% endif %}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+      {{ content }}
     </div>
+  </article>
 </div>

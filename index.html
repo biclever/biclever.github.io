@@ -1,0 +1,109 @@
+---
+title: Biclever Agent for SAP BusinessObjects
+layout: default
+description: Biclever Agent builds and changes Webi reports on your own BusinessObjects system, by email. Start a free one-month pilot.
+---
+{% assign a = site.data.agent %}
+<section class="hero">
+  <div class="container grid-2" style="align-items: center; gap: 64px;">
+    <div class="hero-inner">
+      <span class="badge badge-primary"><span class="dot"></span>Free one-month pilot · {{ a.pilot.places }} places</span>
+      <h1 style="font-size: clamp(40px, 4.6vw, 56px); line-height: 1.04;">Your BusinessObjects report requests, done in minutes, by email.</h1>
+      <p class="hero-sub">Biclever Agent builds and changes Webi reports on your own system. It works on a copy, tells you what it changed, and logs every step.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="{{ '/how-it-works/' | relative_url }}#demo">Watch the 3-minute demo</a>
+      </div>
+      <p class="hero-note">No monthly fee during the pilot · No automatic billing</p>
+    </div>
+    <div class="hero-shot" aria-label="Example email thread with Biclever Agent">
+      <div class="chat">
+        <div class="msg msg-user"><span class="msg-from">Controller · 09:12</span>Can you add Margin % after Revenue in Sales by Region, and sort the regions by margin?</div>
+        <div class="msg msg-agent"><span class="msg-from">Biclever Agent · 09:19</span>Done on a copy: Margin % added and regions sorted. The copy is saved next to the original in Finance / Sales. Want me to apply it to the original?</div>
+        <div class="msg msg-user"><span class="msg-from">Controller · 09:21</span>Yes, please.</div>
+      </div>
+      <div class="hero-shot-meta"><span>Example · 7 minutes</span><span>25 credits · €25</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Email a request. Review the result.</h2>
+      <p>No new tool to learn. The agent works on your BusinessObjects system with the permissions you give it.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><h3>Send a request</h3><p>Email the agent in plain words, the way you would ask a colleague.</p></li>
+      <li class="step"><h3>It works on a copy</h3><p>It builds or changes the report on a copy, often in 5 to 20 minutes.</p></li>
+      <li class="step"><h3>You review the reply</h3><p>It lists every report it created or changed, and anything left open.</p></li>
+    </ol>
+    <a class="btn btn-ghost flush" href="{{ '/how-it-works/' | relative_url }}" style="margin-top: 32px;">See everything it can do <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Example requests</span>
+      <h2>What people ask it to do.</h2>
+      <p>Each task is priced in credits, at {{ a.price.credit }} per credit, and every reply shows what it used.</p>
+    </div>
+    <div class="requests">
+      <div class="request">
+        <div class="request-meta"><span>From: controller</span><span>Fix and add KPIs</span></div>
+        <div class="request-subject">Add Margin % to Sales by Region</div>
+        <p class="request-body">Add Margin % after Revenue and sort the regions by margin.</p>
+        <div class="request-result">✓ Done · 25 credits</div>
+      </div>
+      <div class="request">
+        <div class="request-meta"><span>From: BI lead</span><span>Explain a report</span></div>
+        <div class="request-subject">What does Q3 Headcount calculate?</div>
+        <p class="request-body">Where do the FTE numbers come from, and which filters apply?</p>
+        <div class="request-result">✓ Done · 4 credits</div>
+      </div>
+      <div class="request">
+        <div class="request-meta"><span>From: finance analyst</span><span>Build from a template</span></div>
+        <div class="request-subject">Monthly cost report for Norway</div>
+        <p class="request-body">Same layout as the Sweden report, filtered to Norwegian cost centres.</p>
+        <div class="request-result">✓ Done · 42 credits</div>
+      </div>
+      <div class="request">
+        <div class="request-meta"><span>From: BI lead</span><span>Fix issues</span></div>
+        <div class="request-subject">Totals don't match in Budget vs Actual</div>
+        <p class="request-body">The yearly total is off from the sum of the months. Find out why and fix it.</p>
+        <div class="request-result">✓ Done · 25 credits</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Safe by design</span>
+      <h2>Your system, your permissions, your approval.</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Works on a copy first</h3><p>By default every change is made on a copy, and originals are backed up before any edit.</p></div>
+      <div class="feature"><h3>The AI never sees your passwords</h3><p>A separate gatekeeper holds the credentials and logs in on the agent's behalf.</p></div>
+      <div class="feature"><h3>Every change logged</h3><p>Every system call is logged and every task is recorded in the agent's journal.</p></div>
+    </div>
+    <a class="btn btn-ghost flush" href="{{ '/pages/biclever-agent-security/' | relative_url }}" style="margin-top: 32px;">Read the security and IT review <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2" style="align-items: center;">
+    <div class="placeholder" role="img" aria-label="Founder photo placeholder">[Founder photo]</div>
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: var(--measure);">
+      <span class="eyebrow">Built by a BO specialist</span>
+      <h2 style="font-size: 32px; line-height: 1.15; letter-spacing: -0.015em;">Built on tools [N] BusinessObjects professionals already use.</h2>
+      <p style="font-size: 17px; color: var(--muted);">Biclever is made by Dmytro Bukhantsov, a BusinessObjects consultant for [N] years. The agent works with the same tested toolset used every day in our own consulting work.</p>
+      <a class="btn btn-ghost flush" href="{{ '/about/' | relative_url }}" style="align-self: flex-start;">About Biclever <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+{% include cta-pilot.html %}

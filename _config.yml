@@ -1,14 +1,8 @@
 baseurl: '/'
 permalink: pretty
-title: 'Biclever - Tools for Business Intelligence'
+title: 'Biclever: an AI agent and tools for SAP BusinessObjects'
+url: 'https://biclever.com'
 
-logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
 
 collections:
   products:
@@ -23,11 +17,12 @@ defaults:
       type: "products"
     values:
       layout: "product"
+      section: "tools"
   - scope:
-      path: ""
-      type: "pages"
+      path: "_pages"
     values:
       layout: "page"
+      section: "tools"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed
@@ -47,3 +42,4 @@ exclude:
   - LICENSE.md
   - LICENSE
   - README.md
+  - CLAUDE.md

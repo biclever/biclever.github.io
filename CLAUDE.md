@@ -19,30 +19,34 @@ There are no tests or linters.
 
 ## Architecture
 
-- `_config.yml` defines two Jekyll collections, each auto-assigned a layout via `defaults`:
-  - `products` (`_products/*.md`) → `_layouts/product.html`, sorted by `weight`, surfaced on the home page (capped by `home.limit_products`).
-  - `pages` (`_pages/*.md`) → `_layouts/page.html` (knowledge-base / EULA / how-to articles, distinct from top-level `*.md` like `about.md`, `contact.md`).
-- Top-level `.md` files (`index.md`, `about.md`, `products.md`, `pages.md`, `contact.md`) are landing pages that use the corresponding layouts in `_layouts/`.
-- `_data/*.{yml,json}` holds site-wide content consumed by includes/layouts: `menus.yml`, `social.json`, `features.json`, `seo.yml`, `contact.yml`. Edit these rather than hard-coding values in templates.
-- `_includes/` is small and shared (header, footer, menus, social, GA snippet); `_sass/` feeds `assets/css/style.css`. Sass output is `compressed`.
-- Plugins enabled: `jekyll-environment-variables`, `jekyll-sitemap`. Both are GitHub-Pages-incompatible, which is why deployment goes through Netlify, not GH Pages.
+The site has two areas that share one header, footer and design system:
+
+- **Agent site** (default): `/` (`index.html`), `/how-it-works/`, `/pilot/` (+ `/pilot/thanks/`), `/pricing/`, `/about/`, `/contact/`. Main menu `site.data.menus.agent`; top bar links developers to Tools ("Tools for BO developers").
+- **Tools area**: any page with `section: tools` — `/products/` (tools home), `_products/*` tool pages, `/pro/` (PRO licenses), and the Docs collection. Main menu `site.data.menus.tools` (Tools, PRO licenses); top bar links back to the Agent site.
+
+`_layouts/default.html` picks the menu, top bar and header button from `page.section`. `_config.yml` defaults give `_products/*` and `_pages/*` `section: tools`; an Agent article in `_pages/` sets `section: agent` (see `biclever-agent-security.md`, `biclever-agent-demo-transcript.md`) and appears under "Biclever Agent" in the Docs index.
+
+The Docs index (`/pages/`) is linked only from the footer ("For developers" column): it is a site map, not a destination. Individual articles are meant to be linked from the product pages and other pages that need them.
+
+- Collections: `products` (`_products/*.md` → `_layouts/product.html`, `tier: pro|free`, `weight` orders them) and `pages` (`_pages/*.md` → `_layouts/page.html`, the Docs). Inside layouts, `site.pages` is the `pages` collection (Jekyll gives collections priority).
+- `_data/`: `menus.yml` (agent, tools, footer columns), `agent.yml` (Agent price, task credits, pilot terms, demo video — edit numbers here, not in pages), `tiers.yml` (PRO price and Stripe link), `seo.yml`, `contact.yml`.
+- Layouts: `default` (shell), `page` (Docs article: one centred column, "← Tools" or "← Biclever Agent" back link, no sidebar), `pages` (Docs index), `product` (tool page), `products` (tools home), `pro` (PRO licenses), `basic` (plain prose: About, Contact).
+- Forms: `/pilot/` and `/contact/` use Netlify Forms (`data-netlify="true"`, honeypot `company-website`); submissions appear in the Netlify dashboard.
+- Redirects live in `netlify.toml` (`/products/biclever-agent/` → `/how-it-works/`, `/agent/`, `/security/`). The old Agent product file is kept with `published: false`.
+
+### Styles
+
+`assets/css/style.scss` loads three partials:
+
+- `_sass/_tokens.scss` and `_sass/_components.scss` are copies of the **Biclever design system** (claude.ai artifact "Biclever": `tokens.css` and `components/bundle.css`, with the Google Fonts `@import` removed because `default.html` links the fonts). Don't hand-edit them; change the design system and copy again.
+- `_sass/_site.scss` is layout glue for this site only (mobile menu, docs layout, video embed, product header, old transcript class names).
+
+Fonts: Schibsted Grotesk and IBM Plex Mono from Google Fonts. Components are plain HTML classes (`btn`, `badge`, `section`, `section-head`, `steps`, `features`, `request`, `chat`/`msg`, `plan`, `faq`, `form`/`field`, `cta-band`, `prose`); see the design system's component READMEs for markup.
 
 ### Content authoring notes
 
-- Product pages live in `_products/*.md` with front matter including `title`, `description`, `date`, `published`, and `weight` (controls home-page ordering).
-- `_pages/*.md` are SEO/long-tail articles — slugs are URL-significant because of `permalink: pretty`.
+- Product pages: front matter `title`, `description` (shown as the lead and on `/products/`), `date`, `published`, `weight`, `tier`. Downloads and screenshots stay in the Markdown body.
+- Docs articles: optional `lead`, `updated` (shows "Last updated"), `wide: true` for a wider text column. Slugs are URL-significant (`permalink: pretty`).
+- Markdown renders inside `.prose` (max 40rem). Add `{:.full}` after an image to span the column.
+- Placeholders still to fill are written in square brackets, e.g. `[Founder photo]`, `[Hosting and data residency: to confirm before launch.]`. Search for `\[` before launch.
 - `404.html` is at repo root (Jekyll/Netlify convention).
-
-### Page text-width / image-width convention
-
-Body copy on content pages is capped at `37.5rem` (~600px) for readability, while the surrounding column is wider (Bootstrap container ~1140px). The cap is implemented in `_sass/components/_content.scss` on direct children of `.content` (`> p, > ul, > ol, > h1..h6, > blockquote, > pre, > table, > .call`) with `margin-left/right: auto` to centre them in the column.
-
-Implications when adding pages or layouts:
-- Wrap rendered Markdown in `<div class="content">{{ content }}</div>` (see `_layouts/page.html`, `_layouts/pro.html`). Anything you want capped at the text width must be a direct child of `.content` and one of the selectors above — wrap custom blocks accordingly, or move them inside `.content` so they inherit the cap (this is what `pro.html` does for `.pro-buy`, the "Included tools" `<h2>`, and `.pro-products`).
-- Images in Markdown are wrapped in `<p>` by kramdown and so inherit the text cap. To let an image span the full column width, add `{:.full}` after it:
-  ```markdown
-  ![alt](/images/foo.png)
-  {:.full}
-  ```
-  The `.full` class (and `p.full`) is whitelisted in `_content.scss` to break out to `max-width: 100%` and centre.
-- Custom `<div>`s inside `.content` are NOT in the selector list, so they keep the column's full width unless you give them their own `max-width` (e.g. `.pro-buy` is capped at 280px in `_page-pro.scss` with `margin: ... auto ...` to align with the centred text).

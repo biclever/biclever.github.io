@@ -1,27 +1,45 @@
-main:
-  - name: "Products"
-    url: "/#products"
-    weight: 1
-  - name: "Pricing"
-    url: "/#pricing"
-    weight: 2
-  - name: "Contact"
-    url: "/#contact"
-    weight: 3
-
-footer:
-  - name: "Home"
-    url: "/"
-    weight: 1
-  - name: "Products"
-    url: "/products/"
-    weight: 2
+# Main menu on the Agent site (/, /how-it-works/, /pilot/, /pricing/, ...)
+agent:
+  - name: "How it works"
+    url: "/how-it-works/"
+  - name: "Security"
+    url: "/pages/biclever-agent-security/"
   - name: "Pricing"
     url: "/pricing/"
-    weight: 3
-  - name: "Knowledge Base"
-    url: "/pages/"
-    weight: 4
-  - name: "Contact"
-    url: "/contact/"
-    weight: 5
+  - name: "About"
+    url: "/about/"
+
+# Main menu inside the tools area (pages with `section: tools`)
+tools:
+  - name: "Tools"
+    url: "/products/"
+  - name: "PRO licenses"
+    url: "/pro/"
+
+footer:
+  - title: "Biclever Agent"
+    links:
+      - name: "How it works"
+        url: "/how-it-works/"
+      - name: "Free pilot"
+        url: "/pilot/"
+      - name: "Pricing"
+        url: "/pricing/"
+      - name: "Security"
+        url: "/pages/biclever-agent-security/"
+  - title: "For developers"
+    links:
+      - name: "Tools"
+        url: "/products/"
+      - name: "PRO licenses"
+        url: "/pro/"
+      - name: "Free tools"
+        url: "/products/#free"
+      - name: "Docs"
+        url: "/pages/"
+  - title: "Company"
+    links:
+      - name: "About"
+        url: "/about/"
+      - name: "Contact"
+        url: "/contact/"

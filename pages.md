@@ -1,8 +1,8 @@
 ---
-title: Knowledge base
+title: Docs
 layout: pages
-description: Knowledge base
+section: tools
+description: Guides, CLI references and articles for Biclever Agent and the Biclever tools for SAP BusinessObjects.
+lead: Guides, CLI references and how-tos for Biclever Agent and the Biclever tools.
 permalink: "/pages/"
 ---
-
-"While tools may change, knowledge endures transforming complexity into clarity and challenges into opportunities!" ChatGPT

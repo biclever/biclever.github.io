@@ -1,46 +1,29 @@
 ---
 layout: default
-bodyClass: "page-pro"
 ---
-
 {% assign pro_tier = site.data.tiers | where: "id", "pro" | first %}
 {% assign pro_products = site.products | where: "published", true | where: "tier", "pro" | sort: "weight" %}
-
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <div class="service service-single">
-        <h1 class="title">{{ page.title }}</h1>
-
-        <div class="content">
-          {% if page.description %}
-          <p class="pro-description"><strong>{{ page.description }}</strong></p>
-          {% endif %}
-
-          {% if pro_tier.price or pro_tier.cta_url %}
-          <div class="pro-buy">
-            {% if pro_tier.price %}<p class="pro-price"><strong>{{ pro_tier.price }}</strong></p>{% endif %}
-            {% if pro_tier.cta_url %}
-            <a href="{{ pro_tier.cta_url }}" class="button button-primary pro-cta">{{ pro_tier.cta_text | default: "Buy Pro" }}</a>
-            {% endif %}
-          </div>
-          {% endif %}
-
-          {% if pro_products.size > 0 %}
-          <h2>Included tools</h2>
-          <ul class="pro-products">
-            {% for product in pro_products %}
-            <li>
-              <a href="{{ product.url | relative_url }}"><strong>{{ product.title }}</strong></a>
-              {% if product.description %} — {{ product.description }}{% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-          {% endif %}
-
-          {{ content }}
-        </div>
-      </div>
+<section class="hero" style="padding-block: 96px 64px;">
+  <div class="container grid-2" style="gap: 64px;">
+    <div class="hero-inner">
+      <span class="eyebrow">Biclever PRO</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">One yearly license for every PRO tool.</h1>
+      <p class="hero-sub">{{ page.description }}</p>
+    </div>
+    <div class="plan plan--featured" id="buy">
+      <div class="plan-head"><span class="plan-name">Biclever PRO</span><span class="badge badge-neutral">Per user</span></div>
+      <div class="plan-price"><span class="plan-amount">€25</span><span class="plan-unit">/ user / month, billed yearly (€300)</span></div>
+      <ul class="plan-list">
+        {% for product in pro_products %}<li><a href="{{ product.url | relative_url }}">{{ product.title }}</a></li>{% endfor %}
+      </ul>
+      <a class="btn btn-primary btn-lg" href="{{ pro_tier.cta_url }}">Buy PRO</a>
+      <p style="font-size: 14px; color: var(--muted);">Invoice, purchase order, team or site license: <a href="{{ '/contact/' | relative_url }}">contact us</a>.</p>
     </div>
   </div>
-</div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="prose">{{ content }}</div>
+  </div>
+</section>

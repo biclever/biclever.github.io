@@ -1,5 +1,6 @@
 ---
-title: Biclever Pro
+title: Biclever PRO licenses
+section: tools
 layout: pro
 permalink: /pro/
 description: Biclever Pro is a single yearly license that unlocks the full set of advanced desktop utilities for SAP BusinessObjects® analysts and developers.
@@ -8,7 +9,7 @@ keywords: biclever pro, sap businessobjects tools, bo sql connector, impact anal
 
 ## Setup
 
-1. **Buy a license** using the **Buy Pro** button above. You will receive a signed `license.txt` file by email, usually within one day.
+1. **Buy a license** using the **Buy PRO** button above. You will receive a signed `license.txt` file by email, usually within one day.
 2. **Download** the tool you want from its product page and unzip the archive anywhere on your machine.
 3. **Activate** by dropping `license.txt` into the unzipped tool folder, next to the tool's `.bat` launcher. Restart the tool if it is already open.
 
@@ -22,7 +23,7 @@ Many BO installations sit behind firewalls, so we cannot validate or extend lice
 
 ### Do you support invoices, purchase orders, or bank transfer?
 
-Yes. The fastest option is to buy online by card using the Buy Pro button. If your company requires an invoice, purchase order, or bank transfer, please [contact us](/contact/) and we will prepare the purchase manually. 
+Yes. The fastest option is to buy online by card using the Buy PRO button. If your company requires an invoice, purchase order, or bank transfer, please [contact us](/contact/) and we will prepare the purchase manually. 
 
 ### Can I receive an invoice after paying by card?
 

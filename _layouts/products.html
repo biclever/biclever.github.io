@@ -1,34 +1,63 @@
 ---
 layout: default
-bodyClass: "page-products"
 ---
-
-<div class="container pb-3 pt-6 pt-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <div class="service service-single">
-        <h1 class="title">{{ page.title }}</h1>
-        <div class="content">{{ content }}</div>
+{% assign pro_products = site.products | where: "published", true | where: "tier", "pro" | sort: "weight" %}
+{% assign free_products = site.products | where: "published", true | where: "tier", "free" | sort: "weight" %}
+{% assign pro_tier = site.data.tiers | where: "id", "pro" | first %}
+<section class="hero" style="padding-block: 96px 64px;">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow">Tools</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">{{ page.headline }}</h1>
+      <p class="hero-sub">{{ page.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/pro/' | relative_url }}">PRO · €25 / user / month</a>
+        <a class="btn btn-secondary btn-lg" href="#free">Free tools</a>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<div class="container pt-3 pb-6">
-  <div class="row">
-    {% assign products = site.products | where: "published", true | sort: "weight" %}
-    {% for product in products %}
-    <div class="col-12 col-md-6 mb-3">
-      <div class="product product-summary">
-        <div class="product-content">
-          <h2 class="product-title">
-            <a href="{{ product.url | relative_url }}">{{ product.title }}</a>
-            {% if product.tier %}{% include tier-badge.html tier=product.tier %}{% endif %}
-          </h2>
-          <p>{{ product.description }}</p>
-        </div>
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head" style="flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: end; max-width: none;">
+      <div style="display: flex; flex-direction: column; gap: 12px; max-width: var(--measure);">
+        <span class="eyebrow">PRO</span>
+        <h2>One license, every PRO tool.</h2>
       </div>
+      <a class="btn btn-ghost flush" href="{{ '/pro/' | relative_url }}">How PRO licensing works <span class="arrow" aria-hidden="true">→</span></a>
     </div>
-    {% endfor %}
+    <div class="grid-cards">
+      {% for product in pro_products %}
+      <a class="plan" href="{{ product.url | relative_url }}" style="gap: 10px; padding: 24px;">
+        <div class="plan-head"><h3 style="font-size: 19px;">{{ product.title }}</h3><span class="badge badge-primary">PRO</span></div>
+        <p class="plan-desc">{{ product.description }}</p>
+      </a>
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
+
+<section class="section" id="free">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Free</span>
+      <h2>Free tools, free forever.</h2>
+      <p>Download and use them on any system. No license, no sign-up.</p>
+    </div>
+    <ul class="rows">
+      {% for product in free_products %}
+      <li><h3>{{ product.title }}</h3><p>{{ product.description }}</p><a class="btn btn-secondary" href="{{ product.url | relative_url }}">Details and download</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-flush-top">
+  <div class="container">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 28px; border: 1px solid var(--border); border-radius: var(--radius-lg);">
+      <p style="font-size: 15px; color: var(--muted);"><strong style="color: var(--ink); font-weight: 600;">Rather have it done for you?</strong> Biclever Agent takes BO requests by email and does the work in your system.</p>
+      <a class="btn btn-ghost" href="{{ '/' | relative_url }}">Meet Biclever Agent <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>

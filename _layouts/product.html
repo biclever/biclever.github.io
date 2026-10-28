@@ -1,15 +1,23 @@
 ---
 layout: default
-bodyClass: "page-service"
 ---
-
-<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
-  <div class="row justify-content-start">
-    <div class="col-12">
-      <div class="service service-single">
-        <h1 class="title">{{page.title}} {% if page.tier %}{% include tier-badge.html tier=page.tier %}{% endif %}</h1>
-        <div class="content">{{content}}</div>
-      </div>
+{% assign pro_tier = site.data.tiers | where: "id", "pro" | first %}
+<div class="container">
+  <header class="product-head">
+    <span class="eyebrow">{% if page.tier == "pro" %}PRO tool{% elsif page.tier == "free" %}Free tool{% else %}Tool{% endif %}</span>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+    {% if page.tier == "pro" %}
+    <div class="product-actions">
+      <a class="btn btn-primary" href="{{ pro_tier.cta_url }}">Buy PRO · €25 / user / month</a>
+      <a class="btn btn-secondary" href="{{ '/pro/' | relative_url }}">How PRO licensing works</a>
     </div>
+    <p class="hero-note">Most PRO tools are useful without a license, so you can try them first.</p>
+    {% elsif page.tier == "free" %}
+    <p class="hero-note">Free to download and use · No license, no sign-up</p>
+    {% endif %}
+  </header>
+  <div class="product-body">
+    <div class="prose">{{ content }}</div>
   </div>
 </div>

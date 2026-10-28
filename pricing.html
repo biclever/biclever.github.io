@@ -1,0 +1,47 @@
+---
+title: Biclever Agent pricing
+layout: default
+permalink: /pricing/
+description: Biclever Agent costs €500 a month plus €1 per credit, with every task priced in credits. Start with a free one-month pilot.
+---
+{% assign a = site.data.agent %}
+<section class="hero" style="padding-block: 96px 64px;">
+  <div class="container grid-2" style="gap: 64px;">
+    <div class="hero-inner">
+      <span class="eyebrow">Pricing</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">One plan. You pay for the work it does.</h1>
+      <p class="hero-sub">A monthly fee for your dedicated agent, plus credits for each task. Every reply shows the credits it used, so the cost is never a surprise.</p>
+      <ul class="plan-list" style="border-top: 0; padding-top: 8px; color: var(--muted);">
+        <li>A dedicated agent with its own mailbox and memory</li>
+        <li>You decide who may use it; adding a user takes one email</li>
+        <li>Larger projects, such as a UNV to UNX migration, can be fixed-price</li>
+      </ul>
+    </div>
+    <div class="plan plan--featured">
+      <div class="plan-head"><span class="plan-name">Biclever Agent</span><span class="badge badge-primary"><span class="dot"></span>{{ a.pilot.places }} pilots open</span></div>
+      <div class="plan-price"><span class="plan-amount">{{ a.price.monthly }}</span><span class="plan-unit">/ month + {{ a.price.credit }} per credit</span></div>
+      <table class="price-table"><tbody>{% for t in a.tasks %}<tr><td>{{ t.name }}</td><td>{{ t.credits }} credits · €{{ t.credits }}</td></tr>{% endfor %}</tbody></table>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot</a>
+        <p class="plan-fine">1 month free · {{ a.pilot.credits }} credits · no automatic billing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Questions</span>
+      <h2>Pricing questions</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>What is a credit, and how do I know what a task costs?</summary><p>A credit is {{ a.price.credit }} of agent work. Each task type has a credit price, and every reply shows the credits that task used.</p></details>
+      <details><summary>What happens after the free pilot?</summary><p>Nothing is billed unless you sign up. If you continue, it is {{ a.price.monthly }} a month plus credits.</p></details>
+      <details><summary>Can you invoice us or work with a purchase order?</summary><p>[Invoicing and PO terms: to confirm.]</p></details>
+      <details><summary>What access does the agent need?</summary><p>A dedicated service account with exactly the rights you choose. We recommend starting on development or test.</p></details>
+      <details><summary>Do unused credits expire?</summary><p>[Credit expiry terms: to confirm.]</p></details>
+    </div>
+    <p style="margin-top: 48px; font-size: 14px; color: var(--muted);">Looking for prices of the desktop tools? <a href="{{ '/pro/' | relative_url }}">PRO licenses →</a></p>
+  </div>
+</section>
