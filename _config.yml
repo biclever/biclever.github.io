@@ -43,3 +43,4 @@ exclude:
   - LICENSE
   - README.md
   - CLAUDE.md
+  - WEBSITE-INPUT.md
