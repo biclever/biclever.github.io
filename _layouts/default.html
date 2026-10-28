@@ -25,13 +25,10 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="topbar"><div class="container">
-    {% if page.section == "tools" %}
-    <a href="{{ '/' | relative_url }}">← Biclever Agent: get BO work done for you</a>
-    {% else %}
-    <a href="{{ '/products/' | relative_url }}">Tools for BO developers <span aria-hidden="true">→</span></a>
-    {% endif %}
-  </div></div>
+  <nav class="topbar" aria-label="Biclever sites"><div class="container">
+    <a href="{{ '/' | relative_url }}"{% unless page.section == "tools" %} aria-current="true"{% endunless %}>Biclever Agent</a>
+    <a href="{{ '/products/' | relative_url }}"{% if page.section == "tools" %} aria-current="true"{% endif %}>Tools for BO developers</a>
+  </div></nav>
 
   <header class="nav">
     <div class="container">

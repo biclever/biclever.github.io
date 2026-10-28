@@ -21,8 +21,8 @@ There are no tests or linters.
 
 The site has two areas that share one header, footer and design system:
 
-- **Agent site** (default): `/` (`index.html`), `/how-it-works/`, `/pilot/` (+ `/pilot/thanks/`), `/pricing/`, `/about/`, `/contact/`. Main menu `site.data.menus.agent`; top bar links developers to Tools ("Tools for BO developers").
-- **Tools area**: any page with `section: tools` — `/products/` (tools home), `_products/*` tool pages, `/pro/` (PRO licenses), and the Docs collection. Main menu `site.data.menus.tools` (Tools, PRO licenses); top bar links back to the Agent site.
+- **Agent site** (default): `/` (`index.html`), `/how-it-works/`, `/pilot/` (+ `/pilot/thanks/`), `/pricing/`, `/about/`, `/contact/`. Main menu `site.data.menus.agent`; top bar is a two-item site switch, "Biclever Agent" · "Tools for BO developers", with the current side marked `aria-current`.
+- **Tools area**: any page with `section: tools` — `/products/` (tools home), `_products/*` tool pages, `/pro/` (PRO licenses), and the Docs collection. Main menu `site.data.menus.tools` (Tools, PRO licenses); "Tools for BO developers" is the current side in the top bar.
 
 `_layouts/default.html` picks the menu, top bar and header button from `page.section`. `_config.yml` defaults give `_products/*` and `_pages/*` `section: tools`; an Agent article in `_pages/` sets `section: agent` (see `biclever-agent-security.md`, `biclever-agent-demo-transcript.md`) and appears under "Biclever Agent" in the Docs index.
 
