@@ -22,3 +22,5 @@ Thumbs.db
 .idea
 
 temp
+# Internal notes (kept local)
+WEBSITE-INPUT*.md
