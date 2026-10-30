@@ -4,7 +4,7 @@ nav_title: Security and IT review
 description: What Biclever Agent can and cannot access, where credentials live, and what is logged. Written for the IT and security people reviewing a pilot.
 lead: What the agent can and cannot access, where credentials live, and what is logged. Written for the IT and security people reviewing a pilot.
 date: 2026-10-27T00:00:00+10:00
-updated: 2026-10-27
+updated: 2026-10-30
 weight: 10
 section: agent
 ---
@@ -18,17 +18,28 @@ Each customer gets a private workspace. A mail desk with fixed rules and no AI t
 
 ## Credentials
 
-- **The AI never sees your passwords.** Credentials are held by a separate gatekeeper component that logs in on the agent's behalf.
+- **The AI never sees your passwords.** With the Biclever Gateway, the credentials stay in your network. With a direct connection, they are held by a separate gatekeeper component that logs in on the agent's behalf.
 - **Each task gets its own fresh session.**
+
+## How the agent connects to your system
+
+There are two ways, depending on how your BusinessObjects system is reachable.
+
+- **Biclever Gateway** (recommended). A small service you install on a server in your own network. It holds the BusinessObjects credentials, works with Web Intelligence through the BusinessObjects REST API and with universes through the Semantic Layer SDK, and writes every request to an audit log. The gateway sets up an encrypted channel to the agent, so the credentials and the connection stay on your side.
+- **Direct connection.** If your BusinessObjects system is reachable from the internet, the agent can connect to it directly with the service account.
+
+Supported versions: BI 4.3 SP3 and later, including BI 2025.
 
 ## Access and the service account
 
-The agent uses a dedicated service account with exactly the rights you choose. We recommend starting on development or test environments.
+The agent uses a dedicated service account with the rights you choose. Its access is restricted to one folder, so it can't change reports outside it.
 
-| Environment | Recommended for the pilot |
+| Environment | In a pilot |
 | --- | --- |
-| Development / Test | Yes: the folders and universes in scope |
-| Production | [To agree with each customer] |
+| Test | Yes, restricted to one folder |
+| Production | Yes, if you prefer, restricted to one folder |
+
+Finance teams often want the agent on production, where their reports are. The folder restriction and working on copies apply either way.
 
 ## Who can use the agent
 
@@ -42,7 +53,22 @@ By default, the agent works on a copy. If you explicitly request a change to the
 
 Each customer has a dedicated agent with its own mailbox, memory and system access, running in an isolated workspace.
 
-> [Where the agent runs, where data is stored, which AI model provider is used and under what data terms, and the retention period: to confirm.]
+- **Where it runs.** The agent runs on a dedicated server in Norway.
+- **AI processing.** Requests are processed by Anthropic's Claude API, under Anthropic's commercial terms. Anthropic doesn't use API data to train its models.
+- **Email.** The agent's mailbox is on Google Workspace, which doesn't use customer data to train models.
+- **Retention.** Email threads and work files are deleted 90 days after the last message in a thread. The agent's memory (its notes about your system and its task journal) is kept while you're a customer and deleted within 30 days after the contract ends. You can ask us to delete everything at any time.
+- **Self-hosted.** On request, the agent can run as a container in your own environment.
+
+### Who handles data for us
+
+| Provider | What for |
+| --- | --- |
+| Anthropic | AI processing (Claude API) |
+| Google | Email (Google Workspace) |
+| Stripe | Payments and invoices |
+| Netlify | This website and its forms |
+
+A data processing agreement (DPA) is available on request.
 
 ## Logging and traceability
 
@@ -51,6 +77,8 @@ Every system call is logged and every task is recorded in the agent's journal, s
 ## Limits
 
 AI can make mistakes. Important changes and results may require human review before they can be relied upon in production.
+
+The agent handles everyday BusinessObjects work well, but some reports are very complex, and we can't guarantee it handles them efficiently. When it can't finish a task, it explains what's missing and keeps a note. With your permission, we review those notes to keep improving it.
 
 ---
 

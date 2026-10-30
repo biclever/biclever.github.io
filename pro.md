@@ -4,7 +4,7 @@ section: tools
 layout: pro
 permalink: /pro/
 description: Biclever Pro is a single yearly license that unlocks the full set of advanced desktop utilities for SAP BusinessObjects® analysts and developers.
-keywords: biclever pro, sap businessobjects tools, bo sql connector, impact analysis, keymetrika, unx editor, webi master
+keywords: biclever pro, sap businessobjects tools, impact analysis, unx editor, webi master, security exporter
 ---
 
 ## Setup
@@ -31,7 +31,9 @@ Yes. Card payments are processed through Stripe, and an invoice/receipt is issue
 
 ### Can I try a tool before buying?
 
-Most Pro tools are useful without a license. We recommend trying a tool first to confirm it works in your environment and is compatible with your version of BusinessObjects. 
+Most Pro tools are useful without a license. We recommend trying a tool first to confirm it works in your environment and is compatible with your version of BusinessObjects.
+
+Need the full version for an evaluation? [Contact us](/contact/) for a trial license.
 
 ### Can I use the license on more than one machine?
 

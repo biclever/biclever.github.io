@@ -27,6 +27,14 @@ footer:
         url: "/pricing/"
       - name: "Security"
         url: "/pages/biclever-agent-security/"
+  - title: "Who it's for"
+    links:
+      - name: "For BI teams"
+        url: "/for-bi-teams/"
+      - name: "For finance"
+        url: "/for-finance/"
+      - name: "For Maconomy"
+        url: "/maconomy/"
   - title: "For developers"
     links:
       - name: "Tools"

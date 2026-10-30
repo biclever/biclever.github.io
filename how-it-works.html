@@ -41,15 +41,16 @@ description: Your own SAP BusinessObjects expert, reachable by email. Ask a ques
     <div class="section-head">
       <span class="eyebrow">What you can ask it</span>
       <h2>It does the work, not just give advice.</h2>
-      <p>The agent knows your folders, universes and naming conventions, and learns more with every task.</p>
+      <p>The agent knows your folders, universes and naming conventions, and learns more with every task. On Deltek Maconomy it already knows the standard BPM reporting universes: <a href="{{ '/maconomy/' | relative_url }}">Biclever Agent for Maconomy</a>.</p>
     </div>
     <div class="grid-cards">
-      <div class="request"><div class="request-subject">Build new reports</div><p class="request-body">From a short description or an attached spec: queries, variables, tables, prompts, filters, formatting.</p><div class="request-meta"><span>"Create a report of registered hours per employee for January to May."</span></div></div>
+      <div class="request"><div class="request-subject">Build new reports</div><p class="request-body">From a short description, an attached spec or an existing report: queries, variables, tables, charts, prompts, filters, formatting.</p><div class="request-meta"><span>"Create a report of registered hours per employee for January to May."</span></div></div>
       <div class="request"><div class="request-subject">Change existing reports</div><p class="request-body">Add columns, prompts, totals and formatting to reports you already have.</p><div class="request-meta"><span>"Add Year and Month prompts to that report."</span></div></div>
       <div class="request"><div class="request-subject">Answer questions</div><p class="request-body">What a field means, which universe to use, why a number differs between two reports.</p><div class="request-meta"><span>"Why do these two reports disagree?"</span></div></div>
-      <div class="request"><div class="request-subject">Analyse and check reports</div><p class="request-body">Find unused objects, compare two versions, check reports still run after an upgrade.</p><div class="request-meta"><span>"Do all Finance reports still run after the upgrade?"</span></div></div>
-      <div class="request"><div class="request-subject">Look at the data</div><p class="request-body">Verify a result or answer a factual question from the data itself.</p><div class="request-meta"><span>"How many cost centres had no postings in May?"</span></div></div>
+      <div class="request"><div class="request-subject">Analyse and check reports</div><p class="request-body">Find unused objects, compare two versions, check that reports still run and give the same numbers after an upgrade.</p><div class="request-meta"><span>"Do all Finance reports still run after the upgrade?"</span></div></div>
+      <div class="request"><div class="request-subject">Check the numbers</div><p class="request-body">Verify a report's result against the data, or find out why a total looks wrong.</p><div class="request-meta"><span>"The yearly total is off from the sum of the months. Why?"</span></div></div>
       <div class="request"><div class="request-subject">Apply changes across reports</div><p class="request-body">Once a change works in one report, roll the same approach out to others.</p><div class="request-meta"><span>"Now do the same in the other regional reports."</span></div></div>
+      <div class="request"><div class="request-subject">Change universes <span class="badge badge-neutral soon">Coming soon</span></div><p class="request-body">Change a universe and see which reports the change affects.</p><div class="request-meta"><span>"Rename Cost Centre to Department and check what breaks."</span></div></div>
     </div>
   </div>
 </section>
@@ -59,15 +60,44 @@ description: Your own SAP BusinessObjects expert, reachable by email. Ask a ques
     <div class="section-head">
       <span class="eyebrow">How it works</span>
       <h2>Email in, finished work out.</h2>
-      <p>Replies often arrive within 5 to 20 minutes, depending on the task.</p>
+      <p>Replies often arrive within 5 to 20 minutes, depending on the task. Your agent works on one task at a time; if your team needs more throughput, you can have more than one agent.</p>
     </div>
     <ol class="steps">
-      <li class="step"><h3>Send a request</h3><p>Plain language by email. Attach a specification or an example if it helps.</p></li>
+      <li class="step"><h3>Send a request</h3><p>Plain language by email, in English, Norwegian or another language. Attach a specification or an example if it helps.</p></li>
       <li class="step"><h3>Get the reply</h3><p>Every report created or changed, with system, folder, name and ID, and anything left open.</p></li>
       <li class="step"><h3>Continue the thread</h3><p>Follow-ups like "make the dates monthly" just work; the agent keeps the context.</p></li>
       <li class="step"><h3>Clarify when needed</h3><p>If a request is ambiguous, it asks, and suggests options found in your system.</p></li>
     </ol>
     <p style="margin-top: 24px; font-size: 14px; color: var(--subtle);">AI can make mistakes. Important changes may need human review before they are relied on in production.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Easy to reach</span>
+      <h2>Ask from where you already work.</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Email</h3><p>Write from your normal mailbox. Attach a specification, a screenshot or an example report.</p></div>
+      <div class="feature"><h3>Microsoft Teams <span class="badge badge-neutral soon">Coming soon</span></h3><p>Message the agent in a chat or a channel, next to your team's other conversations.</p></div>
+      <div class="feature"><h3>Slack <span class="badge badge-neutral soon">Coming soon</span></h3><p>The same agent and the same memory, from your Slack workspace.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container grid-2">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="eyebrow">Not a good fit</span>
+      <h2>When to use something else.</h2>
+      <p>The agent is fast at everyday BusinessObjects work. A few jobs are better done another way.</p>
+    </div>
+    <ul class="rows">
+      <li><h3>Everyday data questions</h3><p>For ad hoc queries and data analysis, <a href="{{ '/products/biclever-mcp/' | relative_url }}">Biclever MCP</a> in your own AI assistant is much cheaper.</p></li>
+      <li><h3>Very large jobs</h3><p>Processing every report in your system can use a lot of credits. Contact us first: a fixed-price project is usually cheaper.</p></li>
+      <li><h3>Business decisions</h3><p>The agent knows your BusinessObjects system, not your business, your workflows or your people. Those decisions stay with you.</p></li>
+    </ul>
   </div>
 </section>
 
@@ -82,9 +112,9 @@ description: Your own SAP BusinessObjects expert, reachable by email. Ask a ques
       <div class="feature"><h3>The AI never sees your passwords</h3><p>A separate gatekeeper holds credentials and logs in for the agent. Each task gets a fresh session.</p></div>
       <div class="feature"><h3>Originals are protected</h3><p>It works on a copy by default, and backs up first if you ask it to change the original.</p></div>
       <div class="feature"><h3>Only your people can use it</h3><p>Mail from anyone else, or from an address that can't be verified, is ignored.</p></div>
-      <div class="feature"><h3>Your data stays yours</h3><p>A dedicated agent with its own mailbox, memory and system access.</p></div>
+      <div class="feature"><h3>Your data stays yours</h3><p>A dedicated agent with its own mailbox, memory and system access. Self-hosting in your own environment on request.</p></div>
       <div class="feature"><h3>Everything is traceable</h3><p>Every system call is logged and every task is recorded in the agent's journal.</p></div>
-      <div class="feature"><h3>You set the limits</h3><p>A service account with exactly the rights you choose. Start on dev or test.</p></div>
+      <div class="feature"><h3>You set the limits</h3><p>A service account with the rights you choose, limited to one folder. Use a test or production system, as you prefer.</p></div>
     </div>
     <a class="btn btn-ghost flush" href="{{ '/pages/biclever-agent-security/' | relative_url }}" style="margin-top: 32px;">Read the security and IT review <span class="arrow" aria-hidden="true">→</span></a>
   </div>
@@ -98,7 +128,7 @@ description: Your own SAP BusinessObjects expert, reachable by email. Ask a ques
     </div>
     <ol class="steps">
       <li class="step"><h3>Agree the scope</h3><p>Which systems and environments the agent may work on, and who may write to it.</p></li>
-      <li class="step"><h3>Connect your system</h3><p>You provide a dedicated service account with the rights you're comfortable granting.</p></li>
+      <li class="step"><h3>Connect your system</h3><p>You provide a dedicated service account, limited to the folder the agent may work in.</p></li>
       <li class="step"><h3>Prepare its knowledge</h3><p>We set up its memory with your folders, conventions and key reports.</p></li>
       <li class="step"><h3>Pilot</h3><p>A few of your users send real requests while we watch closely and tune the agent.</p></li>
       <li class="step"><h3>Go live</h3><p>Your users get the address and one rule: write to it like a colleague.</p></li>
@@ -111,16 +141,21 @@ description: Your own SAP BusinessObjects expert, reachable by email. Ask a ques
     <div class="plan plan--featured">
       <div class="plan-head"><span class="plan-name">Biclever Agent</span><span class="badge badge-primary"><span class="dot"></span>{{ a.pilot.places }} pilots open</span></div>
       <div class="plan-price"><span class="plan-amount">{{ a.price.monthly }}</span><span class="plan-unit">/ month + {{ a.price.credit }} per credit</span></div>
-      <table class="price-table"><tbody>{% for t in a.tasks %}<tr><td>{{ t.name }}</td><td>{{ t.credits }} credits</td></tr>{% endfor %}</tbody></table>
+      <ul class="plan-list">
+        <li>A dedicated agent with its own mailbox and memory</li>
+        <li>Every reply shows the credits it used</li>
+        <li>No limit on users</li>
+      </ul>
       <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot</a>
       <p class="plan-fine">1 month free · {{ a.pilot.credits }} credits · no automatic billing</p>
     </div>
     <div style="display: flex; flex-direction: column; gap: 24px; min-width: 0;">
       <div class="section-head" style="margin-bottom: 0;"><span class="eyebrow">Questions</span><h2>Before you start</h2></div>
       <div class="faq">
-        <details open><summary>What does it cost after the pilot?</summary><p>{{ a.price.monthly }} a month plus {{ a.price.credit }} per credit. Larger projects can be fixed-price. Nothing is billed unless you sign up.</p></details>
-        <details><summary>Where does my data go?</summary><p>[Hosting and data residency: to confirm before launch.]</p></details>
-        <details><summary>Which BusinessObjects versions work?</summary><p>[Supported versions: to confirm before launch.]</p></details>
+        <details open><summary>What does it cost after the pilot?</summary><p>{{ a.price.monthly }} a month plus {{ a.price.credit }} per credit. Larger jobs can be a fixed-price project, from €1,000. Nothing is billed unless you sign up.</p></details>
+        <details><summary>Where does my data go?</summary><p>The agent runs on a dedicated server in Norway. Requests are processed by Anthropic's Claude API, and email is handled by Google Workspace. Neither uses your data to train models. Self-hosting in your own environment is available on request.</p></details>
+        <details><summary>Which BusinessObjects versions work?</summary><p>BI 4.3 SP3 and later, including BI 2025.</p></details>
+        <details><summary>What if it can't do a task?</summary><p>The agent handles everyday BusinessObjects work well, but some reports are very complex, and we can't guarantee it handles them efficiently. When it can't finish a task, it explains what's missing and keeps a note. With your permission, we review those notes to keep improving it.</p></details>
         <details><summary>What if it makes a mistake?</summary><p>It works on a copy by default and backs up any original before changing it.</p></details>
         <details><summary>How are users added?</summary><p>You decide who may write to the agent. Adding or removing a user takes one email to us.</p></details>
       </div>

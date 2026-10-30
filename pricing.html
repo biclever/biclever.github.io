@@ -14,13 +14,18 @@ description: Biclever Agent costs €500 a month plus €1 per credit, with ever
       <ul class="plan-list" style="border-top: 0; padding-top: 8px; color: var(--muted);">
         <li>A dedicated agent with its own mailbox and memory</li>
         <li>You decide who may use it; adding a user takes one email</li>
-        <li>Larger projects, such as a UNV to UNX migration, can be fixed-price</li>
+        <li>Larger jobs can be a fixed-price project, from €1,000</li>
+        <li>Enterprise, several agents or self-hosted: <a href="{{ '/contact/' | relative_url }}">contact us</a></li>
       </ul>
     </div>
     <div class="plan plan--featured">
       <div class="plan-head"><span class="plan-name">Biclever Agent</span><span class="badge badge-primary"><span class="dot"></span>{{ a.pilot.places }} pilots open</span></div>
       <div class="plan-price"><span class="plan-amount">{{ a.price.monthly }}</span><span class="plan-unit">/ month + {{ a.price.credit }} per credit</span></div>
-      <table class="price-table"><tbody>{% for t in a.tasks %}<tr><td>{{ t.name }}</td><td>{{ t.credits }} credits · €{{ t.credits }}</td></tr>{% endfor %}</tbody></table>
+      <ul class="plan-list">
+        <li>A dedicated agent with its own mailbox and memory</li>
+        <li>Every reply shows the credits it used</li>
+        <li>No limit on users</li>
+      </ul>
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot</a>
         <p class="plan-fine">1 month free · {{ a.pilot.credits }} credits · no automatic billing</p>
@@ -36,11 +41,12 @@ description: Biclever Agent costs €500 a month plus €1 per credit, with ever
       <h2>Pricing questions</h2>
     </div>
     <div class="faq">
-      <details open><summary>What is a credit, and how do I know what a task costs?</summary><p>A credit is {{ a.price.credit }} of agent work. Each task type has a credit price, and every reply shows the credits that task used.</p></details>
+      <details open><summary>What is a credit, and how much does a task cost?</summary><p>A credit is {{ a.price.credit }} of agent work. The credits a task uses depend on its size: a question about a report uses a few, a larger change more. Every reply shows the credits that task used, so during the free pilot you see the real cost on your own requests. Our <a href="{{ '/pages/biclever-agent-demo-transcript/' | relative_url }}">demo email thread</a> shows a worked example.</p></details>
+      <details><summary>What is a fixed-price project?</summary><p>For larger jobs we agree a fixed price up front, from €1,000. For example: checking your reports for a BusinessObjects upgrade, a migration such as UNV to UNX, a first analysis of all your reports and universes, or importing your documentation (Word, PDF and so on) into the agent's knowledge.</p></details>
+      <details><summary>Is there a limit on users?</summary><p>No. Anyone you approve can write to your agent. It works on one task at a time; for more throughput you can have more than one agent.</p></details>
       <details><summary>What happens after the free pilot?</summary><p>Nothing is billed unless you sign up. If you continue, it is {{ a.price.monthly }} a month plus credits.</p></details>
-      <details><summary>Can you invoice us or work with a purchase order?</summary><p>[Invoicing and PO terms: to confirm.]</p></details>
-      <details><summary>What access does the agent need?</summary><p>A dedicated service account with exactly the rights you choose. We recommend starting on development or test.</p></details>
-      <details><summary>Do unused credits expire?</summary><p>[Credit expiry terms: to confirm.]</p></details>
+      <details><summary>Can you invoice us or work with a purchase order?</summary><p>We invoice in euros (EUR), and payments run through Stripe. If your company needs a purchase order or another way to pay, <a href="{{ '/contact/' | relative_url }}">contact us</a>.</p></details>
+      <details><summary>What access does the agent need?</summary><p>A dedicated service account with the rights you choose, limited to one folder so it can't change reports outside it. Test or production, as you prefer.</p></details>
     </div>
     <p style="margin-top: 48px; font-size: 14px; color: var(--muted);">Looking for prices of the desktop tools? <a href="{{ '/pro/' | relative_url }}">PRO licenses →</a></p>
   </div>

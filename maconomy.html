@@ -1,0 +1,90 @@
+---
+title: Biclever Agent for Maconomy reporting
+layout: default
+permalink: /maconomy/
+description: Biclever Agent already knows the standard Deltek Maconomy BPM reporting universes and reports. Ask for a Maconomy report by email and get it built in your BusinessObjects system.
+---
+{% assign a = site.data.agent %}
+<section class="hero" style="padding-block: 96px 64px;">
+  <div class="container grid-2" style="align-items: center; gap: 64px;">
+    <div class="hero-inner">
+      <span class="eyebrow">For Maconomy customers</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">Maconomy reporting, without the learning curve.</h1>
+      <p class="hero-sub">Biclever Agent already knows the standard BPM reporting universes, the standard reports and the traps in the Maconomy data. Ask for a report by email, and it builds it in your BusinessObjects system.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="{{ '/how-it-works/' | relative_url }}">How it works</a>
+      </div>
+      <p class="hero-note">For Deltek Maconomy customers reporting with SAP BusinessObjects</p>
+    </div>
+    <div class="hero-shot" aria-label="Example email thread with Biclever Agent">
+      <div class="chat">
+        <div class="msg msg-user"><span class="msg-from">Controller · 10:05</span>Can you add utilisation % per department for last month to the Utilization report?</div>
+        <div class="msg msg-agent"><span class="msg-from">Biclever Agent · 10:16</span>Done on a copy, in Finance / Utilization. I limited the expected hours to last month; without a date range they run decades ahead and the % comes out far too low.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What it knows</span>
+      <h2>Starts with Maconomy know-how, not a blank page.</h2>
+      <p>Your agent's memory comes with notes on Maconomy reporting. We add what's specific to your installation.</p>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>The BPM universes</h3><p>Finance, Job Invoicing, Job Budgeting, Utilization, Time Sheet, AR and AP Aging and the other standard universes: what each is for, its prompts and its measures.</p></div>
+      <div class="feature"><h3>The standard reports</h3><p>P&amp;L and balance sheet, job profitability, AR aging, cash receipts, budget to actuals: how they calculate, and why a plain query gives a different number.</p></div>
+      <div class="feature"><h3>The traps</h3><p>Credit notes stored without a sign, fiscal periods above 12, mixed currencies, job budget revisions: the mistakes that make totals wrong.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Example requests</span>
+      <h2>What Maconomy teams ask it.</h2>
+    </div>
+    <div class="requests">
+      <div class="request">
+        <div class="request-meta"><span>From: controller</span><span>Change a report</span></div>
+        <div class="request-subject">Budget vs actual per job</div>
+        <p class="request-body">Add the latest approved budget next to registered cost and show the difference in %.</p>
+        <div class="request-result">✓ Done</div>
+      </div>
+      <div class="request">
+        <div class="request-meta"><span>From: finance analyst</span><span>Answer a question</span></div>
+        <div class="request-subject">Why doesn't revenue match the P&amp;L?</div>
+        <p class="request-body">Job Invoicing shows more revenue for May than the P&amp;L. Which one is right?</p>
+        <div class="request-result">✓ Done</div>
+      </div>
+      <div class="request">
+        <div class="request-meta"><span>From: BI lead</span><span>Build a report</span></div>
+        <div class="request-subject">Open AR by account manager</div>
+        <p class="request-body">Aged receivables per account manager, with the standard aging buckets.</p>
+        <div class="request-result">✓ Done</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container grid-2">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="eyebrow">Getting started</span>
+      <h2>The same agent, set up for Maconomy.</h2>
+      <p>Everything on <a href="{{ '/how-it-works/' | relative_url }}">How it works</a> applies: a dedicated agent, a service account limited to one folder, changes on a copy first, every step logged.</p>
+    </div>
+    <ul class="rows">
+      <li><h3>Your installation</h3><p>We add your Maconomy version, custom fields and your own universes and reports to the agent's memory.</p></li>
+      <li><h3>Your documentation</h3><p>As a fixed-price project, we can import your reporting documentation (Word, PDF and so on) into the agent's knowledge.</p></li>
+      <li><h3>Free pilot</h3><p>One month on your own system, {{ a.pilot.credits }} credits, no monthly fee.</p></li>
+    </ul>
+  </div>
+</section>
+
+{% include cta-pilot.html top=true %}
+
+<div class="container"><p style="padding-bottom: 32px; font-size: 12px; color: var(--subtle);">Deltek and Maconomy are trademarks of Deltek, Inc. Biclever is not affiliated with or endorsed by Deltek.</p></div>

@@ -101,3 +101,25 @@ a.plan:hover { border-color: var(--border-strong); color: var(--ink); }
 .product-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .product-body { padding-bottom: 96px; }
 @media (max-width: 767px) { .product-head h1 { font-size: 34px; } }
+
+// "Coming soon" badge next to a heading
+.badge.soon { margin-left: 6px; vertical-align: 2px; }
+
+// Big numbers next to a section head (Home: tool users)
+.stats { display: flex; flex-wrap: wrap; gap: 32px 64px; }
+.stats > div { display: flex; flex-direction: column; gap: 4px; }
+.stat-value { font-size: 56px; line-height: 1; font-weight: 600; letter-spacing: -0.03em; color: var(--ink); font-variant-numeric: tabular-nums; }
+.stat-label { font-size: 15px; color: var(--muted); }
+
+// Cookie consent banner (_includes/google-analytics.html)
+.consent {
+  position: fixed; left: 16px; bottom: 16px; z-index: 30; max-width: min(24rem, calc(100% - 32px));
+  display: flex; flex-direction: column; gap: 12px; padding: 16px 20px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);
+  font-size: 14px; color: var(--muted);
+}
+.consent[hidden] { display: none; }
+.consent-actions { display: flex; gap: 8px; }
+.footer-legal a { color: inherit; }
+.link-button { padding: 0; border: 0; background: none; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.link-button:hover, .footer-legal a:hover { color: var(--ink); }

@@ -32,3 +32,14 @@
   from = "/security/"
   to = "/pages/biclever-agent-security/"
   status = 301
+
+# Retired tools (2026-10): send old links to the tools home.
+[[redirects]]
+  from = "/products/bo-sql-connector/"
+  to = "/products/"
+  status = 301
+
+[[redirects]]
+  from = "/products/key-metrika/"
+  to = "/products/"
+  status = 301

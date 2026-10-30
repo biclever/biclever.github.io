@@ -1,26 +1,61 @@
+{% comment %}
+  Cookie consent: Google Analytics loads only after "Accept". The choice is kept in
+  localStorage ("bc-consent"); "Cookie settings" in the footer opens the banner again.
+  The measurement ID is set only in production builds, so locally the banner works but loads nothing.
+{% endcomment %}
+{% assign gid = "" %}
 {% if jekyll.environment == "production" %}
-    {% assign gid = site.env.NETLIFY_GOOGLE_ANALYTICS_ID %}
-    {% if gid %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ gid }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', '{{ gid }}');
-    </script>
-    {% elsif site.data.seo.google_analytics_id %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.seo.google_analytics_id }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', '{{ site.data.seo.google_analytics_id }}');
-    </script>
-    {% endif %}
+  {% if site.env.NETLIFY_GOOGLE_ANALYTICS_ID %}{% assign gid = site.env.NETLIFY_GOOGLE_ANALYTICS_ID %}{% else %}{% assign gid = site.data.seo.google_analytics_id %}{% endif %}
 {% endif %}
+<div class="consent" id="consent" role="region" aria-label="Cookie consent" hidden>
+  <p>May we use Google Analytics cookies to see how the site is used? <a href="{{ '/privacy/' | relative_url }}">Privacy policy</a></p>
+  <div class="consent-actions">
+    <button class="btn btn-primary" type="button" data-consent="granted">Accept</button>
+    <button class="btn btn-secondary" type="button" data-consent="denied">Decline</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var KEY = 'bc-consent', GID = '{{ gid }}', box = document.getElementById('consent');
+    function read() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+    function save(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+    function load() {
+      if (!GID || window.gtag) return;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', GID);
+    }
+    function clearCookies() {
+      var host = location.hostname.replace(/^www\./, '');
+      document.cookie.split(';').forEach(function (c) {
+        var name = c.split('=')[0].trim();
+        if (name.indexOf('_ga') !== 0) return;
+        ['', '; domain=' + host, '; domain=.' + host].forEach(function (d) {
+          document.cookie = name + '=; Max-Age=0; path=/' + d;
+        });
+      });
+    }
+
+    var choice = read();
+    if (choice === 'granted') load();
+    else if (choice !== 'denied') box.hidden = false;
+
+    box.addEventListener('click', function (e) {
+      var v = e.target.getAttribute('data-consent');
+      if (!v) return;
+      var wasLoaded = !!window.gtag;
+      save(v);
+      box.hidden = true;
+      if (v === 'granted') load();
+      else { clearCookies(); if (wasLoaded) location.reload(); }
+    });
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-consent-open]')) box.hidden = false;
+    });
+  })();
+</script>

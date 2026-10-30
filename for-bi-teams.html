@@ -1,0 +1,67 @@
+---
+title: Biclever Agent for BI teams
+layout: default
+permalink: /for-bi-teams/
+description: Biclever Agent takes the small BusinessObjects requests off your BI team's queue, so your developers can work on the projects that matter.
+---
+{% assign a = site.data.agent %}
+<section class="hero" style="padding-block: 96px 64px;">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow">For BI teams</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">More done by the same BI team.</h1>
+      <p class="hero-sub">Small report requests fill your team's queue: a new column, a prompt, a question about a number. Biclever Agent picks them up by email and does the work in your BusinessObjects system, so your developers can spend their time on the bigger projects.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="{{ '/how-it-works/' | relative_url }}">How it works</a>
+      </div>
+      <p class="hero-note">For BI managers, BI architects and BO developers</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What it takes off your queue</span>
+      <h2>The requests that don't need a senior developer.</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>Report changes</h3><p>Add columns, prompts, totals, charts and formatting to existing Webi reports, on a copy first.</p></div>
+      <div class="feature"><h3>New reports</h3><p>Build a report from a short description, an attached spec or an existing report.</p></div>
+      <div class="feature"><h3>Questions about reports</h3><p>What a report calculates, where a number comes from, why two reports disagree.</p></div>
+      <div class="feature"><h3>Checks</h3><p>Find unused objects, compare two versions, check reports after an upgrade.</p></div>
+      <div class="feature"><h3>Changes across reports</h3><p>Once a change works in one report, roll it out to the others.</p></div>
+      <div class="feature"><h3>Universe changes <span class="badge badge-neutral soon">Coming soon</span></h3><p>Change a universe and see which reports the change affects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="eyebrow">Under your control</span>
+      <h2>Your team stays in charge.</h2>
+      <p>The agent works with the permissions you give it and tells you exactly what it did.</p>
+    </div>
+    <ul class="rows">
+      <li><h3>One folder</h3><p>A service account with the rights you choose, restricted to one folder.</p></li>
+      <li><h3>Copies first</h3><p>Changes are made on a copy by default, and originals are backed up before any edit.</p></li>
+      <li><h3>Every step logged</h3><p>Each reply lists what was created or changed, with folder, name and ID, and every task is in the agent's journal.</p></li>
+      <li><h3>Knows your conventions</h3><p>We set up its memory with your folders, naming conventions and key reports, and it learns more with every task.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="eyebrow">Cost</span>
+      <h2>Priced per task, not per hour.</h2>
+      <p>{{ a.price.monthly }} a month for your dedicated agent, plus {{ a.price.credit }} per credit. Every reply shows the credits it used. Larger jobs, such as upgrade checks, a migration or a first analysis of all your reports and universes, can be a fixed-price project, from €1,000.</p>
+      <a class="btn btn-ghost flush" href="{{ '/pricing/' | relative_url }}" style="align-self: flex-start;">See pricing <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+
+{% include cta-pilot.html top=true %}

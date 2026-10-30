@@ -21,7 +21,7 @@ There are no tests or linters.
 
 The site has two areas that share one header, footer and design system:
 
-- **Agent site** (default): `/` (`index.html`), `/how-it-works/`, `/pilot/` (+ `/pilot/thanks/`), `/pricing/`, `/about/`, `/contact/`. Main menu `site.data.menus.agent`; top bar is a two-item site switch, "Biclever Agent" · "Tools for BO developers", with the current side marked `aria-current`.
+- **Agent site** (default): `/` (`index.html`), `/how-it-works/`, `/pilot/` (+ `/pilot/thanks/`), `/pricing/`, `/for-bi-teams/`, `/for-finance/`, `/maconomy/`, `/about/`, `/contact/`, `/privacy/`. The persona pages are linked from the footer column "Who it's for", not the main menu. Main menu `site.data.menus.agent`; top bar is a two-item site switch, "Biclever Agent" · "Tools for BO developers", with the current side marked `aria-current`.
 - **Tools area**: any page with `section: tools` — `/products/` (tools home), `_products/*` tool pages, `/pro/` (PRO licenses), and the Docs collection. Main menu `site.data.menus.tools` (Tools, PRO licenses); "Tools for BO developers" is the current side in the top bar.
 
 `_layouts/default.html` picks the menu, top bar and header button from `page.section`. `_config.yml` defaults give `_products/*` and `_pages/*` `section: tools`; an Agent article in `_pages/` sets `section: agent` (see `biclever-agent-security.md`, `biclever-agent-demo-transcript.md`) and appears under "Biclever Agent" in the Docs index.
@@ -29,10 +29,12 @@ The site has two areas that share one header, footer and design system:
 The Docs index (`/pages/`) is linked only from the footer ("For developers" column): it is a site map, not a destination. Individual articles are meant to be linked from the product pages and other pages that need them.
 
 - Collections: `products` (`_products/*.md` → `_layouts/product.html`, `tier: pro|free`, `weight` orders them) and `pages` (`_pages/*.md` → `_layouts/page.html`, the Docs). Inside layouts, `site.pages` is the `pages` collection (Jekyll gives collections priority).
-- `_data/`: `menus.yml` (agent, tools, footer columns), `agent.yml` (Agent price, task credits, pilot terms, demo video — edit numbers here, not in pages), `tiers.yml` (PRO price and Stripe link), `seo.yml`, `contact.yml`.
+- `_data/`: `menus.yml` (agent, tools, footer columns), `agent.yml` (Agent price, pilot terms, tool user numbers, demo video — edit numbers here, not in pages; per-task credit prices are deliberately not published, only the demo transcript shows what its tasks used), `tiers.yml` (PRO price and Stripe link), `seo.yml`, `contact.yml`.
 - Layouts: `default` (shell), `page` (Docs article: one centred column, "← Tools" or "← Biclever Agent" back link, no sidebar), `pages` (Docs index), `product` (tool page), `products` (tools home), `pro` (PRO licenses), `basic` (plain prose: About, Contact).
 - Forms: `/pilot/` and `/contact/` use Netlify Forms (`data-netlify="true"`, honeypot `company-website`); submissions appear in the Netlify dashboard.
-- Redirects live in `netlify.toml` (`/products/biclever-agent/` → `/how-it-works/`, `/agent/`, `/security/`). The old Agent product file is kept with `published: false`.
+- Redirects live in `netlify.toml` (`/products/biclever-agent/` → `/how-it-works/`, `/agent/`, `/security/`, and the retired BO SQL Connector and KeyMetrika → `/products/`). The old Agent product file is kept with `published: false`.
+- Analytics and consent: `_includes/google-analytics.html` shows a small cookie banner and loads Google Analytics only after "Accept" (choice in `localStorage` key `bc-consent`). "Cookie settings" in the footer (`data-consent-open`) reopens it. The measurement ID is only rendered in production builds.
+- "Coming soon" features get `<span class="badge badge-neutral soon">Coming soon</span>` after the heading.
 
 ### Styles
 

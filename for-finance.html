@@ -1,0 +1,71 @@
+---
+title: Biclever Agent for finance teams
+layout: default
+permalink: /for-finance/
+description: CFOs and controllers can build and change BusinessObjects reports themselves, by email, without waiting for a developer.
+---
+{% assign a = site.data.agent %}
+<section class="hero" style="padding-block: 96px 64px;">
+  <div class="container grid-2" style="align-items: center; gap: 64px;">
+    <div class="hero-inner">
+      <span class="eyebrow">For finance</span>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">Get the report you need without waiting for a developer.</h1>
+      <p class="hero-sub">Write to Biclever Agent the way you would write to a colleague. It builds or changes the BusinessObjects report and tells you where to find it, often within minutes.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary btn-lg" href="{{ '/pages/biclever-agent-demo-transcript/' | relative_url }}">Read a real email thread</a>
+      </div>
+      <p class="hero-note">For CFOs, controllers and finance analysts</p>
+    </div>
+    <div class="hero-shot" aria-label="Example email thread with Biclever Agent">
+      <div class="chat">
+        <div class="msg msg-user"><span class="msg-from">Controller · 08:40</span>Can you make a copy of Budget vs Actual for Q4 only, with a Variance % column?</div>
+        <div class="msg msg-agent"><span class="msg-from">Biclever Agent · 08:52</span>Done: "Budget vs Actual Q4" is saved in Finance / Reports, with Variance % after Actual. The original is unchanged.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What you can ask</span>
+      <h2>Everyday reporting, done for you.</h2>
+    </div>
+    <div class="features">
+      <div class="feature"><h3>New views of your numbers</h3><p>A copy of a report for one entity, one quarter or one cost centre group.</p></div>
+      <div class="feature"><h3>New KPIs</h3><p>Margin %, variance, year-on-year: added as columns, with the formula explained.</p></div>
+      <div class="feature"><h3>Answers about a report</h3><p>What a figure includes, which filters apply, why two reports show different totals.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="eyebrow">On production, safely</span>
+      <h2>Where your reports are.</h2>
+      <p>Finance reports live on the production system, and the agent can work there.</p>
+    </div>
+    <ul class="rows">
+      <li><h3>One folder</h3><p>Its access is restricted to one folder you choose, so it can't change reports outside it.</p></li>
+      <li><h3>Copies first</h3><p>It works on a copy by default, and backs up the original before changing it.</p></li>
+      <li><h3>You decide who asks</h3><p>Only the people you approve can write to the agent.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container grid-2">
+    <div class="section-head" style="margin-bottom: 0;">
+      <span class="eyebrow">Good to know</span>
+      <h2>A fast helper, not a decision maker.</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 20px; font-size: 17px; color: var(--muted);">
+      <p>The agent knows your BusinessObjects system, not your business. It builds the report; you decide what the numbers mean. AI can make mistakes, so check important figures before you rely on them.</p>
+      <p>Each task costs credits, at {{ a.price.credit }} per credit, and every reply shows what it used. For everyday data questions, <a href="{{ '/products/biclever-mcp/' | relative_url }}">Biclever MCP</a> is a cheaper fit.</p>
+    </div>
+  </div>
+</section>
+
+{% include cta-pilot.html top=true %}
