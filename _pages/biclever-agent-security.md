@@ -34,7 +34,7 @@ There are two ways, depending on how your BusinessObjects system is reachable.
 - **No inbound ports.** The gateway only makes outbound HTTPS calls to one fixed hostname, which we give you. It works through corporate proxies, including firewalls that inspect HTTPS.
 - **End-to-end encrypted.** The gateway and the agent talk through a relay on Google Cloud in Belgium (europe-west1). The relay passes encrypted messages and can't read requests or answers; it sees only routing details such as sizes and timing.
 - **You decide what it may do.** The rules for each BusinessObjects system are in a local file on your server and can't be changed remotely. A system without rules is read-only.
-- **Audit log on your server.** One line per request: what was called, on which system, and the result. Never report content, passwords or logon tokens. Kept 90 days by default.
+- **Audit log on your server.** One line per request: what was called, on which system, and the result. It never contains report content, passwords or logon tokens. Kept 90 days by default.
 
 Supported versions: BI 4.3 SP3 and later, including BI 2025.
 
