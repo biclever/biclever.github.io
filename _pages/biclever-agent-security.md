@@ -4,7 +4,7 @@ nav_title: Security and IT review
 description: What Biclever Agent can and cannot access, where credentials live, and what is logged. Written for the IT and security people reviewing a pilot.
 lead: What the agent can and cannot access, where credentials live, and what is logged. Written for the IT and security people reviewing a pilot.
 date: 2026-10-27T00:00:00+10:00
-updated: 2026-10-30
+updated: 2026-11-03
 weight: 10
 section: agent
 ---
@@ -27,6 +27,14 @@ There are two ways, depending on how your BusinessObjects system is reachable.
 
 - **Biclever Gateway** (recommended). A small service you install on a server in your own network. It holds the BusinessObjects credentials, works with Web Intelligence through the BusinessObjects REST API and with universes through the Semantic Layer SDK, and writes every request to an audit log. The gateway sets up an encrypted channel to the agent, so the credentials and the connection stay on your side.
 - **Direct connection.** If your BusinessObjects system is reachable from the internet, the agent can connect to it directly with the service account.
+
+### The Biclever Gateway in detail
+
+- **What it is.** A Java service for a Windows or Linux server. On Windows it installs from an MSI and runs as a Windows service under its own low-rights account.
+- **No inbound ports.** The gateway only makes outbound HTTPS calls to one fixed hostname, which we give you. It works through corporate proxies, including firewalls that inspect HTTPS.
+- **End-to-end encrypted.** The gateway and the agent talk through a relay on Google Cloud in Belgium (europe-west1). The relay passes encrypted messages and can't read requests or answers; it sees only routing details such as sizes and timing.
+- **You decide what it may do.** The rules for each BusinessObjects system are in a local file on your server and can't be changed remotely. A system without rules is read-only.
+- **Audit log on your server.** One line per request: what was called, on which system, and the result. Never report content, passwords or logon tokens. Kept 90 days by default.
 
 Supported versions: BI 4.3 SP3 and later, including BI 2025.
 
@@ -65,6 +73,7 @@ Each customer has a dedicated agent with its own mailbox, memory and system acce
 | --- | --- |
 | Anthropic | AI processing (Claude API) |
 | Google | Email (Google Workspace) |
+| Google | Gateway relay (Google Cloud, Belgium), encrypted traffic only |
 | Stripe | Payments and invoices |
 | Netlify | This website and its forms |
 
