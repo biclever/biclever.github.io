@@ -45,11 +45,14 @@ layout: default
       <h2>Free tools, free forever.</h2>
       <p>Download and use them on any system. No license, no sign-up.</p>
     </div>
-    <ul class="rows">
+    <div class="grid-cards">
       {% for product in free_products %}
-      <li><h3>{{ product.title }}</h3><p>{{ product.description }}</p><a class="btn btn-secondary" href="{{ product.url | relative_url }}">Details and download</a></li>
+      <a class="plan" href="{{ product.url | relative_url }}" style="gap: 10px; padding: 24px;">
+        <div class="plan-head"><h3 style="font-size: 19px;">{{ product.title }}</h3><span class="badge badge-success">Free</span></div>
+        <p class="plan-desc">{{ product.description }}</p>
+      </a>
       {% endfor %}
-    </ul>
+    </div>
   </div>
 </section>
 
