@@ -7,8 +7,6 @@ lead: How we handle personal data on biclever.com, in our forms and email, and w
 updated: 2026-10-29
 ---
 
-[Draft: to be reviewed by a lawyer before launch.]
-
 ## Who we are
 
 Biclever Software AS (organisation number 937 609 612), Norway, is the controller for the personal data described here. Questions about privacy: [dmytro@biclever.com](mailto:dmytro@biclever.com).
@@ -36,9 +34,9 @@ Some of these providers process data outside the EEA. Where they do, the transfe
 
 ## How long we keep it
 
-- Form submissions and email: as long as needed to answer and follow up, and deleted within [12 months] if no agreement follows.
+- Form submissions and email: as long as needed to answer and follow up, and deleted within 12 months if no agreement follows.
 - Purchase and invoice records: as long as Norwegian accounting law requires (currently five years).
-- Analytics data: [14 months], the Google Analytics retention setting.
+- Analytics data: 14 months, the Google Analytics retention setting.
 
 ## Your rights
 

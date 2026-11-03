@@ -2,14 +2,14 @@
 title: Biclever Agent pricing
 layout: default
 permalink: /pricing/
-description: Biclever Agent costs €500 a month plus €1 per credit, with every task priced in credits. Start with a free one-month pilot.
+description: Biclever Agent pricing. A monthly fee for your dedicated agent plus credits for the work it does, on a plan that fits your usage. Start with a free one-month pilot.
 ---
 {% assign a = site.data.agent %}
 <section class="hero" style="padding-block: 96px 64px;">
   <div class="container grid-2" style="gap: 64px;">
     <div class="hero-inner">
       <span class="eyebrow">Pricing</span>
-      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">One plan. You pay for the work it does.</h1>
+      <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">You pay for the work it does.</h1>
       <p class="hero-sub">A monthly fee for your dedicated agent, plus credits for each task. Every reply shows the credits it used, so the cost is never a surprise.</p>
       <ul class="plan-list" style="border-top: 0; padding-top: 8px; color: var(--muted);">
         <li>A dedicated agent with its own mailbox and memory</li>
@@ -19,16 +19,17 @@ description: Biclever Agent costs €500 a month plus €1 per credit, with ever
       </ul>
     </div>
     <div class="plan plan--featured">
-      <div class="plan-head"><span class="plan-name">Biclever Agent</span><span class="badge badge-primary"><span class="dot"></span>{{ a.pilot.places }} pilots open</span></div>
-      <div class="plan-price"><span class="plan-amount">{{ a.price.monthly }}</span><span class="plan-unit">/ month + {{ a.price.credit }} per credit</span></div>
+      <div class="plan-head"><span class="plan-name">Free pilot</span><span class="badge badge-primary"><span class="dot"></span>{{ a.pilot.places }} pilots open</span></div>
+      <div class="plan-price"><span class="plan-amount">€0</span><span class="plan-unit">for one month</span></div>
       <ul class="plan-list">
-        <li>A dedicated agent with its own mailbox and memory</li>
+        <li>A dedicated agent on your own system</li>
+        <li>{{ a.pilot.credits }} credits for real requests from your team</li>
         <li>Every reply shows the credits it used</li>
-        <li>No limit on users</li>
+        <li>At the end, we pick the plan that fits your usage</li>
       </ul>
       <div style="display: flex; flex-direction: column; gap: 8px;">
         <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot</a>
-        <p class="plan-fine">1 month free · {{ a.pilot.credits }} credits · no automatic billing</p>
+        <p class="plan-fine">No monthly fee · no automatic billing</p>
       </div>
     </div>
   </div>
@@ -37,14 +38,47 @@ description: Biclever Agent costs €500 a month plus €1 per credit, with ever
 <section class="section section-alt">
   <div class="container">
     <div class="section-head">
+      <span class="eyebrow">Plans</span>
+      <h2>Two plans, depending on how much you use it.</h2>
+      <p>Both include the same agent, with no limit on users. They differ in how the cost is split between the monthly fee and the credits.</p>
+    </div>
+    <div class="grid-2">
+      <div class="plan">
+        <div class="plan-head"><span class="plan-name">Team</span></div>
+        <p class="plan-desc">For teams that send the agent many requests every week.</p>
+        <ul class="plan-list">
+          <li>A higher monthly fee</li>
+          <li>Credits at a lower rate</li>
+          <li>The lower total cost at high volume</li>
+        </ul>
+        <a class="btn btn-secondary" href="{{ '/contact/' | relative_url }}">Ask for a quote</a>
+      </div>
+      <div class="plan">
+        <div class="plan-head"><span class="plan-name">Light</span></div>
+        <p class="plan-desc">For occasional use: a few changes a month.</p>
+        <ul class="plan-list">
+          <li>A lower monthly fee</li>
+          <li>Credits at a higher rate</li>
+          <li>The lower total cost at low volume</li>
+        </ul>
+        <a class="btn btn-secondary" href="{{ '/contact/' | relative_url }}">Ask for a quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
       <span class="eyebrow">Questions</span>
       <h2>Pricing questions</h2>
     </div>
     <div class="faq">
-      <details open><summary>What is a credit, and how much does a task cost?</summary><p>A credit is {{ a.price.credit }} of agent work. The credits a task uses depend on its size: a question about a report uses a few, a larger change more. Every reply shows the credits that task used, so during the free pilot you see the real cost on your own requests. Our <a href="{{ '/pages/biclever-agent-demo-transcript/' | relative_url }}">demo email thread</a> shows a worked example.</p></details>
+      <details open><summary>What is a credit, and how much does a task cost?</summary><p>A credit is a unit of agent work. The credits a task uses depend on its size: a question about a report uses a few, a larger change more. Every reply shows the credits that task used, so during the free pilot you see the real cost on your own requests. Our <a href="{{ '/pages/biclever-agent-demo-transcript/' | relative_url }}">demo email thread</a> shows a worked example.</p></details>
+      <details><summary>Which plan is right for us?</summary><p>It depends on how many requests you send. After the pilot we look at your real usage together and recommend the plan with the lower total cost. You can switch later.</p></details>
       <details><summary>What is a fixed-price project?</summary><p>For larger jobs we agree a fixed price up front, from €1,000. For example: checking your reports for a BusinessObjects upgrade, a migration such as UNV to UNX, a first analysis of all your reports and universes, or importing your documentation (Word, PDF and so on) into the agent's knowledge.</p></details>
       <details><summary>Is there a limit on users?</summary><p>No. Anyone you approve can write to your agent. It works on one task at a time; for more throughput you can have more than one agent.</p></details>
-      <details><summary>What happens after the free pilot?</summary><p>Nothing is billed unless you sign up. If you continue, it is {{ a.price.monthly }} a month plus credits.</p></details>
+      <details><summary>What happens after the free pilot?</summary><p>Nothing is billed unless you sign up. If you continue, we agree the plan that fits your usage.</p></details>
       <details><summary>Can you invoice us or work with a purchase order?</summary><p>We invoice in euros (EUR), and payments run through Stripe. If your company needs a purchase order or another way to pay, <a href="{{ '/contact/' | relative_url }}">contact us</a>.</p></details>
       <details><summary>What access does the agent need?</summary><p>A dedicated service account with the rights you choose, limited to one folder so it can't change reports outside it. Test or production, as you prefer.</p></details>
     </div>

@@ -1,4 +1,6 @@
 # Biclever Agent offer: one place for the numbers used across the site.
+# Agent prices are not shown on the site for now (plans agreed after the pilot).
+# Kept here so they can be brought back with {{ a.price.* }}.
 price:
   monthly: "€500"
   credit: "€1"

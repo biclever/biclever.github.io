@@ -202,7 +202,7 @@ I renamed the tab and title to "Job Invoicing" / "Job Invoicing Report". Amounts
 
 ## Cost
 
-Each task is charged in usage credits, and one credit costs €1. These are the actual costs of the three tasks in this demo:
+Each task is charged in usage credits. These are the credits the three tasks in this demo actually used:
 
 | Task | Credits |
 |---|---:|
