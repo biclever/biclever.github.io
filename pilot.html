@@ -35,9 +35,8 @@ description: Try Biclever Agent free for one month on your own SAP BusinessObjec
       </div>
     </div>
 
-    <form class="panel form" id="apply" name="pilot" method="POST" action="{{ '/pilot/thanks/' | relative_url }}" data-netlify="true" netlify-honeypot="company-website" style="min-width: 0;">
-      <input type="hidden" name="form-name" value="pilot">
-      <p class="hidden-field"><label>Leave this empty: <input name="company-website"></label></p>
+    <form class="panel form" id="apply" name="pilot" method="POST" action="{{ site.data.forms.action }}" style="min-width: 0;">
+      {% include form-service.html subject="Pilot application" thanks="/pilot/thanks/" %}
       <div style="display: flex; flex-direction: column; gap: 6px;">
         <h2 style="font-size: 22px; line-height: 1.3;">Apply for a pilot</h2>
         <p style="font-size: 14px; color: var(--muted);">We reply by email to agree the scope with you.</p>

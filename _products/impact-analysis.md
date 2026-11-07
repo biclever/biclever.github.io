@@ -27,7 +27,7 @@ Because the data lives in a regular SQL database, the questions you can ask aren
 - **Choose your database**: SQLite for laptop-scale, SQL Server or Oracle for shared analysis. JDBC drivers for all three are bundled — no separate downloads.
 - **Stable schema**: documented tables, primary keys, and indexes designed for joins between universes and documents. Build your own dashboards on top.
 - **Refreshable**: re-run extraction whenever the source changes; rows are deleted and replaced per universe/document, never duplicated.
-- **AI-friendly**: pair with [dbquerymcp](/products/dbquerymcp/) to let an AI assistant query the impact-analysis database in plain English.
+- **AI-friendly**: pair with a database MCP server to let an AI assistant query the impact-analysis database in plain English.
 
 ## Case study — Deltek Maconomy field type change
 
@@ -46,7 +46,7 @@ With Impact Analysis the same job became a single SQL query against the extracte
 1. Configure a JDBC connection to the database where you want the metadata to land.
 2. Apply the bundled schema (`impactanalysis-cli initdb`).
 3. Run the extraction (`impactanalysis-cli refresh`) — it walks the selected folders, pulls universe and document metadata, writes it into the database in one transaction per artifact.
-4. Query the database with anything: SSMS, a Webi report, your favourite IDE, an AI assistant via [dbquerymcp](/products/dbquerymcp/).
+4. Query the database with anything: SSMS, a Webi report, your favourite IDE, an AI assistant through a database MCP server.
 
 Re-run the extraction whenever the source state changes. Rows for the refreshed universe / document are replaced cleanly; everything else is left alone.
 

@@ -11,9 +11,8 @@ lead: Questions about the agent, a tool, a license or a support issue? Send a me
 - **Support**: installation issues, bug reports and version compatibility.
 - **Custom work**: tailoring an existing tool, or building one for a workflow not covered yet.
 
-<form class="panel form" name="contact" method="POST" action="/contact/thanks/" data-netlify="true" netlify-honeypot="company-website">
-  <input type="hidden" name="form-name" value="contact">
-  <p class="hidden-field"><label>Leave this empty: <input name="company-website"></label></p>
+<form class="panel form" name="contact" method="POST" action="{{ site.data.forms.action }}">
+  {% include form-service.html subject="Contact form" thanks="/contact/thanks/" %}
   <div class="form-row">
     <div class="field"><label for="c-name">Name</label><input class="input" id="c-name" name="name" autocomplete="name" required></div>
     <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" autocomplete="email" required></div>

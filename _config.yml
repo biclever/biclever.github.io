@@ -28,8 +28,12 @@ sass:
   style: compressed # possible values: nested expanded compact compressed
 
 plugins:
-  - jekyll-environment-variables
   - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Old addresses are kept working with `redirect_from` in the target page's front matter.
+redirect_from:
+  json: false
 
 exclude:
   - Gemfile
@@ -45,3 +49,4 @@ exclude:
   - CLAUDE.md
   - WEBSITE-INPUT.md
   - WEBSITE-INPUT-ROUND2.md
+  - TODO.md

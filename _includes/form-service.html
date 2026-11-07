@@ -1,0 +1,9 @@
+{%- comment -%}
+  Hidden fields the form service needs (see _data/forms.yml).
+  Params: subject (subject of the email we get), thanks (path of the thank-you page).
+  botcheck is a honeypot: people don't see it, and submissions that tick it are dropped.
+{%- endcomment -%}
+<input type="hidden" name="access_key" value="{{ site.data.forms.access_key }}">
+<input type="hidden" name="subject" value="{{ include.subject }} (biclever.com)">
+<input type="hidden" name="redirect" value="{{ include.thanks | absolute_url }}">
+<input class="hidden-field" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">

@@ -24,7 +24,7 @@ You can create documentation for a Unx universe in two ways: as a PDF or in an E
 
 ## Creating XLSX Documentation using Biclever Unx Documenter
 
-1. Download [Biclever Unx Documenter](/products/unx-universe-documenter/) and unpack it to a preferred folder. Ensure you have Semantic Layer SDK enabled.
+1. Download [Biclever Unx Documenter](/products/unx-documenter/) and unpack it to a preferred folder. Ensure you have Semantic Layer SDK enabled.
 2. Start the tool using `unxdoc.bat` and log in.
 
     ![Biclever Unx Documenter](/images/pages/unx-documentation-4.png)

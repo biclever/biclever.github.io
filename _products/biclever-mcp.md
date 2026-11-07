@@ -1,5 +1,6 @@
 ---
 title: "Biclever MCP"
+redirect_from: /products/bo-query-mcp/  # the name until 2026-10-15
 description: An MCP server that lets AI assistants explore SAP BO universes and run ad-hoc universe queries through Claude Desktop, Claude Code, and other MCP clients.
 date: 2026-05-13T22:00:00+10:00
 published: true

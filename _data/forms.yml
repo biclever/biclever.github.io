@@ -1,0 +1,7 @@
+# The pilot and contact forms post to Web3Forms (web3forms.com), which emails each submission to us.
+# GitHub Pages is static, so the forms need an outside service to receive them.
+# access_key: get it at web3forms.com by entering the mailbox that should receive submissions.
+# The key is public by design (it is in the page source); it only says which mailbox to deliver to.
+# The site is not published while it is empty (see .github/workflows/pages.yml).
+action: "https://api.web3forms.com/submit"
+access_key: "47c18d9f-c4bf-4cc0-aa44-01075eef84ce"

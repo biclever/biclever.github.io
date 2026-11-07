@@ -1,19 +1,20 @@
 ---
 title: "Biclever Agent: security and IT review"
 nav_title: Security and IT review
+redirect_from: /security/  # short address for outreach emails
 description: What Biclever Agent can and cannot access, where credentials live, and what is logged. Written for the IT and security people reviewing a pilot.
 lead: What the agent can and cannot access, where credentials live, and what is logged. Written for the IT and security people reviewing a pilot.
 date: 2026-10-27T00:00:00+10:00
-updated: 2026-11-03
+updated: 2026-11-05
 weight: 10
 section: agent
 ---
 
 ## Architecture
 
-Each customer gets a private workspace. A mail desk with fixed rules and no AI talks to your team. The agent works sealed off from the outside, and a gatekeeper holds the passwords to your BusinessObjects system.
+Each customer gets a private workspace. A mail desk with fixed rules and no AI talks to your team, and the agent works sealed off from the outside. The Biclever Gateway, installed in your own network, holds the passwords to your BusinessObjects system and reaches the agent through an encrypted relay.
 
-![Biclever Agent works in your private workspace: a no-AI mail desk talks only to your team, the agent is sealed off, and a gatekeeper holds the passwords to your BusinessObjects system](/images/pages/biclever-agent-overview.svg)
+![Biclever Agent works in your private workspace: a no-AI mail desk talks only to your team and the agent is sealed off. The Biclever Gateway in your network holds the passwords to your BusinessObjects system and reaches the agent through an encrypted relay.](/images/pages/biclever-agent-overview.svg)
 {:.full .figure-plain}
 
 ## Credentials
@@ -75,7 +76,8 @@ Each customer has a dedicated agent with its own mailbox, memory and system acce
 | Google | Email (Google Workspace) |
 | Google | Gateway relay (Google Cloud, Belgium), encrypted traffic only |
 | Stripe | Payments and invoices |
-| Netlify | This website and its forms |
+| GitHub | This website (GitHub Pages) |
+| Web3Forms | The website's pilot and contact forms |
 
 A data processing agreement (DPA) is available on request.
 

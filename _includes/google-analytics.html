@@ -5,7 +5,7 @@
 {% endcomment %}
 {% assign gid = "" %}
 {% if jekyll.environment == "production" %}
-  {% if site.env.NETLIFY_GOOGLE_ANALYTICS_ID %}{% assign gid = site.env.NETLIFY_GOOGLE_ANALYTICS_ID %}{% else %}{% assign gid = site.data.seo.google_analytics_id %}{% endif %}
+  {% assign gid = site.data.seo.google_analytics_id %}
 {% endif %}
 <div class="consent" id="consent" role="region" aria-label="Cookie consent" hidden>
   <p>May we use Google Analytics cookies to see how the site is used? <a href="{{ '/privacy/' | relative_url }}">Privacy policy</a></p>

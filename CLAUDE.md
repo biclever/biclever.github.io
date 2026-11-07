@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-`biclever.github.io` is the Biclever marketing site (custom domain `biclever.com`, see `CNAME`). It is a Jekyll 4 build deployed via Netlify (`netlify.toml` runs `jekyll build` → `_site`).
+`biclever.github.io` is the Biclever marketing site (custom domain `biclever.com`, see `CNAME`). It is a Jekyll 4 site served by GitHub Pages. GitHub's built-in Jekyll 3 can't build it, so `.github/workflows/pages.yml` builds every push with Jekyll 4 and publishes `main` (repo Settings › Pages › Source must be "GitHub Actions"). Pushing another branch only builds it, which is the way to check a branch before merging. The repository is public: keep internal notes out of it.
 
 ## Common commands
 
@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 bundle install                    # install Jekyll + plugins (first time / after Gemfile changes)
 bundle exec jekyll serve          # local dev server with live reload
 bundle exec jekyll build          # production build into _site
-JEKYLL_ENV=production bundle exec jekyll build   # mirrors Netlify build
+JEKYLL_ENV=production bundle exec jekyll build   # what the GitHub workflow runs
 ```
 
 There are no tests or linters.
@@ -29,10 +29,10 @@ The site has two areas that share one header, footer and design system:
 The Docs index (`/pages/`) is linked only from the footer ("For developers" column): it is a site map, not a destination. Individual articles are meant to be linked from the product pages and other pages that need them.
 
 - Collections: `products` (`_products/*.md` → `_layouts/product.html`, `tier: pro|free`, `weight` orders them) and `pages` (`_pages/*.md` → `_layouts/page.html`, the Docs). Inside layouts, `site.pages` is the `pages` collection (Jekyll gives collections priority).
-- `_data/`: `menus.yml` (agent, tools, footer columns), `agent.yml` (Agent price, pilot terms, tool user numbers, demo video — edit numbers here, not in pages; Agent prices (monthly fee, credit price) are not shown on the site for now: the Pricing page describes two plans, Team and Light, without numbers; per-task credit prices are deliberately not published, only the demo transcript shows what its tasks used), `tiers.yml` (PRO price and Stripe link), `seo.yml`, `contact.yml`.
+- `_data/`: `menus.yml` (agent, tools, footer columns), `agent.yml` (Agent price, pilot terms, tool user numbers, demo video — edit numbers here, not in pages; Agent prices (monthly fee, credit price) are not shown on the site for now: the Pricing page describes two plans, Team and Light, without numbers; per-task credit prices are deliberately not published, only the demo transcript shows what its tasks used), `tiers.yml` (PRO price and Stripe link), `forms.yml` (form service address and access key), `seo.yml`, `contact.yml`.
 - Layouts: `default` (shell), `page` (Docs article: one centred column, "← Tools" or "← Biclever Agent" back link, no sidebar), `pages` (Docs index), `product` (tool page), `products` (tools home), `pro` (PRO licenses), `basic` (plain prose: About, Contact).
-- Forms: `/pilot/` and `/contact/` use Netlify Forms (`data-netlify="true"`, honeypot `company-website`); submissions appear in the Netlify dashboard.
-- Redirects live in `netlify.toml` (`/products/biclever-agent/` → `/how-it-works/`, `/agent/`, `/security/`, and the retired BO SQL Connector and KeyMetrika → `/products/`). The old Agent product file is kept with `published: false`.
+- Forms: GitHub Pages is static, so `/pilot/` and `/contact/` post to Web3Forms, which emails each submission. `_includes/form-service.html` adds the hidden fields (access key from `_data/forms.yml`, email subject, thank-you page, honeypot `botcheck`). The workflow refuses to publish while the access key is empty.
+- Redirects: an old address is listed under `redirect_from` in the front matter of the page it now leads to (jekyll-redirect-from builds a small redirect page; GitHub Pages has no server redirects). Current ones: `/products/biclever-agent/` and `/agent/` → `/how-it-works/`, `/security/` → the security article, the old BO Query MCP addresses, and the retired BO SQL Connector and KeyMetrika → `/products/`. The old Agent product file is kept with `published: false`.
 - Analytics and consent: `_includes/google-analytics.html` shows a small cookie banner and loads Google Analytics only after "Accept" (choice in `localStorage` key `bc-consent`). "Cookie settings" in the footer (`data-consent-open`) reopens it. The measurement ID is only rendered in production builds.
 - "Coming soon" features get `<span class="badge badge-neutral soon">Coming soon</span>` after the heading.
 
@@ -51,4 +51,5 @@ Fonts: Schibsted Grotesk and IBM Plex Mono from Google Fonts. Components are pla
 - Docs articles: optional `lead`, `updated` (shows "Last updated"), `wide: true` for a wider text column. Slugs are URL-significant (`permalink: pretty`).
 - Markdown renders inside `.prose` (max 40rem). Add `{:.full}` after an image to span the column.
 - Placeholders still to fill are written in square brackets, e.g. `[Founder photo]`, `[Hosting and data residency: to confirm before launch.]`. Search for `\[` before launch.
-- `404.html` is at repo root (Jekyll/Netlify convention).
+- `404.html` is at repo root (GitHub Pages convention).
+- Link previews (LinkedIn, Teams, Slack) use `images/social/og-default.png` (1200×630); a page can set its own with `image:` in the front matter.

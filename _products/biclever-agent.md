@@ -2,7 +2,7 @@
 title: "Biclever Agent"
 description: Your own SAP BusinessObjects expert, reachable by email. Ask a question or describe the report you need, and the agent does the work and tells you what it did.
 date: 2026-10-03T10:00:00+10:00
-published: false  # moved to /how-it-works/ (301 in netlify.toml)
+published: false  # moved to /how-it-works/, which redirects from this address
 weight: 8
 tier: managed
 ---

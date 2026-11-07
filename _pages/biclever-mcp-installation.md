@@ -1,5 +1,6 @@
 ---
 title: "Biclever MCP — install & configuration"
+redirect_from: /pages/bo-query-mcp-installation/  # the name until 2026-10-15
 date: 2026-05-14T00:00:00+10:00
 weight: 10
 wide: true

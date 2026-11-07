@@ -4,7 +4,7 @@ layout: basic
 permalink: /privacy/
 description: How Biclever Software AS handles personal data on biclever.com, in its forms and email, and when you buy a license.
 lead: How we handle personal data on biclever.com, in our forms and email, and when you buy a license.
-updated: 2026-10-29
+updated: 2026-11-05
 ---
 
 ## Who we are
@@ -26,7 +26,8 @@ The data Biclever Agent processes for a customer (requests, reports, the agent's
 
 ## Who handles the data for us
 
-- **Netlify**: hosts this website and receives form submissions.
+- **GitHub**: hosts this website (GitHub Pages).
+- **Web3Forms**: receives what you send in the pilot and contact forms and passes it on to us by email.
 - **Google**: Google Workspace for email; Google Analytics, only if you consent.
 - **Stripe**: payments and invoices.
 
