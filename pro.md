@@ -3,6 +3,7 @@ title: Biclever PRO licenses
 section: tools
 layout: pro
 permalink: /pro/
+redirect_from: /pricing/  # the PRO price page on the old site (until 2026-11)
 description: Biclever Pro is a single yearly license that unlocks the full set of advanced desktop utilities for SAP BusinessObjects® analysts and developers.
 keywords: biclever pro, sap businessobjects tools, impact analysis, unx editor, webi master, security exporter
 ---

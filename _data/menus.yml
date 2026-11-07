@@ -1,11 +1,9 @@
-# Main menu on the Agent site (/, /how-it-works/, /pilot/, /pricing/, ...)
+# Main menu on the Agent site (/, /how-it-works/, /pilot/, ...)
 agent:
   - name: "How it works"
     url: "/how-it-works/"
   - name: "Security"
     url: "/pages/biclever-agent-security/"
-  - name: "Pricing"
-    url: "/pricing/"
   - name: "About"
     url: "/about/"
 
@@ -23,8 +21,6 @@ footer:
         url: "/how-it-works/"
       - name: "Free pilot"
         url: "/pilot/"
-      - name: "Pricing"
-        url: "/pricing/"
       - name: "Security"
         url: "/pages/biclever-agent-security/"
   - title: "Who it's for"

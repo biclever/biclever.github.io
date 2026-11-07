@@ -8,7 +8,7 @@ lead: Biclever builds Biclever Agent and the Biclever tools for SAP BusinessObje
 
 ## Biclever Software AS
 
-Founded by Dmytro Bukhantsov, a SAP BusinessObjects specialist. Biclever tools are used by {{ site.data.agent.tool_users }} people in {{ site.data.agent.tool_companies }} companies.
+Founded by Dmytro Bukhantsov, a SAP BusinessObjects specialist. Biclever tools are used by {{ site.data.agent.tool_users }} professionals in {{ site.data.agent.tool_companies }} companies.
 
 - Organisation number 937 609 612
 - Based in Norway

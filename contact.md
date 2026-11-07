@@ -13,10 +13,8 @@ lead: Questions about the agent, a tool, a license or a support issue? Send a me
 
 <form class="panel form" name="contact" method="POST" action="{{ site.data.forms.action }}">
   {% include form-service.html subject="Contact form" thanks="/contact/thanks/" %}
-  <div class="form-row">
-    <div class="field"><label for="c-name">Name</label><input class="input" id="c-name" name="name" autocomplete="name" required></div>
-    <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" autocomplete="email" required></div>
-  </div>
+  <div class="field"><label for="c-name">Name</label><input class="input" id="c-name" name="name" autocomplete="name" required></div>
+  <div class="field"><label for="c-email">Email</label><input class="input" id="c-email" name="email" type="email" autocomplete="email" required></div>
   <div class="field"><label for="c-topic">Topic</label><select class="select" id="c-topic" name="topic"><option>Biclever Agent</option><option>PRO license</option><option>Support</option><option>Custom work</option><option>Other</option></select></div>
   <div class="field"><label for="c-message">Message</label><textarea class="textarea" id="c-message" name="message" required></textarea></div>
   <button class="btn btn-primary btn-lg" type="submit">Send message</button>
