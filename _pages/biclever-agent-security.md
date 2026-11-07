@@ -93,4 +93,4 @@ The agent handles everyday BusinessObjects work well, but some reports are very 
 
 ---
 
-Questions from your IT team? Write to [dmytro@biclever.com](mailto:dmytro@biclever.com), or [apply for a pilot](/pilot/).
+Questions from your IT team? Write to [pilot@biclever.com](mailto:pilot@biclever.com), or [apply for a pilot](/pilot/).

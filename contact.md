@@ -3,12 +3,12 @@ title: Contact
 layout: basic
 permalink: /contact/
 description: Get in touch with Biclever about Biclever Agent, PRO licenses, support, or custom BusinessObjects work.
-lead: Questions about the agent, a tool, a license or a support issue? Send a message or write to dmytro@biclever.com.
+lead: Questions about the agent, a tool, a license or a support issue? Send a message, or write to pilot@biclever.com about Biclever Agent and support@biclever.com about the tools.
 ---
 
-- **Biclever Agent and pilots**: scope, security questions, pricing. Or [apply for a pilot](/pilot/) directly.
+- **Biclever Agent and pilots**: scope, security questions, pricing. Write to [pilot@biclever.com](mailto:pilot@biclever.com) or [apply for a pilot](/pilot/) directly.
 - **PRO licenses**: quotes, team licenses, invoices and purchase orders.
-- **Support**: installation issues, bug reports and version compatibility.
+- **Support for the tools**: installation issues, bug reports and version compatibility. Write to [support@biclever.com](mailto:support@biclever.com).
 - **Custom work**: tailoring an existing tool, or building one for a workflow not covered yet.
 
 <form class="panel form" name="contact" method="POST" action="{{ site.data.forms.action }}">
