@@ -9,7 +9,7 @@ updated: 2026-11-05
 
 ## Who we are
 
-Biclever Software AS (organisation number 937 609 612), Norway, is the controller for the personal data described here. Questions about privacy: [dmytro@biclever.com](mailto:dmytro@biclever.com).
+Biclever Software AS (organization number 937 609 612), Norway, is the controller for the personal data described here. Questions about privacy: [dmytro@biclever.com](mailto:dmytro@biclever.com).
 
 ## What we collect and why
 

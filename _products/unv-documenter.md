@@ -1,15 +1,15 @@
 ---
 title: "Unv Documenter"
-description: The tool extracts Unv universe metadata to an Excel spreadsheet. You can also use it to find differences between universes.
+description: Exports UNV universe metadata to Excel and compares universes. For the deprecated Universe Designer; no longer supported.
 date: 2018-11-18T12:33:46+10:00
 published: true
 weight: 2
 tier: free
 ---
 
-UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (objects, classes, tables, joins, incompatibilities, etc.) to an Excel file.
+Unv Documenter (UnvDoc) exports UNV universe metadata (objects, classes, tables, joins, incompatibilities, etc.) to an Excel file.
 
-***Note: this is an old tool for the deprecated Universe Designer, and it is no longer supported. The "Import..." button will crash the application for BO 4.2+. A workaround is to import universes from Universe Design Tool and then use the "Open..." button in UnvDoc.***
+***Note: this is an old tool for the deprecated Universe Designer, and it is no longer supported. The "Import..." button will crash the application on BI 4.2 and later. A workaround is to import universes with the Universe Design Tool and then use the "Open..." button in UnvDoc.***
 
 ## Information
 
@@ -17,8 +17,8 @@ UNV Universe Documenter (UnvDoc) is a tool for exporting UNV universe metadata (
 
 ## Downloads
 
-- [Unv Documenter for BO 4.x (unvdoc-bo4x-20190305.zip)](https://drive.google.com/uc?export=download&id=1Z9NU2QxSL3kWW5iEDgRMCSaPmM6Lp9-0)
-- [Unv Documenter for BO 3.1 SP5+ (unvdoc-bo31sp5-20190305.zip)](https://drive.google.com/uc?export=download&id=1riyL6cINXn1WXqbdxFw68qFMFe18J3_I)
+- [Unv Documenter for BI 4.x (unvdoc-bo4x-20190305.zip)](https://drive.google.com/uc?export=download&id=1Z9NU2QxSL3kWW5iEDgRMCSaPmM6Lp9-0)
+- [Unv Documenter for XI 3.1 SP5 and later (unvdoc-bo31sp5-20190305.zip)](https://drive.google.com/uc?export=download&id=1riyL6cINXn1WXqbdxFw68qFMFe18J3_I)
 - [UnvDoc.pdf](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZYURFMjB2Y2FCSjA)
 
 ## Support

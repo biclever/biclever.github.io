@@ -7,7 +7,7 @@ lead: Questions about the agent, a tool, a license or a support issue? Send a me
 ---
 
 - **Biclever Agent and pilots**: scope, security questions, pricing. Or [apply for a pilot](/pilot/) directly.
-- **Sales and licensing**: quotes, multi-seat pricing, invoices and purchase orders.
+- **PRO licenses**: quotes, team licenses, invoices and purchase orders.
 - **Support**: installation issues, bug reports and version compatibility.
 - **Custom work**: tailoring an existing tool, or building one for a workflow not covered yet.
 

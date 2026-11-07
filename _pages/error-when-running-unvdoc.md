@@ -15,7 +15,7 @@ If you use UnvDoc for BO 4.1 SP12, 4.2 SP6, you may encounter the following erro
 
 ![IEnumVARIANT error](/images/pages/IEnumVARIANT.png)
 
-The issue is caused by an error in Universe Designer Tool API introduced in some of the Service Packs of SAP Business Objects. We are not able to fix it on our side. Hopefully, it will be resolved in a future Service Pack or Patch.
+The issue is caused by an error in Universe Designer Tool API introduced in some of the Service Packs of SAP BusinessObjects. We are not able to fix it on our side. Hopefully, it will be resolved in a future Service Pack or Patch.
 
 We do not know yet the exact Service Pack when the issue was introduced. UnvDoc should fully work for BO 4.1 SP7, 4.2 SP3.
 

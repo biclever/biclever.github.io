@@ -1,11 +1,11 @@
 ---
-title: "Impact Analysis — user guide"
+title: "Impact Analysis: user guide"
 date: 2026-05-23T00:00:00+10:00
 weight: 3
 wide: true
 ---
 
-Impact Analysis is a command-line tool that extracts SAP BusinessObjects universe and Web Intelligence document metadata into a relational database. Once the data is there, you query it with whatever you already have — SQL Server Management Studio, a Webi report, your favourite IDE, or an AI assistant pointed at the same database through a database MCP server.
+Impact Analysis is a command-line tool that extracts SAP BusinessObjects universe and Web Intelligence document metadata into a relational database. Once the data is there, you query it with whatever you already have — SQL Server Management Studio, a Webi report, your favorite IDE, or an AI assistant pointed at the same database through a database MCP server.
 
 The first run loads everything; subsequent runs are incremental — only changed universes and documents are re-extracted. A water-mark timestamp and a per-cuid status table track what's been seen and what failed.
 

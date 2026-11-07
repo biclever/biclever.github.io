@@ -1,15 +1,15 @@
 ---
 title: Biclever Agent for SAP BusinessObjects
 layout: default
-description: BusinessObjects development, automated. Biclever Agent builds and changes universes and Webi reports on your own system, by email. Start a free one-month pilot.
+description: BusinessObjects development, automated. Biclever Agent builds and changes universes and reports on your own BusinessObjects system, by email. Start a free one-month pilot.
 ---
 {% assign a = site.data.agent %}
 <section class="hero">
   <div class="container grid-2" style="align-items: center; gap: 64px;">
     <div class="hero-inner">
-      <span class="badge badge-primary"><span class="dot"></span>Free one-month pilot · {{ a.pilot.places }} places</span>
+      <span class="badge badge-primary"><span class="dot"></span>Free one-month pilot · {{ a.pilot.places_left }} places left</span>
       <h1 style="font-size: clamp(40px, 4.6vw, 56px); line-height: 1.04;">BusinessObjects development, automated.</h1>
-      <p class="hero-sub">Biclever Agent does the work of a BusinessObjects developer: universes, Webi reports, fixes and new builds, from the request to the checked result. Your team asks by email. Minutes later, it's done in your system.</p>
+      <p class="hero-sub">Biclever Agent does the work of a BusinessObjects developer: universes, reports, fixes and new builds, from the request to the checked result. Your team asks by email. Minutes later, it's done in your system.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="{{ '/pilot/' | relative_url }}">Start a free pilot <span class="arrow" aria-hidden="true">→</span></a>
         <a class="btn btn-secondary btn-lg" href="{{ '/how-it-works/' | relative_url }}#demo">Watch the 3-minute demo</a>
@@ -65,7 +65,7 @@ description: BusinessObjects development, automated. Biclever Agent builds and c
       <div class="request">
         <div class="request-meta"><span>From: finance analyst</span><span>Build from an existing report</span></div>
         <div class="request-subject">Monthly cost report for Norway</div>
-        <p class="request-body">Same layout as the Sweden report, filtered to Norwegian cost centres.</p>
+        <p class="request-body">Same layout as the Sweden report, filtered to Norwegian cost centers.</p>
         <div class="request-result">✓ Done</div>
       </div>
       <div class="request">
@@ -87,8 +87,8 @@ description: BusinessObjects development, automated. Biclever Agent builds and c
       <h2>Your system, your permissions, your approval.</h2>
     </div>
     <div class="features">
-      <div class="feature"><h3>Works on a copy first</h3><p>By default every change is made on a copy, and originals are backed up before any edit.</p></div>
-      <div class="feature"><h3>The AI never sees your passwords</h3><p>A separate gatekeeper holds the credentials and logs in on the agent's behalf.</p></div>
+      <div class="feature"><h3>Works on a copy first</h3><p>By default every change is made on a copy. If you ask for a change to the original, it backs the original up first.</p></div>
+      <div class="feature"><h3>The AI never sees your passwords</h3><p>The Biclever Gateway in your own network holds the credentials and logs in on the agent's behalf.</p></div>
       <div class="feature"><h3>Every change logged</h3><p>Every system call is logged and every task is recorded in the agent's journal.</p></div>
     </div>
     <a class="btn btn-ghost flush" href="{{ '/pages/biclever-agent-security/' | relative_url }}" style="margin-top: 32px;">Read the security and IT review <span class="arrow" aria-hidden="true">→</span></a>

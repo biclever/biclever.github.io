@@ -1,6 +1,6 @@
 ---
 title: "Unx Editor"
-description: The tool automates modifications of Unx universes.
+description: Bulk changes to UNX universes. Extract the metadata as JSON, edit it, preview the change plan and apply it back, from the GUI or the CLI.
 date: 2024-05-25T10:45:00+10:00
 published: true
 weight: 5
@@ -30,7 +30,7 @@ Do you need to automate another workflow? We'd love to hear from you at [support
 
 ## Prerequisite
 
-You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
+You need SAP BusinessObjects Client Tools for BI 4.3 SP3 and later, including BI 2025, on your machine.
 
 ## Information
 
@@ -39,10 +39,9 @@ You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
 
 ## Downloads
 
-Without a PRO license the tool runs in a limited test mode — you can extract universe metadata to JSON and diff it against the universe on the server. A PRO license is required to apply changes to a universe and publish it back to the CMS, and to use the CLI for automation.
+Without a PRO license the tool runs in free mode: you can extract universe metadata to JSON and diff it against the universe on the server. A PRO license is required to apply changes to a universe and publish it back to the CMS, and to use the CLI for automation.
 
-- [Unx Editor for BO 4.3 SP3+ (unxeditor-20260525.zip)](https://drive.google.com/uc?export=download&id=1P5dX90rUic0WwilqjveLGZ9Tg6cT6MZ4)
-- [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
+- [Unx Editor for BI 4.3 SP3 and later, including BI 2025 (unxeditor-20260525.zip)](https://drive.google.com/uc?export=download&id=1P5dX90rUic0WwilqjveLGZ9Tg6cT6MZ4)
 
 ## Support
 

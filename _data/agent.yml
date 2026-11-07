@@ -6,7 +6,7 @@ price:
   credit: "€1"
 pilot:
   places: 5
-  # Shown as "N of 5 pilots left" on /pilot/. Lower it as pilots are taken.
+  # Shown on Home, /how-it-works/, /pilot/ and the pilot CTA band. Lower it as pilots are taken.
   places_left: 5
   credits: 200
   email: "pilot@biclever.com"

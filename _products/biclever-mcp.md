@@ -1,7 +1,7 @@
 ---
 title: "Biclever MCP"
 redirect_from: /products/bo-query-mcp/  # the name until 2026-10-15
-description: An MCP server that lets AI assistants explore SAP BO universes and run ad-hoc universe queries through Claude Desktop, Claude Code, and other MCP clients.
+description: An MCP server that lets AI assistants explore SAP BO universes and run ad hoc universe queries through Claude Desktop, Claude Code, and other MCP clients.
 date: 2026-05-13T22:00:00+10:00
 published: true
 weight: 8
@@ -35,13 +35,11 @@ Everything is read-only: queries run in a temporary Web Intelligence document th
 
 ## Free vs PRO
 
-The free preview of first 10 rows is enough to validate a query, see the column shape, and decide whether full data is worth pulling. PRO removes the row cap and adds custom SQL.
-
-[Buy Biclever PRO €300/year/user](https://biclever.com/pro)
+In free mode a query returns the first 10 rows, enough to validate it, see the column shape, and decide whether the full data is worth pulling. PRO removes the row cap and adds custom SQL.
 
 ## Get started
 
-You need SAP BusinessObjects 4.3 SP3 or later (or BI 2025) with REST web services enabled, Java 17 or later, and Claude Desktop or another MCP client.
+You need SAP BusinessObjects BI 4.3 SP3 and later, including BI 2025, with REST web services enabled, Java 17 or later, and Claude Desktop or another MCP client.
 
 - [Download Biclever MCP (biclevermcp-20261015.zip)](https://drive.google.com/uc?export=download&id=12W3oSJYqyr_oXjySJUCOwlsh30Ma5Hor)
-- [Install & configuration guide](/pages/biclever-mcp-installation/)
+- [Install and configuration guide](/pages/biclever-mcp-installation/)

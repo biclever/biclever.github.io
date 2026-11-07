@@ -1,5 +1,5 @@
 ---
-title: "Webi Master — UNV to UNX migration"
+title: "Webi Master: UNV to UNX migration"
 date: 2026-05-23T00:00:00+10:00
 weight: 21
 wide: true

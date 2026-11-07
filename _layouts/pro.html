@@ -12,12 +12,12 @@ layout: default
     </div>
     <div class="plan plan--featured" id="buy">
       <div class="plan-head"><span class="plan-name">Biclever PRO</span><span class="badge badge-neutral">Per user</span></div>
-      <div class="plan-price"><span class="plan-amount">€25</span><span class="plan-unit">/ user / month, billed yearly (€300)</span></div>
+      <div class="plan-price"><span class="plan-amount">{{ pro_tier.amount }}</span><span class="plan-unit">{{ pro_tier.unit }}, {{ pro_tier.billing }}</span></div>
       <ul class="plan-list">
         {% for product in pro_products %}<li><a href="{{ product.url | relative_url }}">{{ product.title }}</a></li>{% endfor %}
       </ul>
       <a class="btn btn-primary btn-lg" href="{{ pro_tier.cta_url }}">Buy PRO</a>
-      <p style="font-size: 14px; color: var(--muted);">Trial license, invoice, purchase order, team or site license: <a href="{{ '/contact/' | relative_url }}">contact us</a>.</p>
+      <p style="font-size: 14px; color: var(--muted);">Trial license, invoice, purchase order, team license:<a href="{{ '/contact/' | relative_url }}">contact us</a>.</p>
     </div>
   </div>
 </section>

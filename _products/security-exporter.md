@@ -1,6 +1,6 @@
 ---
 title: "Security Exporter"
-description: The tool allows extracting access rights to an Excel.
+description: Exports the access rights of your BusinessObjects folders to Excel, with explicit and effective principals, access levels and rights.
 date: 2018-11-18T12:33:46+10:00
 published: true
 weight: 6
@@ -69,17 +69,17 @@ You can change or add more queries. Each query should be on a separate line. Emp
 
 ## Prerequisite
 
-You need to have SAP BusinessObjects 4.x or 2025 Client Tools on your machine.
+You need SAP BusinessObjects Client Tools for BI 4.3 SP3 and later, including BI 2025, on your machine.
 
 ## Information
 
 - [Security Exporter CLI](/pages/security-exporter-cli/)
 
 ## Downloads
-Without a PRO license the tool runs in a limited test mode — you can retrieve and browse the security. A PRO license is required to export to Excel/CSV and to automate with the CLI.
 
-- [Security Exporter for BO 4.3+ (securityexporter-20260525.zip)](https://drive.google.com/uc?export=download&id=1_4ma3jMlChFnpC7LXRcrRFxvGhj8OOP1)
-- [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
+Without a PRO license the tool runs in free mode: you can retrieve and browse the security. A PRO license is required to export to Excel/CSV and to automate with the CLI.
+
+- [Security Exporter for BI 4.3 SP3 and later, including BI 2025 (securityexporter-20260525.zip)](https://drive.google.com/uc?export=download&id=1_4ma3jMlChFnpC7LXRcrRFxvGhj8OOP1)
 
 ## Support
 

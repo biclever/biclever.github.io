@@ -4,7 +4,7 @@ section: tools
 layout: pro
 permalink: /pro/
 redirect_from: /pricing/  # the PRO price page on the old site (until 2026-11)
-description: Biclever Pro is a single yearly license that unlocks the full set of advanced desktop utilities for SAP BusinessObjects® analysts and developers.
+description: Biclever PRO is a single yearly license that unlocks the full set of advanced desktop tools for SAP BusinessObjects analysts and developers.
 keywords: biclever pro, sap businessobjects tools, impact analysis, unx editor, webi master, security exporter
 ---
 
@@ -14,7 +14,7 @@ keywords: biclever pro, sap businessobjects tools, impact analysis, unx editor, 
 2. **Download** the tool you want from its product page and unzip the archive anywhere on your machine.
 3. **Activate** by dropping `license.txt` into the unzipped tool folder, next to the tool's `.bat` launcher. Restart the tool if it is already open.
 
-The same `license.txt` works for every Pro tool — copy it into each tool's folder.
+The same `license.txt` works for every PRO tool: copy it into each tool's folder.
 
 ## Q&A
 
@@ -32,7 +32,7 @@ Yes. Card payments are processed through Stripe, and an invoice/receipt is issue
 
 ### Can I try a tool before buying?
 
-Most Pro tools are useful without a license. We recommend trying a tool first to confirm it works in your environment and is compatible with your version of BusinessObjects.
+Most PRO tools are useful without a license: they run in free mode. We recommend trying a tool first to confirm it works in your environment and is compatible with your version of BusinessObjects.
 
 Need the full version for an evaluation? [Contact us](/contact/) for a trial license.
 
@@ -52,8 +52,8 @@ Please [contact us](/contact/) for details.
 
 ### What happens when the license expires?
 
-The tools revert to limited mode. Renewing restores full functionality.
+The tools revert to free mode. Renewing restores full functionality.
 
-### Do you offer team or site licenses?
+### Do you offer team licenses?
 
-Yes — for multi-seat or site-wide deployments. Please [contact us](/contact/) for more details.
+Yes, for several users or a whole site. Please [contact us](/contact/) for details.

@@ -7,17 +7,15 @@ weight: 1
 tier: free
 ---
 
-## Comprehensive Metadata Extraction and Analysis
+Unx Documenter (UnxDoc) exports UNX universe metadata to an Excel file: objects, tables, joins, lists of values, parameters, contexts, navigation paths and incompatibilities. Use it to document a universe, review its design, or compare two universes, for example across environments or before and after a migration.
 
-The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing the extraction of metadata from UNX universes into Excel for better data management and documentation. It's valuable for universe administrators, data analysts, and IT professionals handling data reporting and management. UnxDoc streamlines creating documentation, analyzing universe designs for optimization and troubleshooting, and comparing universes to ensure consistency across different environments. This tool aids in maintaining version control and facilitating migration projects, making it a practical solution for managing SAP BusinessObjects® universes.
+- Exports the business layer and data foundation to one workbook, with a sheet per category.
+- Compares two universes and highlights the differences (see [Diffing universes with Unx Documenter](/pages/diffing-universes-with-unxdoc/)).
+- GUI and command line interface.
 
-## Key Features
+## Prerequisite
 
-- **Metadata Extraction:** UnxDoc is capable of extracting a wide array of metadata details, including objects, tables, joins, list of values (LOVs), parameters, contexts, navigation paths, and incompatibilities. This comprehensive extraction ensures that users have access to all the necessary information for thorough analysis and documentation.
-
-- **User-Friendly GUI:** To accommodate users of all skill levels, UnxDoc features an intuitive graphical user interface (GUI). This interface simplifies the process of setting up and executing metadata extraction.
-
-- **Prerequisites:** To utilize UnxDoc, users must have SAP BusinessObjects Client Tools installed on their system. Additionally, the Semantic Layer Java SDK and Data Security and Access should be enabled in the Client Tools ([details](/pages/how-to-enable-semantic-layer-sdk/)). This allows the tool run for your specific version of SAP BusinessObjects®. 
+You need SAP BusinessObjects Client Tools on your machine, with the Semantic Layer Java SDK and Data Security and Access enabled ([how to enable them](/pages/how-to-enable-semantic-layer-sdk/)). The current download is for BI 4.3 SP3 and later, including BI 2025; older builds are listed below.
 
 ## Information
 
@@ -28,10 +26,10 @@ The Unx Universe Documenter (UnxDoc) is a tool for SAP BusinessObjects allowing 
 
 ## Downloads
 
-- [Unx Documenter for BO 4.3 SP3+ (unxdoc-20260525.zip)](https://drive.google.com/uc?export=download&id=1i49YQCdE-tH2dhUDPuoTGfDESKnKNCQi)
-- [Unx Documenter for BO 4.2, BO 4.1 SP6+ (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
-- [Unx Documenter for BO 4.1 SP3-SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
-- [Unx Documenter for BO 4.1 SP1-SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
+- [Unx Documenter for BI 4.3 SP3 and later, including BI 2025 (unxdoc-20260525.zip)](https://drive.google.com/uc?export=download&id=1i49YQCdE-tH2dhUDPuoTGfDESKnKNCQi)
+- [Unx Documenter for BI 4.2 and BI 4.1 SP6 and later (unxdoc-bo4x-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1zcW6kNSwh_coEnhDMrizNSQUc3qAfCvE)
+- [Unx Documenter for BI 4.1 SP3 to SP5 (unxdoc-bo41sp3-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=17yuPoShoKJRVcM3zUeOPbcffX4DSJgmp)
+- [Unx Documenter for BI 4.1 SP1 and SP2 (unxdoc-bo41sp1-1.7-20190305.zip)](https://drive.google.com/uc?export=download&id=1CMzNxMywUHFPMhcQlPi_zwW7asudtM0Z)
 - [Example (eFashion.xlsx)](https://drive.google.com/uc?export=download&id=0B-s3ybDd2BjZRks5cnVVNW5VelU)
 
 ## Support

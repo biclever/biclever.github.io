@@ -1,16 +1,14 @@
 ---
-title: "Biclever MCP — install & configuration"
+title: "Biclever MCP: install and configuration"
 redirect_from: /pages/bo-query-mcp-installation/  # the name until 2026-10-15
 date: 2026-05-14T00:00:00+10:00
 weight: 10
 wide: true
 ---
 
-# Biclever MCP — install & configuration
-
 ## Requirements
 
-- SAP BusinessObjects 4.3 SP3 or later, or BI 2025.
+- SAP BusinessObjects BI 4.3 SP3 and later, including BI 2025.
 - Java 17 or later.
 - Network access to your BIP REST endpoint.
 - An Enterprise BIP account with permission to create documents in Web Intelligence (see *Required permissions* below).
@@ -100,7 +98,7 @@ To share one knowledge base across your team, keep it in a network folder and ad
 | `kb_list`, `kb_read`, `kb_search` | ✓ | ✓ | List (with descriptions), read and search the knowledge base. Read-only. |
 | `list_universes` | ✓ | ✓ | List CMS universes by name + folder. |
 | `describe_universe(name, …)` | ✓ | ✓ | Folders, dimensions, measures, predefined filters with their backslash-joined paths. Large universes: one folder at a time, keyword search, or a folder outline. |
-| `run_query(universe, …)` | preview (10 rows) | full (caller's `limit`) | Ad-hoc query against a universe with optional filter tree. Answers the universe's prompts. Returns CSV. |
+| `run_query(universe, …)` | preview (10 rows) | full (caller's `limit`) | Ad hoc query against a universe with optional filter tree. Answers the universe's prompts. Returns CSV. |
 | `inspect_sql(universe, …)` | ✓ | ✓ | Returns the SQL the query would send to the database without executing it. No row cap (no rows returned). |
 | `run_custom_sql(universe, result_objects, sql, …)` | — | ✓ | Runs an edited version of a query's SQL through the universe's connection. Must return one column per result object, in order; must start with `SELECT` (no `WITH`). |
 | `sign_out` | ✓ | ✓ | Signs out; the next call opens the sign-in page so you can switch system or user. |

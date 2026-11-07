@@ -2,15 +2,15 @@
 title: About Biclever
 layout: basic
 permalink: /about/
-description: Biclever is made by Dmytro Bukhantsov, a SAP BusinessObjects specialist. Biclever Software AS is based in Norway.
+description: Biclever is made by Dmytro Bukhantsov, an SAP BusinessObjects specialist. Biclever Software AS is based in Norway.
 lead: Biclever builds Biclever Agent and the Biclever tools for SAP BusinessObjects teams.
 ---
 
 ## Biclever Software AS
 
-Founded by Dmytro Bukhantsov, a SAP BusinessObjects specialist. Biclever tools are used by {{ site.data.agent.tool_users }} professionals in {{ site.data.agent.tool_companies }} companies.
+Founded by Dmytro Bukhantsov, an SAP BusinessObjects specialist. Biclever tools are used by {{ site.data.agent.tool_users }} professionals in {{ site.data.agent.tool_companies }} companies.
 
-- Organisation number 937 609 612
+- Organization number 937 609 612
 - Based in Norway
 - Email: [dmytro@biclever.com](mailto:dmytro@biclever.com)
 

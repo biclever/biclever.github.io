@@ -11,7 +11,7 @@ layout: default
       <h1 style="font-size: 48px; line-height: 1.06; letter-spacing: -0.025em;">{{ page.headline }}</h1>
       <p class="hero-sub">{{ page.lead }}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="{{ '/pro/' | relative_url }}">PRO · €25 / user / month</a>
+        <a class="btn btn-primary btn-lg" href="{{ '/pro/' | relative_url }}">PRO · {{ pro_tier.price }}</a>
         <a class="btn btn-secondary btn-lg" href="#free">Free tools</a>
       </div>
     </div>

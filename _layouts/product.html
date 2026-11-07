@@ -9,7 +9,7 @@ layout: default
     {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
     {% if page.tier == "pro" %}
     <div class="product-actions">
-      <a class="btn btn-primary" href="{{ pro_tier.cta_url }}">Buy PRO · €25 / user / month</a>
+      <a class="btn btn-primary" href="{{ pro_tier.cta_url }}">Buy PRO · {{ pro_tier.price }}</a>
       <a class="btn btn-secondary" href="{{ '/pro/' | relative_url }}">How PRO licensing works</a>
     </div>
     <p class="hero-note">Most PRO tools are useful without a license, so you can try them first.</p>

@@ -4,7 +4,7 @@ date: 2019-03-07T12:00:00+00:00
 weight: 3
 ---
 
-In a standard database, each field of a row contains a single value. However, this is not the case for BO CMS (Business Objects Central Management Server) database. A property in BO CMS can have a quite complex structure. For example, consider the `SI_DSL_UNIVERSE` property for Web Intelligence documents that indicates what Unx universes are used by the document.
+In a standard database, each field of a row contains a single value. However, this is not the case for BO CMS (BusinessObjects Central Management Server) database. A property in BO CMS can have a quite complex structure. For example, consider the `SI_DSL_UNIVERSE` property for Web Intelligence documents that indicates what UNX universes are used by the document.
 
 ```sql
 SELECT si_name, si_universe, si_dsl_universe

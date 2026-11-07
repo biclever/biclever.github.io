@@ -1,6 +1,6 @@
 ---
 title: "Webi Master"
-description: The tool automates modifications and metadata extraction from Webi documents.
+description: Bulk operations on Webi documents. Remap data sources, migrate UNV to UNX, run regression tests, and export dependencies, variables and SQL to Excel.
 date: 2024-05-25T10:45:00+10:00
 published: true
 weight: 4
@@ -34,7 +34,7 @@ This feature is useful to ensure that changes do not negatively impact existing 
 
 - **Dependencies Export**: For every selected document, lists the universe objects it uses. Before you rename, retype, or retire an object, this tells you which reports will break — turning impact analysis into a one-click report instead of opening reports one by one.
 
-- **Variables Export**: Pulls every user-defined variable and formula across selected documents into a single sheet. Useful for spotting duplicated calculations, standardising on a canonical version, and identifying formulas that should be promoted into the universe.
+- **Variables Export**: Pulls every user-defined variable and formula across selected documents into a single sheet. Useful for spotting duplicated calculations, standardizing on a canonical version, and identifying formulas that should be promoted into the universe.
 
 - **Data Provider SQL Export**: Extracts the actual SQL each query generates — including hand-edited free-hand SQL. Lets a DBA review performance and security without needing access to the BO server, and gives developers a quick way to grep across the SQL of an entire estate.
 
@@ -47,10 +47,9 @@ This feature is useful to ensure that changes do not negatively impact existing 
 
 ## Downloads
 
-Without a PRO license the tool runs in a limited test mode so you can evaluate it; full automation and bulk operations require a PRO license.
+Without a PRO license the tool runs in free mode so you can evaluate it; full automation and bulk operations require a PRO license.
 
-- [Webi Master for BO 4.3 SP3+/BI 2025 (webimaster-20260525.zip)](https://drive.google.com/uc?export=download&id=1lAkBpo6vEJy-Olt-ytzNqe-PWOGIdz0N)
-- [Buy Biclever PRO €300/year/user](https://biclever.com/pro)
+- [Webi Master for BI 4.3 SP3 and later, including BI 2025 (webimaster-20260525.zip)](https://drive.google.com/uc?export=download&id=1lAkBpo6vEJy-Olt-ytzNqe-PWOGIdz0N)
 
 ## Support
 

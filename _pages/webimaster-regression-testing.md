@@ -1,5 +1,5 @@
 ---
-title: "Webi Master — Regression Testing"
+title: "Webi Master: regression testing"
 date: 2026-05-23T00:00:00+10:00
 weight: 20
 wide: true

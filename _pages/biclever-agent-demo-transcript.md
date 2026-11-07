@@ -1,5 +1,5 @@
 ---
-title: "Biclever Agent — demo transcript"
+title: "Biclever Agent: demo transcript"
 description: A real email thread with Biclever Agent. It describes a Web Intelligence report, fixes it, adds KPIs and conditional formatting, then rebuilds it on a different universe.
 date: 2026-10-25T00:00:00+10:00
 weight: 20
@@ -83,7 +83,7 @@ Add four KPIs at the top with the totals: Revenue, Cost, GM and GM%.
 
 <p class="msg__from">Biclever Agent · 09:55</p>
 
-I fixed the five issues directly in **Sales Report** and added the GM% column, its colour rules and the four KPIs. It's saved, and I checked it from a fresh session. I backed up the original first.
+I fixed the five issues directly in **Sales Report** and added the GM% column, its color rules and the four KPIs. It's saved, and I checked it from a fresh session. I backed up the original first.
 
 **Fixes to the existing report**
 
@@ -116,7 +116,7 @@ I refreshed with Year = 2019 to check the figures, without saving that refresh:
 **Open points**
 
 - My first save went into a backup copy instead of the report. I deleted that copy, took a new backup and redid all the changes on the report itself. Nothing else was affected.
-- The thresholds are fixed values (20% and 45%), and colour is the only signal, so it won't show in a black-and-white print. I can add a small legend if you want one.
+- The thresholds are fixed values (20% and 45%), and color is the only signal, so it won't show in a black-and-white print. I can add a small legend if you want one.
 
 </div>
 
@@ -199,14 +199,3 @@ I renamed the tab and title to "Job Invoicing" / "Job Invoicing Report". Amounts
 
 ![Job Invoicing Report built from the Sales Report template: jobs grouped by customer with the same KPIs and GM% highlighting](/images/pages/biclever-agent-demo-3.png)
 {:.full}
-
-## Cost
-
-Each task is charged in usage credits. These are the credits the three tasks in this demo actually used:
-
-| Task | Credits |
-|---|---:|
-| Describe a report | 4 |
-| Fix the issues and add KPIs | 21 |
-| Build a new report from an existing one | 17 |
-| **Whole thread** | **42** |

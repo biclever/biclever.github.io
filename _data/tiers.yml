@@ -1,21 +1,11 @@
-- id: free
-  name: Free
-  tagline: Essential BO utilities, free forever.
-  price: "Free"
-  order: 1
+# Biclever PRO: the one place for the price and the Stripe link.
+# `price` is used in buttons (/products/, tool pages); `amount`, `unit` and `billing` on /pro/.
 - id: pro
-  name: Pro
+  name: PRO
   tagline: Advanced desktop tools for BO power users.
-  price: "€25 / user / month (billed annually)"
-  cta_text: "Buy"
+  price: "€25 / user / month"
+  amount: "€25"
+  unit: "/ user / month"
+  billing: "billed yearly (€300)"
+  cta_text: "Buy PRO"
   cta_url: "https://buy.stripe.com/5kQdRacWn2zP4GaeLO18c05"
-  info_url: "/pro"
-  info_text: "More info"
-  order: 2
-- id: managed
-  name: Managed
-  tagline: AI agents that perform BusinessObjects work for you.
-  price: "Contact us"
-  cta_text: "Contact Sales"
-  cta_url: "mailto:dmytro@biclever.com"
-  order: 3

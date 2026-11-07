@@ -48,7 +48,7 @@ Fields:
 
 ### Step 3 — Review the diff workbook
 
-Click **Diff** to generate the output. UnxDoc writes an Excel file with one sheet per metadata category (Objects, Tables, Joins, Parameters, LOVs, Contexts, Navigation Paths, Incompatibilities). Differences are highlighted with colour coding so you can scan changes quickly.
+Click **Diff** to generate the output. UnxDoc writes an Excel file with one sheet per metadata category (Objects, Tables, Joins, Parameters, LOVs, Contexts, Navigation Paths, Incompatibilities). Differences are highlighted with color coding so you can scan changes quickly.
 
 ![Diff workbook with highlighted changes](/images/pages/unxdoc-diff-05-output.png)
 {:.full}

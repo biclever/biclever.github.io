@@ -1,15 +1,15 @@
 ---
-title: "Documenting Unx Universes: PDF vs. Excel"
+title: "Documenting UNX universes: PDF vs. Excel"
 date: 2019-03-07T12:00:00+00:00
 weight: 3
 ---
 
-You can create documentation for a Unx universe in two ways: as a PDF or in an Excel spreadsheet. Here, we'll describe both methods.
+You can create documentation for a UNX universe in two ways: as a PDF or in an Excel spreadsheet. Here, we'll describe both methods.
 
 ## Creating PDF Documentation from IDT (Information Design Tool)
 
 1. Open IDT and log in.
-2. Retrieve the Unx universe in IDT.
+2. Retrieve the UNX universe in IDT.
 3. Right-click on the item you want to document (e.g., business layer) and select "Save as."
 
     ![Creating PDF documentation of UNX in IDT](/images/pages/unx-documentation.png)
@@ -39,4 +39,4 @@ You can create documentation for a Unx universe in two ways: as a PDF or in an E
 
     The universe metadata will be exported to an Excel spreadsheet, allowing for easy filtering, searching, and analysis.
 
-    ![Excel spreadsheet with Unx universe metadata](/images/pages/unx-documentation-7.png)
+    ![Excel spreadsheet with UNX universe metadata](/images/pages/unx-documentation-7.png)
