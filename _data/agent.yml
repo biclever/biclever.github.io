@@ -7,7 +7,7 @@ price:
 pilot:
   places: 5
   # Shown on Home, /how-it-works/, /pilot/ and the pilot CTA band. Lower it as pilots are taken.
-  places_left: 5
+  places_left: 4
   credits: 200
   email: "pilot@biclever.com"
 # Biclever tools reach (used on Home)
